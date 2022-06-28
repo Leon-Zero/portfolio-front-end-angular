@@ -1,0 +1,24 @@
+footer{
+    background-image: url('/assets/bannerPortfolio.png');
+    background-size: cover;
+    background-repeat: repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 40vw;
+    background-color: #EBFCFC;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h5{
+    font-size: 2em ;
+    text-align: center;
+}
+h6{
+    font-size: 1.3em ;
+    text-align: left;
+}

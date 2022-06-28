@@ -1,0 +1,12 @@
+
+.go-top button{
+      width: 50px;
+      height: 50px;
+      background-image: url('/assets/arrowUp.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 3px 1px 1px;
+      border-radius: 50%;
+      background-color: #30E3E3;
+      box-shadow: 4px 2px 2px #cf1c1c
+}

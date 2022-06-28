@@ -1,0 +1,39 @@
+.contenedor__skill{
+    display: flex;
+    place-content: center;
+    flex-flow: row wrap
+}
+.skill__grafico{
+    height: 200px;
+    width: 200px;
+    box-shadow: 5px 5px 20px #118181, -5px -5px 20px #118181;
+    border-radius: 50%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex: 0 1 auto;
+    margin: 1em;
+}
+    .skill__grafico::before{
+        content: "";
+        position: absolute;
+        height: 80%;
+        width: 80%;
+        border-radius: 50%;
+        background-color: hsla(0, 0%, 100%, 0.856);
+        box-shadow: inset 5px 5px 20px #80EEEE, inset -5px -5px 20px #118181;
+}
+.skill__grafico-div{
+    font-size: 20px;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 1px 1px 2px #FF7D7D;
+}
+.skill__grafico-div span{
+    display: block;
+}
+
+.skill__grafico{
+    color: #9C0000;
+}

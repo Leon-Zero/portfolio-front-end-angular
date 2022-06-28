@@ -1,0 +1,9 @@
+section{
+    font-weight: 1em;
+    font-size: 1.1em;
+    padding: 2em;
+    margin: auto;
+    flex: auto;    
+    text-align: left;
+    width: 80%;
+}

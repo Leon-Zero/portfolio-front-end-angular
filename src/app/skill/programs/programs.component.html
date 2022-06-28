@@ -1,0 +1,9 @@
+<div class="contenedor__skill" >
+    <div *ngFor="let programas of programsList">
+        <div class="skill__grafico" [style]="programas.fill">
+            <div class="skill__grafico-div">
+                <span>{{programas.porcentaje}}</span><span>{{programas.tag}}</span>
+            </div>
+        </div>
+    </div>
+</div>

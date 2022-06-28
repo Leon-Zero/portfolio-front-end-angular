@@ -1,0 +1,9 @@
+<div class="contenedor__skill" >
+    <div *ngFor="let idiomas of lenguageList">
+        <div class="skill__grafico" [style]="idiomas.fill">
+            <div class="skill__grafico-div">
+                <span>{{idiomas.porcentaje}}</span><span>{{idiomas.tag}}</span>
+            </div>
+        </div>
+    </div>
+</div>

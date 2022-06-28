@@ -1,0 +1,19 @@
+<section>
+    <app-title-laboral></app-title-laboral>
+    <br><br>
+    <div class="experiencia__contenido" *ngFor="let jobs of jobsList">
+        <h3>{{jobs.job}}</h3>
+        <br><br>
+            <div class="experiencia__contenido-div"> 
+                <span>cargo</span> 
+                    <p>{{jobs.cargo}}</p>
+                <span>funciones</span>
+                    <p>{{jobs.funciones}}</p>
+                <span>ingreso/salida</span>
+                    <p>{{jobs.ingresoSalida}}</p>
+                <span>contacto</span>
+                    <p>{{jobs.contacto}}</p>
+            </div>
+        <br><br>
+    </div>
+</section>

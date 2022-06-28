@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin: 3em;
+}   
+.foto-perfil{
+    width: 380px;
+    height: 270px;
+    background-size: cover;
+    -moz-border-radius: 0 50% / 0 100%;
+    -webkit-border-radius: 0 50% / 0 100%;
+    border-radius: 0 50% / 0 100%;
+    border: 8px solid #7DFFFF;
+    box-shadow: 10px 10px 15px #118181, -10px -10px 15px #118181;
+    flex: 0 2 auto;
+}
+.info{    
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 1em;
+    font-size: 1.2em;
+    width: 40%;
+    flex: 2 0 auto;    
+    text-align: justify;
+    padding: 3em;
+}
+.info span b{
+    color:#30E3E3;
+    font-size: 1.1em ;
+    text-shadow: 1px 1px 1px #118181;
+}

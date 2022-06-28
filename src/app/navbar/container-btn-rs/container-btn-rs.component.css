@@ -1,0 +1,77 @@
+.contenedor-btn-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.contenedor-btn-social a{
+    color: #ffffff;
+}
+    .contenedor-btn-social a:hover{
+        color: #ffffff;
+    }
+    
+.contenedor-btn-social ul{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.contenedor-btn-social ul li{
+    position: relative;
+    list-style: none;
+    height: 40px;
+    width: 40px;
+    margin: 0 20px;
+    transform: rotate(-30deg) skew(25deg);
+    background: #ccc;
+}
+.contenedor-btn-social ul li span{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: .5s;
+    font-size: 30px;
+}
+    .contenedor-btn-social ul li:hover span:nth-child(5){
+        transform: translate(40px, -40px);
+        opacity: 1;
+    }
+    .contenedor-btn-social ul li:hover span:nth-child(4){
+        transform: translate(30px, -30px);
+        opacity: .8;
+    }   
+    .contenedor-btn-social ul li:hover span:nth-child(3){
+        transform: translate(20px, -20px);
+        opacity: .6;
+    }   
+    .contenedor-btn-social ul li:hover span:nth-child(2){
+        transform: translate(10px, -10px);
+        opacity: .4;
+    }   
+    .contenedor-btn-social ul li:hover span:nth-child(1){
+        transform: translate(0, 0);
+        opacity: .2;
+    }
+        
+        .contenedor-btn-social ul li:nth-child(1) span{
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        }
+        .contenedor-btn-social ul li:nth-child(2) span{
+            background: #3b5999;
+        }
+        .contenedor-btn-social ul li:nth-child(3) span{
+            background: linear-gradient(45deg, #aa47aae3 20%, #5c5858 40%, #812681e3 80%);
+        }
+        .contenedor-btn-social ul li:nth-child(4) span{
+            background: #0077b5;
+        }
+        .contenedor-btn-social ul li:nth-child(5) span{
+            background: #25d366;
+        }
