@@ -118,71 +118,61 @@
 			"tag": "capacidad analítica",
 			"modal": "Habilidad para analizar información, números, datos, etc.; procesar esta información de forma lógica; llegar a conclusiones razonadas",
 			"beneficio": "Beneficios organizacionales: analice las causas fundamentales de los problemas y manipule los números y la información",
-			"fill": "width:83%",
-			"porcentaje": "83%"
+			"porcentaje": "83"
 		},
 		{
 			"tag": "pensamiento creativo",
 			"modal": "Habilidad para crear cosas nuevas e innovar; huir del lugar común",
 			"beneficio": "Beneficios organizacionales: desarrollar soluciones innovadoras y pensar en nuevas formas de resolver problemas",
-			"fill": "width:98%",
-			"porcentaje": "98%"
+			"porcentaje": "98"
 		},
 		{
 			"tag": "planificación y organización",
 			"modal": "Habilidad para mantener las cosas en orden; estructura de control y lugar",
 			"beneficio": "Beneficios organizacionales: Formular e implementar procesos y tener excelencia en el flujo de trabajo",
-			"fill": "width:83%",
-			"porcentaje": "83%"
+			"porcentaje": "83"
 		},
 		{
 			"tag": "reflexión",
 			"modal": "Capacidad para reflexionar, autoanalizarse y observar sus estados y fortalezas y debilidades",
 			"beneficio": "Beneficios organizacionales: acelere el aprendizaje y aporte conocimientos a su posición y su área",
-			"fill": "width:93%",
-			"porcentaje": "93%"
+			"porcentaje": "93"
 		},
 		{
 			"tag": "comunicación",
 			"modal": "Habilidad para comunicarse verbalmente con claridad; transmitir ideas en palabras a individuos o audiencias",
 			"beneficio": "Beneficios organizacionales: Explicar conceptos difíciles al grupo y transmitir ideas claramente a varias personas.",
-			"fill": "width:72%",
-			"porcentaje": "72%"
+			"porcentaje": "72"
 		},
 		{
 			"tag": "sociabilidad",
 			"modal": "Habilidad para interactuar y crear relaciones con diferentes personas; facilidad en entornos sociales",
 			"beneficio": "Beneficios organizacionales: trabajar en red con las partes interesadas y conectar a las personas",
-			"fill": "width:70%",
-			"porcentaje": "70%"
+			"porcentaje": "70"
 		},
 		{
 			"tag": "estabilidad emocional",
 			"modal": "Capacidad para mantener la calma en situaciones de presión y para controlar los altibajos emocionales",
 			"beneficio": "Beneficios organizacionales: mantener al equipo enfocado durante la agitación y mantener el trabajo en movimiento incluso con mucha interferencia externa",
-			"fill": "width:73%",
-			"porcentaje": "73%"
+			"porcentaje": "73"
 		},
 		{
 			"tag": "iniciativa",
 			"modal": "Capacidad de iniciar acciones sin necesidad de intervención de terceros; tomar la iniciativa",
 			"beneficio": "Beneficios organizacionales: actuar incluso cuando la dirección no está clara y tener un mayor rendimiento de ejecución",
-			"fill": "width:82%",
-			"porcentaje": "82%"
+			"porcentaje": "82"
 		},
 		{
 			"tag": "asertividad",
 			"modal": "Capacidad para poner sus ideas directamente; no te dejes intimidar por el entorno",
 			"beneficio": "Beneficios organizacionales: Poner sobre la mesa opiniones que otras personas terminan eludiendo y aumentar la eficiencia de la comunicación",
-			"fill": "width:82%",
-			"porcentaje": "82%"
+			"porcentaje": "82"
 		},
 		{
 			"tag": "influencia",
 			"modal": "Capacidad de persuadir a otros para que tomen posiciones y se comporten de manera diferente a como lo harían sin intervención",
 			"beneficio": "Beneficios organizacionales: Vender ideas a clientes internos y externos y obtener recursos para llevar a cabo proyectos",
-			"fill": "width:57%",
-			"porcentaje": "57%"
+			"porcentaje": "57"
 		}
 	]
 }
