@@ -5,8 +5,9 @@
 }
 .contenedor {
     border: #151515;
-    position: absolute;
+    display: flex;
 }
+
 .button {
     display: inline-block;
     width: 90px;

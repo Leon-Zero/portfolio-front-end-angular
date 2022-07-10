@@ -4,8 +4,7 @@
     z-index: 200;
     width: 100vw;
 }
-app-night-mode{
-    position: absolute;
-    top: 10px;
-    left: 80%;
+
+.nav-item{
+    margin-left: 1em;
 }
