@@ -15,6 +15,7 @@ export class SoftComponent implements OnInit {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
       this.softList=data.skillSoft;
     });
+
    
   }
 

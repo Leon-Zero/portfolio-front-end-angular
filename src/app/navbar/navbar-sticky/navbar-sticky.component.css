@@ -4,7 +4,6 @@
     z-index: 200;
     width: 100vw;
 }
-
-.nav-item{
-    margin-left: 1em;
+#navbarNavDarkDropdown{
+    padding: 0 1em;
 }

@@ -1,5 +1,7 @@
 <div class="contenedor__skill" >
-    <div *ngFor="let idiomas of lenguageList">
+    <div *ngFor="let idiomas of lenguageList" data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000" data-aos-anchor-placement="top-center" data-aos-once="true">
         <div class="skill__grafico" [style]="idiomas.fill">
             <div class="skill__grafico-div">
                 <span>{{idiomas.porcentaje}}</span><span>{{idiomas.tag}}</span>

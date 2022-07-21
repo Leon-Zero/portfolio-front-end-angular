@@ -1,29 +1,47 @@
 <section class="experiencia__encabezado">
     <app-title-academica></app-title-academica>
     <br><br>
-    <div class="experiencia__contenido">
-        <h3>NIVEL UNIVERSITARIO</h3>
-        <br>
-            <div class="experiencia__contenido-div">
-                <span>institución</span>
-                    <p>{{miPortfolio.instituto}}</p>
-                <span>carrera</span>
-                    <p>{{miPortfolio.carrera}}</p>
-                <span>estado</span>
-                    <p>{{miPortfolio.estado}}<b>{{miPortfolio.curso}}</b></p>
-                <span>ingreso/salida</span>
-                    <p>{{miPortfolio.ingreso}}</p>
-            </div>
-        <br><br>
-        <h3>ACTIVIDADES EXTRACURRICULARES</h3>
-        <br>
-            <div class="experiencia__contenido-div">
-                <span>ayudante</span>
-                    <p>{{miPortfolio.extra1}}</p>
-                <span>disertante</span>
-                    <p>{{miPortfolio.extra2}}<b>{{miPortfolio.extra2B}}</b>{{miPortfolio.extra2C}}</p>
-                <span>disertante</span>
-                    <p>{{miPortfolio.extra3}}</p>
+<div class="accordion" id="accordion-school" data-aos="zoom-in"
+data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item-1" aria-expanded="true" aria-controls="item-1">
+            <h3>NIVEL UNIVERSITARIO</h3>
+            </button>
+            </h2>
+            <div id="item-1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion-school">
+                <div class="accordion-body">
+                    <div class="experiencia__contenido-div">
+                        <span>institución</span>
+                            <p>{{miPortfolio.instituto}}</p>
+                        <span>carrera</span>
+                            <p>{{miPortfolio.carrera}}</p>
+                        <span>estado</span>
+                            <p>{{miPortfolio.estado}}<b>{{miPortfolio.curso}}</b></p>
+                        <span>ingreso/salida</span>
+                            <p>{{miPortfolio.ingreso}}</p>
+                    </div>
+                </div>
             </div>
     </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item-2" aria-expanded="false" aria-controls="item-2">
+            <h3>ACTIVIDADES EXTRACURRICULARES</h3>
+            </button>
+        </h2>
+        <div id="item-2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-school">
+            <div class="accordion-body">
+                <div class="experiencia__contenido-div">
+                    <span>ayudante</span>
+                        <p>{{miPortfolio.extra1}}</p>
+                    <span>disertante</span>
+                        <p>{{miPortfolio.extra2}}<b>{{miPortfolio.extra2B}}</b>{{miPortfolio.extra2C}}</p>
+                    <span>disertante</span>
+                        <p>{{miPortfolio.extra3}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </section>

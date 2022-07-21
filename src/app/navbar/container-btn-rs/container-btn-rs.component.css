@@ -13,15 +13,15 @@
     
 .contenedor-btn-social ul{
     position: relative;
-    margin: 0;
+    margin: 3.5em 1em .5em 1em;
     padding: 0;
     display: flex;
 }
 .contenedor-btn-social ul li{
     position: relative;
     list-style: none;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     margin: 0 20px;
     transform: rotate(-30deg) skew(25deg);
     background: #ccc;

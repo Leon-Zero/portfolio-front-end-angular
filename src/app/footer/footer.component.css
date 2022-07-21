@@ -1,4 +1,5 @@
 footer{
+    position: relative;
     background-image: url('/assets/bannerPortfolio.png');
     background-size: cover;
     background-repeat: repeat;

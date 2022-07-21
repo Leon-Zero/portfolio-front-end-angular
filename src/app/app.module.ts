@@ -8,7 +8,6 @@ import { BtnAPComponent } from './header/btn-ap/btn-ap.component';
 import { LogoAPComponent } from './header/logo-ap/logo-ap.component';
 import { TitleComponent } from './header/title/title.component';
 import { NavbarStickyComponent } from './navbar/navbar-sticky/navbar-sticky.component';
-import { DropDownComponent } from './navbar/drop-down/drop-down.component';
 import { ContainerBtnRSComponent } from './navbar/container-btn-rs/container-btn-rs.component';
 import { NightModeComponent } from './navbar/night-mode/night-mode.component';
 import { AboutMeComponent } from './about-me/about-me/about-me.component';
@@ -36,7 +35,6 @@ import { HttpClientModule } from '@angular/common/http';
     LogoAPComponent,
     TitleComponent,
     NavbarStickyComponent,
-    DropDownComponent,
     ContainerBtnRSComponent,
     NightModeComponent,
     AboutMeComponent,
