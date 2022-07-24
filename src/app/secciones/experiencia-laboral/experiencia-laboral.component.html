@@ -1,15 +1,15 @@
 <section>
     <app-title-laboral></app-title-laboral>
     <br><br>
-    <div class="accordion" id="accordionExample" data-aos="zoom-in"
+    <div class="accordion accordion-shadow" id="accordionExample" data-aos="zoom-in"
     data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
         <div class="accordion-item" *ngFor="let jobs of jobsList">
-            <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="jobs.target" aria-expanded="true" [attr.aria-controls]="jobs.id">
+            <h2 class="accordion-header" [id]="jobs.idItem">
+                <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="jobs.target" [attr.aria-controls]="jobs.id">
                 <h3>{{jobs.job}}</h3>
                 </button>
               </h2>
-              <div [id]="jobs.id" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div [id]="jobs.id" class="accordion-collapse collapse" [attr.aria-labelledby]="jobs.idItem" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="experiencia__contenido-div"> 
                             <span class="span-item">cargo</span> 

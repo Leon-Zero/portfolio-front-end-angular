@@ -1,7 +1,17 @@
+.fondo{
+    background-color: #EBFCFC;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .contenedor__skill{
     display: flex;
     place-content: center;
-    flex-flow: row wrap
+    flex-flow: row wrap;
+    gap: 5px;
 }
 .skill__grafico{
     height: 200px;

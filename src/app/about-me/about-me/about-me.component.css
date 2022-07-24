@@ -17,15 +17,17 @@
 }
 .info{    
     font-family: 'Catamaran', sans-serif;
-    font-weight: 1em;
+    font-weight: 599;
     font-size: 1.2em;
     width: 40%;
     flex: 2 0 auto;    
     text-align: justify;
+    color: var(--color-2);
     padding: 3em;
+    transition: color .8s ease-in;
 }
 .info span b{
     color:#30E3E3;
     font-size: 1.1em ;
-    text-shadow: 1px 1px 1px #118181;
+    text-shadow: 1px 1px 1px #031313;
 }
