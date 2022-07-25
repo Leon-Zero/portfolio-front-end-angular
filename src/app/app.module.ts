@@ -26,6 +26,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TitleProjectsComponent } from './projects/title-projects/title-projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CrudComponent } from './crud/crud.component';
+import { OffCanvasComponent } from './navbar/off-canvas/off-canvas.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { HttpClientModule } from '@angular/common/http';
     TitleSkillComponent,
     ProjectsComponent,
     TitleProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    CrudComponent,
+    OffCanvasComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+i{
+    font-size: 40px;
+    margin-right: 5px;
+    color: var(--color-2);
+}
+.fa-user-secret{
+    position: relative;
+    left: 10px;
+}
+.fa-key{
+    position: relative;
+    left: 25px;
+}
+label{
+width: 125px;    
+}
+.user{
+    position: relative;
+    left: 20px;
+}
+.centrar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#offcanvasExample{
+    background: var(--color-1);
+    color: var(--color-2) ;
+}
