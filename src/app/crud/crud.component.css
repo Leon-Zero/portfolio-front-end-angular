@@ -1,9 +1,7 @@
 
-.ocultar{
-    display: none;
-}
+
 .mostrar{
-    display: flex;
+    display: var(--display-1);
     align-items: center;
     justify-content: center;
     justify-self: center;

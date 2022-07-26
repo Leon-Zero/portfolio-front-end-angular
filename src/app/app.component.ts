@@ -7,7 +7,7 @@ import * as AOS from 'aos'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'portfolio-angular';
+  title = 'portfolio-LH';
   ngOnInit(){
     AOS.init();
     window.addEventListener('load',AOS.refresh)

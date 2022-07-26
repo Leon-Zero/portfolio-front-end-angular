@@ -10,14 +10,25 @@
               <input type="text" class="form-control" id="username" placeholder="ejemplo123">
             </div>
             <div class="mb-3 centrar">
-              <label for="exampleInputPassword1" class="form-label"><i class="fa-solid fa-key"></i>Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="abc123">
+              <label for="password" class="form-label"><i class="fa-solid fa-key"></i>Contraseña</label>
+              <input type="password" class="form-control" id="password" placeholder="abc123">
             </div>
-            <div class="mb-3 form-check">
+            <div class="form-footer">
+           <!-- <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Recordar Datos</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Confirmar Identidad</button>
+            </div>-->
+            <button id="confirm" type="button" class="btn btn-primary" data-theme-btn>Confirmar Identidad</button>
+          </div>
           </form>
+          <div id="liveAlertPlaceholder"></div>
+
+          <div class="msg">
+              <div class="alert alert-success" role="alert">
+                <i class="fa-solid fa-thumbs-up"></i> MODO EDICIÓN HABILITADO
+              </div>
+              <br>
+              <button id="salir" type="button" class="btn btn-danger">Salir del modo edición</button>
+          </div>
     </div>
   </div>

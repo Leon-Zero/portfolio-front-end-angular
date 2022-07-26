@@ -28,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CrudComponent } from './crud/crud.component';
 import { OffCanvasComponent } from './navbar/off-canvas/off-canvas.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { OffCanvasComponent } from './navbar/off-canvas/off-canvas.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
