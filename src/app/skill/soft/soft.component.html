@@ -1,27 +1,13 @@
 <div>
-    <div class="grafico-barra" *ngFor="let skill of softList">
-        <div class="grafico-barra__tag">
+    <div class="grafico-barra" data-aos="zoom-out" data-aos-duration="2000" data-aos-once="true" *ngFor="let skill of softList">
+        <div class="grafico-barra__tag" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-size" data-bs-toggle="modal" data-bs-target="#modal-1">
-            <img src="assets/info-circle-fill.svg" alt="info">
-        </button>
-        
-        <!-- Modal -->
-            <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                    <p>{{skill.modal}} <br><br> {{skill.beneficio}}</p>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-                </div>
-            </div>
+            <button type="button" class="btn btn-size" data-bs-toggle="modal" [attr.data-bs-target]="skill.target">
+                <img src="assets/info-circle-fill.svg" alt="info">
+            </button>
         {{skill.tag}}
         </div>
-        <div class="grafico-barra__contenedor">
+        <div class="grafico-barra__contenedor" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true">
             <div class="grafico-barra__relleno" [style.width.%]="skill.porcentaje"></div>
             <div class="grafico-barra__porcentaje">{{skill.porcentaje}}%</div>
         </div>
@@ -29,5 +15,21 @@
     <div class="grafico-barra__info">
         <img src="assets/informacion.png" alt="info">
         <p>informe de resultados de <a href="https://app.mindsight.com.br/">app.mindsight.com</a> haga click <a href="https://app.mindsight.com.br/devolutiva/a3ed87c7-560d-4b28-82e8-c020301ebfbe/resultado/" target="_blank">aquí</a> para ver o descargar el estudio completo</p>
-    </div>    
+    </div>
+</div>
+<app-crud></app-crud>
+<!-- Modal -->
+<div *ngFor="let skill of softList">
+    <div class="modal fade" [id]="skill.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+            <p>{{skill.modal}} <br><br> {{skill.beneficio}}</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>  
 </div>

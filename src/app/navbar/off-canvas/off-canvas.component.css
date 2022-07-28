@@ -1,0 +1,56 @@
+.form-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+#confirm{
+    display: var(--display-2);
+}
+#salir{
+    display: var(--display-1);    
+}
+i{
+    font-size: 40px;
+    margin-right: 5px;
+    color: var(--color-2);
+}
+.fa-user-secret{
+    position: relative;
+    left: 10px;
+}
+.fa-key{
+    position: relative;
+    left: 25px;
+}
+label{
+width: 125px;    
+}
+.user{
+    position: relative;
+    left: 20px;
+}
+.centrar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#offcanvasExample{
+    background: var(--color-1);
+    color: var(--color-2) ;
+}
+.msg{
+    display: var(--display-1);
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.alert{
+    background: var(--color-1);
+}
+
+
+.fa-thumbs-up{
+    color: var(--color-2);
+}

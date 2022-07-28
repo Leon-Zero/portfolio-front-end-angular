@@ -1,7 +1,7 @@
 section{
     font-weight: 1em;
-    font-size: 1.1em;
-    padding: 2em;
+    font-size: 14px;
+    padding: 1em;
     margin: auto;
     flex: auto;    
     text-align: left;
@@ -14,10 +14,10 @@ grid-auto-rows: minmax(50px, auto);
 grid-column-gap: 20px;
 
 }
-.experiencia__contenido span{
+span{
     display: inline-block;
-    height: 2em;
-    width: 7em;
+    height: 35px;
+    width: 120px;
     line-height: 1;
     padding: .5em;
     background: linear-gradient(to left,#30E3E3, #118181);
@@ -28,3 +28,14 @@ grid-column-gap: 20px;
     font-weight: bolder;
     text-align: center;
 }
+
+.accordion-shadow{
+    border: #118181 solid 3px;
+    -webkit-box-shadow: 0 9px 25px 0px  rgba(48,227,227,.5);
+    -moz-box-shadow: 0 9px 25px 0px  rgba(48,227,227,.5);
+    box-shadow: 0 9px 25px 0px  rgba(48,227,227,.5);
+}
+.accordion-fondo{
+    background-color: var(--color-1);
+    transition: background .8s ease-in;
+  }

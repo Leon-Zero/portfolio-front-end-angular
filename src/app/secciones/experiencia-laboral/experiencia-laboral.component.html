@@ -1,19 +1,29 @@
 <section>
     <app-title-laboral></app-title-laboral>
     <br><br>
-    <div class="experiencia__contenido" *ngFor="let jobs of jobsList">
-        <h3>{{jobs.job}}</h3>
-        <br><br>
-            <div class="experiencia__contenido-div"> 
-                <span>cargo</span> 
-                    <p>{{jobs.cargo}}</p>
-                <span>funciones</span>
-                    <p>{{jobs.funciones}}</p>
-                <span>ingreso/salida</span>
-                    <p>{{jobs.ingresoSalida}}</p>
-                <span>contacto</span>
-                    <p>{{jobs.contacto}}</p>
-            </div>
-        <br><br>
+    <div class="accordion accordion-shadow" id="accordionExample" data-aos="zoom-in"
+    data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
+        <div class="accordion-item" *ngFor="let jobs of jobsList">
+            <h2 class="accordion-header" [id]="jobs.idItem">
+                <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="jobs.target" [attr.aria-controls]="jobs.id">
+                <h3>{{jobs.job}}</h3>
+                </button>
+              </h2>
+              <div [id]="jobs.id" class="accordion-collapse collapse" [attr.aria-labelledby]="jobs.idItem" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="experiencia__contenido-div"> 
+                            <span class="span-item">cargo</span> 
+                                <p>{{jobs.cargo}}</p>
+                            <span class="span-item">funciones</span>
+                                <p>{{jobs.funciones}}</p>
+                            <span class="span-item">ingreso/salida</span>
+                                <p>{{jobs.ingresoSalida}}</p>
+                            <span class="span-item">contacto</span>
+                                <p>{{jobs.contacto}}</p>
+                        </div>
+                    </div>
+              </div>
+        </div>
     </div>
+ <app-crud></app-crud>
 </section>

@@ -8,7 +8,6 @@ import { BtnAPComponent } from './header/btn-ap/btn-ap.component';
 import { LogoAPComponent } from './header/logo-ap/logo-ap.component';
 import { TitleComponent } from './header/title/title.component';
 import { NavbarStickyComponent } from './navbar/navbar-sticky/navbar-sticky.component';
-import { DropDownComponent } from './navbar/drop-down/drop-down.component';
 import { ContainerBtnRSComponent } from './navbar/container-btn-rs/container-btn-rs.component';
 import { NightModeComponent } from './navbar/night-mode/night-mode.component';
 import { AboutMeComponent } from './about-me/about-me/about-me.component';
@@ -27,6 +26,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TitleProjectsComponent } from './projects/title-projects/title-projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CrudComponent } from './crud/crud.component';
+import { OffCanvasComponent } from './navbar/off-canvas/off-canvas.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,6 @@ import { HttpClientModule } from '@angular/common/http';
     LogoAPComponent,
     TitleComponent,
     NavbarStickyComponent,
-    DropDownComponent,
     ContainerBtnRSComponent,
     NightModeComponent,
     AboutMeComponent,
@@ -53,12 +54,15 @@ import { HttpClientModule } from '@angular/common/http';
     TitleSkillComponent,
     ProjectsComponent,
     TitleProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    CrudComponent,
+    OffCanvasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,8 +4,47 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <app-drop-down></app-drop-down>
-        </div>
-        <app-night-mode></app-night-mode>
+          <div class="navbar-collapse collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav navbar-collapse me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <button type="button" class="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <span class="fa-solid fa-pen-to-square"></span>Modo Edición
+                  </button>
+                  <app-off-canvas></app-off-canvas>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#index-about">Sobre Mí</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Redes Sociales
+                  </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                      <li><app-container-btn-rs></app-container-btn-rs></li>
+                    </ul>   
+                </li>             
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Skill
+                  </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#index-programing">Lenguajes de Programación</a></li>
+                      <li><a class="dropdown-item" href="#index-language">Idiomas</a></li>
+                      <li><a class="dropdown-item" href="#index-programs">Programas</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#index-soft">Soft Skill</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#index-contacto">Contactarse</a>
+                </li>
+                <li class="nav-item">
+                  <app-night-mode></app-night-mode>
+                </li>       
+            </ul>
+         </div>
+       </div>             
     </nav>
 </div>
+
+
