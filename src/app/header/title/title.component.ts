@@ -11,7 +11,7 @@ export class TitleComponent implements OnInit {miPortfolio:any;
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.miPortfolio=data;
+      this.miPortfolio=data.datos;
     });
    
   }
