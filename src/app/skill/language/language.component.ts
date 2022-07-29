@@ -12,8 +12,8 @@ export class LanguageComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.lenguageList=data.skillLenguage;
+    this.datosPortfolio.obtenerLengua().subscribe(data =>{console.log(data);
+      this.lenguageList=data;
     });
    
   }

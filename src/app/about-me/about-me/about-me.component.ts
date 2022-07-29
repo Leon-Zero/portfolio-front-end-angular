@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -12,8 +12,8 @@ export class AboutMeComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.miPortfolio=data.datos;
+    this.datosPortfolio.obtenerData().subscribe(data =>{console.log(data);
+      this.miPortfolio=data;
     });
    
   }

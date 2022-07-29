@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { SkillSoft } from 'src/assets/data/Data';
 
 @Component({
   selector: 'app-soft',
@@ -8,15 +9,15 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class SoftComponent implements OnInit {
   
-  softList:any;
+  public softList: any = [];
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.softList=data.skillSoft;
-    });
-
-   
-  }
+    this.datosPortfolio.obtenerSoft().subscribe(respuesta =>{console.log(respuesta);
+      this.softList=respuesta;
+    }); }
+    
+  onDelete(){
+console.log("Delete Funciona!!")}
 
 }

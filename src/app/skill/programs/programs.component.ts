@@ -12,8 +12,8 @@ export class ProgramsComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.programsList=data.skillPrograms;
+    this.datosPortfolio.obtenerProgram().subscribe(data =>{console.log(data);
+      this.programsList=data;
     });
    
   }

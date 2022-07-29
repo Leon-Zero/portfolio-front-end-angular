@@ -12,8 +12,8 @@ export class InfoAcademicaComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.miPortfolio=data.academica;
+    this.datosPortfolio.obtenerAcademica().subscribe(data =>{console.log(data);
+      this.miPortfolio=data;
     });
    
   }

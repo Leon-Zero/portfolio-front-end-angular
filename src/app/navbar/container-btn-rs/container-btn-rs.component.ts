@@ -12,8 +12,8 @@ export class ContainerBtnRSComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.socialList=data.btnRS;
+    this.datosPortfolio.obtenerBtn().subscribe(data =>{console.log(data);
+      this.socialList=data;
     });
    
   }

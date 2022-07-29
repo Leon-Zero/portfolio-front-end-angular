@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SkillSoft } from 'src/assets/data/Data';
+import { PortfolioService } from '../servicios/portfolio.service';
 
 @Component({
   selector: 'app-crud',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit {
-
-  constructor() { }
+@Input() datos: any;
+@Output() onDeleteDatos: EventEmitter<SkillSoft> = new EventEmitter
+  constructor(private datosPortfolio:PortfolioService) { }
+  public softList: any = [];
 
   ngOnInit(): void {
   }
-
+  onDelete(datos:SkillSoft){
+    this.onDeleteDatos.emit(datos)
+  }
 }

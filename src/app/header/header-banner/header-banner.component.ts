@@ -8,15 +8,10 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class HeaderBannerComponent implements OnInit {
   
-  miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+ 
+  constructor() { }
 
-  ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.miPortfolio=data.datos;
-    });
-   
-  }
+  ngOnInit(): void { }
 
 }
 

@@ -1,16 +1,51 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, observable } from 'rxjs';
+import { Portfolio} from "src/assets/data/Data";
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiUrl = 'http://localhost:5000/portfolio'
+
+
+  private dataUrl = 'http://localhost:5000/data'
+  private academicaUrl= 'http://localhost:5000/academica'
+  private btnUrl= 'http://localhost:5000/btnRS'
+  private jobUrl= 'http://localhost:5000/jobs'
+  private programingUrl= 'http://localhost:5000/skillPrograming'
+  private lenguageUrl= 'http://localhost:5000/skillLenguage'
+  private programUrl= 'http://localhost:5000/skillPrograms'
+  private softUrl= 'http://localhost:5000/skillSoft'
+
   constructor(private http:HttpClient) { }
-  
-  obtenerDatos():Observable<any>{
-    return this.http.get(this.apiUrl)
+  // metodos get a api de 
+  // prueba json-server
+
+  obtenerData():Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.dataUrl)
   }
+  obtenerAcademica():Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.academicaUrl)
+  }
+  obtenerBtn():Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.btnUrl)
+  }
+  obtenerJob():Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.jobUrl)
+  }
+  obtenerPrograming():Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.programingUrl)
+  }
+  obtenerLengua():Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.lenguageUrl)
+  }
+  obtenerProgram():Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.programUrl)
+  }
+  obtenerSoft():Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.softUrl)
+  }
+
 }

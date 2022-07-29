@@ -12,8 +12,8 @@ export class ExperienciaLaboralComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.jobsList=data.jobs;
+    this.datosPortfolio.obtenerJob().subscribe(data =>{console.log(data);
+      this.jobsList=data;
     });
    
   }

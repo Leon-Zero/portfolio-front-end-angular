@@ -29,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CrudComponent } from './crud/crud.component';
 import { OffCanvasComponent } from './navbar/off-canvas/off-canvas.component';
 import { FormsModule } from '@angular/forms';
+import { DeleteComponent } from './crud/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { FormsModule } from '@angular/forms';
     TitleProjectsComponent,
     FooterComponent,
     CrudComponent,
-    OffCanvasComponent
+    OffCanvasComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

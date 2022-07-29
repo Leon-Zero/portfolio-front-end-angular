@@ -10,8 +10,8 @@ export class TitleComponent implements OnInit {miPortfolio:any;
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{console.log(data);
-      this.miPortfolio=data.datos;
+    this.datosPortfolio.obtenerData().subscribe(data =>{console.log(data);
+      this.miPortfolio=data;
     });
    
   }
