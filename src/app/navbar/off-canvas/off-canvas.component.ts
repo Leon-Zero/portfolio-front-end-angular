@@ -33,7 +33,7 @@ export class OffCanvasComponent implements OnInit {
       const display2 = getComputedStyle(document.documentElement).getPropertyValue("--display-2");   
       stylesheet.setProperty("--display-1", display2);
       stylesheet.setProperty("--display-2", display1);
-      }
+      } 
     function salir_edition(){
       activar_edition();      
     }

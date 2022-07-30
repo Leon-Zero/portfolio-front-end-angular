@@ -8,14 +8,16 @@ import { PortfolioService } from '../servicios/portfolio.service';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit {
-@Input() datos: any;
-@Output() onDeleteDatos: EventEmitter<SkillSoft> = new EventEmitter
-  constructor(private datosPortfolio:PortfolioService) { }
-  public softList: any = [];
 
-  ngOnInit(): void {
-  }
-  onDelete(datos:SkillSoft){
-    this.onDeleteDatos.emit(datos)
-  }
+  constructor(private datosPortfolio:PortfolioService) { }
+
+  ngOnInit(): void {}
+  activar_delete(){
+    const stylesheet = document.documentElement.style;  
+    const display3 = getComputedStyle(document.documentElement).getPropertyValue("--display-3");  
+    const display4 = getComputedStyle(document.documentElement).getPropertyValue("--display-4");   
+    stylesheet.setProperty("--display-3", display4);
+    stylesheet.setProperty("--display-4", display3);
 }
+}
+

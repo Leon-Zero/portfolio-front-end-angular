@@ -1,5 +1,8 @@
-div{
-    position: absolute;
-    border: red 4px solid;
-    border-radius: 50%;
+button{
+    display: var(--display-3);
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
 }

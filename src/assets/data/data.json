@@ -1,116 +1,117 @@
 {
-	"data":{
-	"titleName": "Leonardo Hidalgo",
-	"name": "Leonardo Ismael HIDALGO.",
-	"ubicacion": "Córdoba Capital, Argentina.",
-	"school": "Licenciatura en tecnologia de los alimentos.",
-	"fullStack": "programación Full Stack Developer Junior",
-	"ap": "Argentina Programa.",
-	"perfil": "background-image: url('/assets/perfil.JPG')"},
-	"academica": {
-		"id": 1,
-		"instituto": "Universidad Católica de Córdoba",
-		"carrera": "licenciatura en tecnología de los alimentos,facultad de ciencias químicas.",
-		"estado": "4to año, sin finalizar - ",
-		"curso": "no cursante",
-		"ingreso": "(Marzo 2012 – Febrero 2016); segundo ingreso (Marzo 2020 – Octubre 2020)",
-		"extra1": "jornada de tecnología y seguridad alimentaria XIII (08/2015).",
-		"extra2": "Proyecto de capacitación de BPM en centro educativo ",
-		"extra2B": "-U.E.P. Nº 88 “FE Y ALEGRÍA- ",
-		"extra2C": "ciudad de Taco Pozo ,Chaco.",
-		"extra3": "proyecto de capacitación destinado a los jóvenes de la calle, fundación La Luciérnaga (SPYRSU)"
-	},
-	"btnRS": [
-		{
-			"id": 1,
-			"redSocial": "instagram",
-			"btn": "fa-brands fa-instagram",
-			"url": "https://www.instagram.com/leon_cito94/"
-		},
-		{
-			"id": 2,
-			"redSocial": "facebook",
-			"btn": "fa-brands fa-facebook",
-			"url": "https://www.facebook.com/leon.zeroo.9/"
-		},
-		{
-			"id": 3,
-			"redSocial": "github",
-			"btn": "fa-brands fa-github",
-			"url": "https://github.com/Leon-Zero"
-		},
-		{
-			"id": 4,
-			"redSocial": "linkedin",
-			"btn": "fa-brands fa-linkedin-in",
-			"url": "https://www.linkedin.com/in/leonardo-ismael-hidalgo/"
-		},
-		{
-			"id": 5,
-			"redSocial": "whatsapp",
-			"btn": "fa-brands fa-whatsapp",
-			"url": "https://wa.me/+543516418288?text=Contacta%20conmigo%20a%20trav%C3%A9s%20de%20mi%20WhatsApp!!"
-		}
-	],
-	"jobs": [
-		{
-			"id": 1,
-			"job": "PINTOR INDEPENDIENTE",
-			"idTarget": "collapseOne",
-			"target": "#collapseOne",
-			"idItem": "item1",
-			"cargo": "Ayudante de pintor",
-			"funciones": "Pintor de obra en un equipo de trabajo tercerizado por empresas constructoras y contratistas. Trabajo en paredes interiores y exteriores, aberturas y muebles.",
-			"ingresoSalida": "12/2021",
-			"contacto": "Daniel Maritano (jefe de pintores) +54 9 351-3700519"
-		},
-		{
-			"id": 2,
-			"job": "ECOKIL. Prevención y sanidad integral para empresas",
-			"idTarget": "collapseTwo",
-			"target": "#collapseTwo",
-			"idItem": "item2",
-			"cargo": "Pasante en el departamento de calidad",
-			"funciones": "Auditorias, controles e inspecciones bromatológicas y de M.I.P. (manejó integrado de plagas) en industrias y locales. Redacción de informes, manuales y circulares. Elaboración de planos lay-out, respuesta de mails y llamadas, procesamiento de remitos y otros formularios.",
-			"ingresoSalida": "01/10/2016 hasta 15/01/2017.",
-			"contacto": " - Ecokil S.R.L. oficina central San Jerónimo 2350"
-		}
-	],
-	"skillPrograming": [
-		{
-			"id": 1,
-			"tag": "HTML",
-			"porcentaje": 80,
-			"fill": "background-image: conic-gradient(#30E3E3 80%, transparent 0)"
-		},
-		{
-			"id": 2,
-			"tag": "CSS",
-			"porcentaje": 60,
-			"fill": "background-image: conic-gradient(#30E3E3 60%, transparent 0)"
-		},
-		{
-			"id": 3,
-			"tag": "JSCRIPT",
-			"porcentaje": 40,
-			"fill": "background-image: conic-gradient(#30E3E3 40%, transparent 0)"
-		}
-	],
-	"skillLenguage": [
-		{
-			"id": 1,
-			"tag": "INGLES escrito",
-			"porcentaje": 80,
-			"fill": "background-image: conic-gradient(#007676 80%, transparent 0)"
-		},
-		{
-			"id": 2,
-			"tag": "ESPAÑOL nativo",
-			"porcentaje": 100,
-			"fill": "background-image: conic-gradient(#007676 100%, transparent 0)"
-		}
-	],
-	"skillPrograms": [
+  "data": {
+    "titleName": "Leonardo Hidalgo",
+    "name": "Leonardo Ismael HIDALGO.",
+    "ubicacion": "Córdoba Capital, Argentina.",
+    "school": "Licenciatura en tecnologia de los alimentos.",
+    "fullStack": "programación Full Stack Developer Junior",
+    "ap": "Argentina Programa.",
+    "perfil": "background-image: url('/assets/perfil.JPG')"
+  },
+  "academica": {
+    "id": 1,
+    "instituto": "Universidad Católica de Córdoba",
+    "carrera": "licenciatura en tecnología de los alimentos,facultad de ciencias químicas.",
+    "estado": "4to año, sin finalizar - ",
+    "curso": "no cursante",
+    "ingreso": "(Marzo 2012 – Febrero 2016); segundo ingreso (Marzo 2020 – Octubre 2020)",
+    "extra1": "jornada de tecnología y seguridad alimentaria XIII (08/2015).",
+    "extra2": "Proyecto de capacitación de BPM en centro educativo ",
+    "extra2B": "-U.E.P. Nº 88 “FE Y ALEGRÍA- ",
+    "extra2C": "ciudad de Taco Pozo ,Chaco.",
+    "extra3": "proyecto de capacitación destinado a los jóvenes de la calle, fundación La Luciérnaga (SPYRSU)"
+  },
+  "btnRS": [
+    {
+      "id": 1,
+      "redSocial": "instagram",
+      "btn": "fa-brands fa-instagram",
+      "url": "https://www.instagram.com/leon_cito94/"
+    },
+    {
+      "id": 2,
+      "redSocial": "facebook",
+      "btn": "fa-brands fa-facebook",
+      "url": "https://www.facebook.com/leon.zeroo.9/"
+    },
+    {
+      "id": 3,
+      "redSocial": "github",
+      "btn": "fa-brands fa-github",
+      "url": "https://github.com/Leon-Zero"
+    },
+    {
+      "id": 4,
+      "redSocial": "linkedin",
+      "btn": "fa-brands fa-linkedin-in",
+      "url": "https://www.linkedin.com/in/leonardo-ismael-hidalgo/"
+    },
+    {
+      "id": 5,
+      "redSocial": "whatsapp",
+      "btn": "fa-brands fa-whatsapp",
+      "url": "https://wa.me/+543516418288?text=Contacta%20conmigo%20a%20trav%C3%A9s%20de%20mi%20WhatsApp!!"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "job": "PINTOR INDEPENDIENTE",
+      "idTarget": "collapseOne",
+      "target": "#collapseOne",
+      "idItem": "item1",
+      "cargo": "Ayudante de pintor",
+      "funciones": "Pintor de obra en un equipo de trabajo tercerizado por empresas constructoras y contratistas. Trabajo en paredes interiores y exteriores, aberturas y muebles.",
+      "ingresoSalida": "12/2021",
+      "contacto": "Daniel Maritano (jefe de pintores) +54 9 351-3700519"
+    },
+    {
+      "id": 2,
+      "job": "ECOKIL. Prevención y sanidad integral para empresas",
+      "idTarget": "collapseTwo",
+      "target": "#collapseTwo",
+      "idItem": "item2",
+      "cargo": "Pasante en el departamento de calidad",
+      "funciones": "Auditorias, controles e inspecciones bromatológicas y de M.I.P. (manejó integrado de plagas) en industrias y locales. Redacción de informes, manuales y circulares. Elaboración de planos lay-out, respuesta de mails y llamadas, procesamiento de remitos y otros formularios.",
+      "ingresoSalida": "01/10/2016 hasta 15/01/2017.",
+      "contacto": " - Ecokil S.R.L. oficina central San Jerónimo 2350"
+    }
+  ],
+  "skillPrograming": [
+    {
+      "id": 1,
+      "tag": "HTML",
+      "porcentaje": 80,
+      "fill": "background-image: conic-gradient(#30E3E3 80%, transparent 0)"
+    },
+    {
+      "id": 2,
+      "tag": "CSS",
+      "porcentaje": 60,
+      "fill": "background-image: conic-gradient(#30E3E3 60%, transparent 0)"
+    },
+    {
+      "id": 3,
+      "tag": "JSCRIPT",
+      "porcentaje": 40,
+      "fill": "background-image: conic-gradient(#30E3E3 40%, transparent 0)"
+    }
+  ],
+  "skillLenguage": [
+    {
+      "id": 1,
+      "tag": "INGLES escrito",
+      "porcentaje": 80,
+      "fill": "background-image: conic-gradient(#007676 80%, transparent 0)"
+    },
+    {
+      "id": 2,
+      "tag": "ESPAÑOL nativo",
+      "porcentaje": 100,
+      "fill": "background-image: conic-gradient(#007676 100%, transparent 0)"
+    }
+  ],
+  "skillPrograms": [
 		{
 			"id": 1,
 			"tag": "INFOSTAT",

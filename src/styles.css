@@ -8,6 +8,8 @@ body{
   --color-2: #010505e7;
   --display-1: none;
   --display-2: flex;
+  --display-3: none;
+  --display-4: flex;
 }
 .page{
   background: var(--color-1);  

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Skill } from 'src/assets/data/Data';
 
 @Component({
   selector: 'app-programs',
@@ -15,7 +16,10 @@ export class ProgramsComponent implements OnInit {
     this.datosPortfolio.obtenerProgram().subscribe(data =>{console.log(data);
       this.programsList=data;
     });
-   
   }
-
+  onDelete(datosPortfolio_id: Skill){
+    this.datosPortfolio.DeleteSkill(datosPortfolio_id).subscribe((
+      result)=>{
+      this.ngOnInit();})
+ }
 }

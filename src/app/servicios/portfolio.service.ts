@@ -1,7 +1,8 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, observable } from 'rxjs';
-import { Portfolio} from "src/assets/data/Data";
+import { TASKS } from 'src/assets/data/mock-data';
+import {Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
 
 
 @Injectable({
@@ -48,4 +49,10 @@ export class PortfolioService {
     return this.http.get<Portfolio>(this.softUrl)
   }
 
+  DeleteSoft(id:SkillSoft){
+    return this.http.delete(`${this.softUrl}/${id}`)
+  }
+  DeleteSkill(id:Skill){
+    return this.http.delete(`${this.programUrl}/${id}`)
+  }
 }
