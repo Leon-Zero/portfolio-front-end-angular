@@ -18,8 +18,8 @@ export class ProgramsComponent implements OnInit {
     });
   }
   onDelete(datosPortfolio_id: Skill){
-    this.datosPortfolio.DeleteSkill(datosPortfolio_id).subscribe((
+    this.datosPortfolio.DeleteProgram(datosPortfolio_id).subscribe((
       result)=>{
-      this.ngOnInit();})
+      this.ngOnInit();}) 
  }
 }

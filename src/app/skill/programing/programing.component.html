@@ -7,6 +7,7 @@
                     <span>{{programacion.porcentaje}}%</span><span>{{programacion.tag}}</span>
                 </div>
             </div>
+            <app-delete  (click)="onDelete(programacion.id)"></app-delete>
         </div>
     </div>
-    <app-crud></app-crud>
+    <app-crud></app-crud> 

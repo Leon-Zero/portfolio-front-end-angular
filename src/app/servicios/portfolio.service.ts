@@ -52,7 +52,14 @@ export class PortfolioService {
   DeleteSoft(id:SkillSoft){
     return this.http.delete(`${this.softUrl}/${id}`)
   }
-  DeleteSkill(id:Skill){
+  DeleteProgram(id:Skill){
     return this.http.delete(`${this.programUrl}/${id}`)
   }
+  DeletePrograming(id:Skill){
+    return this.http.delete(`${this.programingUrl}/${id}`)
+  }
+  DeleteLenguage(id:Skill){
+    return this.http.delete(`${this.lenguageUrl}/${id}`)
+  }
+
 }
