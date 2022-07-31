@@ -1,7 +1,7 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, observable } from 'rxjs';
-import {Academica, ExtraCurricular, Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
+import {Academica, ExtraCurricular, Job, Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
 
 
 @Injectable({
@@ -69,6 +69,9 @@ export class PortfolioService {
   }
   DeleteExtra(id:ExtraCurricular){
     return this.http.delete(`${this.extraUrl}/${id}`)
+  }
+  DeleteJob(id:Job){
+    return this.http.delete(`${this.jobUrl}/${id}`)
   }
 
 }

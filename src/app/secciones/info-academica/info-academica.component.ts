@@ -26,9 +26,9 @@ export class InfoAcademicaComponent implements OnInit {
       result)=>{
       this.ngOnInit();}) 
  }
- onDeleteExtra(datosPortfolio_id: ExtraCurricular){
-  this.datosPortfolio.DeleteExtra(datosPortfolio_id).subscribe((
-    result)=>{
-    this.ngOnInit();}) 
-}
+  onDeleteExtra(datosPortfolio_id: ExtraCurricular){
+    this.datosPortfolio.DeleteExtra(datosPortfolio_id).subscribe((
+      result)=>{
+      this.ngOnInit();}) 
+  }
 }

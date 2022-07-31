@@ -7,6 +7,13 @@ section{
     text-align: left;
     width: 80%;
 }
+app-delete{
+    display: flex;
+    justify-self: center ;
+    align-self: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
 
 .experiencia__contenido-div{
 display: grid;
