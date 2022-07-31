@@ -1,8 +1,7 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, observable } from 'rxjs';
-import { TASKS } from 'src/assets/data/mock-data';
-import {Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
+import {Academica, ExtraCurricular, Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
 
 
 @Injectable({
@@ -13,6 +12,7 @@ export class PortfolioService {
 
   private dataUrl = 'http://localhost:5000/data'
   private academicaUrl= 'http://localhost:5000/academica'
+  private extraUrl= 'http://localhost:5000/extraCurricular'
   private btnUrl= 'http://localhost:5000/btnRS'
   private jobUrl= 'http://localhost:5000/jobs'
   private programingUrl= 'http://localhost:5000/skillPrograming'
@@ -29,6 +29,9 @@ export class PortfolioService {
   }
   obtenerAcademica():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.academicaUrl)
+  }
+  obtenerExtra():Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.extraUrl)
   }
   obtenerBtn():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.btnUrl)
@@ -60,6 +63,12 @@ export class PortfolioService {
   }
   DeleteLenguage(id:Skill){
     return this.http.delete(`${this.lenguageUrl}/${id}`)
+  }
+  DeleteAcademica(id:Academica){
+    return this.http.delete(`${this.academicaUrl}/${id}`)
+  }
+  DeleteExtra(id:ExtraCurricular){
+    return this.http.delete(`${this.extraUrl}/${id}`)
   }
 
 }

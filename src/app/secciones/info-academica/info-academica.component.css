@@ -7,6 +7,30 @@ section{
     text-align: left;
     width: 80%;
 }
+app-delete{
+    display: flex;
+    justify-self: center ;
+    align-self: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.img{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+}
+.img img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.flex-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
 .experiencia__contenido-div{
 display: grid;
 grid-template-columns: .3fr 1fr;
@@ -15,14 +39,11 @@ grid-column-gap: 20px;
 
 }
 span{
-    display: inline-block;
     height: 35px;
     width: 120px;
     line-height: 1;
-    padding: .5em;
+    padding: .6em;
     background: linear-gradient(to left,#30E3E3, #118181);
-    -moz-border-radius: 0 100px 100px 0;
-    -webkit-border-radius: 0 100px 100px 0;
     border-radius: 0 100px 100px 0;
     box-shadow: -4pt 2pt 4pt 2pt #881212;
     font-weight: bolder;
@@ -31,8 +52,6 @@ span{
 
 .accordion-shadow{
     border: #118181 solid 3px;
-    -webkit-box-shadow: 0 9px 25px 0px  rgba(48,227,227,.5);
-    -moz-box-shadow: 0 9px 25px 0px  rgba(48,227,227,.5);
     box-shadow: 0 9px 25px 0px  rgba(48,227,227,.5);
 }
 .accordion-fondo{

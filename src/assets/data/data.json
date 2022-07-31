@@ -8,19 +8,35 @@
 	  "ap": "Argentina Programa.",
 	  "perfil": "background-image: url('/assets/perfil.JPG')"
 	},
-	"academica": {
-	  "id": 1,
-	  "instituto": "Universidad Católica de Córdoba",
-	  "carrera": "licenciatura en tecnología de los alimentos,facultad de ciencias químicas.",
-	  "estado": "4to año, sin finalizar - ",
-	  "curso": "no cursante",
-	  "ingreso": "(Marzo 2012 – Febrero 2016); segundo ingreso (Marzo 2020 – Octubre 2020)",
-	  "extra1": "jornada de tecnología y seguridad alimentaria XIII (08/2015).",
-	  "extra2": "Proyecto de capacitación de BPM en centro educativo ",
-	  "extra2B": "-U.E.P. Nº 88 “FE Y ALEGRÍA- ",
-	  "extra2C": "ciudad de Taco Pozo ,Chaco.",
-	  "extra3": "proyecto de capacitación destinado a los jóvenes de la calle, fundación La Luciérnaga (SPYRSU)"
-	},
+	"academica": [
+	  {
+		"id": 1,
+		"tituloTag": "NIVEL UNIVERSITARIO",
+		"instituto": "Universidad Católica de Córdoba",
+		"logo": "./assets/ucc.png",
+		"carrera": "licenciatura en tecnología de los alimentos,facultad de ciencias químicas.",
+		"estado": "4to año, sin finalizar - ",
+		"estadoAnexo": "no cursante",
+		"ingreso": "(Marzo 2012 – Febrero 2016); segundo ingreso (Marzo 2020 – Octubre 2020)"
+	  }
+	],
+	"extraCurricular": [
+	  {
+		"id": 1,
+		"tipo": "ayudante",
+		"actividad": "jornada de tecnología y seguridad alimentaria XIII (08/2015)."
+	  },
+	  {
+		"id": 2,
+		"tipo": "disertante",
+		"actividad": "Proyecto de capacitación de BPM en centro educativo -U.E.P. Nº 88 “FE Y ALEGRÍA- Ciudad de Taco Pozo ,Chaco."
+	  },
+	  {
+		"id": 3,
+		"tipo": "disertante",
+		"actividad": "proyecto de capacitación destinado a los jóvenes de la calle, fundación La Luciérnaga (SPYRSU)"
+	  }
+	],
 	"btnRS": [
 	  {
 		"id": 1,
@@ -112,120 +128,121 @@
 	  }
 	],
 	"skillPrograms": [
-		  {
-			  "id": 1,
-			  "tag": "INFOSTAT",
-			  "porcentaje": 75,
-			  "fill": "background-image: conic-gradient(#003737 75%, transparent 0)"
-		  },
-		  {
-			  "id": 2,
-			  "tag": "MICROSOFT OFFICE",
-			  "porcentaje": 80,
-			  "fill": "background-image: conic-gradient(#003737 80%, transparent 0)"
-		  },
-		  {
-			  "id": 3,
-			  "tag": "SketchUP",
-			  "porcentaje": 50,
-			  "fill": "background-image: conic-gradient(#003737 50%, transparent 0)"
-		  },
-		  {
-			  "id": 4,
-			  "tag": "CANVAS",
-			  "porcentaje": 70,
-			  "fill": "background-image: conic-gradient(#003737 70%, transparent 0)"
-		  }
-	  ],
-	  "skillSoft": [
-		  {
-			  "id": 1,
-			  "idTarget": "modal-1",
-			  "target": "#modal-1",
-			  "tag": "capacidad analítica",
-			  "modal": "Habilidad para analizar información, números, datos, etc.; procesar esta información de forma lógica; llegar a conclusiones razonadas",
-			  "beneficio": "Beneficios organizacionales: analice las causas fundamentales de los problemas y manipule los números y la información",
-			  "porcentaje": 83
-		  },
-		  {
-			  "id": 2,
-			  "idTarget": "modal-2",
-			  "target": "#modal-2",
-			  "tag": "pensamiento creativo",
-			  "modal": "Habilidad para crear cosas nuevas e innovar; huir del lugar común",
-			  "beneficio": "Beneficios organizacionales: desarrollar soluciones innovadoras y pensar en nuevas formas de resolver problemas",
-			  "porcentaje": 98
-		  },
-		  {
-			  "id": 3,
-			  "idTarget": "modal-3",
-			  "target": "#modal-3",
-			  "tag": "planificación y organización",
-			  "modal": "Habilidad para mantener las cosas en orden; estructura de control y lugar",
-			  "beneficio": "Beneficios organizacionales: Formular e implementar procesos y tener excelencia en el flujo de trabajo",
-			  "porcentaje": 83
-		  },
-		  {
-			  "id": 4,
-			  "idTarget": "modal-4",
-			  "target": "#modal-4",
-			  "tag": "reflexión",
-			  "modal": "Capacidad para reflexionar, autoanalizarse y observar sus estados y fortalezas y debilidades",
-			  "beneficio": "Beneficios organizacionales: acelere el aprendizaje y aporte conocimientos a su posición y su área",
-			  "porcentaje": 93
-		  },
-		  {
-			  "id": 5,
-			  "idTarget": "modal-5",
-			  "target": "#modal-5",
-			  "tag": "comunicación",
-			  "modal": "Habilidad para comunicarse verbalmente con claridad; transmitir ideas en palabras a individuos o audiencias",
-			  "beneficio": "Beneficios organizacionales: Explicar conceptos difíciles al grupo y transmitir ideas claramente a varias personas.",
-			  "porcentaje": 72
-		  },
-		  {
-			  "id": 6,
-			  "idTarget": "modal-6",
-			  "target": "#modal-6",
-			  "tag": "sociabilidad",
-			  "modal": "Habilidad para interactuar y crear relaciones con diferentes personas; facilidad en entornos sociales",
-			  "beneficio": "Beneficios organizacionales: trabajar en red con las partes interesadas y conectar a las personas",
-			  "porcentaje": 70
-		  },
-		  {
-			  "id": 7,
-			  "idTarget": "modal-7",
-			  "target": "#modal-7",
-			  "tag": "estabilidad emocional",
-			  "modal": "Capacidad para mantener la calma en situaciones de presión y para controlar los altibajos emocionales",
-			  "beneficio": "Beneficios organizacionales: mantener al equipo enfocado durante la agitación y mantener el trabajo en movimiento incluso con mucha interferencia externa",
-			  "porcentaje": 73
-		  },
-		  {
-			  "id": 8,
-			  "idTarget": "modal-8",
-			  "target": "#modal-8",
-			  "tag": "iniciativa",
-			  "modal": "Capacidad de iniciar acciones sin necesidad de intervención de terceros; tomar la iniciativa",
-			  "beneficio": "Beneficios organizacionales: actuar incluso cuando la dirección no está clara y tener un mayor rendimiento de ejecución",
-			  "porcentaje": 82
-		  },
-		  {
-			  "id": 9,
-			  "idTarget": "modal-9",
-			  "target": "#modal-9",
-			  "tag": "asertividad",
-			  "modal": "Capacidad para poner sus ideas directamente; no te dejes intimidar por el entorno",
-			  "beneficio": "Beneficios organizacionales: Poner sobre la mesa opiniones que otras personas terminan eludiendo y aumentar la eficiencia de la comunicación",
-			  "porcentaje": 82
-		  },
-		  {
-			  "id": 10,
-			  "idTarget": "modal-10",
-			  "target": "#modal-10",
-			  "tag": "influencia",
-			  "modal": "Capacidad de persuadir a otros para que tomen posiciones y se comporten de manera diferente a como lo harían sin intervención",
-			  "beneficio": "Beneficios organizacionales: Vender ideas a clientes internos y externos y obtener recursos para llevar a cabo proyectos",
-			  "porcentaje": 57
-		  }
-	  ]}
+	  {
+		"id": 1,
+		"tag": "INFOSTAT",
+		"porcentaje": 75,
+		"fill": "background-image: conic-gradient(#003737 75%, transparent 0)"
+	  },
+	  {
+		"id": 2,
+		"tag": "MICROSOFT OFFICE",
+		"porcentaje": 80,
+		"fill": "background-image: conic-gradient(#003737 80%, transparent 0)"
+	  },
+	  {
+		"id": 3,
+		"tag": "SketchUP",
+		"porcentaje": 50,
+		"fill": "background-image: conic-gradient(#003737 50%, transparent 0)"
+	  },
+	  {
+		"id": 4,
+		"tag": "CANVAS",
+		"porcentaje": 70,
+		"fill": "background-image: conic-gradient(#003737 70%, transparent 0)"
+	  }
+	],
+	"skillSoft": [
+	  {
+		"id": 1,
+		"idTarget": "modal-1",
+		"target": "#modal-1",
+		"tag": "capacidad analítica",
+		"modal": "Habilidad para analizar información, números, datos, etc.; procesar esta información de forma lógica; llegar a conclusiones razonadas",
+		"beneficio": "Beneficios organizacionales: analice las causas fundamentales de los problemas y manipule los números y la información",
+		"porcentaje": 83
+	  },
+	  {
+		"id": 2,
+		"idTarget": "modal-2",
+		"target": "#modal-2",
+		"tag": "pensamiento creativo",
+		"modal": "Habilidad para crear cosas nuevas e innovar; huir del lugar común",
+		"beneficio": "Beneficios organizacionales: desarrollar soluciones innovadoras y pensar en nuevas formas de resolver problemas",
+		"porcentaje": 98
+	  },
+	  {
+		"id": 3,
+		"idTarget": "modal-3",
+		"target": "#modal-3",
+		"tag": "planificación y organización",
+		"modal": "Habilidad para mantener las cosas en orden; estructura de control y lugar",
+		"beneficio": "Beneficios organizacionales: Formular e implementar procesos y tener excelencia en el flujo de trabajo",
+		"porcentaje": 83
+	  },
+	  {
+		"id": 4,
+		"idTarget": "modal-4",
+		"target": "#modal-4",
+		"tag": "reflexión",
+		"modal": "Capacidad para reflexionar, autoanalizarse y observar sus estados y fortalezas y debilidades",
+		"beneficio": "Beneficios organizacionales: acelere el aprendizaje y aporte conocimientos a su posición y su área",
+		"porcentaje": 93
+	  },
+	  {
+		"id": 5,
+		"idTarget": "modal-5",
+		"target": "#modal-5",
+		"tag": "comunicación",
+		"modal": "Habilidad para comunicarse verbalmente con claridad; transmitir ideas en palabras a individuos o audiencias",
+		"beneficio": "Beneficios organizacionales: Explicar conceptos difíciles al grupo y transmitir ideas claramente a varias personas.",
+		"porcentaje": 72
+	  },
+	  {
+		"id": 6,
+		"idTarget": "modal-6",
+		"target": "#modal-6",
+		"tag": "sociabilidad",
+		"modal": "Habilidad para interactuar y crear relaciones con diferentes personas; facilidad en entornos sociales",
+		"beneficio": "Beneficios organizacionales: trabajar en red con las partes interesadas y conectar a las personas",
+		"porcentaje": 70
+	  },
+	  {
+		"id": 7,
+		"idTarget": "modal-7",
+		"target": "#modal-7",
+		"tag": "estabilidad emocional",
+		"modal": "Capacidad para mantener la calma en situaciones de presión y para controlar los altibajos emocionales",
+		"beneficio": "Beneficios organizacionales: mantener al equipo enfocado durante la agitación y mantener el trabajo en movimiento incluso con mucha interferencia externa",
+		"porcentaje": 73
+	  },
+	  {
+		"id": 8,
+		"idTarget": "modal-8",
+		"target": "#modal-8",
+		"tag": "iniciativa",
+		"modal": "Capacidad de iniciar acciones sin necesidad de intervención de terceros; tomar la iniciativa",
+		"beneficio": "Beneficios organizacionales: actuar incluso cuando la dirección no está clara y tener un mayor rendimiento de ejecución",
+		"porcentaje": 82
+	  },
+	  {
+		"id": 9,
+		"idTarget": "modal-9",
+		"target": "#modal-9",
+		"tag": "asertividad",
+		"modal": "Capacidad para poner sus ideas directamente; no te dejes intimidar por el entorno",
+		"beneficio": "Beneficios organizacionales: Poner sobre la mesa opiniones que otras personas terminan eludiendo y aumentar la eficiencia de la comunicación",
+		"porcentaje": 82
+	  },
+	  {
+		"id": 10,
+		"idTarget": "modal-10",
+		"target": "#modal-10",
+		"tag": "influencia",
+		"modal": "Capacidad de persuadir a otros para que tomen posiciones y se comporten de manera diferente a como lo harían sin intervención",
+		"beneficio": "Beneficios organizacionales: Vender ideas a clientes internos y externos y obtener recursos para llevar a cabo proyectos",
+		"porcentaje": 57
+	  }
+	]
+  }

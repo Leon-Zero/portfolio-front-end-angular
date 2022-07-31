@@ -1,6 +1,7 @@
 export interface Portfolio {
     data:            Data;
-    academica:       Academica;
+    academica:       Academica[];
+    extraCurricular: ExtraCurricular[];
     btnRS:           BtnR[];
     jobs:            Job[];
     skillPrograming: Skill[];
@@ -10,17 +11,14 @@ export interface Portfolio {
 }
 
 export interface Academica {
-    id:        number;
-    instituto: string;
-    carrera:   string;
-    estado:    string;
-    curso:     string;
-    ingreso:   string;
-    extra1:    string;
-    extra2:    string;
-    extra2B:   string;
-    extra2C:   string;
-    extra3:    string;
+    id:          number;
+    tituloTag:   string;
+    instituto:   string;
+    logo:        string;
+    carrera:     string;
+    estado:      string;
+    estadoAnexo: string;
+    ingreso:     string;
 }
 
 export interface BtnR {
@@ -38,6 +36,12 @@ export interface Data {
     fullStack: string;
     ap:        string;
     perfil:    string;
+}
+
+export interface ExtraCurricular {
+    id:        number;
+    tipo:      string;
+    actividad: string;
 }
 
 export interface Job {

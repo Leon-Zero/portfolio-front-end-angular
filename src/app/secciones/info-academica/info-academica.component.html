@@ -3,23 +3,27 @@
     <br><br>
 <div class="accordion accordion-shadow" id="accordion-school" data-aos="zoom-in"
 data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
-    <div class="accordion-item">
+    <div class="accordion-item" *ngFor="let school of academica">
         <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" data-bs-target="#item-1" >
-            <h3>NIVEL UNIVERSITARIO</h3>
+                <app-delete  (click)="onDelete(school.id)"></app-delete>
+                <h3>{{school.tituloTag}}</h3>
             </button>
-            </h2>
+        </h2>
             <div id="item-1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion-school">
-                <div class="accordion-body">
+                <div class="accordion-body flex-grid">
+                    <div class="img"> 
+                        <img [src]="school.logo" alt="logo instituto">
+                    </div>
                     <div class="experiencia__contenido-div">
                         <span>institución</span>
-                            <p>{{miPortfolio.instituto}}</p>
+                            <p>{{school.instituto}}</p>
                         <span>carrera</span>
-                            <p>{{miPortfolio.carrera}}</p>
+                            <p>{{school.carrera}}</p>
                         <span>estado</span>
-                            <p>{{miPortfolio.estado}}<b>{{miPortfolio.curso}}</b></p>
+                            <p>{{school.estado}}<b>{{school.estadoAnexo}}</b></p>
                         <span>ingreso/salida</span>
-                            <p>{{miPortfolio.ingreso}}</p>
+                            <p>{{school.ingreso}}</p>
                     </div>
                 </div>
             </div>
@@ -32,13 +36,12 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
         </h2>
         <div id="item-2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-school">
             <div class="accordion-body">
-                <div class="experiencia__contenido-div">
-                    <span>ayudante</span>
-                        <p>{{miPortfolio.extra1}}</p>
-                    <span>disertante</span>
-                        <p>{{miPortfolio.extra2}}<b>{{miPortfolio.extra2B}}</b>{{miPortfolio.extra2C}}</p>
-                    <span>disertante</span>
-                        <p>{{miPortfolio.extra3}}</p>
+                <div class="extra-box" *ngFor="let ex of extra">
+                    <app-delete  (click)="onDeleteExtra(ex.id)"></app-delete>
+                    <div  class="experiencia__contenido-div">
+                        <span>{{ex.tipo}}</span>
+                        <p>{{ex.actividad}}</p>
+                    </div>
                 </div>
             </div>
         </div>
