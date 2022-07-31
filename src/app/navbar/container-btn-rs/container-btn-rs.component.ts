@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { BtnR } from 'src/assets/data/Data';
 
 @Component({
   selector: 'app-container-btn-rs',
@@ -15,7 +16,10 @@ export class ContainerBtnRSComponent implements OnInit {
     this.datosPortfolio.obtenerBtn().subscribe(data =>{console.log(data);
       this.socialList=data;
     });
-   
   }
-
+  onDelete(datosPortfolio_id: BtnR){
+    this.datosPortfolio.DeleteBtn(datosPortfolio_id).subscribe((
+      result)=>{
+      this.ngOnInit();})
+    }
 }

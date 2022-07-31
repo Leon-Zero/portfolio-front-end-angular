@@ -60,18 +60,23 @@
         opacity: .2;
     }
         
-        .contenedor-btn-social ul li:nth-child(1) span{
+        #instagram span{
             background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
         }
-        .contenedor-btn-social ul li:nth-child(2) span{
+        #facebook span{
             background: #3b5999;
         }
-        .contenedor-btn-social ul li:nth-child(3) span{
+        #github span{
             background: linear-gradient(45deg, #aa47aae3 20%, #5c5858 40%, #812681e3 80%);
         }
-        .contenedor-btn-social ul li:nth-child(4) span{
+        #linkedin span{
             background: #0077b5;
         }
-        .contenedor-btn-social ul li:nth-child(5) span{
+        #whatsapp span{
             background: #25d366;
         }
+app-delete{
+    position: absolute;
+    top: 10px;
+    left: -40px;
+}

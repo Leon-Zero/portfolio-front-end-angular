@@ -1,13 +1,15 @@
 <div class="contenedor-btn-social">
     <ul>
         <li *ngFor="let social of socialList">
-            <a [href]="social.url" target="_blank" [title]="social.redSocial">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span [class]="social.btn"></span>
-            </a>
+            <app-delete  (click)="onDelete(social.id)"></app-delete>
+                <a [id]="social.redSocial" [href]="social.url" target="_blank" [title]="social.redSocial">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span ></span>
+                    <span [class]="social.btn"></span>
+                </a>
         </li>
     </ul>
+    <app-crud></app-crud>
 </div>

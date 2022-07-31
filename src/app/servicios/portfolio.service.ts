@@ -1,7 +1,7 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, observable } from 'rxjs';
-import {Academica, ExtraCurricular, Job, Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
+import {Academica, BtnR, ExtraCurricular, Job, Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
 
 
 @Injectable({
@@ -51,6 +51,7 @@ export class PortfolioService {
   obtenerSoft():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.softUrl)
   }
+  //metodos delete json-server
 
   DeleteSoft(id:SkillSoft){
     return this.http.delete(`${this.softUrl}/${id}`)
@@ -72,6 +73,9 @@ export class PortfolioService {
   }
   DeleteJob(id:Job){
     return this.http.delete(`${this.jobUrl}/${id}`)
+  }
+  DeleteBtn(id:BtnR){
+    return this.http.delete(`${this.btnUrl}/${id}`)
   }
 
 }
