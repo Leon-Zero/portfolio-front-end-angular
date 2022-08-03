@@ -1,7 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { Skill } from 'src/assets/data/Data';
 
 @Component({
   selector: 'app-form-programing',
@@ -21,7 +20,7 @@ export class FormProgramingComponent implements OnInit {
   ngOnInit(): void {
   }
   mesage: boolean= false
-  SaveData(){
+  SavePrograming(){
    // console.log(this.addPrograming.value)
     this.datosPortfolio.SavePrograming(this.addPrograming.value).subscribe(
       (result)=> {

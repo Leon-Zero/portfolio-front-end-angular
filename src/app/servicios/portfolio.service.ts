@@ -52,9 +52,7 @@ export class PortfolioService {
   obtenerSoft():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.softUrl)
   }
-  get refresh$(){
-    return this._refresh$;
-  }
+
   //metodos delete json-server
 
   DeleteSoft(id:SkillSoft){
@@ -81,10 +79,20 @@ export class PortfolioService {
   DeleteBtn(id:BtnR){
     return this.http.delete(`${this.btnUrl}/${id}`)
   }
-  //metodos Post
+
+  //metodos Post y observable refresh
+  get refresh$(){
+    return this._refresh$;
+  }
   SavePrograming(data:Object):Observable<Skill>{
     console.log(data);
     return this.http.post<Skill>(this.programingUrl, data).pipe(
+      tap(()=> { this._refresh$.next();        
+      }))
+  }
+  SaveLengua(data:Object):Observable<Skill>{
+    console.log(data);
+    return this.http.post<Skill>(this.lenguageUrl, data).pipe(
       tap(()=> { this._refresh$.next();        
       }))
   }

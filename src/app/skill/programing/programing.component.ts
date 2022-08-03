@@ -29,5 +29,4 @@ export class ProgramingComponent implements OnInit {
       result)=>{
       this.ngOnInit();}) 
  }
-
 }

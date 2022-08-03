@@ -1,10 +1,5 @@
 <div class="box-new">
-    <div *ngIf="mesage" class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Grafico "lenguajes de programacion" ha sido Creado con exito!!</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    
-    <form [formGroup]="addPrograming" (ngSubmit)="SavePrograming()">
+    <form [formGroup]="addLengua" (ngSubmit)="SaveLengua()">
         <div class="input-group mb-3">
             <span class="input-group-text">Tag</span>
             <input type="text" class="form-control" placeholder="Nombre de la etiqueta"
@@ -19,7 +14,7 @@
         
         <div class="input-group mb-3">
             <span class="input-group-text">Relleno</span>
-            <input type="text" class="form-control" value="background-image: conic-gradient(#30E3E3 0%, transparent 0)" 
+            <input type="text" class="form-control" 
             formControlName="fill" list="fill-input">
             <datalist id="fill-input">
                 <option value="background-image: conic-gradient(#30E3E3 0%, transparent 0)"></option>
