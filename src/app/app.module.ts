@@ -35,6 +35,7 @@ import { FormLenguaComponent } from './reactiveForm/form-lengua/form-lengua.comp
 import { FormProgramComponent } from './reactiveForm/form-program/form-program.component';
 import { FormSoftComponent } from './reactiveForm/form-soft/form-soft.component';
 import { FormJobsComponent } from './reactiveForm/form-jobs/form-jobs.component';
+import { FormAcademicaComponent } from './reactiveForm/form-academica/form-academica.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { FormJobsComponent } from './reactiveForm/form-jobs/form-jobs.component'
     FormLenguaComponent,
     FormProgramComponent,
     FormSoftComponent,
-    FormJobsComponent
+    FormJobsComponent,
+    FormAcademicaComponent
   ],
   imports: [
     BrowserModule,

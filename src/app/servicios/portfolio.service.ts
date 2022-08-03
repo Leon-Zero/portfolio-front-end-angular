@@ -114,5 +114,11 @@ export class PortfolioService {
       tap(()=> { this._refresh$.next();        
       }))
   }
+  SaveAcademica(data:Object):Observable<Academica>{
+    console.log(data);
+    return this.http.post<Academica>(this.academicaUrl, data).pipe(
+      tap(()=> { this._refresh$.next();        
+      }))
+  }
 
 }

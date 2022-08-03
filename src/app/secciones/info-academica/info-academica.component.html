@@ -1,16 +1,16 @@
 <section class="experiencia__encabezado">
     <app-title-academica></app-title-academica>
     <br><br>
-<div class="accordion accordion-shadow" id="accordion-school" data-aos="zoom-in"
+<div class="accordion accordion-shadow" [id]="'accordion-school-' + academica.id" data-aos="zoom-in"
 data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
     <div class="accordion-item" *ngFor="let school of academica">
         <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" data-bs-target="#item-1" >
+            <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#item-academica-' + school.id" >
                 <app-delete  (click)="onDelete(school.id)"></app-delete>
                 <h3>{{school.tituloTag}}</h3>
             </button>
         </h2>
-            <div id="item-1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion-school">
+            <div [id]="'item-academica-' + school.id" class="accordion-collapse collapse" aria-labelledby="headingOne" [attr.data-bs-parent]="'#accordion-school-' + school.id">
                 <div class="accordion-body flex-grid">
                     <div class="img"> 
                         <img [src]="school.logo" alt="logo instituto">
@@ -30,11 +30,11 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
     </div>
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" data-bs-target="#item-2">
+            <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#item-extra-' + extra.id">
             <h3>ACTIVIDADES EXTRACURRICULARES</h3>
             </button>
         </h2>
-        <div id="item-2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-school">
+        <div [id]="'item-extra-' + extra.id" class="accordion-collapse collapse" aria-labelledby="headingTwo" [attr.data-bs-parent]="'#accordion-school-' + extra.id">
             <div class="accordion-body">
                 <div class="extra-box" *ngFor="let ex of extra">
                     <app-delete  (click)="onDeleteExtra(ex.id)"></app-delete>
@@ -48,4 +48,5 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
     </div>
 </div>
 <app-crud></app-crud>
+<app-form-academica></app-form-academica>
 </section>

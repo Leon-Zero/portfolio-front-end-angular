@@ -1,0 +1,43 @@
+<div class="box-new">
+    <form [formGroup]="addAcademica" (ngSubmit)="SaveAcademica()">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nivel de estudio</span>
+            <input type="text" class="form-control"
+            formControlName="tituloTag">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Instituto</span>
+            <input type="text" class="form-control"
+            formControlName="instituto">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Cargar Imagen</span>
+            <input type="text" class="form-control" placeholder="URL de la imagen"
+            formControlName="logo">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Carrera o Curso</span>
+            <input type="text" class="form-control" 
+            formControlName="carrera">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Estado</span>
+            <input type="text" class="form-control" 
+            formControlName="estado">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Ingreso / Salida</span>
+            <input type="text" class="form-control" placeholder="Ej: dd/mm/aaaa hasta dd/mm/aaaa"
+            formControlName="ingreso">
+        </div>
+        
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Añadir Estudios(+)</button>
+    </div>
+    </form>
+</div>

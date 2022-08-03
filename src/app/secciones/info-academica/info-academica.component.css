@@ -1,3 +1,6 @@
+app-form-academica{
+    display: var(--display-5);
+}
 section{
     font-weight: 1em;
     font-size: 14px;
