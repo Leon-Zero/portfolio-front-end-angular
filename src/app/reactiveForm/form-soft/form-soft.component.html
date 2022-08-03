@@ -1,0 +1,41 @@
+<div class="box-new">
+    <form [formGroup]="addSoft" (ngSubmit)="SaveSoft()">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Tag</span>
+            <input type="text" class="form-control" placeholder="Nombre de la etiqueta"
+            formControlName="tag">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Porcentaje</span>
+            <input type="text" class="form-control" placeholder="0-100"
+            formControlName="porcentaje">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Id-Taget del modal</span>
+            <input type="text" class="form-control"
+            formControlName="idTarget" list="modalInput">
+            <datalist id="modalInput">
+                <option value="modal-11 en adelante"></option>
+                <option value="modal+numero"></option>
+            </datalist>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Modal</span>
+            <input type="text" class="form-control" placeholder="descripción de la habilidad blanda"
+            formControlName="modal">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Beneficio</span>
+            <input type="text" class="form-control" placeholder="/opcional/ beneficio organizacional de la habilidad blanda"
+            formControlName="beneficio">
+        </div>
+        
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Crear Grafico de barras(+)</button>
+    </div>
+    </form>
+</div>

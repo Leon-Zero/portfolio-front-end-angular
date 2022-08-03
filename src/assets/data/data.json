@@ -157,7 +157,6 @@
     {
       "id": 1,
       "idTarget": "modal-1",
-      "target": "#modal-1",
       "tag": "capacidad analítica",
       "modal": "Habilidad para analizar información, números, datos, etc.; procesar esta información de forma lógica; llegar a conclusiones razonadas",
       "beneficio": "Beneficios organizacionales: analice las causas fundamentales de los problemas y manipule los números y la información",
@@ -166,7 +165,6 @@
     {
       "id": 2,
       "idTarget": "modal-2",
-      "target": "#modal-2",
       "tag": "pensamiento creativo",
       "modal": "Habilidad para crear cosas nuevas e innovar; huir del lugar común",
       "beneficio": "Beneficios organizacionales: desarrollar soluciones innovadoras y pensar en nuevas formas de resolver problemas",
@@ -175,7 +173,6 @@
     {
       "id": 3,
       "idTarget": "modal-3",
-      "target": "#modal-3",
       "tag": "planificación y organización",
       "modal": "Habilidad para mantener las cosas en orden; estructura de control y lugar",
       "beneficio": "Beneficios organizacionales: Formular e implementar procesos y tener excelencia en el flujo de trabajo",
@@ -184,7 +181,6 @@
     {
       "id": 4,
       "idTarget": "modal-4",
-      "target": "#modal-4",
       "tag": "reflexión",
       "modal": "Capacidad para reflexionar, autoanalizarse y observar sus estados y fortalezas y debilidades",
       "beneficio": "Beneficios organizacionales: acelere el aprendizaje y aporte conocimientos a su posición y su área",
@@ -193,7 +189,6 @@
     {
       "id": 5,
       "idTarget": "modal-5",
-      "target": "#modal-5",
       "tag": "comunicación",
       "modal": "Habilidad para comunicarse verbalmente con claridad; transmitir ideas en palabras a individuos o audiencias",
       "beneficio": "Beneficios organizacionales: Explicar conceptos difíciles al grupo y transmitir ideas claramente a varias personas.",
@@ -202,7 +197,6 @@
     {
       "id": 6,
       "idTarget": "modal-6",
-      "target": "#modal-6",
       "tag": "sociabilidad",
       "modal": "Habilidad para interactuar y crear relaciones con diferentes personas; facilidad en entornos sociales",
       "beneficio": "Beneficios organizacionales: trabajar en red con las partes interesadas y conectar a las personas",
@@ -211,7 +205,6 @@
     {
       "id": 7,
       "idTarget": "modal-7",
-      "target": "#modal-7",
       "tag": "estabilidad emocional",
       "modal": "Capacidad para mantener la calma en situaciones de presión y para controlar los altibajos emocionales",
       "beneficio": "Beneficios organizacionales: mantener al equipo enfocado durante la agitación y mantener el trabajo en movimiento incluso con mucha interferencia externa",
@@ -220,7 +213,6 @@
     {
       "id": 8,
       "idTarget": "modal-8",
-      "target": "#modal-8",
       "tag": "iniciativa",
       "modal": "Capacidad de iniciar acciones sin necesidad de intervención de terceros; tomar la iniciativa",
       "beneficio": "Beneficios organizacionales: actuar incluso cuando la dirección no está clara y tener un mayor rendimiento de ejecución",
@@ -229,7 +221,6 @@
     {
       "id": 9,
       "idTarget": "modal-9",
-      "target": "#modal-9",
       "tag": "asertividad",
       "modal": "Capacidad para poner sus ideas directamente; no te dejes intimidar por el entorno",
       "beneficio": "Beneficios organizacionales: Poner sobre la mesa opiniones que otras personas terminan eludiendo y aumentar la eficiencia de la comunicación",
@@ -238,7 +229,6 @@
     {
       "id": 10,
       "idTarget": "modal-10",
-      "target": "#modal-10",
       "tag": "influencia",
       "modal": "Capacidad de persuadir a otros para que tomen posiciones y se comporten de manera diferente a como lo harían sin intervención",
       "beneficio": "Beneficios organizacionales: Vender ideas a clientes internos y externos y obtener recursos para llevar a cabo proyectos",

@@ -3,7 +3,7 @@
     *ngFor="let skill of softList">
         <div class="grafico-barra__tag" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true">
         <!-- Button trigger modal -->
-            <button type="button" class="btn btn-size" data-bs-toggle="modal" [attr.data-bs-target]="skill.target">
+            <button type="button" class="btn btn-size" data-bs-toggle="modal" [attr.data-bs-target]="'#'+ skill.idTarget">
                 <img src="assets/info-circle-fill.svg" alt="info">
             </button>
         {{skill.tag}}
@@ -15,6 +15,7 @@
         <app-delete  (click)="onDelete(skill.id)"></app-delete>
     </div>
     <app-crud></app-crud>
+    <app-form-soft></app-form-soft>
     <div class="grafico-barra__info">
         <img src="assets/informacion.png" alt="info">
         <p>informe de resultados de <a href="https://app.mindsight.com.br/">app.mindsight.com</a> haga click <a href="https://app.mindsight.com.br/devolutiva/a3ed87c7-560d-4b28-82e8-c020301ebfbe/resultado/" target="_blank">aquí</a> para ver o descargar el estudio completo</p>

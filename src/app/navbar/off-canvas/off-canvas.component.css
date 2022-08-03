@@ -38,7 +38,7 @@ width: 125px;
 }
 #offcanvasExample{
     background: var(--color-1);
-    color: var(--color-2) ;
+    color: var(--color-2);
 }
 .msg{
     display: var(--display-1);

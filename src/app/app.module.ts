@@ -33,6 +33,7 @@ import { DeleteComponent } from './crud/delete/delete.component';
 import { FormProgramingComponent } from './reactiveForm/form-programing/form-programing.component';
 import { FormLenguaComponent } from './reactiveForm/form-lengua/form-lengua.component';
 import { FormProgramComponent } from './reactiveForm/form-program/form-program.component';
+import { FormSoftComponent } from './reactiveForm/form-soft/form-soft.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { FormProgramComponent } from './reactiveForm/form-program/form-program.c
     DeleteComponent,
     FormProgramingComponent,
     FormLenguaComponent,
-    FormProgramComponent
+    FormProgramComponent,
+    FormSoftComponent
   ],
   imports: [
     BrowserModule,

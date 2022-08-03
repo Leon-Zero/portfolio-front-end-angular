@@ -102,5 +102,11 @@ export class PortfolioService {
       tap(()=> { this._refresh$.next();        
       }))
   }
+  SaveSoft(data:Object):Observable<SkillSoft>{
+    console.log(data);
+    return this.http.post<SkillSoft>(this.softUrl, data).pipe(
+      tap(()=> { this._refresh$.next();        
+      }))
+  }
 
 }
