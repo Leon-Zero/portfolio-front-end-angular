@@ -32,6 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DeleteComponent } from './crud/delete/delete.component';
 import { FormProgramingComponent } from './reactiveForm/form-programing/form-programing.component';
 import { FormLenguaComponent } from './reactiveForm/form-lengua/form-lengua.component';
+import { FormProgramComponent } from './reactiveForm/form-program/form-program.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { FormLenguaComponent } from './reactiveForm/form-lengua/form-lengua.comp
     OffCanvasComponent,
     DeleteComponent,
     FormProgramingComponent,
-    FormLenguaComponent
+    FormLenguaComponent,
+    FormProgramComponent
   ],
   imports: [
     BrowserModule,

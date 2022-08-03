@@ -17,7 +17,7 @@ export class LanguageComponent implements OnInit {
     this.getData();
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
     this.getData();
-    })
+    }) 
   }
   onDelete(datosPortfolio_id: Skill){
     this.datosPortfolio.DeleteLenguage(datosPortfolio_id).subscribe((
