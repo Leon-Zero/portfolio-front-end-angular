@@ -1,0 +1,19 @@
+<div class="box-new">
+    <form [formGroup]="addExtra" (ngSubmit)="SaveExtra()">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Tipo de Actividad</span>
+            <input type="text" class="form-control" placeholder="participante / ayudante / disertante / organizador / cursante / etc."
+            formControlName="tipo">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Descripción de la Actividad</span>
+            <input type="text" class="form-control"
+            formControlName="actividad">
+        </div>
+        
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Añadir Act. Extracurricular(+)</button>
+    </div>
+    </form>
+</div>

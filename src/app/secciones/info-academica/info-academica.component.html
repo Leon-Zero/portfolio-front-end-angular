@@ -36,6 +36,9 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
         </h2>
         <div [id]="'item-extra-' + extra.id" class="accordion-collapse collapse" aria-labelledby="headingTwo" [attr.data-bs-parent]="'#accordion-school-' + extra.id">
             <div class="accordion-body">
+
+                <app-form-extra></app-form-extra>
+                
                 <div class="extra-box" *ngFor="let ex of extra">
                     <app-delete  (click)="onDeleteExtra(ex.id)"></app-delete>
                     <div  class="experiencia__contenido-div">

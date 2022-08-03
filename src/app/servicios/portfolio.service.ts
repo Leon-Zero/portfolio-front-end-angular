@@ -120,5 +120,11 @@ export class PortfolioService {
       tap(()=> { this._refresh$.next();        
       }))
   }
+  SaveExtra(data:Object):Observable<ExtraCurricular>{
+    console.log(data);
+    return this.http.post<ExtraCurricular>(this.extraUrl, data).pipe(
+      tap(()=> { this._refresh$.next();        
+      }))
+  }
 
 }

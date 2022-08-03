@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { PortfolioService } from 'src/app/servicios/portfolio.service'; 
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-form-academica',
