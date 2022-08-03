@@ -1,0 +1,37 @@
+<div class="box-new">
+    <form [formGroup]="addJob" (ngSubmit)="SaveJob()">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Trabajo</span>
+            <input type="text" class="form-control" placeholder="Nombre de la empresa o emprendimiento"
+            formControlName="job">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Cargo</span>
+            <input type="text" class="form-control" placeholder="puesto que desempeño"
+            formControlName="cargo">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Funciones</span>
+            <textarea class="form-control" id="FormControlTextarea1" rows="2"
+            formControlName="funciones"></textarea>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Ingreso / Salida</span>
+            <input type="text" class="form-control" placeholder="Ej: dd/mm/aaaa hasta dd/mm/aaaa"
+            formControlName="ingresoSalida">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">contacto</span>
+            <input type="text" class="form-control"
+            formControlName="contacto">
+        </div>
+        
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Añadir Trabajo(+)</button>
+    </div>
+    </form>
+</div>

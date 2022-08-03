@@ -3,7 +3,7 @@
     *ngFor="let skill of softList">
         <div class="grafico-barra__tag" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true">
         <!-- Button trigger modal -->
-            <button type="button" class="btn btn-size" data-bs-toggle="modal" [attr.data-bs-target]="'#'+ skill.idTarget">
+            <button type="button" class="btn btn-size" data-bs-toggle="modal" [attr.data-bs-target]="'#modal-'+ skill.id">
                 <img src="assets/info-circle-fill.svg" alt="info">
             </button>
         {{skill.tag}}
@@ -23,7 +23,7 @@
 </div>
 <!-- Modal -->
 <div *ngFor="let skill of softList">
-    <div class="modal fade" [id]="skill.idTarget" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" [id]="'modal-' + skill.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">

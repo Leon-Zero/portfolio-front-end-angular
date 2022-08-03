@@ -4,13 +4,13 @@
     <div class="accordion accordion-shadow" id="accordionExample" data-aos="zoom-in"
     data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
         <div class="accordion-item" *ngFor="let jobs of jobsList">
-            <h2 class="accordion-header" [id]="jobs.idItem">
-                <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="jobs.target" [attr.aria-controls]="jobs.id">
+            <h2 class="accordion-header" [id]="'item-' + jobs.id">
+                <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + jobs.id" [attr.aria-controls]="jobs.id">
                 <app-delete  (click)="onDelete(jobs.id)"></app-delete>
                 <h3>{{jobs.job}}</h3> 
                 </button>
               </h2>
-              <div [id]="jobs.idTarget" class="accordion-collapse collapse" [attr.aria-labelledby]="jobs.idItem" data-bs-parent="#accordionExample">
+              <div [id]="'collapse-' + jobs.id" class="accordion-collapse collapse" [attr.aria-labelledby]="'item-' + jobs.id" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="experiencia__contenido-div"> 
                             <span class="span-item">cargo</span> 
@@ -27,4 +27,5 @@
         </div>
     </div>
  <app-crud></app-crud>
+ <app-form-jobs></app-form-jobs>
 </section>

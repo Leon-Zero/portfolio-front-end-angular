@@ -108,5 +108,11 @@ export class PortfolioService {
       tap(()=> { this._refresh$.next();        
       }))
   }
+  SaveJob(data:Object):Observable<Job>{
+    console.log(data);
+    return this.http.post<Job>(this.jobUrl, data).pipe(
+      tap(()=> { this._refresh$.next();        
+      }))
+  }
 
 }

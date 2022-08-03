@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Subscription } from 'rxjs';
 import { SkillSoft } from 'src/assets/data/Data';
-import {Portfolio} from 'src/assets/data/Data';
+import {Portfolio} from 'src/assets/data/Data'; 
 
 @Component({
   selector: 'app-soft',

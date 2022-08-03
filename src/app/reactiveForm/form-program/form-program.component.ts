@@ -13,7 +13,7 @@ export class FormProgramComponent implements OnInit {
   addProgram = new FormGroup ({
     tag: new FormControl(''),
     porcentaje: new FormControl(''),
-    fill: new FormControl('')
+    color: new FormControl('')
   });
 
   ngOnInit(): void {

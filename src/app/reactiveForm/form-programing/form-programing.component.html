@@ -13,19 +13,14 @@
         
         <div class="input-group mb-3">
             <span class="input-group-text">Porcentaje</span>
-            <input type="text" class="form-control" placeholder="0-100"
+            <input type="number" class="form-control" placeholder="0-100"
             formControlName="porcentaje">
         </div>
         
         <div class="input-group mb-3">
-            <span class="input-group-text">Relleno</span>
-            <input type="text" class="form-control" value="background-image: conic-gradient(#30E3E3 0%, transparent 0)" 
-            formControlName="fill" list="fill-input">
-            <datalist id="fill-input">
-                <option value="background-image: conic-gradient(#30E3E3 0%, transparent 0)"></option>
-                <option value="background-image: conic-gradient(#007676 0%, transparent 0)"></option>
-                <option value="background-image: conic-gradient(#003737 0%, transparent 0)"></option>
-            </datalist>
+            <span class="input-group-text">Color</span>
+            <input type="color" class="form-control" value="background-image: conic-gradient(#30E3E3 0%, transparent 0)" 
+            formControlName="color">
         </div>
         
     <div class="col-12">

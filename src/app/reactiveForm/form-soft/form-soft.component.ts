@@ -14,7 +14,6 @@ export class FormSoftComponent implements OnInit {
   addSoft = new FormGroup ({
     tag: new FormControl(''),
     porcentaje: new FormControl(''),
-    idTarget: new FormControl(''),
     modal: new FormControl(''),
     beneficio: new FormControl('')
   });

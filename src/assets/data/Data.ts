@@ -60,13 +60,11 @@ export interface Skill {
     id:         number;
     tag:        string;
     porcentaje: number;
-    fill:       string;
+    color:       string;
 }
 
 export interface SkillSoft {
     id:         number;
-    idTarget:   string;
-    target:     string;
     tag:        string;
     modal:      string;
     beneficio:  string;

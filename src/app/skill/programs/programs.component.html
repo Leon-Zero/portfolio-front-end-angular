@@ -2,7 +2,7 @@
     <div class="fondo" *ngFor="let programas of programsList" data-aos="flip-left"
     data-aos-easing="ease-out-cubic"
     data-aos-duration="2000" data-aos-anchor-placement="top-center" data-aos-once="true">
-        <div class="skill__grafico" [style]="programas.fill">
+        <div class="skill__grafico" [style]="'background-image: conic-gradient(' + programas.color + ' ' + programas.porcentaje + '%, transparent 0'">
             <div class="skill__grafico-div">
                 <span>{{programas.porcentaje}}%</span><span>{{programas.tag}}</span>
             </div>
