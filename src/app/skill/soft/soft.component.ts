@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { SkillSoft } from 'src/assets/data/Data';
 import {Portfolio} from 'src/assets/data/Data';

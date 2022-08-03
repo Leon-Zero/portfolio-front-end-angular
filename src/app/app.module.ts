@@ -28,8 +28,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CrudComponent } from './crud/crud.component';
 import { OffCanvasComponent } from './navbar/off-canvas/off-canvas.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DeleteComponent } from './crud/delete/delete.component';
+import { FormProgramingComponent } from './reactiveForm/form-programing/form-programing.component';
 
 @NgModule({
   declarations: [
@@ -58,13 +59,14 @@ import { DeleteComponent } from './crud/delete/delete.component';
     FooterComponent,
     CrudComponent,
     OffCanvasComponent,
-    DeleteComponent
+    DeleteComponent,
+    FormProgramingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

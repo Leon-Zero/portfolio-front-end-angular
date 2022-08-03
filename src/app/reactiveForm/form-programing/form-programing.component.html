@@ -1,0 +1,35 @@
+<div class="box-new">
+    <div *ngIf="mesage" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Grafico "lenguajes de programacion" ha sido Creado con exito!!</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+    <form [formGroup]="addPrograming" (ngSubmit)="SaveData()">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Tag</span>
+            <input type="text" class="form-control" placeholder="Nombre de la etiqueta"
+            formControlName="tag">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Porcentaje</span>
+            <input type="text" class="form-control" placeholder="0-100"
+            formControlName="porcentaje">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Relleno</span>
+            <input type="text" class="form-control" value="background-image: conic-gradient(#30E3E3 0%, transparent 0)" 
+            formControlName="fill" list="fill-input">
+            <datalist id="fill-input">
+                <option value="background-image: conic-gradient(#30E3E3 0%, transparent 0)"></option>
+                <option value="background-image: conic-gradient(#007676 0%, transparent 0)"></option>
+                <option value="background-image: conic-gradient(#003737 0%, transparent 0)"></option>
+            </datalist>
+        </div>
+        
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Crear Grafico(+)</button>
+    </div>
+    </form>
+</div>

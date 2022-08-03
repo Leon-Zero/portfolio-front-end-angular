@@ -1,6 +1,7 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, observable } from 'rxjs';
+import { Observable, observable, pipe, Subject } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import {Academica, BtnR, ExtraCurricular, Job, Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
 
 
@@ -9,16 +10,16 @@ import {Academica, BtnR, ExtraCurricular, Job, Portfolio, Skill, SkillSoft} from
 })
 export class PortfolioService {
 
-
-  private dataUrl = 'http://localhost:5000/data'
-  private academicaUrl= 'http://localhost:5000/academica'
-  private extraUrl= 'http://localhost:5000/extraCurricular'
-  private btnUrl= 'http://localhost:5000/btnRS'
-  private jobUrl= 'http://localhost:5000/jobs'
-  private programingUrl= 'http://localhost:5000/skillPrograming'
-  private lenguageUrl= 'http://localhost:5000/skillLenguage'
-  private programUrl= 'http://localhost:5000/skillPrograms'
-  private softUrl= 'http://localhost:5000/skillSoft'
+  private _refresh$ = new Subject<void>();
+  private dataUrl = 'http://localhost:5001/data'
+  private academicaUrl= 'http://localhost:5001/academica'
+  private extraUrl= 'http://localhost:5001/extraCurricular'
+  private btnUrl= 'http://localhost:5001/btnRS'
+  private jobUrl= 'http://localhost:5001/jobs'
+  private programingUrl= 'http://localhost:5001/skillPrograming'
+  private lenguageUrl= 'http://localhost:5001/skillLenguage'
+  private programUrl= 'http://localhost:5001/skillPrograms'
+  private softUrl= 'http://localhost:5001/skillSoft'
 
   constructor(private http:HttpClient) { }
   // metodos get a api de 
@@ -51,6 +52,9 @@ export class PortfolioService {
   obtenerSoft():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.softUrl)
   }
+  get refresh$(){
+    return this._refresh$;
+  }
   //metodos delete json-server
 
   DeleteSoft(id:SkillSoft){
@@ -76,6 +80,13 @@ export class PortfolioService {
   }
   DeleteBtn(id:BtnR){
     return this.http.delete(`${this.btnUrl}/${id}`)
+  }
+  //metodos Post
+  SavePrograming(data:Object):Observable<Skill>{
+    console.log(data);
+    return this.http.post<Skill>(this.programingUrl, data).pipe(
+      tap(()=> { this._refresh$.next();        
+      }))
   }
 
 }

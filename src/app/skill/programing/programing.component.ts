@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Skill } from 'src/assets/data/Data';
 
@@ -8,14 +9,20 @@ import { Skill } from 'src/assets/data/Data';
   styleUrls: ['./programing.component.css']
 })
 export class ProgramingComponent implements OnInit {
-  
+  suscription: Subscription = new Subscription;
   programingList:any;
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
+    this.getData();
+    this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
+    this.getData();
+    })
+  }
+  getData(){
     this.datosPortfolio.obtenerPrograming().subscribe(data =>{console.log(data);
       this.programingList=data;
-    });
+    })
   }
   onDelete(datosPortfolio_id: Skill){
     this.datosPortfolio.DeletePrograming(datosPortfolio_id).subscribe((
