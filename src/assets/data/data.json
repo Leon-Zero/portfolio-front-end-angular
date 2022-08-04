@@ -42,31 +42,36 @@
       "id": 1,
       "redSocial": "instagram",
       "btn": "fa-brands fa-instagram",
-      "url": "https://www.instagram.com/leon_cito94/"
+      "url": "https://www.instagram.com/leon_cito94/",
+      "color": "linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)"
     },
     {
       "id": 2,
       "redSocial": "facebook",
       "btn": "fa-brands fa-facebook",
-      "url": "https://www.facebook.com/leon.zeroo.9/"
+      "url": "https://www.facebook.com/leon.zeroo.9/",
+      "color": "#3b5999"
     },
     {
       "id": 3,
       "redSocial": "github",
       "btn": "fa-brands fa-github",
-      "url": "https://github.com/Leon-Zero"
+      "url": "https://github.com/Leon-Zero",
+      "color": "linear-gradient(45deg, #aa47aae3 20%, #5c5858 40%, #812681e3 80%)"
     },
     {
       "id": 4,
       "redSocial": "linkedin",
       "btn": "fa-brands fa-linkedin-in",
-      "url": "https://www.linkedin.com/in/leonardo-ismael-hidalgo/"
+      "url": "https://www.linkedin.com/in/leonardo-ismael-hidalgo/",
+      "color": "#0077b5"
     },
     {
       "id": 5,
       "redSocial": "whatsapp",
       "btn": "fa-brands fa-whatsapp",
-      "url": "https://wa.me/+543516418288?text=Contacta%20conmigo%20a%20trav%C3%A9s%20de%20mi%20WhatsApp!!"
+      "url": "https://wa.me/+543516418288?text=Contacta%20conmigo%20a%20trav%C3%A9s%20de%20mi%20WhatsApp!!",
+      "color": "#25d366"
     }
   ],
   "jobs": [

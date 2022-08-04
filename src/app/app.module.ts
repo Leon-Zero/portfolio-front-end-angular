@@ -37,6 +37,7 @@ import { FormSoftComponent } from './reactiveForm/form-soft/form-soft.component'
 import { FormJobsComponent } from './reactiveForm/form-jobs/form-jobs.component';
 import { FormAcademicaComponent } from './reactiveForm/form-academica/form-academica.component';
 import { FormExtraComponent } from './reactiveForm/form-extra/form-extra.component';
+import { FormBtnComponent } from './reactiveForm/form-btn/form-btn.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { FormExtraComponent } from './reactiveForm/form-extra/form-extra.compone
     FormSoftComponent,
     FormJobsComponent,
     FormAcademicaComponent,
-    FormExtraComponent
+    FormExtraComponent,
+    FormBtnComponent
   ],
   imports: [
     BrowserModule,

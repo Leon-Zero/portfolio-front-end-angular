@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { Skill } from 'src/assets/data/Data';
+import { Skill } from 'src/assets/data/Data'; 
 
 @Component({
   selector: 'app-language',

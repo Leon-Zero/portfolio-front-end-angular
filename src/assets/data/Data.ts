@@ -26,6 +26,7 @@ export interface BtnR {
     redSocial: string;
     btn:       string;
     url:       string;
+    color:     string;
 }
 
 export interface Data {
@@ -47,9 +48,6 @@ export interface ExtraCurricular {
 export interface Job {
     id:            number;
     job:           string;
-    idTarget:      string;
-    target:        string;
-    idItem:        string;
     cargo:         string;
     funciones:     string;
     ingresoSalida: string;
@@ -60,7 +58,7 @@ export interface Skill {
     id:         number;
     tag:        string;
     porcentaje: number;
-    color:       string;
+    color:      string;
 }
 
 export interface SkillSoft {

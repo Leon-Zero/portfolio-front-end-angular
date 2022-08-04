@@ -1,0 +1,31 @@
+<div class="box-new">
+    <form [formGroup]="addBtn" (ngSubmit)="SaveBtn()">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Red Social</span>
+            <input type="text" class="form-control" placeholder="Nombre de Red Social"
+            formControlName="redSocial">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">FontAwesome</span>
+            <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
+            formControlName="btn">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">URL</span>
+            <input type="text" class="form-control"
+            formControlName="url">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Elije un Color</span>
+            <input type="color" class="form-control form-control-color" title="Choose your color" 
+            formControlName="color">
+        </div>
+        
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Crear Botón(+)</button>
+    </div>
+    </form>
+</div>

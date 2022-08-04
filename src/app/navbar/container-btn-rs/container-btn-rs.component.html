@@ -2,14 +2,15 @@
     <ul>
         <li *ngFor="let social of socialList">
             <app-delete  (click)="onDelete(social.id)"></app-delete>
-                <a [id]="social.redSocial" [href]="social.url" target="_blank" [title]="social.redSocial">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span ></span>
-                    <span [class]="social.btn"></span>
+                <a [href]="social.url" target="_blank" [title]="social.redSocial">
+                    <span [style]="'background: ' + social.color"></span>
+                    <span [style]="'background: ' + social.color"></span>
+                    <span [style]="'background: ' + social.color"></span>
+                    <span [style]="'background: ' + social.color"></span>
+                    <span [style]="'background: ' + social.color" [class]="social.btn"></span>
                 </a>
         </li>
     </ul>
     <app-crud></app-crud>
+    <app-form-btn></app-form-btn>
 </div>

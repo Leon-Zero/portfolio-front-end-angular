@@ -126,5 +126,11 @@ export class PortfolioService {
       tap(()=> { this._refresh$.next();        
       }))
   }
+  SaveBtn(data:Object):Observable<BtnR>{
+    console.log(data);
+    return this.http.post<BtnR>(this.btnUrl, data).pipe(
+      tap(()=> { this._refresh$.next();        
+      }))
+  }
 
 }
