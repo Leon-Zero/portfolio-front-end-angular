@@ -1,6 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Skill, SkillSoft } from 'src/assets/data/Data';
 
 @Component({
   selector: 'app-form-soft',
@@ -10,22 +11,34 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class FormSoftComponent implements OnInit {
 
   constructor(private datosPortfolio:PortfolioService) { }
-
+  @Input() object:any=[]
   addSoft = new FormGroup ({
     tag: new FormControl(''),
     porcentaje: new FormControl(''),
     modal: new FormControl(''),
     beneficio: new FormControl('')
   });
-
-  ngOnInit(): void {
+  editMode: boolean = false;
+  ngOnInit(): void {  }
+  Set(){
+    this.addSoft.setValue({
+      tag: this.object.tag,
+      porcentaje: this.object.porcentaje,
+      modal: this.object.modal,
+      beneficio: this.object.beneficio
+    });
+    this.editMode=true;
   }
   SaveSoft(){
-   // console.log(this.addSoft.value)
-    this.datosPortfolio.SaveSoft(this.addSoft.value).subscribe(
-      (result)=> {
-      //  console.log(result)
-      this.addSoft.reset({});
-      }); 
+    if (!this.editMode) {
+      this.datosPortfolio.SaveSoft(this.addSoft.value).subscribe(
+        (result)=> {
+        this.addSoft.reset({});
+        });       
+    }
+    else {
+      this.datosPortfolio.UpdateSoft(this.object.id, this.addSoft.value).subscribe((result)=>{this.addSoft.reset({}); this.editMode = false;
+    })
+    }
   }
 }

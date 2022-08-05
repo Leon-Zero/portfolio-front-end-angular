@@ -1,8 +1,10 @@
 <div class="box-new">
+    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button>
+<hr>
     <form [formGroup]="addSoft" (ngSubmit)="SaveSoft()">
         <div class="input-group mb-3">
             <span class="input-group-text">Tag</span>
-            <input type="number" class="form-control" placeholder="Nombre de la etiqueta"
+            <input type="text" class="form-control" placeholder="Nombre de la etiqueta"
             formControlName="tag">
         </div>
         
@@ -25,7 +27,8 @@
         </div>
         
     <div class="col-12">
-        <button type="submit" class="btn btn-primary">Crear Grafico de barras(+)</button>
+        <button type="submit" class="btn btn-primary">{{editMode? 'Editar Grafico':'Crear Grafico de Barras (+)'}}</button>
+        <br>
     </div>
     </form>
 </div>

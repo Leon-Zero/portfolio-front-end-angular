@@ -12,6 +12,7 @@ import {Portfolio} from 'src/assets/data/Data';
 export class SoftComponent implements OnInit {
   suscription: Subscription = new Subscription;
   softList: any;
+  datos:Object=[]
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -20,15 +21,21 @@ export class SoftComponent implements OnInit {
     this.getData();
     }) 
   }
-    
+
+  getData(){
+    this.datosPortfolio.obtenerSoft().subscribe(respuesta =>{console.log(respuesta);
+      this.softList=respuesta;
+    });
+  }
     onDelete(datosPortfolio_id: SkillSoft){
     this.datosPortfolio.DeleteSoft(datosPortfolio_id).subscribe((
       result)=>{
       this.ngOnInit();})
     }
-    getData(){
-      this.datosPortfolio.obtenerSoft().subscribe(respuesta =>{console.log(respuesta);
-        this.softList=respuesta;
-      });
+    onEdit(datosPortfolio_id: SkillSoft){
+      this.datosPortfolio.IdSoft(datosPortfolio_id).subscribe((data)=>{
+        this.datos = data;
+        console.log(this.datos);
+      })
     }
 }

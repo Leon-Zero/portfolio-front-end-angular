@@ -35,10 +35,9 @@ export class OffCanvasComponent implements OnInit {
       stylesheet.setProperty("--display-2", display1);
       } 
     function salir_edition(){
-      activar_edition();      
+      activar_edition();
+      location.reload();
     }
-
-
 
     //mensaje de alerta
     const alertPlaceholder = (document.getElementById('liveAlertPlaceholder') as Element);

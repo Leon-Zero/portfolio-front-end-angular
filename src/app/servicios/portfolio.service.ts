@@ -133,4 +133,13 @@ export class PortfolioService {
       }))
   }
 
+  //metodo put + obtener datos
+  IdSoft(id:SkillSoft): Observable<Object>{
+    return this.http.get(`${this.softUrl}/${id}`);
+  }
+  UpdateSoft(id: string, data:Object ){
+   return this.http.put(`${this.softUrl}/${id}`, data).pipe(
+    tap(()=> { this._refresh$.next();        
+    }))
+  }
 }
