@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Academica, ExtraCurricular } from 'src/assets/data/Data'; 
-import { Subscription } from 'rxjs'; 
+import { Subscription } from 'rxjs';  
 
 
 @Component({
@@ -25,7 +25,6 @@ export class InfoAcademicaComponent implements OnInit {
    this.getData();
    this.getDataExtra();
    })
-
   }
   getData(){
     this.datosPortfolio.obtenerAcademica().subscribe(data =>{console.log(data);

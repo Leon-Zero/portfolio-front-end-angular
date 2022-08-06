@@ -1,0 +1,39 @@
+<div class="box-new"> 
+    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <hr>
+    <form [formGroup]="addData" (ngSubmit)="EditData()">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Titulo del Portfolio</span>
+            <input type="text" class="form-control"
+            formControlName="titleName">
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nombre Completo</span>
+            <input type="text" class="form-control"
+            formControlName="name">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Ubicación / Nacionalidad</span>
+            <input type="text" class="form-control" 
+            formControlName="ubicacion">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Titulo de Carrera</span>
+            <input type="text" class="form-control" 
+            formControlName="school">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Foto de Perfil</span>
+            <input type="text" class="form-control" placeholder="URL de la imagen"
+            formControlName="perfil">
+        </div>
+        
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Editar Datos</button>
+    </div>
+    </form>
+</div>

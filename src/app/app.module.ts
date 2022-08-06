@@ -39,6 +39,7 @@ import { FormAcademicaComponent } from './reactiveForm/form-academica/form-acade
 import { FormExtraComponent } from './reactiveForm/form-extra/form-extra.component';
 import { FormBtnComponent } from './reactiveForm/form-btn/form-btn.component';
 import { EditComponent } from './crud/edit/edit.component';
+import { FormAboutMeComponent } from './reactiveForm/form-about-me/form-about-me.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { EditComponent } from './crud/edit/edit.component';
     FormExtraComponent,
     FormBtnComponent,
     EditComponent,
+    FormAboutMeComponent,
   ],
   imports: [
     BrowserModule,

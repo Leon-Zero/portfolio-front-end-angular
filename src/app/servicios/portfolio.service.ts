@@ -2,7 +2,7 @@ import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, observable, pipe, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import {Academica, BtnR, ExtraCurricular, Job, Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
+import {Academica, BtnR, Datum, ExtraCurricular, Job, Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
 
 
 @Injectable({
@@ -201,5 +201,12 @@ export class PortfolioService {
     tap(()=> { this._refresh$.next();        
     }))
   }
-
+  IdData(id:Datum): Observable<Object>{
+    return this.http.get(`${this.dataUrl}/${id}`);
+  }
+  UpdateData(id: string, data:Object ){
+   return this.http.put(`${this.dataUrl}/${id}`, data).pipe(
+    tap(()=> { this._refresh$.next();        
+    }))
+  }
 }

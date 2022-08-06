@@ -1,5 +1,5 @@
 export interface Portfolio {
-    data:            Data;
+    data:            Datum[];
     academica:       Academica[];
     extraCurricular: ExtraCurricular[];
     btnRS:           BtnR[];
@@ -11,14 +11,13 @@ export interface Portfolio {
 }
 
 export interface Academica {
-    id:          number;
-    tituloTag:   string;
-    instituto:   string;
-    logo:        string;
-    carrera:     string;
-    estado:      string;
-    estadoAnexo: string;
-    ingreso:     string;
+    tituloTag: string;
+    instituto: string;
+    logo:      string;
+    carrera:   string;
+    estado:    string;
+    ingreso:   string;
+    id:        number;
 }
 
 export interface BtnR {
@@ -29,7 +28,8 @@ export interface BtnR {
     color:     string;
 }
 
-export interface Data {
+export interface Datum {
+    id:        number;
     titleName: string;
     name:      string;
     ubicacion: string;

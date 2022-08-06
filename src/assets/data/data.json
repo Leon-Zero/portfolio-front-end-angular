@@ -1,23 +1,23 @@
 {
-  "data": {
-    "titleName": "Leonardo Hidalgo",
-    "name": "Leonardo Ismael HIDALGO.",
-    "ubicacion": "Córdoba Capital, Argentina.",
-    "school": "Licenciatura en tecnologia de los alimentos.",
-    "fullStack": "programación Full Stack Developer Junior",
-    "ap": "Argentina Programa.",
-    "perfil": "background-image: url('/assets/perfil.JPG')"
-  },
+  "data": [
+    {
+      "titleName": "Leonardo Hidalgo",
+      "name": "Leonardo Ismael HIDALGO.",
+      "ubicacion": "Córdoba Capital, Argentina.",
+      "school": "Licenciatura en tecnología de los alimentos (L.T.A.).",
+      "perfil": "/assets/perfil.JPG",
+      "id": 1
+    }
+  ],
   "academica": [
     {
-      "id": 1,
-      "tituloTag": "NIVEL UNIVERSITARIO",
+      "tituloTag": "ESTUDIOS UNIVERSITARIOS",
       "instituto": "Universidad Católica de Córdoba",
       "logo": "./assets/ucc.png",
       "carrera": "licenciatura en tecnología de los alimentos,facultad de ciencias químicas.",
       "estado": "4to año, sin finalizar - ",
-      "estadoAnexo": "no cursante",
-      "ingreso": "(Marzo 2012 – Febrero 2016); segundo ingreso (Marzo 2020 – Octubre 2020)"
+      "ingreso": "(Marzo 2012 – Febrero 2016); segundo ingreso (Marzo 2020 – Octubre 2020)",
+      "id": 1
     }
   ],
   "extraCurricular": [

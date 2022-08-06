@@ -1,10 +1,26 @@
+app-form-about-me{
+    display: var(--display-5);
+}
+app-edit{
+    display: flex;
+    justify-self: center ;
+    align-self: center;
+}
+section{
+    font-weight: 1em;
+    font-size: 14px;
+    padding: 1em;
+    margin: auto;
+    flex: auto;    
+    text-align: left;
+    width: 80%;
+}
 .container {
     display: flex;
     flex-flow: row-reverse wrap;
     align-items: center;
     justify-content: center;
-    width: 90vw;
-    margin-top: 8em;
+    margin-top: 5em;
 }   
 .foto-perfil{
     width: 380px;

@@ -1,15 +1,23 @@
-<div class="container">
-    <div class="foto-perfil" [style]="miPortfolio.perfil" data-aos="fade-right" data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true"></div>
-    <p class="info" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500" data-aos-anchor-placement="top-center" data-aos-once="true">
-        Mi nombre es <b>{{miPortfolio.name}}</b> Vivo en la ciudad de <b>{{miPortfolio.ubicacion}}</b>
-        Trabajo part-time como pintor de obra para un equipo de trabajo tercerizado. Soy una persona organizada,
-        puntual y respetuosa, de facilidad para el aprendizaje y excelente predisposición para el trato interpersonal.
-        Ex-alumno de <b>{{miPortfolio.school}}</b> Actualmente me encuentro cursando <strong>{{miPortfolio.fullStack}}</strong>
-        en el programa de formacion <b>{{miPortfolio.ap}}</b>
-        <span><b> Aunque soy principiante en la programacion los invito a ver mi primera pagina web, espero la disfruten y conozcan más de mí.</b></span>
+<section class="experiencia__encabezado">
+<div class="container" *ngFor="let datos of miPortfolio">
+    <div class="foto-perfil" [ngStyle]="{'background-image': 'url(' + datos.perfil + ')'}"
+    data-aos="fade-right" data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true"></div>
+
+    <p class="info" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500" 
+    data-aos-anchor-placement="top-center" data-aos-once="true">
+        Mi nombre es <b>{{datos.name}}</b> Vivo en la ciudad de <b>{{datos.ubicacion}}</b>
+        Trabajo part-time como pintor de obra para un equipo de trabajo tercerizado. 
+        Soy una persona organizada, puntual y respetuosa, de facilidad para el aprendizaje y excelente predisposición para el trato interpersonal.
+        Ex-alumno de <b>{{datos.school}}</b> Actualmente me encuentro cursando 
+        <strong>{{datos.fullStack}}</strong> en el programa de formacion <b>{{datos.ap}}</b>
+        <span><b> Aunque soy principiante en la programacion los invito a ver mi primera pagina web, 
+        espero la disfruten y conozcan más de mí.</b></span>
     </p>
+    <app-edit (click)="onEdit(datos.id)"></app-edit>
 </div>
 <app-crud></app-crud>
+<app-form-about-me [object]="datos"></app-form-about-me>
+</section>
 
 
             

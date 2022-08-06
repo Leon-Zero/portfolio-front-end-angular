@@ -6,7 +6,9 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.css']
 })
-export class TitleComponent implements OnInit {miPortfolio:any;
+export class TitleComponent implements OnInit {
+  
+  miPortfolio:any;
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {

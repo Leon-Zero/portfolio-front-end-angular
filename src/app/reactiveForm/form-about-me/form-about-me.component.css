@@ -1,0 +1,8 @@
+.box-new{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.btn-edit{
+    display: var(--display-7);
+}
