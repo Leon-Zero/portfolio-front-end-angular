@@ -2,7 +2,7 @@ app-form-extra{
     display: var(--display-5);
 }
 app-form-academica{
-    display: var(--display-5);
+    display: var(--display-5); 
 }
 section{
     font-weight: 1em;
@@ -13,7 +13,7 @@ section{
     text-align: left;
     width: 80%;
 }
-app-delete{
+app-delete, app-edit{
     display: flex;
     justify-self: center ;
     align-self: center;

@@ -1,6 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+
 
 @Component({
   selector: 'app-form-academica',
@@ -11,6 +12,8 @@ export class FormAcademicaComponent implements OnInit {
 
   constructor(private datosPortfolio:PortfolioService) { }
 
+  @Input() object:any=[];
+
   addAcademica = new FormGroup ({
     tituloTag: new FormControl(''),
     instituto: new FormControl(''),
@@ -20,14 +23,29 @@ export class FormAcademicaComponent implements OnInit {
     ingreso: new FormControl('')
   });
 
-  ngOnInit(): void {
+  editMode: boolean = false;
+
+  ngOnInit(): void { }
+
+  Set(){
+    this.addAcademica.setValue({
+    tituloTag: this.object.tituloTag,
+    instituto: this.object.instituto,
+    logo: this.object.logo,
+    carrera: this.object.carrera,
+    estado: this.object.estado,
+    ingreso: this.object.ingreso
+     });
+    this.editMode=true;
   }
   SaveAcademica(){
-    // console.log(this.addAcademica.value)
-     this.datosPortfolio.SaveAcademica(this.addAcademica.value).subscribe(
-       (result)=> {
-       //  console.log(result)
-       this.addAcademica.reset({});
-       }); 
-   }
+    if (!this.editMode) {
+      this.datosPortfolio.SaveAcademica(this.addAcademica.value).subscribe(
+       (result)=> {this.addAcademica.reset({});}); 
+    }
+    else {
+      this.datosPortfolio.UpdateAcademica(this.object.id, this.addAcademica.value).subscribe((result)=>{this.addAcademica.reset({}); this.editMode = false;
+    })
+    }
+  }
 }

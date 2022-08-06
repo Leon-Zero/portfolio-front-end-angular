@@ -177,4 +177,21 @@ export class PortfolioService {
     tap(()=> { this._refresh$.next();        
     }))
   }
+  IdAcademica(id:Academica): Observable<Object>{
+    return this.http.get(`${this.academicaUrl}/${id}`);
+  }
+  UpdateAcademica(id: string, data:Object ){
+   return this.http.put(`${this.academicaUrl}/${id}`, data).pipe(
+    tap(()=> { this._refresh$.next();        
+    }))
+  }
+  IdExtra(id:ExtraCurricular): Observable<Object>{
+    return this.http.get(`${this.extraUrl}/${id}`);
+  }
+  UpdateExtra(id: string, data:Object ){
+   return this.http.put(`${this.extraUrl}/${id}`, data).pipe(
+    tap(()=> { this._refresh$.next();        
+    }))
+  }
+
 }

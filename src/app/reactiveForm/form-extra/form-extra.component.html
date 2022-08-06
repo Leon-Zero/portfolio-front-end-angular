@@ -1,4 +1,6 @@
 <div class="box-new">
+    <button class="btn btn-warning btn-edit" (click)="SetExtra()">Setear Valores</button> 
+    <hr>
     <form [formGroup]="addExtra" (ngSubmit)="SaveExtra()">
         <div class="input-group mb-3">
             <span class="input-group-text">Tipo de Actividad</span>
@@ -13,7 +15,7 @@
         </div>
         
     <div class="col-12">
-        <button type="submit" class="btn btn-primary">Añadir Act. Extracurricular(+)</button>
+        <button type="submit" class="btn btn-primary">{{editMode? 'Editar Act. Extracurricular':'Añadir Act. Extracurricular(+)'}}</button>
     </div>
     </form>
 </div>

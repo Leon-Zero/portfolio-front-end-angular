@@ -1,12 +1,15 @@
 <section class="experiencia__encabezado">
-    <app-title-academica></app-title-academica>
+    <app-title-academica></app-title-academica> 
     <br><br>
 <div class="accordion accordion-shadow" [id]="'accordion-school-' + academica.id" data-aos="zoom-in"
 data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
     <div class="accordion-item" *ngFor="let school of academica">
         <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#item-academica-' + school.id" >
+                
+                <app-edit (click)="onEdit(school.id)"></app-edit>
                 <app-delete  (click)="onDelete(school.id)"></app-delete>
+
                 <h3>{{school.tituloTag}}</h3>
             </button>
         </h2>
@@ -37,10 +40,14 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
         <div [id]="'item-extra-' + extra.id" class="accordion-collapse collapse" aria-labelledby="headingTwo" [attr.data-bs-parent]="'#accordion-school-' + extra.id">
             <div class="accordion-body">
 
-                <app-form-extra></app-form-extra>
+                <app-crud></app-crud>
+                <app-form-extra [object]="datos"></app-form-extra>
                 
                 <div class="extra-box" *ngFor="let ex of extra">
+
+                    <app-edit (click)="onEditExtra(ex.id)"></app-edit>
                     <app-delete  (click)="onDeleteExtra(ex.id)"></app-delete>
+
                     <div  class="experiencia__contenido-div">
                         <span>{{ex.tipo}}</span>
                         <p>{{ex.actividad}}</p>
@@ -51,5 +58,5 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
     </div>
 </div>
 <app-crud></app-crud>
-<app-form-academica></app-form-academica>
+<app-form-academica [object]="datos"></app-form-academica>
 </section>

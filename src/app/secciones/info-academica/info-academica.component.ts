@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Academica, ExtraCurricular } from 'src/assets/data/Data'; 
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs'; 
 
 
 @Component({
@@ -10,9 +10,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./info-academica.component.css']
 })
 export class InfoAcademicaComponent implements OnInit {
+ 
   suscription: Subscription = new Subscription;
   academica:any;
   extra: any;
+  datos:Object=[]
+
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -44,4 +47,16 @@ export class InfoAcademicaComponent implements OnInit {
       result)=>{
       this.ngOnInit();}) 
   }
+  onEdit(datosPortfolio_id: Academica){
+    this.datosPortfolio.IdAcademica(datosPortfolio_id).subscribe((data)=>{
+      this.datos = data;
+      console.log(this.datos);
+    })
+   }
+   onEditExtra(datosPortfolio_id: ExtraCurricular){
+    this.datosPortfolio.IdExtra(datosPortfolio_id).subscribe((data)=>{
+      this.datos = data;
+      console.log(this.datos);
+    })
+   }
 }

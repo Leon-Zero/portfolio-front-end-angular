@@ -1,4 +1,6 @@
-<div class="box-new">
+<div class="box-new"> 
+    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <hr>
     <form [formGroup]="addAcademica" (ngSubmit)="SaveAcademica()">
         <div class="input-group mb-3">
             <span class="input-group-text">Nivel de estudio</span>
@@ -37,7 +39,7 @@
         </div>
         
     <div class="col-12">
-        <button type="submit" class="btn btn-primary">Añadir Estudios(+)</button>
+        <button type="submit" class="btn btn-primary">{{editMode? 'Editar Estudios':'Añadir Estudios(+)'}}</button>
     </div>
     </form>
 </div>
