@@ -36,5 +36,5 @@ export class ProgramingComponent implements OnInit {
     this.datos = data;
     console.log(this.datos);
   })
-}
+ }
 }

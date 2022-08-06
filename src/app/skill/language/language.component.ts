@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { Skill } from 'src/assets/data/Data'; 
+import { Skill } from 'src/assets/data/Data';
 
 @Component({
   selector: 'app-language',
@@ -11,6 +11,8 @@ import { Skill } from 'src/assets/data/Data';
 export class LanguageComponent implements OnInit {
   suscription: Subscription = new Subscription;
   lenguageList:any;
+  datos:Object=[]
+
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -29,5 +31,10 @@ export class LanguageComponent implements OnInit {
     this.lenguageList=data;
   });
  }
-
+ onEdit(datosPortfolio_id: Skill){
+  this.datosPortfolio.IdLengua(datosPortfolio_id).subscribe((data)=>{
+    this.datos = data;
+    console.log(this.datos);
+  })
+ }
 }

@@ -1,6 +1,11 @@
 app-form-lengua{
    display: var(--display-5);
 }
+app-edit{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+}
 app-delete{
     position: absolute;
     top: -10px;

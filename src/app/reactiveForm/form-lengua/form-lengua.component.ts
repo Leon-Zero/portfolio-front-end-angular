@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
 import { PortfolioService } from 'src/app/servicios/portfolio.service'; 
 
@@ -11,20 +11,36 @@ export class FormLenguaComponent implements OnInit {
 
   constructor(private datosPortfolio:PortfolioService) { }
 
+  @Input() object:any=[];
+
   addLengua = new FormGroup ({
     tag: new FormControl(''),
     porcentaje: new FormControl(''),
     color: new FormControl('')
   });
 
-  ngOnInit(): void {
+  editMode: boolean = false;
+
+  ngOnInit(): void { }
+
+  Set(){
+    this.addLengua.setValue({
+      tag: this.object.tag,
+      porcentaje: this.object.porcentaje,
+      color: this.object.color,
+    });
+    this.editMode=true;
   }
   SaveLengua(){
-   // console.log(this.addLengua.value)
+    if (!this.editMode) {
     this.datosPortfolio.SaveLengua(this.addLengua.value).subscribe(
       (result)=> {
-      //  console.log(result)
       this.addLengua.reset({});
       }); 
+    }
+    else {
+      this.datosPortfolio.UpdateLengua(this.object.id, this.addLengua.value).subscribe((result)=>{this.addLengua.reset({}); this.editMode = false;
+    })
+    }
   }
 }

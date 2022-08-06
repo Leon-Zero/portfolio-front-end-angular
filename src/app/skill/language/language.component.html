@@ -7,8 +7,9 @@
                 <span>{{idiomas.porcentaje}}%</span><span>{{idiomas.tag}}</span>
             </div>
         </div>
+        <app-edit (click)="onEdit(idiomas.id)"></app-edit>
         <app-delete  (click)="onDelete(idiomas.id)"></app-delete>
     </div>
 </div>
 <app-crud></app-crud>
-<app-form-lengua></app-form-lengua>
+<app-form-lengua [object]="datos"></app-form-lengua>
