@@ -6,7 +6,10 @@
         <div class="accordion-item" *ngFor="let jobs of jobsList">
             <h2 class="accordion-header" [id]="'item-' + jobs.id">
                 <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + jobs.id" [attr.aria-controls]="jobs.id">
+
+                <app-edit (click)="onEdit(jobs.id)"></app-edit>
                 <app-delete  (click)="onDelete(jobs.id)"></app-delete>
+
                 <h3>{{jobs.job}}</h3> 
                 </button>
               </h2>
@@ -27,5 +30,5 @@
         </div>
     </div>
  <app-crud></app-crud>
- <app-form-jobs></app-form-jobs>
+ <app-form-jobs [object]="datos"></app-form-jobs> 
 </section>

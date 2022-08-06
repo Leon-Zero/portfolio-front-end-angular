@@ -1,4 +1,6 @@
 <div class="box-new">
+    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <hr>
     <form [formGroup]="addJob" (ngSubmit)="SaveJob()">
         <div class="input-group mb-3">
             <span class="input-group-text">Trabajo</span>
@@ -31,7 +33,7 @@
         </div>
         
     <div class="col-12">
-        <button type="submit" class="btn btn-primary">Añadir Trabajo(+)</button>
+        <button type="submit" class="btn btn-primary">{{editMode? 'Editar Trabajo':'Crear Trabajo(+)'}}</button>
     </div>
     </form>
 </div>

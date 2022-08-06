@@ -7,11 +7,14 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-experiencia-laboral',
   templateUrl: './experiencia-laboral.component.html',
-  styleUrls: ['./experiencia-laboral.component.css']
+  styleUrls: ['./experiencia-laboral.component.css'] 
 })
 export class ExperienciaLaboralComponent implements OnInit {
+
   suscription: Subscription = new Subscription;
   jobsList:any;
+  datos:Object=[]
+
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -30,4 +33,10 @@ export class ExperienciaLaboralComponent implements OnInit {
       result)=>{
       this.ngOnInit();}) 
   }
+  onEdit(datosPortfolio_id: Job){
+    this.datosPortfolio.IdJob(datosPortfolio_id).subscribe((data)=>{
+      this.datos = data;
+      console.log(this.datos);
+    })
+   }
 }

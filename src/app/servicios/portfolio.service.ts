@@ -169,4 +169,12 @@ export class PortfolioService {
     tap(()=> { this._refresh$.next();        
     }))
   }
+  IdJob(id:Job): Observable<Object>{
+    return this.http.get(`${this.jobUrl}/${id}`);
+  }
+  UpdateJob(id: string, data:Object ){
+   return this.http.put(`${this.jobUrl}/${id}`, data).pipe(
+    tap(()=> { this._refresh$.next();        
+    }))
+  }
 }

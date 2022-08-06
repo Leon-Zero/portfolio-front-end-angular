@@ -1,6 +1,6 @@
 app-form-jobs{
     display: var(--display-5);
-}
+} 
 section{
     font-weight: 1em;
     font-size: 14px;
@@ -10,7 +10,7 @@ section{
     text-align: left;
     width: 80%;
 }
-app-delete{
+app-delete, app-edit{
     display: flex;
     justify-self: center ;
     align-self: center;
