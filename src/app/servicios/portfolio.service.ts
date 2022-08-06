@@ -193,5 +193,13 @@ export class PortfolioService {
     tap(()=> { this._refresh$.next();        
     }))
   }
+  IdBtn(id:BtnR): Observable<Object>{
+    return this.http.get(`${this.btnUrl}/${id}`);
+  }
+  UpdateBtn(id: string, data:Object ){
+   return this.http.put(`${this.btnUrl}/${id}`, data).pipe(
+    tap(()=> { this._refresh$.next();        
+    }))
+  }
 
 }

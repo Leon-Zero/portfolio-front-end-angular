@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { BtnR } from 'src/assets/data/Data';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs'; 
 
 
 @Component({
@@ -10,8 +10,11 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./container-btn-rs.component.css']
 })
 export class ContainerBtnRSComponent implements OnInit {
+
   suscription: Subscription = new Subscription;
   socialList:any;
+  datos:Object=[]
+
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -30,4 +33,10 @@ export class ContainerBtnRSComponent implements OnInit {
       result)=>{
       this.ngOnInit();})
     }
+  onEdit(datosPortfolio_id: BtnR){
+      this.datosPortfolio.IdBtn(datosPortfolio_id).subscribe((data)=>{
+        this.datos = data;
+        console.log(this.datos);
+      })
+     }
 }

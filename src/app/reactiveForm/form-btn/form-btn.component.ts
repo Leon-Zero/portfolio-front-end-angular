@@ -1,6 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service'; 
 
 @Component({
   selector: 'app-form-btn',
@@ -11,6 +11,8 @@ export class FormBtnComponent implements OnInit {
 
   constructor(private datosPortfolio:PortfolioService) { }
 
+  @Input() object:any=[];
+
   addBtn = new FormGroup ({
     redSocial: new FormControl(''),
     btn: new FormControl(''),
@@ -18,14 +20,27 @@ export class FormBtnComponent implements OnInit {
     color: new FormControl('')
   });
 
-  ngOnInit(): void {
+  editMode: boolean = false;
+
+  ngOnInit(): void { }
+
+  Set(){
+    this.addBtn.setValue({
+      redSocial: this.object.redSocial,
+      btn: this.object.btn,
+      url: this.object.url,
+      color: this.object.color
+     });
+    this.editMode=true;
   }
   SaveBtn(){
-    // console.log(this.addBtn.value)
+    if (!this.editMode) {
      this.datosPortfolio.SaveBtn(this.addBtn.value).subscribe(
-       (result)=> {
-       //  console.log(result)
-       this.addBtn.reset({});
-       }); 
-   }
- }
+       (result)=> {this.addBtn.reset({});}); 
+    }
+    else {
+      this.datosPortfolio.UpdateBtn(this.object.id, this.addBtn.value).subscribe((result)=>{this.addBtn.reset({}); this.editMode = false;
+    })
+    }
+  }
+}

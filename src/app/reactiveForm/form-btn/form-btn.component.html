@@ -1,4 +1,6 @@
 <div class="box-new">
+    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <hr>
     <form [formGroup]="addBtn" (ngSubmit)="SaveBtn()">
         <div class="input-group mb-3">
             <span class="input-group-text">Red Social</span>
@@ -25,7 +27,7 @@
         </div>
         
     <div class="col-12">
-        <button type="submit" class="btn btn-primary">Crear Botón(+)</button>
+        <button type="submit" class="btn btn-primary">{{editMode? 'Editar Botón':'Crear Botón(+)'}}</button>
     </div>
     </form>
 </div>
