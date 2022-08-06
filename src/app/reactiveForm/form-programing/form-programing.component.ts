@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
@@ -11,23 +11,36 @@ export class FormProgramingComponent implements OnInit {
 
   constructor(private datosPortfolio:PortfolioService) { }
 
+  @Input() object:any=[]
+
   addPrograming = new FormGroup ({
     tag: new FormControl(''),
     porcentaje: new FormControl(''),
     color: new FormControl('')
   });
 
-  ngOnInit(): void {
+  editMode: boolean = false;
+
+
+  ngOnInit(): void {  }
+
+  Set(){
+    this.addPrograming.setValue({
+      tag: this.object.tag,
+      porcentaje: this.object.porcentaje,
+      color: this.object.color,
+    });
+    this.editMode=true;
   }
-  mesage: boolean= false
   SavePrograming(){
-   // console.log(this.addPrograming.value)
+    if (!this.editMode) {
     this.datosPortfolio.SavePrograming(this.addPrograming.value).subscribe(
-      (result)=> {
-      //  console.log(result)
-      this.mesage=true
-      this.addPrograming.reset({});
+      (result)=> {this.addPrograming.reset({});
       }); 
   }
-
+    else {
+      this.datosPortfolio.UpdatePrograming(this.object.id, this.addPrograming.value).subscribe((result)=>{this.addPrograming.reset({}); this.editMode = false;
+    })
+    }
+  }
 }

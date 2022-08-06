@@ -3,3 +3,6 @@
     height: auto;
     margin: 0 auto;
 }
+.btn-edit{
+    display: var(--display-7);
+}

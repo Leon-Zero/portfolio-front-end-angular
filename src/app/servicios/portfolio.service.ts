@@ -142,4 +142,13 @@ export class PortfolioService {
     tap(()=> { this._refresh$.next();        
     }))
   }
+  //metodo put + obtener datos
+  IdPrograming(id:Skill): Observable<Object>{
+    return this.http.get(`${this.programingUrl}/${id}`);
+  }
+  UpdatePrograming(id: string, data:Object ){
+   return this.http.put(`${this.programingUrl}/${id}`, data).pipe(
+    tap(()=> { this._refresh$.next();        
+    }))
+  }
 }

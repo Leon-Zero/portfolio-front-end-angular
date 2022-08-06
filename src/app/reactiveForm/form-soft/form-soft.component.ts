@@ -1,7 +1,6 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core'; 
 import { FormGroup, FormControl } from "@angular/forms";
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { Skill, SkillSoft } from 'src/assets/data/Data';
 
 @Component({
   selector: 'app-form-soft',

@@ -9,8 +9,10 @@ import { Skill } from 'src/assets/data/Data';
   styleUrls: ['./programing.component.css']
 })
 export class ProgramingComponent implements OnInit {
+
   suscription: Subscription = new Subscription;
   programingList:any;
+  datos:Object=[]
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -18,7 +20,7 @@ export class ProgramingComponent implements OnInit {
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
     this.getData();
     })
-  }
+  } 
   getData(){
     this.datosPortfolio.obtenerPrograming().subscribe(data =>{console.log(data);
       this.programingList=data;
@@ -29,4 +31,10 @@ export class ProgramingComponent implements OnInit {
       result)=>{
       this.ngOnInit();}) 
  }
+ onEdit(datosPortfolio_id: Skill){
+  this.datosPortfolio.IdPrograming(datosPortfolio_id).subscribe((data)=>{
+    this.datos = data;
+    console.log(this.datos);
+  })
+}
 }

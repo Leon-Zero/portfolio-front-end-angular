@@ -1,9 +1,6 @@
 <div class="box-new">
-    <div *ngIf="mesage" class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Grafico "lenguajes de programacion" ha sido Creado con exito!!</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    
+    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button>
+<hr>   
     <form [formGroup]="addPrograming" (ngSubmit)="SavePrograming()">
         <div class="input-group mb-3">
             <span class="input-group-text">Tag</span>
@@ -24,7 +21,7 @@
         </div>
         
     <div class="col-12">
-        <button type="submit" class="btn btn-primary">Crear Grafico(+)</button>
+        <button type="submit" class="btn btn-primary">{{editMode? 'Editar Grafico':'Crear Grafico(+)'}}</button>
     </div>
     </form>
 </div>

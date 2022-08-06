@@ -100,16 +100,16 @@
       "color": "#30E3E3"
     },
     {
-      "id": 2,
       "tag": "CSS",
-      "porcentaje": 60,
-      "color": "#30E3E3"
+      "porcentaje": 75,
+      "color": "#30E3E3",
+      "id": 2
     },
     {
-      "id": 3,
       "tag": "JSCRIPT",
-      "porcentaje": 40,
-      "color": "#30E3E3"
+      "porcentaje": 60,
+      "color": "#30E3E3",
+      "id": 3
     }
   ],
   "skillLenguage": [

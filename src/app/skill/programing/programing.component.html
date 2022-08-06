@@ -7,8 +7,9 @@
                     <span>{{programacion.porcentaje}}%</span><span>{{programacion.tag}}</span>
                 </div>
             </div>
+            <app-edit (click)="onEdit(programacion.id)"></app-edit>
             <app-delete  (click)="onDelete(programacion.id)"></app-delete>
         </div>
     </div>
 <app-crud></app-crud>
-<app-form-programing></app-form-programing>
+<app-form-programing [object]="datos"></app-form-programing>
