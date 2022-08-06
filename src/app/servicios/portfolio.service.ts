@@ -54,6 +54,7 @@ export class PortfolioService {
   }
 
   //metodos delete json-server
+  // -------------
 
   DeleteSoft(id:SkillSoft){
     return this.http.delete(`${this.softUrl}/${id}`)
@@ -80,7 +81,8 @@ export class PortfolioService {
     return this.http.delete(`${this.btnUrl}/${id}`)
   }
 
-  //metodos Post y observable refresh
+  //metodos Post y 
+  // observable refresh
   get refresh$(){
     return this._refresh$;
   }
@@ -133,7 +135,8 @@ export class PortfolioService {
       }))
   }
 
-  //metodo put + obtener datos
+  //metodo put + 
+  // obtener datos
   IdSoft(id:SkillSoft): Observable<Object>{
     return this.http.get(`${this.softUrl}/${id}`);
   }
@@ -155,6 +158,14 @@ export class PortfolioService {
   }
   UpdateLengua(id: string, data:Object ){
    return this.http.put(`${this.lenguageUrl}/${id}`, data).pipe(
+    tap(()=> { this._refresh$.next();        
+    }))
+  }
+  IdProgram(id:Skill): Observable<Object>{
+    return this.http.get(`${this.programUrl}/${id}`);
+  }
+  UpdateProgram(id: string, data:Object ){
+   return this.http.put(`${this.programUrl}/${id}`, data).pipe(
     tap(()=> { this._refresh$.next();        
     }))
   }

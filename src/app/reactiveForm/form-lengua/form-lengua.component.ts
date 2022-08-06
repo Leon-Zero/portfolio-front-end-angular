@@ -1,6 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { PortfolioService } from 'src/app/servicios/portfolio.service'; 
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-form-lengua',
@@ -34,8 +34,7 @@ export class FormLenguaComponent implements OnInit {
   SaveLengua(){
     if (!this.editMode) {
     this.datosPortfolio.SaveLengua(this.addLengua.value).subscribe(
-      (result)=> {
-      this.addLengua.reset({});
+      (result)=> {this.addLengua.reset({});
       }); 
     }
     else {

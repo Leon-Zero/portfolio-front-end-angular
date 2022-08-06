@@ -11,6 +11,8 @@ import { Skill } from 'src/assets/data/Data';
 export class ProgramsComponent implements OnInit {
   suscription: Subscription = new Subscription;
   programsList:any;
+  datos:Object=[]
+
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -29,4 +31,10 @@ export class ProgramsComponent implements OnInit {
       this.programsList=data;
     });
   }
-}
+  onEdit(datosPortfolio_id: Skill){
+    this.datosPortfolio.IdProgram(datosPortfolio_id).subscribe((data)=>{
+      this.datos = data;
+      console.log(this.datos);
+    })
+   }
+  }

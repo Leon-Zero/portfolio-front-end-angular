@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { Skill } from 'src/assets/data/Data';
+import { Skill } from 'src/assets/data/Data'; 
 
 @Component({
   selector: 'app-language',
@@ -21,15 +21,15 @@ export class LanguageComponent implements OnInit {
     this.getData();
     }) 
   }
+  getData(){
+    this.datosPortfolio.obtenerLengua().subscribe(data =>{console.log(data);
+      this.lenguageList=data;
+    });
+   }
   onDelete(datosPortfolio_id: Skill){
     this.datosPortfolio.DeleteLenguage(datosPortfolio_id).subscribe((
       result)=>{
       this.ngOnInit();}) 
- }
- getData(){
-  this.datosPortfolio.obtenerLengua().subscribe(data =>{console.log(data);
-    this.lenguageList=data;
-  });
  }
  onEdit(datosPortfolio_id: Skill){
   this.datosPortfolio.IdLengua(datosPortfolio_id).subscribe((data)=>{

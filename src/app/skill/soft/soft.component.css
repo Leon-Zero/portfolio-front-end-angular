@@ -10,7 +10,7 @@ app-form-soft{
     flex-flow: row nowrap;
     background-color: rgb(182, 179, 179);
     flex: 1 0 auto;
-    box-shadow: 1px 1px 3px 1px rgba(48,227,227,.5);
+    box-shadow: 2px 2px 4px 4px rgba(48,227,227,.5);
     border: rgba(48,227,227) solid 1px
 }
 .grafico-barra__tag{
