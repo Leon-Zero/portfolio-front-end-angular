@@ -2,9 +2,6 @@
     <ul>
         <li *ngFor="let social of socialList">
 
-            <app-edit (click)="onEdit(social.id)"></app-edit>
-            <app-delete  (click)="onDelete(social.id)"></app-delete>
-
                 <a [href]="social.url" target="_blank" [title]="social.redSocial">
                     <span [style]="'background: ' + social.color"></span>
                     <span [style]="'background: ' + social.color"></span>
@@ -12,9 +9,16 @@
                     <span [style]="'background: ' + social.color"></span>
                     <span [style]="'background: ' + social.color" [class]="social.btn"></span>
                 </a>
+                <app-edit *ngIf="displayEdit" (click)="onEdit(social.id)"></app-edit>
+                <app-delete *ngIf="displayDelete" (click)="onDelete(social.id)"></app-delete>
         </li>
     </ul>
 </div>
-<app-crud></app-crud>
 <br>
-<app-form-btn [object]="datos"></app-form-btn>
+<app-crud 
+(statusBtnDelete)="onDisplayDelete( $event )"
+(statusBtnNew)="onDisplayNew( $event )"
+(statusBtnEdit)="onDisplayEdit( $event )" 
+></app-crud>
+<br>
+<app-form-btn *ngIf="displayNew" [object]="datos"></app-form-btn>

@@ -60,12 +60,13 @@
         opacity: .2;
     }
         
-app-delete, app-edit{
-    position: relative;
-    top: 10px;
+app-edit{
+    position: absolute;
+    top: 50px;
     left: -40px;
-    margin: 8px 0;
 }
-app-form-btn{
-    display: var(--display-5);
-} 
+app-delete{
+    position: absolute;
+    top: 50px;
+    left: -5px;
+}

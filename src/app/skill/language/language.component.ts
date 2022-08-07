@@ -12,6 +12,9 @@ export class LanguageComponent implements OnInit {
   suscription: Subscription = new Subscription;
   lenguageList:any;
   datos:Object=[]
+  displayDelete: boolean=false 
+  displayNew: boolean=false
+  displayEdit: boolean=false
 
   constructor(private datosPortfolio:PortfolioService) { }
 
@@ -26,6 +29,30 @@ export class LanguageComponent implements OnInit {
       this.lenguageList=data;
     });
    }
+   onDisplayDelete( active:boolean){
+    if (active) {
+      this.displayDelete = true
+    }
+    else {
+      this.displayDelete = false
+    }
+  }
+  onDisplayNew( active:boolean){
+    if (active) {
+      this.displayNew = true
+    }
+    else {
+      this.displayNew = false
+    }
+  }
+  onDisplayEdit( active:boolean){
+    if (active) {
+      this.displayEdit = true
+    }
+    else {
+      this.displayEdit = false
+    }
+  }
   onDelete(datosPortfolio_id: Skill){
     this.datosPortfolio.DeleteLenguage(datosPortfolio_id).subscribe((
       result)=>{

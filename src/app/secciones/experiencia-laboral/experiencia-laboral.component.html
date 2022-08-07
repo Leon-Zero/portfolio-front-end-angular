@@ -7,8 +7,8 @@
             <h2 class="accordion-header" [id]="'item-' + jobs.id">
                 <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + jobs.id" [attr.aria-controls]="jobs.id">
 
-                <app-edit (click)="onEdit(jobs.id)"></app-edit>
-                <app-delete  (click)="onDelete(jobs.id)"></app-delete>
+                <app-edit *ngIf="displayEdit" (click)="onEdit(jobs.id)"></app-edit>
+                <app-delete *ngIf="displayDelete" (click)="onDelete(jobs.id)"></app-delete>
 
                 <h3>{{jobs.job}}</h3> 
                 </button>
@@ -29,6 +29,12 @@
               </div>
         </div>
     </div>
- <app-crud></app-crud>
- <app-form-jobs [object]="datos"></app-form-jobs> 
+
+    <app-crud 
+    (statusBtnDelete)="onDisplayDelete( $event )"
+    (statusBtnNew)="onDisplayNew( $event )"
+    (statusBtnEdit)="onDisplayEdit( $event )" 
+    ></app-crud>
+
+ <app-form-jobs *ngIf="displayNew" [object]="datos"></app-form-jobs> 
 </section>

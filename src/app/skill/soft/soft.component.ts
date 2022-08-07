@@ -13,15 +13,44 @@ export class SoftComponent implements OnInit {
   suscription: Subscription = new Subscription;
   softList: any;
   datos:Object=[]
+  displayDelete: boolean=false
+  displayNew: boolean=false
+  displayEdit: boolean=false
+
   constructor(private datosPortfolio:PortfolioService) { }
 
+  
   ngOnInit(): void {
     this.getData();
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
     this.getData();
     }) 
   }
-
+  onDisplayDelete( active:boolean){
+    if (active) {
+      this.displayDelete = true
+    }
+    else {
+      this.displayDelete = false
+    }
+  }
+  onDisplayNew( active:boolean){
+    if (active) {
+      this.displayNew = true
+    }
+    else {
+      this.displayNew = false
+    }
+  }
+  onDisplayEdit( active:boolean){
+    if (active) {
+      this.displayEdit = true
+    }
+    else {
+      this.displayEdit = false
+    }
+    }
+    
   getData(){
     this.datosPortfolio.obtenerSoft().subscribe(respuesta =>{console.log(respuesta);
       this.softList=respuesta;

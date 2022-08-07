@@ -7,8 +7,8 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
         <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#item-academica-' + school.id" >
                 
-                <app-edit (click)="onEdit(school.id)"></app-edit>
-                <app-delete  (click)="onDelete(school.id)"></app-delete>
+                <app-edit *ngIf="displayEdit" (click)="onEdit(school.id)"></app-edit>
+                <app-delete *ngIf="displayDelete" (click)="onDelete(school.id)"></app-delete>
 
                 <h3>{{school.tituloTag}}</h3>
             </button>
@@ -40,13 +40,18 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
         <div [id]="'item-extra-' + extra.id" class="accordion-collapse collapse" aria-labelledby="headingTwo" [attr.data-bs-parent]="'#accordion-school-' + extra.id">
             <div class="accordion-body">
 
-                <app-crud></app-crud>
-                <app-form-extra [object]="datos"></app-form-extra>
+                <app-crud 
+                (statusBtnDelete)="onDisplayDelete( $event )"
+                (statusBtnNew)="onDisplayNew( $event )"
+                (statusBtnEdit)="onDisplayEdit( $event )" 
+                ></app-crud>
+
+                <app-form-extra *ngIf="displayNew" [object]="datos"></app-form-extra>
                 
                 <div class="extra-box" *ngFor="let ex of extra">
 
-                    <app-edit (click)="onEditExtra(ex.id)"></app-edit>
-                    <app-delete  (click)="onDeleteExtra(ex.id)"></app-delete>
+                    <app-edit *ngIf="displayEdit" (click)="onEditExtra(ex.id)"></app-edit>
+                    <app-delete *ngIf="displayDelete" (click)="onDeleteExtra(ex.id)"></app-delete>
 
                     <div  class="experiencia__contenido-div">
                         <span>{{ex.tipo}}</span>
@@ -57,6 +62,12 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
         </div>
     </div>
 </div>
-<app-crud></app-crud>
-<app-form-academica [object]="datos"></app-form-academica>
+
+<app-crud 
+(statusBtnDelete)="onDisplayDelete( $event )"
+(statusBtnNew)="onDisplayNew( $event )"
+(statusBtnEdit)="onDisplayEdit( $event )" 
+></app-crud>
+
+<app-form-academica *ngIf="displayNew" [object]="datos"></app-form-academica>
 </section>

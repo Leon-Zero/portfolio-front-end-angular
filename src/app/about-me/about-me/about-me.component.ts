@@ -13,6 +13,7 @@ export class AboutMeComponent implements OnInit {
   suscription: Subscription = new Subscription;
   miPortfolio:any;
   datos:Object=[]
+  displayEdit: boolean=false
 
   constructor(private datosPortfolio:PortfolioService) { }
 
@@ -25,6 +26,14 @@ export class AboutMeComponent implements OnInit {
     this.datosPortfolio.obtenerData().subscribe(data =>{console.log(data);
       this.miPortfolio=data;
     });
+  }
+  onDisplayEdit( active:boolean){
+    if (active) {
+      this.displayEdit = true
+    }
+    else {
+      this.displayEdit = false
+    }
   }
   onEdit(datosPortfolio_id: Datum){
     this.datosPortfolio.IdData(datosPortfolio_id).subscribe((data)=>{

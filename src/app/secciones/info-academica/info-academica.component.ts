@@ -15,6 +15,9 @@ export class InfoAcademicaComponent implements OnInit {
   academica:any;
   extra: any;
   datos:Object=[]
+  displayDelete: boolean=false 
+  displayNew: boolean=false
+  displayEdit: boolean=false
 
   constructor(private datosPortfolio:PortfolioService) { }
 
@@ -35,6 +38,30 @@ export class InfoAcademicaComponent implements OnInit {
     this.datosPortfolio.obtenerExtra().subscribe(data =>{console.log(data);
       this.extra=data;
     });
+  }
+  onDisplayDelete( active:boolean){
+    if (active) {
+      this.displayDelete = true
+    }
+    else {
+      this.displayDelete = false
+    }
+  }
+  onDisplayNew( active:boolean){
+    if (active) {
+      this.displayNew = true
+    }
+    else {
+      this.displayNew = false
+    }
+  }
+  onDisplayEdit( active:boolean){
+    if (active) {
+      this.displayEdit = true
+    }
+    else {
+      this.displayEdit = false
+    }
   }
   onDelete(datosPortfolio_id: Academica){
     this.datosPortfolio.DeleteAcademica(datosPortfolio_id).subscribe((

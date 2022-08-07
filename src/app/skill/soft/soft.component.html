@@ -12,12 +12,19 @@
             <div class="grafico-barra__relleno" [style.width.%]="skill.porcentaje"></div>
             <div class="grafico-barra__porcentaje">{{skill.porcentaje}}%</div>
         </div>
-        <app-edit (click)="onEdit(skill.id)"></app-edit> 
-        <app-delete  (click)="onDelete(skill.id)"></app-delete>
+
+        <app-edit *ngIf="displayEdit" (click)="onEdit(skill.id)"></app-edit> 
+        <app-delete *ngIf="displayDelete" (click)="onDelete(skill.id)"></app-delete>
+
     </div>
 
-    <app-crud></app-crud>
-    <app-form-soft [object]="datos"></app-form-soft>
+    <app-crud 
+    (statusBtnDelete)="onDisplayDelete( $event )"
+    (statusBtnNew)="onDisplayNew( $event )"
+    (statusBtnEdit)="onDisplayEdit( $event )"
+    ></app-crud>
+    
+    <app-form-soft *ngIf="displayNew" [object]="datos"></app-form-soft>
     
     <div class="grafico-barra__info">
         <img src="assets/informacion.png" alt="info">

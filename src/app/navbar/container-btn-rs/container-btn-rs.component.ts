@@ -14,6 +14,9 @@ export class ContainerBtnRSComponent implements OnInit {
   suscription: Subscription = new Subscription;
   socialList:any;
   datos:Object=[]
+  displayDelete: boolean=false 
+  displayNew: boolean=false
+  displayEdit: boolean=false
 
   constructor(private datosPortfolio:PortfolioService) { }
 
@@ -27,6 +30,30 @@ export class ContainerBtnRSComponent implements OnInit {
     this.datosPortfolio.obtenerBtn().subscribe(data =>{console.log(data);
       this.socialList=data;
     });
+  }
+  onDisplayDelete( active:boolean){
+    if (active) {
+      this.displayDelete = true
+    }
+    else {
+      this.displayDelete = false
+    }
+  }
+  onDisplayNew( active:boolean){
+    if (active) {
+      this.displayNew = true
+    }
+    else {
+      this.displayNew = false
+    }
+  }
+  onDisplayEdit( active:boolean){
+    if (active) {
+      this.displayEdit = true
+    }
+    else {
+      this.displayEdit = false
+    }
   }
   onDelete(datosPortfolio_id: BtnR){
     this.datosPortfolio.DeleteBtn(datosPortfolio_id).subscribe((

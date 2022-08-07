@@ -8,12 +8,6 @@ body{
   --color-2: #010505e7;
   --display-1: none;
   --display-2: flex;
-  --display-3: none;
-  --display-4: flex;
-  --display-5: none;
-  --display-6: inline;
-  --display-7: none;
-  --display-8: flex;
 }
 .page{
   background: var(--color-1);  

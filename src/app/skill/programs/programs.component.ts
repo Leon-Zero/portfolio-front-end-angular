@@ -12,6 +12,9 @@ export class ProgramsComponent implements OnInit {
   suscription: Subscription = new Subscription;
   programsList:any;
   datos:Object=[]
+  displayDelete: boolean=false 
+  displayNew: boolean=false
+  displayEdit: boolean=false
 
   constructor(private datosPortfolio:PortfolioService) { }
 
@@ -20,6 +23,30 @@ export class ProgramsComponent implements OnInit {
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
     this.getData();
     }) 
+  }
+  onDisplayDelete( active:boolean){
+    if (active) {
+      this.displayDelete = true
+    }
+    else {
+      this.displayDelete = false
+    }
+  }
+  onDisplayNew( active:boolean){
+    if (active) {
+      this.displayNew = true
+    }
+    else {
+      this.displayNew = false
+    }
+  }
+  onDisplayEdit( active:boolean){
+    if (active) {
+      this.displayEdit = true
+    }
+    else {
+      this.displayEdit = false
+    }
   }
   onDelete(datosPortfolio_id: Skill){
     this.datosPortfolio.DeleteProgram(datosPortfolio_id).subscribe((

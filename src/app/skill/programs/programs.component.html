@@ -7,9 +7,14 @@
                 <span>{{programas.porcentaje}}%</span><span>{{programas.tag}}</span>
             </div>
         </div>
-        <app-edit (click)="onEdit(programas.id)"></app-edit>
-        <app-delete  (click)="onDelete(programas.id)"></app-delete>
+        <app-edit *ngIf="displayEdit" (click)="onEdit(programas.id)"></app-edit>
+        <app-delete *ngIf="displayDelete" (click)="onDelete(programas.id)"></app-delete>
     </div>
 </div>
-<app-crud></app-crud>
-<app-form-program [object]="datos"></app-form-program>
+<app-crud 
+    (statusBtnDelete)="onDisplayDelete( $event )"
+    (statusBtnNew)="onDisplayNew( $event )"
+    (statusBtnEdit)="onDisplayEdit( $event )" 
+></app-crud>
+
+<app-form-program *ngIf="displayNew" [object]="datos"></app-form-program>
