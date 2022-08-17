@@ -11,7 +11,7 @@ section{
     margin: auto;
     flex: auto;    
     text-align: left;
-    width: 80%;
+    width: 70%;
 }
 app-delete, app-edit{
     display: flex;
@@ -51,7 +51,7 @@ span{
     padding: .6em;
     background: linear-gradient(to left,#30E3E3, #118181);
     border-radius: 0 100px 100px 0;
-    box-shadow: -4pt 2pt 4pt 2pt #881212;
+    box-shadow: -4pt 2pt 4pt 2pt #E43838;
     font-weight: bolder;
     text-align: center;
 }

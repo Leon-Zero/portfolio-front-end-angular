@@ -110,6 +110,12 @@
       "porcentaje": 60,
       "color": "#30E3E3",
       "id": 3
+    },
+    {
+      "tag": "JAVA",
+      "porcentaje": 50,
+      "color": "#30e3e3",
+      "id": 4
     }
   ],
   "skillLenguage": [

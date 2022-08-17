@@ -1,6 +1,6 @@
 <section>
     <app-title-laboral></app-title-laboral>
-    <br><br>
+    <div class="blank page"></div>
     <div class="accordion accordion-shadow" id="accordionExample" data-aos="zoom-in"
     data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
         <div class="accordion-item" *ngFor="let jobs of jobsList">
@@ -10,7 +10,7 @@
                 <app-edit *ngIf="displayEdit" (click)="onEdit(jobs.id)"></app-edit>
                 <app-delete *ngIf="displayDelete" (click)="onDelete(jobs.id)"></app-delete>
 
-                <h3>{{jobs.job}}</h3> 
+                <h4>{{jobs.job}}</h4> 
                 </button>
               </h2>
               <div [id]="'collapse-' + jobs.id" class="accordion-collapse collapse" [attr.aria-labelledby]="'item-' + jobs.id" data-bs-parent="#accordionExample">

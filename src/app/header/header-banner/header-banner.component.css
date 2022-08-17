@@ -18,6 +18,7 @@ app-title{
 .animated {
     animation-duration: 2s;
     animation-fill-mode: both;
+    animation-delay: 1s;
   }
   .animated.infinite {
     animation-iteration-count: infinite;

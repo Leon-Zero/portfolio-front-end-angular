@@ -40,6 +40,9 @@ import { FormExtraComponent } from './reactiveForm/form-extra/form-extra.compone
 import { FormBtnComponent } from './reactiveForm/form-btn/form-btn.component';
 import { EditComponent } from './crud/edit/edit.component';
 import { FormAboutMeComponent } from './reactiveForm/form-about-me/form-about-me.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +82,9 @@ import { FormAboutMeComponent } from './reactiveForm/form-about-me/form-about-me
     FormBtnComponent,
     EditComponent,
     FormAboutMeComponent,
+    PortfolioComponent,
+    LoginComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

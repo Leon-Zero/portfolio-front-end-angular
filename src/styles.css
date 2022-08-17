@@ -13,6 +13,11 @@ body{
   background: var(--color-1);  
   transition: background .8s ease-in;
 }
+.blank{
+  width: 100%;
+  height: 150px;
+  opacity: 0;
+}
 h2{
   font-size: 2em;
   font-weight: bolder;
@@ -22,7 +27,13 @@ h2{
 }
 h3{
   color: var(--color-2);
+  text-shadow: 5px 5px 10px #F4ACAC;
   transition: color .8s ease-in
+}
+
+h4{
+  text-shadow: 5px 5px 5px #F4ACAC;
+  color: var(--color-2);
 }
 
 h5 + h6{

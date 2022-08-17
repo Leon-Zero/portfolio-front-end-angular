@@ -8,7 +8,7 @@ section{
     margin: auto;
     flex: auto;    
     text-align: left;
-    width: 80%;
+    width: 70%;
 }
 app-delete, app-edit{
     display: flex;
@@ -35,7 +35,9 @@ grid-column-gap: 20px;
     -moz-border-radius: 0 100px 100px 0;
     -webkit-border-radius: 0 100px 100px 0;
     border-radius: 0 100px 100px 0;
-    box-shadow: -4pt 2pt 4pt 2pt #881212;
+    box-shadow: -4pt 2pt 4pt 2pt #E43838;
+
+
     font-weight: bolder;
     text-align: center;
 }
