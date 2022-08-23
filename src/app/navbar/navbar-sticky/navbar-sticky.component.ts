@@ -9,7 +9,28 @@ export class NavbarStickyComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { 
 
+   }
+
+  goAbout(){
+      document.getElementById('index-about')?.scrollIntoView({behavior: "smooth"});
+    }
+  goProgramacion(){
+    document.getElementById('index-programing')?.scrollIntoView({behavior: "smooth"});
+  }
+  goIdioma(){
+    document.getElementById('index-language')?.scrollIntoView({behavior: "smooth"});
+  }
+  goProgramas(){
+    document.getElementById('index-programs')?.scrollIntoView({behavior: "smooth"});
+  }
+  goSoft(){
+    document.getElementById('index-soft')?.scrollIntoView({behavior: "smooth"});
+  }
+  goContacto(){
+    document.getElementById('index-contacto')?.scrollIntoView({behavior: "smooth"});
+  }
 }
+
+

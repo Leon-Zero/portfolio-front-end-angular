@@ -1,41 +1,41 @@
 export interface Portfolio {
-    data:            Datum[];
+    datos:           Datum[];
     academica:       Academica[];
-    extraCurricular: ExtraCurricular[];
-    btnRS:           BtnR[];
+    extracurricular: ExtraCurricular[];
+    btnrs:           BtnR[];
     jobs:            Job[];
-    skillPrograming: Skill[];
-    skillLenguage:   Skill[];
-    skillPrograms:   Skill[];
-    skillSoft:       SkillSoft[];
+    programacion:    Skill[];
+    idioma:          Skill[];
+    programas:       Skill[];
+    soft:            SkillSoft[];
 }
 
 export interface Academica {
-    tituloTag: string;
+    titulo_tag: string;
     instituto: string;
     logo:      string;
     carrera:   string;
     estado:    string;
     ingreso:   string;
     id:        number;
+    datos_id:  number;
 }
 
 export interface BtnR {
     id:        number;
-    redSocial: string;
+    red_social: string;
     btn:       string;
     url:       string;
     color:     string;
+    datos_id:  number;
 }
 
 export interface Datum {
     id:        number;
-    titleName: string;
+    title_name: string;
     name:      string;
     ubicacion: string;
     school:    string;
-    fullStack: string;
-    ap:        string;
     perfil:    string;
 }
 
@@ -43,6 +43,7 @@ export interface ExtraCurricular {
     id:        number;
     tipo:      string;
     actividad: string;
+    datos_id:  number;
 }
 
 export interface Job {
@@ -50,8 +51,9 @@ export interface Job {
     job:           string;
     cargo:         string;
     funciones:     string;
-    ingresoSalida: string;
+    ingreso_salida: string;
     contacto:      string;
+    datos_id:  number;
 }
 
 export interface Skill {
@@ -59,6 +61,7 @@ export interface Skill {
     tag:        string;
     porcentaje: number;
     color:      string;
+    datos_id:  number;
 }
 
 export interface SkillSoft {
@@ -67,4 +70,5 @@ export interface SkillSoft {
     modal:      string;
     beneficio:  string;
     porcentaje: number;
+    datos_id:  number;
 }

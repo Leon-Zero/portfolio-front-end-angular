@@ -1,1 +1,24 @@
-<p>login works!</p>
+<div class="login-body">
+    <div class="login-video">
+        <video src="./assets/video-login.mp4" onloadedmetadata="this.muted=true" autoplay loop></video>
+    </div>
+    <div class="login-content">
+    <form>
+                <div class="mb-3 centrar">
+                    <label for="username" class="form-label user"><i class="fa-solid fa-user-secret"></i>Usuario</label>
+                    <input type="text" class="form-control" id="username" placeholder="ejemplo123">
+                </div>
+                <div class="mb-3 centrar">
+                    <label for="password" class="form-label"><i class="fa-solid fa-key"></i>Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="abc123">
+        </div>
+        <div class="form-footer">
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Recordar Datos</label>
+            </div>
+            <button id="confirm" type="button" class="btn btn-primary" data-theme-btn>Confirmar Identidad</button>
+        </div>
+    </form>
+    </div>
+</div>

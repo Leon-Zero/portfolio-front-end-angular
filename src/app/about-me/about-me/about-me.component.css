@@ -8,8 +8,8 @@ app-edit{
 }
 section{
     font-weight: 1em;
-    font-size: 14px;
-    padding: 1em;
+    font-size: 15px;
+    padding: .5em;
     margin: auto;
     flex: auto;    
     text-align: left;
@@ -20,7 +20,8 @@ section{
     flex-flow: row-reverse wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 5em;
+    gap: 3em;
+    margin-top: 3em;
 }   
 .foto-perfil{
     width: 380px;
@@ -35,11 +36,10 @@ section{
     font-family: 'Catamaran', sans-serif;
     font-weight: 599;
     font-size: 1.3em;
-    width: 40%;
+    width: 50%;
     flex: 2 0 auto;    
     text-align: justify;
     color: var(--color-2);
-    padding: 2em;
     transition: color .8s ease-in;
 }
 .info span b{
@@ -48,3 +48,31 @@ section{
     text-shadow: 1px 1px 1px #031313;
 }
 
+@media only screen and (max-width: 1050px){
+
+    section{
+        font-weight: 1em;
+        font-size: 15px;
+        padding: .5em;
+        width: 100%;
+    }
+    .container {
+        margin-top: 1em;
+        flex-flow: column wrap;
+        width: 100%;
+    }   
+    .foto-perfil{
+        width: 280px;
+        height: 170px;
+    }
+    .info{    
+        font-size: 1em;
+        width: 100%;
+        padding: 1em;
+    }
+    .info span b{        
+        font-size: 1em ;
+    }
+
+
+}

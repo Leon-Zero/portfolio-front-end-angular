@@ -1,9 +1,12 @@
 #navbar-sticky {
     position: sticky;
     top: 0;
-    z-index: 200;
+    z-index: 3000;
     width: 100vw;
 }
 #navbarNavDarkDropdown{
     padding: 0 1em;
+}
+.nav-item{
+    cursor: pointer;
 }

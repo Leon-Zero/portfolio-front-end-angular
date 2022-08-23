@@ -1,4 +1,4 @@
-<div>
+<div class="wraper">
     <div class="grafico-barra" data-aos="zoom-out" data-aos-duration="2000" data-aos-once="true" 
     *ngFor="let skill of softList">
         <div class="grafico-barra__tag" data-aos="fade-right" data-aos-duration="1400" data-aos-once="true">
@@ -6,7 +6,9 @@
             <button type="button" class="btn btn-size" data-bs-toggle="modal" [attr.data-bs-target]="'#modal-'+ skill.id">
                 <img src="assets/info-circle-fill.svg" alt="info">
             </button>
-        {{skill.tag}}
+            <p>
+             {{skill.tag}}
+            </p>
         </div>
         <div class="grafico-barra__contenedor" data-aos="fade-left" data-aos-duration="1400" data-aos-once="true">
             <div class="grafico-barra__relleno" [style.width.%]="skill.porcentaje"></div>

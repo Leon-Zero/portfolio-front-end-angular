@@ -8,7 +8,7 @@ section{
     margin: auto;
     flex: auto;    
     text-align: left;
-    width: 70%;
+    width: 70%; 
 }
 app-delete, app-edit{
     display: flex;
@@ -52,3 +52,26 @@ grid-column-gap: 20px;
     background-color: var(--color-1);
     transition: background .8s ease-in;
   }
+
+  @media only screen and (max-width: 600px){
+
+    section{
+        font-weight: .8em;
+        font-size: 12px;
+        padding: .5em;
+        width: 80%; 
+    }
+    
+    .experiencia__contenido-div{
+    grid-auto-rows: minmax(30px, auto);
+    grid-column-gap: 10px;
+    
+    }
+    .span-item{
+        display: inline-block;
+        height: 30px;
+        width: 90px;
+        padding: .5em;
+    }    
+  
+}

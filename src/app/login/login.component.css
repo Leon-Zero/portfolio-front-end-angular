@@ -1,0 +1,40 @@
+.login-body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-content{
+    width: 400px;
+    height: 300px;
+    z-index: 1000;
+}
+form{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #48E6E6;
+    border-radius: 30px;
+    padding: 1em 2em;
+    box-sizing: border-box;
+    background-color: #C4F7F7;
+}
+i{
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+}
+.login-video{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.login-video video{
+    min-width: 50%;
+    min-height: 50%;
+}

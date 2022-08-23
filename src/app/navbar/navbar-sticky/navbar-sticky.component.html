@@ -13,7 +13,7 @@
                   <app-off-canvas></app-off-canvas>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#index-about">Sobre Mí</a>
+                  <a class="nav-link" aria-current="page" (click)="goAbout()">Sobre Mí</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,15 +28,15 @@
                     Skill
                   </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#index-programing">Lenguajes de Programación</a></li>
-                      <li><a class="dropdown-item" href="#index-language">Idiomas</a></li>
-                      <li><a class="dropdown-item" href="#index-programs">Programas</a></li>
+                      <li><a class="dropdown-item" (click)="goProgramacion()">Lenguajes de Programación</a></li>
+                      <li><a class="dropdown-item" (click)="goIdioma()">Idiomas</a></li>
+                      <li><a class="dropdown-item" (click)="goProgramas()">Programas</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#index-soft">Soft Skill</a></li>
+                      <li><a class="dropdown-item" (click)="goSoft()">Soft Skill</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#index-contacto">Contactarse</a>
+                  <a class="nav-link" aria-current="page" (click)="goContacto()">Contactarse</a>
                 </li>
                 <li class="nav-item">
                   <app-night-mode></app-night-mode>

@@ -10,7 +10,7 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
                 <app-edit *ngIf="displayEdit" (click)="onEdit(school.id)"></app-edit>
                 <app-delete *ngIf="displayDelete" (click)="onDelete(school.id)"></app-delete>
 
-                <h3>{{school.tituloTag}}</h3>
+                <h3>{{school.titulo_tag}}</h3>
             </button>
         </h2>
             <div [id]="'item-academica-' + school.id" class="accordion-collapse collapse" aria-labelledby="headingOne" [attr.data-bs-parent]="'#accordion-school-' + school.id">
@@ -24,7 +24,7 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
                         <span>carrera</span>
                             <p>{{school.carrera}}</p>
                         <span>estado</span>
-                            <p>{{school.estado}}<b>{{school.estadoAnexo}}</b></p>
+                            <p>{{school.estado}}</p>
                         <span>ingreso/salida</span>
                             <p>{{school.ingreso}}</p>
                     </div>

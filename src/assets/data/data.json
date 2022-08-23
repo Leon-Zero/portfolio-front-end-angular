@@ -1,77 +1,87 @@
 {
-  "data": [
+  "datos": [
     {
-      "titleName": "Leonardo Hidalgo",
+      "title_name": "Leonardo Hidalgo",
       "name": "Leonardo Ismael HIDALGO.",
       "ubicacion": "Córdoba Capital, Argentina.",
       "school": "Licenciatura en tecnología de los alimentos (L.T.A.).",
       "perfil": "/assets/perfil.JPG",
-      "id": 1
+      "id": 1, 
+      "datos_id": 1
     }
   ],
   "academica": [
-    {
-      "tituloTag": "ESTUDIOS UNIVERSITARIOS",
+    { 
+      "titulo_tag": "ESTUDIOS UNIVERSITARIOS",
       "instituto": "Universidad Católica de Córdoba",
       "logo": "./assets/ucc.png",
       "carrera": "licenciatura en tecnología de los alimentos,facultad de ciencias químicas.",
       "estado": "4to año, sin finalizar - ",
       "ingreso": "(Marzo 2012 – Febrero 2016); segundo ingreso (Marzo 2020 – Octubre 2020)",
-      "id": 1
+      "id": 1,
+      "datos_id": 1
     }
   ],
-  "extraCurricular": [
+  "extracurricular": [
     {
       "id": 1,
       "tipo": "ayudante",
-      "actividad": "jornada de tecnología y seguridad alimentaria XIII (08/2015)."
+      "actividad": "jornada de tecnología y seguridad alimentaria XIII (08/2015).",
+      "datos_id": 1
     },
     {
       "id": 2,
       "tipo": "disertante",
-      "actividad": "Proyecto de capacitación de BPM en centro educativo -U.E.P. Nº 88 “FE Y ALEGRÍA- Ciudad de Taco Pozo ,Chaco."
+      "actividad": "Proyecto de capacitación de BPM en centro educativo -U.E.P. Nº 88 “FE Y ALEGRÍA- Ciudad de Taco Pozo ,Chaco.",
+      "datos_id": 1
     },
     {
       "id": 3,
       "tipo": "disertante",
-      "actividad": "proyecto de capacitación destinado a los jóvenes de la calle, fundación La Luciérnaga (SPYRSU)"
+      "actividad": "proyecto de capacitación destinado a los jóvenes de la calle, fundación La Luciérnaga (SPYRSU)",
+      "datos_id": 1
     }
   ],
-  "btnRS": [
+  "btnrs": [
     {
       "id": 1,
-      "redSocial": "instagram",
+      "red_social": "instagram",
       "btn": "fa-brands fa-instagram",
       "url": "https://www.instagram.com/leon_cito94/",
-      "color": "linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)"
+      "color": "linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)",
+      "datos_id": 1
     },
     {
       "id": 2,
-      "redSocial": "facebook",
+      "red_social": "facebook",
       "btn": "fa-brands fa-facebook",
       "url": "https://www.facebook.com/leon.zeroo.9/",
-      "color": "#3b5999"
+      "color": "#3b5999",
+      "datos_id": 1
     },
     {
       "id": 3,
-      "redSocial": "github",
+      "red_social": "github",
       "btn": "fa-brands fa-github",
       "url": "https://github.com/Leon-Zero",
-      "color": "linear-gradient(45deg, #aa47aae3 20%, #5c5858 40%, #812681e3 80%)"
+      "color": "linear-gradient(45deg, #aa47aae3 20%, #5c5858 40%, #812681e3 80%)",
+      "datos_id": 1
     },
     {
       "id": 4,
-      "redSocial": "linkedin",
+      "red_social": "linkedin",
       "btn": "fa-brands fa-linkedin-in",
       "url": "https://www.linkedin.com/in/leonardo-ismael-hidalgo/",
-      "color": "#0077b5"
+      "color": "#0077b5",
+      "datos_id": 1
     },
     {
       "id": 5,
-      "redSocial": "whatsapp",
+      "red_social": "whatsapp",
       "btn": "fa-brands fa-whatsapp",
       "url": "https://wa.me/+543516418288?text=Contacta%20conmigo%20a%20trav%C3%A9s%20de%20mi%20WhatsApp!!",
-      "color": "#25d366"
+      "color": "#25d366",
+      "datos_id": 1
     }
   ],
   "jobs": [
@@ -80,154 +90,176 @@
       "job": "PINTOR INDEPENDIENTE",
       "cargo": "Ayudante de pintor",
       "funciones": "Pintor de obra en un equipo de trabajo tercerizado por empresas constructoras y contratistas. Trabajo en paredes interiores y exteriores, aberturas y muebles.",
-      "ingresoSalida": "12/2021",
-      "contacto": "Daniel Maritano (jefe de pintores) +54 9 351-3700519"
+      "ingreso_salida": "12/2021",
+      "contacto": "Daniel Maritano (jefe de pintores) +54 9 351-3700519",
+      "datos_id": 1
     },
     {
       "id": 2,
       "job": "ECOKIL. Prevención y sanidad integral para empresas",
       "cargo": "Pasante en el departamento de calidad",
       "funciones": "Auditorias, controles e inspecciones bromatológicas y de M.I.P. (manejó integrado de plagas) en industrias y locales. Redacción de informes, manuales y circulares. Elaboración de planos lay-out, respuesta de mails y llamadas, procesamiento de remitos y otros formularios.",
-      "ingresoSalida": "01/10/2016 hasta 15/01/2017.",
-      "contacto": " - Ecokil S.R.L. oficina central San Jerónimo 2350"
+      "ingreso_salida": "01/10/2016 hasta 15/01/2017.",
+      "contacto": " - Ecokil S.R.L. oficina central San Jerónimo 2350",
+      "datos_id": 1
     }
   ],
-  "skillPrograming": [
+  "programacion": [
     {
       "id": 1,
       "tag": "HTML",
       "porcentaje": 80,
-      "color": "#30E3E3"
+      "color": "#30E3E3",
+      "datos_id": 1
     },
     {
       "tag": "CSS",
       "porcentaje": 75,
       "color": "#30E3E3",
-      "id": 2
+      "id": 2,
+      "datos_id": 1
     },
     {
       "tag": "JSCRIPT",
       "porcentaje": 60,
       "color": "#30E3E3",
-      "id": 3
+      "id": 3,
+      "datos_id": 1
     },
     {
       "tag": "JAVA",
       "porcentaje": 50,
       "color": "#30e3e3",
-      "id": 4
+      "id": 4,
+      "datos_id": 1
     }
   ],
-  "skillLenguage": [
+  "idioma": [
     {
       "id": 1,
       "tag": "INGLES escrito",
       "porcentaje": 80,
-      "color": "#007676"
+      "color": "#007676",
+      "datos_id": 1
     },
     {
       "id": 2,
       "tag": "ESPAÑOL nativo",
       "porcentaje": 100,
-      "color": "#007676"
+      "color": "#007676",
+      "datos_id": 1
     }
   ],
-  "skillPrograms": [
+  "programas": [
     {
       "id": 1,
       "tag": "INFOSTAT",
       "porcentaje": 75,
-      "color": "#003737"
+      "color": "#003737",
+      "datos_id": 1
     },
     {
       "id": 2,
       "tag": "MICROSOFT OFFICE",
       "porcentaje": 80,
-      "color": "#003737"
+      "color": "#003737",
+      "datos_id": 1
     },
     {
       "id": 3,
       "tag": "SketchUP",
       "porcentaje": 50,
-      "color": "#003737"
+      "color": "#003737",
+      "datos_id": 1
     },
     {
       "id": 4,
       "tag": "CANVAS",
       "porcentaje": 70,
-      "color": "#003737"
+      "color": "#003737",
+      "datos_id": 1
     }
   ],
-  "skillSoft": [
+  "soft": [
     {
       "id": 1,
       "tag": "capacidad analítica",
       "modal": "Habilidad para analizar información, números, datos, etc.; procesar esta información de forma lógica; llegar a conclusiones razonadas",
       "beneficio": "Beneficios organizacionales: analice las causas fundamentales de los problemas y manipule los números y la información",
-      "porcentaje": 83
+      "porcentaje": 83,
+      "datos_id": 1
     },
     {
       "id": 2,
       "tag": "pensamiento creativo",
       "modal": "Habilidad para crear cosas nuevas e innovar; huir del lugar común",
       "beneficio": "Beneficios organizacionales: desarrollar soluciones innovadoras y pensar en nuevas formas de resolver problemas",
-      "porcentaje": 98
+      "porcentaje": 98,
+      "datos_id": 1
     },
     {
       "id": 3,
       "tag": "planificación y organización",
       "modal": "Habilidad para mantener las cosas en orden; estructura de control y lugar",
       "beneficio": "Beneficios organizacionales: Formular e implementar procesos y tener excelencia en el flujo de trabajo",
-      "porcentaje": 83
+      "porcentaje": 83,
+      "datos_id": 1
     },
     {
       "id": 4,
       "tag": "reflexión",
       "modal": "Capacidad para reflexionar, autoanalizarse y observar sus estados y fortalezas y debilidades",
       "beneficio": "Beneficios organizacionales: acelere el aprendizaje y aporte conocimientos a su posición y su área",
-      "porcentaje": 93
+      "porcentaje": 93,
+      "datos_id": 1
     },
     {
       "id": 5,
       "tag": "comunicación",
       "modal": "Habilidad para comunicarse verbalmente con claridad; transmitir ideas en palabras a individuos o audiencias",
       "beneficio": "Beneficios organizacionales: Explicar conceptos difíciles al grupo y transmitir ideas claramente a varias personas.",
-      "porcentaje": 72
+      "porcentaje": 72,
+      "datos_id": 1
     },
     {
       "id": 6,
       "tag": "sociabilidad",
       "modal": "Habilidad para interactuar y crear relaciones con diferentes personas; facilidad en entornos sociales",
       "beneficio": "Beneficios organizacionales: trabajar en red con las partes interesadas y conectar a las personas",
-      "porcentaje": 70
+      "porcentaje": 70,
+      "datos_id": 1
     },
     {
       "id": 7,
       "tag": "estabilidad emocional",
       "modal": "Capacidad para mantener la calma en situaciones de presión y para controlar los altibajos emocionales",
       "beneficio": "Beneficios organizacionales: mantener al equipo enfocado durante la agitación y mantener el trabajo en movimiento incluso con mucha interferencia externa",
-      "porcentaje": 73
+      "porcentaje": 73,
+      "datos_id": 1
     },
     {
       "id": 8,
       "tag": "iniciativa",
       "modal": "Capacidad de iniciar acciones sin necesidad de intervención de terceros; tomar la iniciativa",
       "beneficio": "Beneficios organizacionales: actuar incluso cuando la dirección no está clara y tener un mayor rendimiento de ejecución",
-      "porcentaje": 82
+      "porcentaje": 82,
+      "datos_id": 1
     },
     {
       "id": 9,
       "tag": "asertividad",
       "modal": "Capacidad para poner sus ideas directamente; no te dejes intimidar por el entorno",
       "beneficio": "Beneficios organizacionales: Poner sobre la mesa opiniones que otras personas terminan eludiendo y aumentar la eficiencia de la comunicación",
-      "porcentaje": 82
+      "porcentaje": 82,
+      "datos_id": 1
     },
     {
       "id": 10,
       "tag": "influencia",
       "modal": "Capacidad de persuadir a otros para que tomen posiciones y se comporten de manera diferente a como lo harían sin intervención",
       "beneficio": "Beneficios organizacionales: Vender ideas a clientes internos y externos y obtener recursos para llevar a cabo proyectos",
-      "porcentaje": 57
+      "porcentaje": 57,
+      "datos_id": 1
     }
   ]
 }

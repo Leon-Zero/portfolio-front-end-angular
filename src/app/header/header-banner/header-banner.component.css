@@ -8,9 +8,7 @@ header {
     flex-flow: row wrap;
     background-image: url('/assets/bannerPortfolio.png');
 }
-app-btn-ap{
-position: relative;
-    }
+
 app-title{
     flex: 2 1 auto;
 }
@@ -44,5 +42,10 @@ app-title{
   .zoomInDown {
     animation-name: zoomInDown
   }
-  
-  
+  @media only screen and (max-width: 600px){
+    header {
+      width: 100%;
+      height: 100%; 
+
+  }
+}

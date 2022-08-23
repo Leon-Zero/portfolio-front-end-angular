@@ -1,6 +1,6 @@
 .grafico-barra{
     width: 60vw;
-    height: 25px;
+    height: 30px;
     display: flex;
     margin:1em auto;
     align-content: stretch;
@@ -23,18 +23,27 @@
     color: #9C0000;
     flex: 1 .5 auto;
 }
+.grafico-barra__tag p{
+    position: relative;
+    top:-18px;
+    left: 40px;
+}
     .btn-size{
         height: 20px;   
     }
     .btn-size img{
         position: relative;
-        top: -5px;
+        top: 0;
     }
-    .modal-body{
+    .modal-body p{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 1em;
         text-align: center;
         color: #000000;
+    }
+    .modal{
+        position: fixed;
+        top: 20%;
     }
 .grafico-barra__contenedor{
     width: 90%;
@@ -53,13 +62,75 @@
 .grafico-barra__info{
     display: flex;
     margin: auto;
-    width: 55vw;
+    width: 80%;
     align-items: center;
     align-content: center;
+}
+.grafico-barra__info img{
+    position: relative;
+    top: -5px;
 }
 .grafico-barra__info p{
     text-align: center;
     font-weight: bolder;
     color: var(--color-2);
     transition: color .8s ease-in
+}
+
+@media only screen and (max-width: 800px){
+    .grafico-barra{
+        width: 80vw;
+        height: 20px;
+        margin: .5em auto;
+        box-shadow: -6px 4px 12px rgba(48,227,227,.5);
+        box-shadow: 6px -4px 12px rgba(48,227,227,.5);
+        border: rgba(48,227,227) solid 1px
+        }
+        .wraper{
+            position: relative;
+            left: -40px;
+        }
+    .grafico-barra__tag{
+        width: 145px;
+        font-size: 8px;
+        font-weight: 50;
+    }
+    .grafico-barra__tag p{
+        position: relative;
+        top:-10px;
+        left: 20px;
+    }
+        .btn-size{
+            height: 10px;   
+            width: 6px;
+        }
+        .btn-size img{
+            height: 15px;   
+            width: 10px;
+            top: -5px;
+            left: -10px;
+        }
+        .modal-body p{
+            font-size: 10px;
+        }
+    .grafico-barra__contenedor{
+        width: 90%;
+    }
+    .grafico-barra__porcentaje{
+        font-size: 15px;
+        top: -22px;
+        
+    }
+    .grafico-barra__info p{
+        font-size: 10px;
+        padding-left: 10px;
+    }
+    .grafico-barra__info{
+        width: 80vw;
+    }
+    .grafico-barra__info img{
+        top: -5px;
+        width: 20px;
+        height: auto;
+    }
 }

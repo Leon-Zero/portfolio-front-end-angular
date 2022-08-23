@@ -60,3 +60,23 @@ app-delete{
 .skill__grafico{
     color: #9C0000;
 }
+@media only screen and (max-width: 800px){
+    .fondo{
+        height: 120px;
+        width: 120px;
+    }
+    
+    .skill__grafico{
+        height: 100px;
+        width: 100px;
+        box-shadow: 3px 3px 12px #118181, -3px -3px 12px #118181;
+        border-radius: 50%;
+        margin: 10px;
+    }
+    .contenedor__skill{
+        gap: 3px;
+    }
+    .skill__grafico-div{
+        font-size: 10px;
+    }
+}

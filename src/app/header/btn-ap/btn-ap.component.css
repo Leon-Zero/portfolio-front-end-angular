@@ -41,3 +41,33 @@
                 transform: translate(-50%, -50%) scale(1);
                 opacity: 1;
             }
+
+@media only screen and (max-width: 600px){
+
+    .btn-ap{
+        width: 100px;
+        height: 70px;    
+        margin: 0 1em;
+    }
+            .btn-ap::before{
+                font-size: 3em;
+                position: relative;
+                top: -12px;
+              
+            }
+            .btn-ap::after{
+                
+                top: 35px;
+                left: 65px;
+                font-size: 1em;
+            }
+                .btn-ap:hover::before{
+                    transform: translate(50%, -50%) scale(3);
+                    opacity: 0;
+                }
+                .btn-ap:hover::after{
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                }
+
+}

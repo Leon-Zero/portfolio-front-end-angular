@@ -12,4 +12,8 @@ export class TopBtnComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goTop(){
+    document.getElementById('top-start')?.scrollIntoView({behavior: "smooth"});
+  }
+
 }
