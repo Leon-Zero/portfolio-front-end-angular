@@ -42,3 +42,9 @@ h5 + h6{
   text-align: center;
 
 }
+
+@media only screen and (max-width: 600px){
+  h2{
+    font-size: 1.5em;
+  }
+}
