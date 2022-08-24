@@ -16,12 +16,14 @@ footer{
     flex-flow: column;
     width: 100%;
     height: 100%;
+    padding: 1em;
 }
 
 form{
     width: 40vw;
     background-color: #EBFCFC;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1em;
 }
 h5{
     font-size: 2em ;
