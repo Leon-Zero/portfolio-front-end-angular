@@ -89,4 +89,10 @@ span{
         width: 250px;
         height: 160px;
     }
+    h3{
+        font-size: 15px;
+      }
+    .accordion{
+      width: 95%;
+    }
   }    
