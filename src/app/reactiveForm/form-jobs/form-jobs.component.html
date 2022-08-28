@@ -1,5 +1,5 @@
 <div class="box-new">
-    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <button *ngIf="onSet" class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
     <hr>
     <form [formGroup]="addJob" (ngSubmit)="SaveJob()">
         <div class="input-group mb-3">
@@ -23,7 +23,7 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Ingreso / Salida</span>
             <input type="text" class="form-control" placeholder="Ej: dd/mm/aaaa hasta dd/mm/aaaa"
-            formControlName="ingresoSalida">
+            formControlName="ingreso_salida">
         </div>
 
         <div class="input-group mb-3">
@@ -31,6 +31,9 @@
             <input type="text" class="form-control"
             formControlName="contacto">
         </div>
+
+        <input type="hidden" name="datos_id" 
+        formControlName="datos_id"> 
         
     <div class="col-12">
         <button type="submit" class="btn btn-primary">{{editMode? 'Editar Trabajo':'Crear Trabajo(+)'}}</button>

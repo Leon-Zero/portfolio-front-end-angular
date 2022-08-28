@@ -12,11 +12,13 @@ export class FormLenguaComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   @Input() object:any=[];
+  @Input() onSet:boolean = false  
 
   addLengua = new FormGroup ({
     tag: new FormControl(''),
     porcentaje: new FormControl(''),
-    color: new FormControl('')
+    color: new FormControl(''),
+    datos_id: new FormControl(1)
   });
 
   editMode: boolean = false;
@@ -28,6 +30,7 @@ export class FormLenguaComponent implements OnInit {
       tag: this.object.tag,
       porcentaje: this.object.porcentaje,
       color: this.object.color,
+      datos_id: this.object.datos_id
     });
     this.editMode=true;
   }

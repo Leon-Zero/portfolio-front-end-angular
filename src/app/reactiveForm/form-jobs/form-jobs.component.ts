@@ -12,13 +12,16 @@ export class FormJobsComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   @Input() object:any=[];
+  @Input() onSet:boolean = false  
 
   addJob = new FormGroup ({
     job: new FormControl(''),
     cargo: new FormControl(''),
     funciones: new FormControl(''),
-    ingresoSalida: new FormControl(''),
-    contacto: new FormControl('')
+    ingreso_salida: new FormControl(''),
+    contacto: new FormControl(''),
+    datos_id: new FormControl(1)
+
   });
 
   editMode: boolean = false;
@@ -30,8 +33,9 @@ export class FormJobsComponent implements OnInit {
       job: this.object.job,
       cargo: this.object.cargo,
       funciones: this.object.funciones,
-      ingresoSalida: this.object.ingresoSalida,
-      contacto: this.object.contacto
+      ingreso_salida: this.object.ingreso_salida,
+      contacto: this.object.contacto,
+      datos_id: this.object.datos_id
      });
     this.editMode=true;
   }

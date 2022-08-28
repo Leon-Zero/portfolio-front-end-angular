@@ -21,4 +21,6 @@
 (statusBtnEdit)="onDisplayEdit( $event )" 
 ></app-crud>
 <br>
-<app-form-btn *ngIf="displayNew" [object]="datos"></app-form-btn>
+<app-form-btn *ngIf="displayNew || displayEdit"
+ [object]="datos"
+ [onSet]="displayEdit" ></app-form-btn>

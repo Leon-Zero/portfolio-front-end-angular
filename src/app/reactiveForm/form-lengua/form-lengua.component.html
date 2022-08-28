@@ -1,5 +1,5 @@
 <div class="box-new">
-    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <button *ngIf="onSet" class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
     <hr> 
     <form [formGroup]="addLengua" (ngSubmit)="SaveLengua()">
         <div class="input-group mb-3">
@@ -19,6 +19,9 @@
             <input type="color" class="form-control form-control-color" title="Choose your color" 
             formControlName="color">
         </div>
+
+        <input type="hidden" name="datos_id" 
+        formControlName="datos_id"> 
         
     <div class="col-12">
         <button type="submit" class="btn btn-primary">{{editMode? 'Editar Grafico':'Crear Grafico(+)'}}</button>

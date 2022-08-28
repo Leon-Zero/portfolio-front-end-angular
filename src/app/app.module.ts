@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderBannerComponent } from './header/header-banner/header-banner.component';
@@ -25,7 +24,7 @@ import { TitleSkillComponent } from './skill/skill/title-skill/title-skill.compo
 import { ProjectsComponent } from './projects/projects.component';
 import { TitleProjectsComponent } from './projects/title-projects/title-projects.component';
 import { FooterComponent } from './footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CrudComponent } from './crud/crud.component';
 import { OffCanvasComponent } from './navbar/off-canvas/off-canvas.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -90,9 +89,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

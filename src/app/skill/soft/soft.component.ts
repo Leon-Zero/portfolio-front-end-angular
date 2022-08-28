@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Subscription } from 'rxjs';
 import { SkillSoft } from 'src/assets/data/Data';
-import {Portfolio} from 'src/assets/data/Data'; 
 
 @Component({
   selector: 'app-soft',
@@ -16,7 +15,8 @@ export class SoftComponent implements OnInit {
   displayDelete: boolean=false
   displayNew: boolean=false
   displayEdit: boolean=false
-
+ 
+  
   constructor(private datosPortfolio:PortfolioService) { }
 
   
@@ -36,20 +36,26 @@ export class SoftComponent implements OnInit {
   }
   onDisplayNew( active:boolean){
     if (active) {
-      this.displayNew = true
+      this.displayNew = true;
     }
     else {
       this.displayNew = false
     }
+    if (this.displayEdit) {
+        this.displayEdit = false
+      }
   }
   onDisplayEdit( active:boolean){
-    if (active) {
-      this.displayEdit = true
-    }
-    else {
-      this.displayEdit = false
-    }
-    }
+      if (active) {
+        this.displayEdit = true
+      }
+      else {
+        this.displayEdit = false
+      }
+      if (this.displayNew) {
+        this.displayNew = false
+      }
+  }
     
   getData(){
     this.datosPortfolio.obtenerSoft().subscribe(respuesta =>{console.log(respuesta);

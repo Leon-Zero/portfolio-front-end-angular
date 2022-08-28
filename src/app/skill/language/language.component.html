@@ -18,4 +18,6 @@
 (statusBtnEdit)="onDisplayEdit( $event )" 
 ></app-crud>
 
-<app-form-lengua *ngIf="displayNew" [object]="datos"></app-form-lengua>
+<app-form-lengua *ngIf="displayNew || displayEdit"
+ [object]="datos"
+ [onSet]="displayEdit" ></app-form-lengua>

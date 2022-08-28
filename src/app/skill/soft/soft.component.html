@@ -26,7 +26,9 @@
     (statusBtnEdit)="onDisplayEdit( $event )"
     ></app-crud>
     
-    <app-form-soft *ngIf="displayNew" [object]="datos"></app-form-soft>
+    <app-form-soft  *ngIf="displayNew || displayEdit"   
+    [object]="datos" 
+    [onSet]="displayEdit" ></app-form-soft> 
     
     <div class="grafico-barra__info">
         <img src="assets/informacion.png" alt="info">

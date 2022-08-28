@@ -25,7 +25,7 @@ export class AboutMeComponent implements OnInit {
   getData(){
     this.datosPortfolio.obtenerData().subscribe(data =>{console.log(data);
       this.miPortfolio=data;
-    });
+    }); 
   }
   onDisplayEdit( active:boolean){
     if (active) {

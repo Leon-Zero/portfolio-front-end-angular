@@ -5,7 +5,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 @Component({
   selector: 'app-form-about-me',
   templateUrl: './form-about-me.component.html',
-  styleUrls: ['./form-about-me.component.css']
+  styleUrls: ['./form-about-me.component.css'] 
 })
 export class FormAboutMeComponent implements OnInit {
 
@@ -14,22 +14,25 @@ export class FormAboutMeComponent implements OnInit {
   @Input() object:any=[];
 
   addData = new FormGroup ({
-    titleName: new FormControl(''),
+    title_name: new FormControl(''),
     name: new FormControl(''),
     ubicacion: new FormControl(''),
     school: new FormControl(''),
     perfil: new FormControl(''),
+    datos_id: new FormControl(1)
+
   });
 
   ngOnInit(): void { }
 
   Set(){
     this.addData.setValue({
-    titleName: this.object.titleName,
+    title_name: this.object.title_name,
     name: this.object.name,
     ubicacion: this.object.ubicacion,
     school: this.object.school,
     perfil: this.object.perfil,
+    datos_id: this.object.datos_id
     });
   }
   EditData(){

@@ -1,11 +1,11 @@
 <div class="box-new">
-    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <button *ngIf="onSet" class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
     <hr>
     <form [formGroup]="addBtn" (ngSubmit)="SaveBtn()">
         <div class="input-group mb-3">
             <span class="input-group-text">Red Social</span>
             <input type="text" class="form-control" placeholder="Nombre de Red Social"
-            formControlName="redSocial">
+            formControlName="red_social">
         </div>
         
         <div class="input-group mb-3">
@@ -25,6 +25,9 @@
             <input type="color" class="form-control form-control-color" title="Choose your color" 
             formControlName="color">
         </div>
+
+        <input type="hidden" name="datos_id" 
+        formControlName="datos_id"> 
         
     <div class="col-12">
         <button type="submit" class="btn btn-primary">{{editMode? 'Editar Botón':'Crear Botón(+)'}}</button>

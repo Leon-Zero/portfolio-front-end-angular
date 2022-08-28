@@ -36,5 +36,7 @@
     (statusBtnEdit)="onDisplayEdit( $event )" 
     ></app-crud>
 
- <app-form-jobs *ngIf="displayNew" [object]="datos"></app-form-jobs> 
+ <app-form-jobs *ngIf="displayNew || displayEdit" 
+ [object]="datos"
+ [onSet]="displayEdit" ></app-form-jobs> 
 </section>

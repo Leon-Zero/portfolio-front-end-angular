@@ -12,12 +12,14 @@ export class FormBtnComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   @Input() object:any=[];
+  @Input() onSet:boolean = false
 
   addBtn = new FormGroup ({
-    redSocial: new FormControl(''),
+    red_social: new FormControl(''),
     btn: new FormControl(''),
     url: new FormControl(''),
-    color: new FormControl('')
+    color: new FormControl(''),
+    datos_id: new FormControl(1)
   });
 
   editMode: boolean = false;
@@ -26,10 +28,11 @@ export class FormBtnComponent implements OnInit {
 
   Set(){
     this.addBtn.setValue({
-      redSocial: this.object.redSocial,
+      red_social: this.object.red_social,
       btn: this.object.btn,
       url: this.object.url,
-      color: this.object.color
+      color: this.object.color,
+      datos_id: this.object.datos_id
      });
     this.editMode=true;
   }

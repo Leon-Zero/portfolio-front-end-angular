@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { BtnR } from 'src/assets/data/Data';
-import { Subscription } from 'rxjs'; 
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -41,19 +41,25 @@ export class ContainerBtnRSComponent implements OnInit {
   }
   onDisplayNew( active:boolean){
     if (active) {
-      this.displayNew = true
+      this.displayNew = true;
     }
     else {
       this.displayNew = false
     }
+    if (this.displayEdit) {
+        this.displayEdit = false
+      }
   }
   onDisplayEdit( active:boolean){
-    if (active) {
-      this.displayEdit = true
-    }
-    else {
-      this.displayEdit = false
-    }
+      if (active) {
+        this.displayEdit = true
+      }
+      else {
+        this.displayEdit = false
+      }
+      if (this.displayNew) {
+        this.displayNew = false
+      }
   }
   onDelete(datosPortfolio_id: BtnR){
     this.datosPortfolio.DeleteBtn(datosPortfolio_id).subscribe((

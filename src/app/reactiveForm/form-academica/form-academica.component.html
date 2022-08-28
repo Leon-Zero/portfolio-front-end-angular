@@ -1,11 +1,11 @@
 <div class="box-new"> 
-    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <button *ngIf="onSet" class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
     <hr>
     <form [formGroup]="addAcademica" (ngSubmit)="SaveAcademica()">
         <div class="input-group mb-3">
             <span class="input-group-text">Nivel de estudio</span>
             <input type="text" class="form-control"
-            formControlName="tituloTag">
+            formControlName="titulo_tag">
         </div>
         
         <div class="input-group mb-3">
@@ -37,6 +37,9 @@
             <input type="text" class="form-control" placeholder="Ej: dd/mm/aaaa hasta dd/mm/aaaa"
             formControlName="ingreso">
         </div>
+
+        <input type="hidden" name="datos_id" 
+        formControlName="datos_id"> 
         
     <div class="col-12">
         <button type="submit" class="btn btn-primary">{{editMode? 'Editar Estudios':'Añadir Estudios(+)'}}</button>

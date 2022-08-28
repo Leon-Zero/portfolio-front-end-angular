@@ -12,10 +12,13 @@ export class FormExtraComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   @Input() object:any=[];
+  @Input() onSet:boolean = false
+
 
   addExtra = new FormGroup ({
     tipo: new FormControl(''),
     actividad: new FormControl(''),
+    datos_id: new FormControl(1)
   });
 
   editMode: boolean = false;
@@ -26,6 +29,7 @@ export class FormExtraComponent implements OnInit {
     this.addExtra.setValue({
     tipo: this.object.tipo,
     actividad: this.object.actividad,
+    datos_id: this.object.datos_id
      });
     this.editMode=true;
   }

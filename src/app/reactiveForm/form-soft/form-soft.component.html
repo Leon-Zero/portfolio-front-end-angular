@@ -1,6 +1,6 @@
 <div class="box-new">
-    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button>
-<hr>
+    <button *ngIf="onSet" class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button>
+<hr>  
     <form [formGroup]="addSoft" (ngSubmit)="SaveSoft()">
         <div class="input-group mb-3">
             <span class="input-group-text">Tag</span>
@@ -25,10 +25,13 @@
             <input type="text" class="form-control" placeholder="/opcional/ beneficio organizacional de la habilidad blanda"
             formControlName="beneficio">
         </div>
+
+        <input type="hidden" name="datos_id" 
+        formControlName="datos_id"> 
         
-    <div class="col-12">
-        <button type="submit" class="btn btn-primary">{{editMode? 'Editar Grafico':'Crear Grafico de Barras (+)'}}</button>
-        <br>
-    </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">{{editMode? 'Editar Grafico':'Crear Grafico de Barras (+)'}}</button>
+            <br>
+        </div>
     </form>
-</div>
+</div> 

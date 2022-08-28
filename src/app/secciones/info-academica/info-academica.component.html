@@ -46,7 +46,9 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
                 (statusBtnEdit)="onDisplayEdit( $event )" 
                 ></app-crud>
 
-                <app-form-extra *ngIf="displayNew" [object]="datos"></app-form-extra>
+                <app-form-extra *ngIf="displayNew || displayEdit"
+                 [object]="datos"
+                 [onSet]="displayEdit" ></app-form-extra>
                 
                 <div class="extra-box" *ngFor="let ex of extra">
 
@@ -69,5 +71,7 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
 (statusBtnEdit)="onDisplayEdit( $event )" 
 ></app-crud>
 
-<app-form-academica *ngIf="displayNew" [object]="datos"></app-form-academica>
+<app-form-academica *ngIf="displayNew || displayEdit"
+ [object]="datos"
+ [onSet]="displayEdit" ></app-form-academica>
 </section>

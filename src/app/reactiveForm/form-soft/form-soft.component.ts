@@ -11,11 +11,14 @@ export class FormSoftComponent implements OnInit {
 
   constructor(private datosPortfolio:PortfolioService) { }
   @Input() object:any=[]
+  @Input() onSet:boolean = false 
+
   addSoft = new FormGroup ({
     tag: new FormControl(''),
     porcentaje: new FormControl(''),
     modal: new FormControl(''),
-    beneficio: new FormControl('')
+    beneficio: new FormControl(''),
+    datos_id: new FormControl(1)
   });
   editMode: boolean = false;
   ngOnInit(): void {  }
@@ -24,7 +27,8 @@ export class FormSoftComponent implements OnInit {
       tag: this.object.tag,
       porcentaje: this.object.porcentaje,
       modal: this.object.modal,
-      beneficio: this.object.beneficio
+      beneficio: this.object.beneficio,
+      datos_id: this.object.datos_id
     });
     this.editMode=true;
   }
@@ -40,4 +44,4 @@ export class FormSoftComponent implements OnInit {
     })
     }
   }
-}
+} 

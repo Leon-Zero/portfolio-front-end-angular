@@ -22,8 +22,7 @@ export class PortfolioService {
   private softUrl= 'http://localhost:5001/soft'
 
   constructor(private http:HttpClient) { }
-  // metodos get a api de 
-  // prueba json-server
+  // metodos get 
 
   obtenerData():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.dataUrl)
@@ -136,7 +135,7 @@ export class PortfolioService {
   }
 
   //metodo put + 
-  // obtener datos
+  // obtener id
   IdSoft(id:SkillSoft): Observable<Object>{
     return this.http.get(`${this.softUrl}/${id}`);
   }

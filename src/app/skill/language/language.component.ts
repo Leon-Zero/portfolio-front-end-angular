@@ -39,19 +39,26 @@ export class LanguageComponent implements OnInit {
   }
   onDisplayNew( active:boolean){
     if (active) {
-      this.displayNew = true
+      this.displayNew = true;
     }
     else {
       this.displayNew = false
     }
+    if (this.displayEdit) {
+        this.displayEdit = false
+      }
+    
   }
   onDisplayEdit( active:boolean){
-    if (active) {
-      this.displayEdit = true
-    }
-    else {
-      this.displayEdit = false
-    }
+      if (active) {
+        this.displayEdit = true
+      }
+      else {
+        this.displayEdit = false
+      }
+      if (this.displayNew) {
+        this.displayNew = false
+      }
   }
   onDelete(datosPortfolio_id: Skill){
     this.datosPortfolio.DeleteLenguage(datosPortfolio_id).subscribe((

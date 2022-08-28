@@ -1,17 +1,17 @@
 {
   "datos": [
     {
-      "title_name": "Leonardo Hidalgo",
+      "title_name": "LEONARDO HIDALGO.",
       "name": "Leonardo Ismael HIDALGO.",
       "ubicacion": "Córdoba Capital, Argentina.",
       "school": "Licenciatura en tecnología de los alimentos (L.T.A.).",
       "perfil": "/assets/perfil.JPG",
-      "id": 1, 
-      "datos_id": 1
+      "datos_id": 1,
+      "id": 1
     }
   ],
   "academica": [
-    { 
+    {
       "titulo_tag": "ESTUDIOS UNIVERSITARIOS",
       "instituto": "Universidad Católica de Córdoba",
       "logo": "./assets/ucc.png",
@@ -120,18 +120,17 @@
       "datos_id": 1
     },
     {
-      "tag": "JSCRIPT",
+      "tag": "cancan",
       "porcentaje": 60,
       "color": "#30E3E3",
-      "id": 3,
-      "datos_id": 1
+      "id": 3
     },
     {
       "tag": "JAVA",
       "porcentaje": 50,
       "color": "#30e3e3",
-      "id": 4,
-      "datos_id": 1
+      "datos_id": 1,
+      "id": 4
     }
   ],
   "idioma": [
