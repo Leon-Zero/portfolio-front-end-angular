@@ -19,12 +19,20 @@ form{
     border-radius: 30px;
     padding: 1em 2em;
     box-sizing: border-box;
-    background-color: #C4F7F7;
+    background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
 }
 i{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     font-size: 30px;
+    color: #010505;
+    margin-right: 10px;
+}
+label{
+    color: #010505;
 }
 .login__content-video{
     width: 100%;

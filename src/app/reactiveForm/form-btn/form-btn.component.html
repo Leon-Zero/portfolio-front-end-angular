@@ -30,7 +30,7 @@
         formControlName="datos_id"> 
         
     <div class="col-12">
-        <button type="submit" class="btn btn-primary">{{editMode? 'Editar Botón':'Crear Botón(+)'}}</button>
+        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'">{{editMode? 'Editar Botón':'Crear Botón(+)'}}</button>
     </div>
     </form>
 </div>
