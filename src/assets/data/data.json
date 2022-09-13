@@ -5,7 +5,7 @@
       "name": "Leonardo Ismael HIDALGO.",
       "ubicacion": "Córdoba Capital, Argentina.",
       "school": "Licenciatura en tecnología de los alimentos (L.T.A.).",
-      "perfil": "/assets/perfil.JPG",
+      "perfil": "./assets/imagenes/perfil.JPG",
       "datos_id": 1,
       "id": 1
     }
@@ -14,7 +14,7 @@
     {
       "titulo_tag": "ESTUDIOS UNIVERSITARIOS",
       "instituto": "Universidad Católica de Córdoba",
-      "logo": "./assets/ucc.png",
+      "logo": "./assets/imagenes/ucc.png",
       "carrera": "licenciatura en tecnología de los alimentos,facultad de ciencias químicas.",
       "estado": "4to año, sin finalizar - ",
       "ingreso": "(Marzo 2012 – Febrero 2016); segundo ingreso (Marzo 2020 – Octubre 2020)",
