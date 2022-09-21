@@ -2,7 +2,7 @@
 .go-top button{
       width: 50px;
       height: 50px;
-      background-image: url('/assets/arrowUp.png');
+      background-image: url('/assets/imagenes/arrowUp.png');
       background-repeat: no-repeat;
       background-size: cover;
       border: 3px 1px 1px;
