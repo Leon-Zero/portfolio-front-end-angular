@@ -5,14 +5,17 @@
         </video>
     </div>
     <div class="login__content-form">
-    <form>
-                <div class="mb-3 centrar">
-                    <label for="username" class="form-label user"><i class="fa-solid fa-user-secret"></i>Usuario</label>
-                    <input type="text" class="form-control" id="username" placeholder="ejemplo123">
-                </div>
-                <div class="mb-3 centrar">
-                    <label for="password" class="form-label"><i class="fa-solid fa-key"></i>Contraseña</label>
-                    <input type="password" class="form-control" id="password" placeholder="abc123">
+    <form (ngSubmit)="onLogin()" novalidate>
+        <div class="mb-3 centrar">
+            <label for="username" class="form-label user"><i class="fa-solid fa-user-secret"></i>Usuario</label>
+            <input type="text" class="form-control" id="nombreUsuario" placeholder="ejemplo123"
+          >
+        </div>
+        <div class="mb-3 centrar">
+            <label for="password" class="form-label"><i class="fa-solid fa-key"></i>Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="abc123"
+           >
+
         </div>
         <div class="form-footer">
             <div class="mb-3 form-check">
@@ -22,7 +25,7 @@
         <!-- 
             <button id="confirm" type="button" class="btn btn-primary" data-theme-btn>Confirmar Identidad</button>
         -->
-        <button class="btn__submit" href="#">
+        <button class="btn__submit" type="submit">
             <span> </span>
             <span> </span>
             <span> </span>

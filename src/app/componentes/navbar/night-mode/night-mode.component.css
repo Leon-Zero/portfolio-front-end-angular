@@ -20,7 +20,7 @@
     cursor: pointer;
 }
 .button::after {
-    content: url('./assets/imagenes/sunLine.svg');
+    content: url("src/assets/imagenes/sunLine.svg");
     width: 40px;
     height: 40px;
     background-color: hwb(22 0% 0%);
@@ -37,7 +37,7 @@
         transform 1s ease-in;
 }
 #toggle:checked+.button::after {
-    content: url('./assets/imagenes/moonLine.svg');
+    content: url("src/assets/imagenes/moonLine.svg");
     background-color: #0a062b;
     transform: translateX(50px) rotate(225deg);
 }

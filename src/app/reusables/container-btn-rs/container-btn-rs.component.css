@@ -22,7 +22,7 @@
     list-style: none;
     height: 45px;
     width: 45px;
-    margin: 0 20px;
+    margin: 0 25px;
     transform: rotate(-30deg) skew(25deg);
     background: #ccc;
 }

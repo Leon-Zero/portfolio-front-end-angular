@@ -259,6 +259,14 @@
       "beneficio": "Beneficios organizacionales: Vender ideas a clientes internos y externos y obtener recursos para llevar a cabo proyectos",
       "porcentaje": 57,
       "datos_id": 1
+    },
+    {
+      "tag": "prueba",
+      "porcentaje": 80,
+      "modal": "",
+      "beneficio": "",
+      "datos_id": 1,
+      "id": 11
     }
   ]
 }

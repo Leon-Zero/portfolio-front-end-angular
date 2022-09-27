@@ -6,10 +6,11 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
   { path: 'portfolio', component: PortfolioComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: '**', component: PageNotFoundComponent }
+
   
 ];
 

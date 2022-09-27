@@ -6,7 +6,7 @@ app-edit{display:flex;
 section{font-weight:1em;
     font-size:15px;
     padding:.5em;
-    margin:auto;
+    margin:2em auto;
     flex:auto;
     text-align:left;
     width:80%}

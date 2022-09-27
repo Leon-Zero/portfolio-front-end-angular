@@ -6,7 +6,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    background-image: url('./assets/imagenes/bannerPortfolio.png');
+    background-image: url('src/assets/imagenes/bannerPortfolio.png');
     padding: 2em;
     position: relative;
 }

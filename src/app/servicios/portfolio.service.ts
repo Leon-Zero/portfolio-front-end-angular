@@ -10,15 +10,15 @@ import {Academica, BtnR, Datum, ExtraCurricular, Job, Portfolio, Skill, SkillSof
 export class PortfolioService {
 
   private _refresh$ = new Subject<void>();
-  private dataUrl = 'http://localhost:8080/datos'
-  private academicaUrl= 'http://localhost:8080/academica'
-  private extraUrl= 'http://localhost:8080/extraCurricular'
-  private btnUrl= 'http://localhost:8080/btnrs'
-  private jobUrl= 'http://localhost:8080/jobs'
-  private programingUrl= 'http://localhost:8080/programacion'
-  private lenguageUrl= 'http://localhost:8080/idioma'
-  private programUrl= 'http://localhost:8080/programas'
-  private softUrl= 'http://localhost:8080/soft'
+  private dataUrl = 'http://localhost:5001/datos'
+  private academicaUrl= 'http://localhost:5001/academica'
+  private extraUrl= 'http://localhost:5001/extraCurricular'
+  private btnUrl= 'http://localhost:5001/btnrs'
+  private jobUrl= 'http://localhost:5001/jobs'
+  private programingUrl= 'http://localhost:5001/programacion'
+  private lenguageUrl= 'http://localhost:5001/idioma'
+  private programUrl= 'http://localhost:5001/programas'
+  private softUrl= 'http://localhost:5001/soft'
 
   constructor(private http:HttpClient) { }
   // metodos get 
