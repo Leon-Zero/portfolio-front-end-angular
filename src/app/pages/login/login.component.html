@@ -1,37 +1,39 @@
 <section class="login-body">
-    <div class="login__content-video">
-        <video [muted]="true" autoplay loop>
-            <source src="./assets/imagenes/video-login.mp4" type="video/mp4"> 
-        </video>
-    </div>
-    <div class="login__content-form">
-    <form (ngSubmit)="onLogin()" novalidate>
+      <!-- 
+        <div class="login__content-video">
+            <video [muted]="true" autoplay loop>
+                <source src="./assets/imagenes/video-login.mp4" type="video/mp4"> 
+            </video>
+        </div>
+      -->
+<div class="login__content-form">
+    <form #login="ngForm" (ngSubmit)="onLogin()" novalidate>
         <div class="mb-3 centrar">
-            <label for="username" class="form-label user"><i class="fa-solid fa-user-secret"></i>Usuario</label>
-            <input type="text" class="form-control" id="nombreUsuario" placeholder="ejemplo123"
-          >
+            <label for="nombreUsuario" class="form-label user"><i class="fa-solid fa-user-secret"></i>Usuario</label>
+            <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" placeholder="ejemplo123"
+            [(ngModel)]="loginModel.nombreUsuario" required >
         </div>
         <div class="mb-3 centrar">
             <label for="password" class="form-label"><i class="fa-solid fa-key"></i>Contraseña</label>
-            <input type="password" class="form-control" id="password" placeholder="abc123"
-           >
+            <input type="password" name="password" class="form-control" id="password" placeholder="abc123"
+            [(ngModel)]="loginModel.password" required >
 
         </div>
-        <div class="form-footer">
+      
+         <div class="form-footer">
+            <!--  
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Recordar Datos</label>
             </div>
-        <!-- 
-            <button id="confirm" type="button" class="btn btn-primary" data-theme-btn>Confirmar Identidad</button>
-        -->
-        <button class="btn__submit" type="submit">
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            Confirmar Identidad
-        </button>
+       -->
+            <button class="btn__submit" type="submit">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+                <span> </span>
+                Confirmar Identidad
+            </button>
         </div>
     </form>
     </div>

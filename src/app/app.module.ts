@@ -27,7 +27,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CrudComponent } from './reusables/crud/crud.component';
 import { OffCanvasComponent } from './componentes/navbar/off-canvas/off-canvas.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DeleteComponent } from './reusables/crud/delete/delete.component';
 import { FormProgramingComponent } from './reactiveForm/form-programing/form-programing.component';
 import { FormLenguaComponent } from './reactiveForm/form-lengua/form-lengua.component';
@@ -90,6 +90,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]

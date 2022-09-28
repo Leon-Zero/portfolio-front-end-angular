@@ -11,44 +11,45 @@ import { LoginUsuario } from 'src/assets/data/login-usuario';
 })
 export class LoginComponent implements OnInit {
 
+  loginModel = new LoginUsuario("","");
+
   isLogged = false;
-  isLogginFail = false;
-  loginUsuario! : LoginUsuario;
-  nombreUsuario! : string;
-  password! : string;
-  roles: string[]= [];
-  errMsj! : string;
+  isLoginFail = false;
+  loginUsuario!: LoginUsuario;
+  roles: string[] = [];
+  errMsj!: string;
 
 
-  constructor(private tokenService: TokenService, 
-                      private authService: AuthService, 
-                      private router: Router) { }
+  constructor(private tokenService: TokenService,
+              private authService: AuthService,
+              private router: Router) { }
 
-  ngOnInit(): void {
-    if (this.tokenService.getToken()){
+  ngOnInit() {
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
-      this.isLogginFail = false;
+      this.isLoginFail = false;
       this.roles = this.tokenService.getAuthorities();
     }
   }
 
-  onLogin(): void{
-    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
+ onLogin(): void {
+    this.loginUsuario = new LoginUsuario(this.loginModel.nombreUsuario, this.loginModel.password);
+   // console.log(this.loginUsuario);
     this.authService.login(this.loginUsuario).subscribe(data => {
         this.isLogged = true;
-        this.isLogginFail = false;
+        this.isLoginFail = false;
+
         this.tokenService.setToken(data.token);
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        this.router.navigate(['']);
-        }, 
-          err => {
-          this.isLogged = false;
-          this.isLogginFail = true;
-          this.errMsj = err.error.mensaje;
-          console.log(this.errMsj)
-      }
-    );
+        this.router.navigate(['portfolio']);
+    }, 
+      err => {
+      this.isLogged = false;
+      this.isLoginFail = true;
+      this.errMsj = err.error.mensaje;
+      console.log(this.errMsj)
+      });
   }
 }
