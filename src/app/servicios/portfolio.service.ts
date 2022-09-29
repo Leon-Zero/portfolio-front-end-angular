@@ -10,15 +10,14 @@ import {Academica, BtnR, Datum, ExtraCurricular, Job, Portfolio, Skill, SkillSof
 export class PortfolioService {
 
   private _refresh$ = new Subject<void>();
-  private dataUrl = 'http://localhost:8080/datos'
-  private academicaUrl= 'http://localhost:8080/academica'
-  private extraUrl= 'http://localhost:8080/extraCurricular'
-  private btnUrl= 'http://localhost:8080/btnrs'
-  private jobUrl= 'http://localhost:8080/jobs'
-  private programingUrl= 'http://localhost:8080/programacion'
-  private lenguageUrl= 'http://localhost:8080/idioma'
-  private programUrl= 'http://localhost:8080/programas'
-  private softUrl= 'http://localhost:8080/soft'
+  private dataUrl = 'http://localhost:8080/datos';
+  private academicaUrl= 'http://localhost:8080/academica';
+  private extraUrl= 'http://localhost:8080/extracurricular';
+  private btnUrl= 'http://localhost:8080/btnrs';
+  private jobUrl= 'http://localhost:8080/jobs';
+  private programingUrl= 'http://localhost:8080/programacion';
+  private programUrl= 'http://localhost:8080/programas';
+  private softUrl= 'http://localhost:8080/soft';
 
   constructor(private http:HttpClient) { }
   // metodos get 
@@ -41,9 +40,6 @@ export class PortfolioService {
   obtenerPrograming():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.programingUrl)
   }
-  obtenerLengua():Observable<Portfolio>{
-    return this.http.get<Portfolio>(this.lenguageUrl)
-  }
   obtenerProgram():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.programUrl)
   }
@@ -62,9 +58,6 @@ export class PortfolioService {
   }
   DeletePrograming(id:Skill){
     return this.http.delete(`${this.programingUrl}/${id}`)
-  }
-  DeleteLenguage(id:Skill){
-    return this.http.delete(`${this.lenguageUrl}/${id}`)
   }
   DeleteAcademica(id:Academica){
     return this.http.delete(`${this.academicaUrl}/${id}`)
@@ -87,12 +80,6 @@ export class PortfolioService {
   SavePrograming(data:Object):Observable<Skill>{
     console.log(data);
     return this.http.post<Skill>(this.programingUrl, data).pipe(
-      tap(()=> { this._refresh$.next();        
-      }))
-  }
-  SaveLengua(data:Object):Observable<Skill>{
-    console.log(data);
-    return this.http.post<Skill>(this.lenguageUrl, data).pipe(
       tap(()=> { this._refresh$.next();        
       }))
   }
@@ -148,14 +135,6 @@ export class PortfolioService {
   }
   UpdatePrograming(id: string, data:Object ){
    return this.http.put(`${this.programingUrl}/${id}`, data).pipe(
-    tap(()=> { this._refresh$.next();        
-    }))
-  }
-  IdLengua(id:Skill): Observable<Object>{
-    return this.http.get(`${this.lenguageUrl}/${id}`);
-  }
-  UpdateLengua(id: string, data:Object ){
-   return this.http.put(`${this.lenguageUrl}/${id}`, data).pipe(
     tap(()=> { this._refresh$.next();        
     }))
   }

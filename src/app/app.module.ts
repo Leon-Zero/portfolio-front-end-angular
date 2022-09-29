@@ -16,7 +16,6 @@ import { InfoAcademicaComponent } from './componentes/secciones/info-academica/i
 import { TitleLaboralComponent } from './componentes/secciones/experiencia-laboral/title-laboral/title-laboral.component';
 import { TitleAcademicaComponent } from './componentes/secciones/info-academica/title-academica/title-academica.component';
 import { SkillComponent } from './componentes/secciones/skill/skill/skill.component';
-import { LanguageComponent } from './componentes/secciones/skill/language/language.component';
 import { ProgramingComponent } from './componentes/secciones/skill/programing/programing.component';
 import { ProgramsComponent } from './componentes/secciones//skill/programs/programs.component';
 import { SoftComponent } from './componentes/secciones//skill/soft/soft.component';
@@ -30,7 +29,6 @@ import { OffCanvasComponent } from './componentes/navbar/off-canvas/off-canvas.c
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DeleteComponent } from './reusables/crud/delete/delete.component';
 import { FormProgramingComponent } from './reactiveForm/form-programing/form-programing.component';
-import { FormLenguaComponent } from './reactiveForm/form-lengua/form-lengua.component';
 import { FormProgramComponent } from './reactiveForm/form-program/form-program.component';
 import { FormSoftComponent } from './reactiveForm/form-soft/form-soft.component';
 import { FormJobsComponent } from './reactiveForm/form-jobs/form-jobs.component';
@@ -60,7 +58,6 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     TitleLaboralComponent,
     TitleAcademicaComponent,
     SkillComponent,
-    LanguageComponent,
     ProgramingComponent,
     ProgramsComponent,
     SoftComponent,
@@ -72,7 +69,6 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     OffCanvasComponent,
     DeleteComponent,
     FormProgramingComponent,
-    FormLenguaComponent,
     FormProgramComponent,
     FormSoftComponent,
     FormJobsComponent,

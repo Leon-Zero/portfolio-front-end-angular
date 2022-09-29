@@ -19,9 +19,6 @@ export class NavbarStickyComponent implements OnInit {
   goProgramacion(){
     document.getElementById('index-programing')?.scrollIntoView({behavior: "smooth"});
   }
-  goIdioma(){
-    document.getElementById('index-language')?.scrollIntoView({behavior: "smooth"});
-  }
   goProgramas(){
     document.getElementById('index-programs')?.scrollIntoView({behavior: "smooth"});
   }

@@ -17,8 +17,7 @@ export class FormSoftComponent implements OnInit {
     tag: new FormControl(''),
     porcentaje: new FormControl(''),
     modal: new FormControl(''),
-    beneficio: new FormControl(''),
-    datos_id: new FormControl(1)
+    beneficio: new FormControl('')
   });
   editMode: boolean = false;
   ngOnInit(): void {  }
@@ -27,8 +26,7 @@ export class FormSoftComponent implements OnInit {
       tag: this.object.tag,
       porcentaje: this.object.porcentaje,
       modal: this.object.modal,
-      beneficio: this.object.beneficio,
-      datos_id: this.object.datos_id
+      beneficio: this.object.beneficio
     });
     this.editMode=true;
   }
