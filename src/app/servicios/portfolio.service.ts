@@ -2,7 +2,7 @@ import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, observable, pipe, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import {Academica, BtnR, Datum, ExtraCurricular, Job, Portfolio, Skill, SkillSoft} from 'src/assets/data/Data';
+import {Academica, BtnR, Datum, ExtraCurricular, Job, Portfolio} from 'src/assets/data/Data';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,6 @@ export class PortfolioService {
   private extraUrl= 'http://localhost:8080/extracurricular';
   private btnUrl= 'http://localhost:8080/btnrs';
   private jobUrl= 'http://localhost:8080/jobs';
-  private programingUrl= 'http://localhost:8080/programacion';
-  private programUrl= 'http://localhost:8080/programas';
 
   constructor(private http:HttpClient) { }
   // metodos get 
@@ -36,24 +34,15 @@ export class PortfolioService {
   obtenerJob():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.jobUrl)
   }
-  obtenerPrograming():Observable<Portfolio>{
-    return this.http.get<Portfolio>(this.programingUrl)
-  }
-  obtenerProgram():Observable<Portfolio>{
-    return this.http.get<Portfolio>(this.programUrl)
-  }
+ 
   
 
   //metodos delete json-server
   // -------------
 
   
-  DeleteProgram(id:Skill){
-    return this.http.delete(`${this.programUrl}/${id}`)
-  }
-  DeletePrograming(id:Skill){
-    return this.http.delete(`${this.programingUrl}/${id}`)
-  }
+  
+  
   DeleteAcademica(id:Academica){
     return this.http.delete(`${this.academicaUrl}/${id}`)
   }
@@ -72,18 +61,8 @@ export class PortfolioService {
   get refresh$(){
     return this._refresh$;
   }
-  SavePrograming(data:Object):Observable<Skill>{
-    console.log(data);
-    return this.http.post<Skill>(this.programingUrl, data).pipe(
-      tap(()=> { this._refresh$.next();        
-      }))
-  }
-  SaveProgram(data:Object):Observable<Skill>{
-    console.log(data);
-    return this.http.post<Skill>(this.programUrl, data).pipe(
-      tap(()=> { this._refresh$.next();        
-      }))
-  }
+  
+  
   
   SaveJob(data:Object):Observable<Job>{
     console.log(data);
@@ -113,22 +92,8 @@ export class PortfolioService {
   //metodo put + 
   // obtener id
   
-  IdPrograming(id:Skill): Observable<Object>{
-    return this.http.get(`${this.programingUrl}/${id}`);
-  }
-  UpdatePrograming(id: string, data:Object ){
-   return this.http.put(`${this.programingUrl}/${id}`, data).pipe(
-    tap(()=> { this._refresh$.next();        
-    }))
-  }
-  IdProgram(id:Skill): Observable<Object>{
-    return this.http.get(`${this.programUrl}/${id}`);
-  }
-  UpdateProgram(id: string, data:Object ){
-   return this.http.put(`${this.programUrl}/${id}`, data).pipe(
-    tap(()=> { this._refresh$.next();        
-    }))
-  }
+  
+  
   IdJob(id:Job): Observable<Object>{
     return this.http.get(`${this.jobUrl}/${id}`);
   }

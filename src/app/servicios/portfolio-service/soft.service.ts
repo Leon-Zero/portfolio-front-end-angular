@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, observable, pipe, Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { Portfolio, SkillSoft } from 'src/assets/data/Data';
 
@@ -17,8 +17,8 @@ export class SoftService {
   get refresh$(){
     return this._refresh$;
   }  
-  obtenerSoft():Observable<Portfolio>{
-    return this.http.get<Portfolio>(this.softUrl)
+  obtenerSoft():Observable<SkillSoft[]>{
+    return this.http.get<SkillSoft[]>(this.softUrl)
   }
   SaveSoft(data:Object):Observable<SkillSoft>{
     console.log(data);
@@ -26,15 +26,15 @@ export class SoftService {
       tap(()=> { this._refresh$.next();        
       }))
   }
-  IdSoft(id:SkillSoft): Observable<Object>{
-    return this.http.get(`${this.softUrl}/${id}`);
+  IdSoft(id: number): Observable<SkillSoft>{
+    return this.http.get<SkillSoft>(`${this.softUrl}/${id}`);
   }
-  UpdateSoft(id: number, data:Object ){
-   return this.http.put(`${this.softUrl}/${id}`, data).pipe(
+  UpdateSoft(id: number, data:Object): Observable<SkillSoft>{
+   return this.http.put<SkillSoft>(`${this.softUrl}/${id}`, data).pipe(
     tap(()=> { this._refresh$.next();        
     }))
   }
-  DeleteSoft(id:SkillSoft){
+  DeleteSoft(id: number){
     return this.http.delete(`${this.softUrl}/${id}`)
   }  
 }

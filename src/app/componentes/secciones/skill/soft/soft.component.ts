@@ -11,7 +11,7 @@ import { SoftService } from 'src/app/servicios/portfolio-service/soft.service';
 })
 export class SoftComponent implements OnInit {
   suscription: Subscription = new Subscription;
-  softList: any;
+  softList: SkillSoft[]= [];
   datos:Object=[]
   displayDelete: boolean=false
   displayNew: boolean=false
@@ -70,12 +70,12 @@ export class SoftComponent implements OnInit {
       this.softList=respuesta;
     });
   }
-    onDelete(datosPortfolio_id: SkillSoft){
+    onDelete(datosPortfolio_id: number){
     this.datosPortfolio.DeleteSoft(datosPortfolio_id).subscribe((
       result) => {
       this.ngOnInit();})
     }
-    onEdit(datosPortfolio_id: SkillSoft){
+    onEdit(datosPortfolio_id: number){
       this.datosPortfolio.IdSoft(datosPortfolio_id).subscribe((data) => {
         this.datos = data;
       })

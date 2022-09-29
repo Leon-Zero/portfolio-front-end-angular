@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Subscription } from 'rxjs';
 import { Skill } from 'src/assets/data/Data';
+import { ProgramsService } from 'src/app/servicios/portfolio-service/programs.service';
 
 @Component({
   selector: 'app-programs',
@@ -10,13 +10,13 @@ import { Skill } from 'src/assets/data/Data';
 })
 export class ProgramsComponent implements OnInit {
   suscription: Subscription = new Subscription;
-  programsList:any;
+  programsList: Skill[]= [];
   datos:Object=[]
   displayDelete: boolean=false 
   displayNew: boolean=false
   displayEdit: boolean=false
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: ProgramsService) { }
 
   ngOnInit(): void {
     this.getData();
@@ -55,7 +55,7 @@ export class ProgramsComponent implements OnInit {
         this.displayNew = false
       }
   }
-  onDelete(datosPortfolio_id: Skill){
+  onDelete(datosPortfolio_id: number){
     this.datosPortfolio.DeleteProgram(datosPortfolio_id).subscribe((
       result)=>{
       this.ngOnInit();}) 
@@ -65,7 +65,7 @@ export class ProgramsComponent implements OnInit {
       this.programsList=data;
     });
   }
-  onEdit(datosPortfolio_id: Skill){
+  onEdit(datosPortfolio_id: number){
     this.datosPortfolio.IdProgram(datosPortfolio_id).subscribe((data)=>{
       this.datos = data;
       console.log(this.datos);
