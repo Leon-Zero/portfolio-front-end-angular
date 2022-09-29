@@ -1,6 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core'; 
 import { FormGroup, FormControl } from "@angular/forms";
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { SoftService } from 'src/app/servicios/portfolio-service/soft.service';
 
 @Component({
   selector: 'app-form-soft',
@@ -9,11 +9,13 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class FormSoftComponent implements OnInit {
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: SoftService) { }
+
   @Input() object:any=[]
   @Input() onSet:boolean = false 
 
   addSoft = new FormGroup ({
+    id: new FormControl(''),
     tag: new FormControl(''),
     porcentaje: new FormControl(''),
     modal: new FormControl(''),
@@ -23,6 +25,7 @@ export class FormSoftComponent implements OnInit {
   ngOnInit(): void {  }
   Set(){
     this.addSoft.setValue({
+      id: this.object.id,
       tag: this.object.tag,
       porcentaje: this.object.porcentaje,
       modal: this.object.modal,
@@ -38,8 +41,10 @@ export class FormSoftComponent implements OnInit {
         });       
     }
     else {
-      this.datosPortfolio.UpdateSoft(this.object.id, this.addSoft.value).subscribe((result)=>{this.addSoft.reset({}); this.editMode = false;
+      this.datosPortfolio.UpdateSoft(this.object.id, this.addSoft.value).subscribe((result)=>{
+      this.addSoft.reset({});
+      this.editMode = false;
     })
     }
   }
-} 
+}

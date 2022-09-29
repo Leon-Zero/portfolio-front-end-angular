@@ -5,7 +5,6 @@ export interface Portfolio {
     btnrs:           BtnR[];
     jobs:            Job[];
     programacion:    Skill[];
-    idioma:          Skill[];
     programas:       Skill[];
     soft:            SkillSoft[];
 }
@@ -18,7 +17,6 @@ export interface Academica {
     estado:    string;
     ingreso:   string;
     id:        number;
-    datos_id:  number;
 }
 
 export interface BtnR {
@@ -27,7 +25,6 @@ export interface BtnR {
     btn:       string;
     url:       string;
     color:     string;
-    datos_id:  number;
 }
 
 export interface Datum {
@@ -43,7 +40,6 @@ export interface ExtraCurricular {
     id:        number;
     tipo:      string;
     actividad: string;
-    datos_id:  number;
 }
 
 export interface Job {
@@ -53,7 +49,6 @@ export interface Job {
     funciones:     string;
     ingreso_salida: string;
     contacto:      string;
-    datos_id:  number;
 }
 
 export interface Skill {
@@ -61,7 +56,6 @@ export interface Skill {
     tag:        string;
     porcentaje: number;
     color:      string;
-    datos_id:  number;
 }
 
 export interface SkillSoft {
@@ -70,5 +64,4 @@ export interface SkillSoft {
     modal:      string;
     beneficio:  string;
     porcentaje: number;
-    datos_id:  number;
 }

@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Subscription } from 'rxjs';
 import { SkillSoft } from 'src/assets/data/Data';
+import { TokenService } from 'src/app/servicios/token.service';
+import { SoftService } from 'src/app/servicios/portfolio-service/soft.service';
 
 @Component({
   selector: 'app-soft',
@@ -17,14 +18,21 @@ export class SoftComponent implements OnInit {
   displayEdit: boolean=false
  
   
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: SoftService,
+              private tokenService: TokenService) { }
 
-  
+  isLogged = false;
+
   ngOnInit(): void {
     this.getData();
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
     this.getData();
-    }) 
+    });
+    if (this.tokenService.getToken()){
+      this.isLogged = true;      
+    } else {
+      this.isLogged = false;      
+    } 
   }
   onDisplayDelete( active:boolean){
     if (active) {
@@ -58,19 +66,18 @@ export class SoftComponent implements OnInit {
   }
     
   getData(){
-    this.datosPortfolio.obtenerSoft().subscribe(respuesta =>{console.log(respuesta);
+    this.datosPortfolio.obtenerSoft().subscribe(respuesta => {
       this.softList=respuesta;
     });
   }
     onDelete(datosPortfolio_id: SkillSoft){
     this.datosPortfolio.DeleteSoft(datosPortfolio_id).subscribe((
-      result)=>{
+      result) => {
       this.ngOnInit();})
     }
     onEdit(datosPortfolio_id: SkillSoft){
-      this.datosPortfolio.IdSoft(datosPortfolio_id).subscribe((data)=>{
+      this.datosPortfolio.IdSoft(datosPortfolio_id).subscribe((data) => {
         this.datos = data;
-        console.log(this.datos);
       })
     }
 }

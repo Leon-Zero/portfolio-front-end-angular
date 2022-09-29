@@ -40,6 +40,7 @@ import { FormAboutMeComponent } from './reactiveForm/form-about-me/form-about-me
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { interceptorProvider } from './servicios/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -88,7 +89,9 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [ ],
+  providers: [
+    interceptorProvider
+   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

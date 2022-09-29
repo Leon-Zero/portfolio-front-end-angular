@@ -17,7 +17,6 @@ export class PortfolioService {
   private jobUrl= 'http://localhost:8080/jobs';
   private programingUrl= 'http://localhost:8080/programacion';
   private programUrl= 'http://localhost:8080/programas';
-  private softUrl= 'http://localhost:8080/soft';
 
   constructor(private http:HttpClient) { }
   // metodos get 
@@ -43,16 +42,12 @@ export class PortfolioService {
   obtenerProgram():Observable<Portfolio>{
     return this.http.get<Portfolio>(this.programUrl)
   }
-  obtenerSoft():Observable<Portfolio>{
-    return this.http.get<Portfolio>(this.softUrl)
-  }
+  
 
   //metodos delete json-server
   // -------------
 
-  DeleteSoft(id:SkillSoft){
-    return this.http.delete(`${this.softUrl}/${id}`)
-  }
+  
   DeleteProgram(id:Skill){
     return this.http.delete(`${this.programUrl}/${id}`)
   }
@@ -89,12 +84,7 @@ export class PortfolioService {
       tap(()=> { this._refresh$.next();        
       }))
   }
-  SaveSoft(data:Object):Observable<SkillSoft>{
-    console.log(data);
-    return this.http.post<SkillSoft>(this.softUrl, data).pipe(
-      tap(()=> { this._refresh$.next();        
-      }))
-  }
+  
   SaveJob(data:Object):Observable<Job>{
     console.log(data);
     return this.http.post<Job>(this.jobUrl, data).pipe(
@@ -122,14 +112,7 @@ export class PortfolioService {
 
   //metodo put + 
   // obtener id
-  IdSoft(id:SkillSoft): Observable<Object>{
-    return this.http.get(`${this.softUrl}/${id}`);
-  }
-  UpdateSoft(id: string, data:Object ){
-   return this.http.put(`${this.softUrl}/${id}`, data).pipe(
-    tap(()=> { this._refresh$.next();        
-    }))
-  }
+  
   IdPrograming(id:Skill): Observable<Object>{
     return this.http.get(`${this.programingUrl}/${id}`);
   }
@@ -181,7 +164,7 @@ export class PortfolioService {
   IdData(id:Datum): Observable<Object>{
     return this.http.get(`${this.dataUrl}/${id}`);
   }
-  UpdateData(id: string, data:Object ){
+  UpdateData(id: number, data:Object ){
    return this.http.put(`${this.dataUrl}/${id}`, data).pipe(
     tap(()=> { this._refresh$.next();        
     }))
