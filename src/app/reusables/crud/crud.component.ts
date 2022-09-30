@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-crud',
@@ -12,7 +11,7 @@ export class CrudComponent implements OnInit {
   @Output() statusBtnNew = new EventEmitter<boolean>();
   @Output() statusBtnEdit = new EventEmitter<boolean>();
 
-  constructor(private datosPortfolio:PortfolioService) {
+  constructor() {
    }
 
   ngOnInit(): void {}

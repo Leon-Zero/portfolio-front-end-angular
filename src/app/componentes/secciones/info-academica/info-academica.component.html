@@ -1,8 +1,8 @@
 <section class="experiencia__encabezado">
     <app-title-academica></app-title-academica> 
     <div class="blank page"></div>
-    <div class="accordion accordion-shadow" [id]="'accordion-school-' + academica.id" data-aos="zoom-in"
-data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
+<div class="accordion accordion-shadow" id="accordion-school" data-aos="zoom-in"
+ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true">
     <div class="accordion-item" *ngFor="let school of academica">
         <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#item-academica-' + school.id" >
@@ -13,7 +13,7 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
                 <h3>{{school.titulo_tag}}</h3>
             </button>
         </h2>
-            <div [id]="'item-academica-' + school.id" class="accordion-collapse collapse" aria-labelledby="headingOne" [attr.data-bs-parent]="'#accordion-school-' + school.id">
+            <div [id]="'item-academica-' + school.id" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion-school">
                 <div class="accordion-body flex-grid">
                     <div class="img"> 
                         <img [src]="school.logo" alt="logo instituto">
@@ -33,11 +33,11 @@ data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="t
     </div>
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#item-extra-' + extra.id">
+            <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" data-bs-target="#item-extra">
             <h3>ACTIVIDADES EXTRACURRICULARES</h3>
             </button>
         </h2>
-        <div [id]="'item-extra-' + extra.id" class="accordion-collapse collapse" aria-labelledby="headingTwo" [attr.data-bs-parent]="'#accordion-school-' + extra.id">
+        <div id="item-extra" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-school">
             <div class="accordion-body">
 
                 <app-crud 

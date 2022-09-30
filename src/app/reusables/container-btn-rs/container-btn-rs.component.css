@@ -1,3 +1,8 @@
+section{
+    padding: 1em;
+    margin: auto;
+    width: 70%; 
+}
 .contenedor-btn-social{
     display: flex;
     justify-content: center;

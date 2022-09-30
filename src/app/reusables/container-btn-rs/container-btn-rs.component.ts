@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { BtnR } from 'src/assets/data/Data';
 import { Subscription } from 'rxjs';
+import { BtnRsService } from 'src/app/servicios/portfolio-service/btn-rs.service';
 
 
 @Component({
@@ -12,13 +12,13 @@ import { Subscription } from 'rxjs';
 export class ContainerBtnRSComponent implements OnInit {
 
   suscription: Subscription = new Subscription;
-  socialList:any;
+  socialList: BtnR[]= [];
   datos:Object=[]
   displayDelete: boolean=false 
   displayNew: boolean=false
   displayEdit: boolean=false
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: BtnRsService) { }
 
   ngOnInit(): void {
     this.getData();
@@ -61,12 +61,12 @@ export class ContainerBtnRSComponent implements OnInit {
         this.displayNew = false
       }
   }
-  onDelete(datosPortfolio_id: BtnR){
+  onDelete(datosPortfolio_id: number){
     this.datosPortfolio.DeleteBtn(datosPortfolio_id).subscribe((
       result)=>{
       this.ngOnInit();})
     }
-  onEdit(datosPortfolio_id: BtnR){
+  onEdit(datosPortfolio_id: number){
       this.datosPortfolio.IdBtn(datosPortfolio_id).subscribe((data)=>{
         this.datos = data;
         console.log(this.datos);

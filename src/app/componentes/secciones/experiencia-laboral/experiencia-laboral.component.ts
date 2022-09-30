@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Job } from 'src/assets/data/Data';
 import { Subscription } from 'rxjs';
+import { JobService } from 'src/app/servicios/portfolio-service/job.service';
 
 
 @Component({
@@ -12,14 +12,14 @@ import { Subscription } from 'rxjs';
 export class ExperienciaLaboralComponent implements OnInit {
 
   suscription: Subscription = new Subscription;
-  jobsList:any;
+  jobsList: Job[] = [];
   datos:Object=[]
   displayDelete: boolean=false 
   displayNew: boolean=false
   displayEdit: boolean=false
 
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: JobService) { }
 
   ngOnInit(): void {
     this.getData();
@@ -62,12 +62,12 @@ export class ExperienciaLaboralComponent implements OnInit {
         this.displayNew = false
       }
   }
-  onDelete(datosPortfolio_id: Job){
+  onDelete(datosPortfolio_id: number){
     this.datosPortfolio.DeleteJob(datosPortfolio_id).subscribe((
       result)=>{
       this.ngOnInit();}) 
   }
-  onEdit(datosPortfolio_id: Job){
+  onEdit(datosPortfolio_id: number){
     this.datosPortfolio.IdJob(datosPortfolio_id).subscribe((data)=>{
       this.datos = data;
       console.log(this.datos);

@@ -10,13 +10,13 @@ export interface Portfolio {
 }
 
 export interface Academica {
+    id:         number;
     titulo_tag: string;
-    instituto: string;
-    logo:      string;
-    carrera:   string;
-    estado:    string;
-    ingreso:   string;
-    id:        number;
+    instituto:  string;
+    logo:       string;
+    carrera:    string;
+    estado:     string;
+    ingreso:    string;
 }
 
 export interface BtnR {

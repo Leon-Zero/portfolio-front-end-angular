@@ -1,6 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { DatosService } from 'src/app/servicios/portfolio-service/datos.service';
 
 @Component({
   selector: 'app-form-about-me',
@@ -9,30 +9,29 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class FormAboutMeComponent implements OnInit {
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: DatosService) { }
 
   @Input() object:any=[];
 
   addData = new FormGroup ({
+    id: new FormControl(''),
     title_name: new FormControl(''),
     name: new FormControl(''),
     ubicacion: new FormControl(''),
     school: new FormControl(''),
-    perfil: new FormControl(''),
-    datos_id: new FormControl(1)
-
+    perfil: new FormControl('')
   });
 
   ngOnInit(): void { }
 
   Set(){
     this.addData.setValue({
+    id: this.object.id,
     title_name: this.object.title_name,
     name: this.object.name,
     ubicacion: this.object.ubicacion,
     school: this.object.school,
-    perfil: this.object.perfil,
-    datos_id: this.object.datos_id
+    perfil: this.object.perfil
     });
   }
   EditData(){
@@ -40,5 +39,16 @@ export class FormAboutMeComponent implements OnInit {
     (result)=>{this.addData.reset({});
     })
     }
+
+    //Codigo para agregar componente about-me, comentado por que solo se necesita una unica vez
+    //Los botones de edicion eliminar y agregar para este componente están inutilizados.
+    /*
+    SaveData(){
+        this.datosPortfolio.SaveData(this.addData.value).subscribe(
+          (result)=> {
+          this.addData.reset({});
+          });       
+      }
+    */
 }
 

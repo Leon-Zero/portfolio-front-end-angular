@@ -1,6 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { PortfolioService } from 'src/app/servicios/portfolio.service'; 
+import { JobService } from 'src/app/servicios/portfolio-service/job.service';
 
 @Component({
   selector: 'app-form-jobs',
@@ -9,19 +9,18 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class FormJobsComponent implements OnInit {
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: JobService) { }
 
   @Input() object:any=[];
   @Input() onSet:boolean = false  
 
   addJob = new FormGroup ({
+    id: new FormControl(''),
     job: new FormControl(''),
     cargo: new FormControl(''),
     funciones: new FormControl(''),
     ingreso_salida: new FormControl(''),
-    contacto: new FormControl(''),
-    datos_id: new FormControl(1)
-
+    contacto: new FormControl('')
   });
 
   editMode: boolean = false;
@@ -30,13 +29,13 @@ export class FormJobsComponent implements OnInit {
 
   Set(){
     this.addJob.setValue({
+      id: this.object.id,
       job: this.object.job,
       cargo: this.object.cargo,
       funciones: this.object.funciones,
       ingreso_salida: this.object.ingreso_salida,
-      contacto: this.object.contacto,
-      datos_id: this.object.datos_id
-     });
+      contacto: this.object.contacto
+    });
     this.editMode=true;
   }
 

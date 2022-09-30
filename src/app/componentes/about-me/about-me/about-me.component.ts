@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Subscription } from 'rxjs'; 
+import { DatosService } from 'src/app/servicios/portfolio-service/datos.service';
 import { Datum } from 'src/assets/data/Data';
 
 @Component({
@@ -11,11 +11,11 @@ import { Datum } from 'src/assets/data/Data';
 export class AboutMeComponent implements OnInit {
   
   suscription: Subscription = new Subscription;
-  miPortfolio:any;
+  miPortfolio: Datum[] = [];
   datos:Object=[]
   displayEdit: boolean=false
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: DatosService) { }
 
   ngOnInit(): void {
     this.getData();
@@ -35,7 +35,7 @@ export class AboutMeComponent implements OnInit {
       this.displayEdit = false
     }
   }
-  onEdit(datosPortfolio_id: Datum){
+  onEdit(datosPortfolio_id: number){
     this.datosPortfolio.IdData(datosPortfolio_id).subscribe((data)=>{
       this.datos = data;
       console.log(this.datos);

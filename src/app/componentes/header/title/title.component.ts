@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { DatosService } from 'src/app/servicios/portfolio-service/datos.service';
+import { Datum } from 'src/assets/data/Data';
 
 @Component({
   selector: 'app-title',
@@ -9,10 +10,10 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class TitleComponent implements OnInit {
   
-  miPortfolio:any;
+  miPortfolio: Datum[]= [];
   suscription: Subscription = new Subscription;
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: DatosService) { }
 
   ngOnInit(): void {
     this.getData();

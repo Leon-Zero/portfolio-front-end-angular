@@ -1,6 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { SchoolService } from 'src/app/servicios/portfolio-service/school.service';
 
 @Component({
   selector: 'app-form-extra',
@@ -9,17 +9,17 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class FormExtraComponent implements OnInit {
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: SchoolService) { }
 
   @Input() object:any=[];
   @Input() onSet:boolean = false
 
 
   addExtra = new FormGroup ({
+    id: new FormControl(''),
     tipo: new FormControl(''),
-    actividad: new FormControl(''),
-    datos_id: new FormControl(1)
-  });
+    actividad: new FormControl('')
+    });
 
   editMode: boolean = false;
 
@@ -27,9 +27,9 @@ export class FormExtraComponent implements OnInit {
 
   SetExtra(){
     this.addExtra.setValue({
+    id: this.object.id,
     tipo: this.object.tipo,
     actividad: this.object.actividad,
-    datos_id: this.object.datos_id
      });
     this.editMode=true;
   }

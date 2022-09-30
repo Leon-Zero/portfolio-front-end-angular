@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { Portfolio, SkillSoft } from 'src/assets/data/Data';
+import { SkillSoft } from 'src/assets/data/Data';
 
 @Injectable({
   providedIn: 'root'

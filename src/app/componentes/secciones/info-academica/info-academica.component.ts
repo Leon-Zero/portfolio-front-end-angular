@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Academica, ExtraCurricular } from 'src/assets/data/Data'; 
 import { Subscription } from 'rxjs';  
+import { SchoolService } from 'src/app/servicios/portfolio-service/school.service';
 
 
 @Component({
@@ -12,14 +12,14 @@ import { Subscription } from 'rxjs';
 export class InfoAcademicaComponent implements OnInit {
  
   suscription: Subscription = new Subscription;
-  academica:any;
-  extra: any;
+  academica: Academica[]= [];
+  extra: ExtraCurricular[]= [];
   datos:Object=[]
   displayDelete: boolean=false 
   displayNew: boolean=false
   displayEdit: boolean=false
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: SchoolService) { }
 
   ngOnInit(): void {
    this.getData();
@@ -69,26 +69,24 @@ export class InfoAcademicaComponent implements OnInit {
         this.displayNew = false
       }
   }
-  onDelete(datosPortfolio_id: Academica){
+  onDelete(datosPortfolio_id: number){
     this.datosPortfolio.DeleteAcademica(datosPortfolio_id).subscribe((
       result)=>{
       this.ngOnInit();}) 
  }
-  onDeleteExtra(datosPortfolio_id: ExtraCurricular){
+  onDeleteExtra(datosPortfolio_id: number){
     this.datosPortfolio.DeleteExtra(datosPortfolio_id).subscribe((
       result)=>{
       this.ngOnInit();}) 
   }
-  onEdit(datosPortfolio_id: Academica){
+  onEdit(datosPortfolio_id: number){
     this.datosPortfolio.IdAcademica(datosPortfolio_id).subscribe((data)=>{
       this.datos = data;
-      console.log(this.datos);
     })
    }
-   onEditExtra(datosPortfolio_id: ExtraCurricular){
+   onEditExtra(datosPortfolio_id: number){
     this.datosPortfolio.IdExtra(datosPortfolio_id).subscribe((data)=>{
       this.datos = data;
-      console.log(this.datos);
     })
    }
 }

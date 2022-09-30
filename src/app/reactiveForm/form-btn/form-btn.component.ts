@@ -1,6 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { PortfolioService } from 'src/app/servicios/portfolio.service'; 
+import { BtnRsService } from 'src/app/servicios/portfolio-service/btn-rs.service';
 
 @Component({
   selector: 'app-form-btn',
@@ -9,17 +9,17 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class FormBtnComponent implements OnInit {
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: BtnRsService) { }
 
   @Input() object:any=[];
   @Input() onSet:boolean = false
 
   addBtn = new FormGroup ({
+    id: new FormControl(''),
     red_social: new FormControl(''),
     btn: new FormControl(''),
     url: new FormControl(''),
-    color: new FormControl(''),
-    datos_id: new FormControl(1)
+    color: new FormControl('')
   });
 
   editMode: boolean = false;
@@ -28,11 +28,11 @@ export class FormBtnComponent implements OnInit {
 
   Set(){
     this.addBtn.setValue({
+      id: this.object.id,
       red_social: this.object.red_social,
       btn: this.object.btn,
       url: this.object.url,
-      color: this.object.color,
-      datos_id: this.object.datos_id
+      color: this.object.color
      });
     this.editMode=true;
   }

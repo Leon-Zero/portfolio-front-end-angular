@@ -1,6 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { SchoolService } from 'src/app/servicios/portfolio-service/school.service';
 
 
 @Component({
@@ -10,21 +10,20 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class FormAcademicaComponent implements OnInit {
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: SchoolService) { }
 
   @Input() object:any=[];
   @Input() onSet:boolean = false
 
 
   addAcademica = new FormGroup ({
+    id: new FormControl(''),
     titulo_tag: new FormControl(''),
     instituto: new FormControl(''),
     logo: new FormControl(''),
     carrera: new FormControl(''),
     estado: new FormControl(''),
-    ingreso: new FormControl(''),
-    datos_id: new FormControl(1)
-
+    ingreso: new FormControl('')
   });
 
   editMode: boolean = false;
@@ -33,13 +32,13 @@ export class FormAcademicaComponent implements OnInit {
 
   Set(){
     this.addAcademica.setValue({
+    id: this.object.id,
     titulo_tag: this.object.titulo_tag,
     instituto: this.object.instituto,
     logo: this.object.logo,
     carrera: this.object.carrera,
     estado: this.object.estado,
-    ingreso: this.object.ingreso,
-    datos_id: this.object.datos_id
+    ingreso: this.object.ingreso
      });
     this.editMode=true;
   }
