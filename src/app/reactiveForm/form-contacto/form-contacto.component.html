@@ -1,0 +1,33 @@
+<div class="box-new"> 
+    <button class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <hr>
+    <form [formGroup]="addContacto" (ngSubmit)="EditContacto()">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Email del Destinatario</span>
+            <input type="email" class="form-control"
+            formControlName="mail">
+            <p>*Una vez actualizado el mail, debe de enviarse a travez del formulario de contacto 
+                un intento de prueba para que el servicio establezca el vinculo, revise su casilla 
+                de correo electronico y vincule al servicio</p>
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Asunto del mail de AUTORESPUESTA</span>
+            <input type="text" class="form-control"
+            formControlName="asunto">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Mensaje de AUTORESPUESTA</span>
+            <input type="text" class="form-control" 
+            formControlName="mensaje">
+        </div>
+
+        <input type="hidden" name="id"
+        formControlName="id">
+        
+        <div class="col-12">
+            <button type="submit" class="btn btn-warning">Editar Datos</button>
+        </div>
+    </form>
+</div>

@@ -30,12 +30,14 @@ export class InfoAcademicaComponent implements OnInit {
    })
   }
   getData(){
-    this.datosPortfolio.obtenerAcademica().subscribe(data =>{console.log(data);
+    this.datosPortfolio.obtenerAcademica().subscribe(data =>{
+      //console.log(data);
       this.academica=data;
     });
   }
   getDataExtra(){
-    this.datosPortfolio.obtenerExtra().subscribe(data =>{console.log(data);
+    this.datosPortfolio.obtenerExtra().subscribe(data =>{
+      //console.log(data);
       this.extra=data;
     });
   }

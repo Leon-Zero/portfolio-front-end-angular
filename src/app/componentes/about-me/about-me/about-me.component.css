@@ -1,8 +1,7 @@
 app-form-about-me{
     display:var(--display-5)}
-app-edit{display:flex;
-    justify-self:center;
-    align-self:center}
+app-edit{display:block
+}
 section{font-weight:1em;
     font-size:15px;
     padding:.5em;

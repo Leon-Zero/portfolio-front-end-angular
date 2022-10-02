@@ -28,7 +28,8 @@ export class ExperienciaLaboralComponent implements OnInit {
     }) 
   }
   getData(){
-    this.datosPortfolio.obtenerJob().subscribe(data =>{console.log(data);
+    this.datosPortfolio.obtenerJob().subscribe(data =>{
+    //console.log(data);
     this.jobsList=data;
     });
   }

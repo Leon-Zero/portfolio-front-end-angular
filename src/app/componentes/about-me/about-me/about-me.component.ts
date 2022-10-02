@@ -10,7 +10,7 @@ import { Datum } from 'src/assets/data/Data';
   
 export class AboutMeComponent implements OnInit {
   
-  suscription: Subscription = new Subscription;
+  suscription: Subscription = new Subscription; 
   miPortfolio: Datum[] = [];
   datos:Object=[]
   displayEdit: boolean=false
@@ -23,7 +23,8 @@ export class AboutMeComponent implements OnInit {
     this.getData();})
   }
   getData(){
-    this.datosPortfolio.obtenerData().subscribe(data =>{console.log(data);
+    this.datosPortfolio.obtenerData().subscribe(data =>{
+      //console.log(data);
       this.miPortfolio=data;
     }); 
   }
@@ -38,7 +39,6 @@ export class AboutMeComponent implements OnInit {
   onEdit(datosPortfolio_id: number){
     this.datosPortfolio.IdData(datosPortfolio_id).subscribe((data)=>{
       this.datos = data;
-      console.log(this.datos);
     })
    }
 }

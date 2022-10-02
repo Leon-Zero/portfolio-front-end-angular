@@ -41,6 +41,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { interceptorProvider } from './servicios/interceptor.service';
+import { FormContactoComponent } from './reactiveForm/form-contacto/form-contacto.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { interceptorProvider } from './servicios/interceptor.service';
     PortfolioComponent,
     LoginComponent,
     PageNotFoundComponent,
+    FormContactoComponent,
   ],
   imports: [
     BrowserModule,

@@ -39,7 +39,6 @@ export class FormAboutMeComponent implements OnInit {
     (result)=>{this.addData.reset({});
     })
     }
-
     //Codigo para agregar componente about-me, comentado por que solo se necesita una unica vez
     //Los botones de edicion eliminar y agregar para este componente están inutilizados.
     /*

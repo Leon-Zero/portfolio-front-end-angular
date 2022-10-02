@@ -27,7 +27,8 @@ export class ContainerBtnRSComponent implements OnInit {
     }) 
   }
   getData(){
-    this.datosPortfolio.obtenerBtn().subscribe(data =>{console.log(data);
+    this.datosPortfolio.obtenerBtn().subscribe(data =>{
+      //console.log(data);
       this.socialList=data;
     });
   }

@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SkillSoft } from 'src/assets/data/Data';
-import { TokenService } from 'src/app/servicios/token.service';
+// import { TokenService } from 'src/app/servicios/token.service';
 import { SoftService } from 'src/app/servicios/portfolio-service/soft.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { SoftService } from 'src/app/servicios/portfolio-service/soft.service';
   styleUrls: ['./soft.component.css']
 })
 export class SoftComponent implements OnInit {
+
   suscription: Subscription = new Subscription;
   softList: SkillSoft[]= [];
   datos:Object=[]
@@ -19,21 +20,24 @@ export class SoftComponent implements OnInit {
  
   
   constructor(private datosPortfolio: SoftService,
-              private tokenService: TokenService) { }
+             // private tokenService: TokenService
+              ) { }
 
-  isLogged = false;
+  //isLogged = false;
 
   ngOnInit(): void {
     this.getData();
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
     this.getData();
     });
+    /*
     if (this.tokenService.getToken()){
       this.isLogged = true;      
     } else {
       this.isLogged = false;      
-    } 
+    }*/
   }
+
   onDisplayDelete( active:boolean){
     if (active) {
       this.displayDelete = true
@@ -67,6 +71,7 @@ export class SoftComponent implements OnInit {
     
   getData(){
     this.datosPortfolio.obtenerSoft().subscribe(respuesta => {
+      //console.log(data);
       this.softList=respuesta;
     });
   }

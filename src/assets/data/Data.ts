@@ -7,6 +7,7 @@ export interface Portfolio {
     programacion:    Skill[];
     programas:       Skill[];
     soft:            SkillSoft[];
+    contacto:        Contacto[];
 }
 
 export interface Academica {
@@ -64,4 +65,11 @@ export interface SkillSoft {
     modal:      string;
     beneficio:  string;
     porcentaje: number;
+}
+
+export interface Contacto {
+    id:          number;
+    mail:        string;
+    asunto:      string;
+    mensaje:     string;
 }

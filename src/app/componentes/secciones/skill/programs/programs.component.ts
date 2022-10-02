@@ -9,6 +9,7 @@ import { ProgramsService } from 'src/app/servicios/portfolio-service/programs.se
   styleUrls: ['./programs.component.css']
 })
 export class ProgramsComponent implements OnInit {
+
   suscription: Subscription = new Subscription;
   programsList: Skill[]= [];
   datos:Object=[]
@@ -22,8 +23,9 @@ export class ProgramsComponent implements OnInit {
     this.getData();
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
     this.getData();
-    }) 
+    })
   }
+
   onDisplayDelete( active:boolean){
     if (active) {
       this.displayDelete = true
@@ -61,7 +63,8 @@ export class ProgramsComponent implements OnInit {
       this.ngOnInit();}) 
   }
   getData(){
-    this.datosPortfolio.obtenerProgram().subscribe(data =>{console.log(data);
+    this.datosPortfolio.obtenerProgram().subscribe(data =>{
+      //console.log(data);
       this.programsList=data;
     });
   }

@@ -1,29 +1,42 @@
-footer{
+app-container-btn-rs{
+    position: static;
+}
+app-form-contacto{
+    display:var(--display-5)
+}
+.footer{
     position: relative;
     background-image: url('src/assets/imagenes/bannerPortfolio.png');
     background-size: cover;
     background-repeat: repeat;
     width: 100vw;
     height: auto;
-    position: relative;
+    box-sizing: content-box;
     z-index: 2000; 
-    padding: 2em 0 2em 0;
+    padding: 3em 0 2em 0;
 }
-.content{
-    width: 100%;
-    height: 100%;
-    margin: 2em auto 0 auto;
+.center{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: column;  
 }
-
+.content{
+    width: 100%;
+    height: auto;
+    margin: 2em auto 0 auto;
+    flex-flow: column; 
+}
+.wraper_form{
+    width: 70%;
+    margin: auto;
+    flex-direction: column;
+}
 form{
     width: 45vw;
     background-color: #EBFCFC;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 2em;
+    margin: 1em;
 }
 h5{
     font-size: 2em ;
@@ -32,11 +45,6 @@ h5{
 h6{
     font-size: 1.3em ;
     text-align: left;
-}
-app-top-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 @media only screen and (max-width: 800px){   

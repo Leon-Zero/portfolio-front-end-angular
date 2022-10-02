@@ -16,16 +16,18 @@ export class ProgramingComponent implements OnInit {
   displayDelete: boolean=false 
   displayNew: boolean=false
   displayEdit: boolean=false
+
   constructor(private datosPortfolio: ProgramingService) { }
 
   ngOnInit(): void {
     this.getData();
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
     this.getData();
-    })
+    });
   } 
   getData(){
-    this.datosPortfolio.obtenerPrograming().subscribe(data =>{console.log(data);
+    this.datosPortfolio.obtenerPrograming().subscribe(data =>{
+      //console.log(data);
       this.programingList=data;
     })
   }

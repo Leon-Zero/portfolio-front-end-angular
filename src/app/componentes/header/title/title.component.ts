@@ -23,7 +23,8 @@ export class TitleComponent implements OnInit {
   }
 
   getData(){
-    this.datosPortfolio.obtenerData().subscribe(data =>{console.log(data);
+    this.datosPortfolio.obtenerData().subscribe(data =>{
+      //console.log(data);
       this.miPortfolio=data;
     });
   }

@@ -1,32 +1,44 @@
-<footer>
-<div class="content">
-        <form action="https://formsubmit.co/leon.cba09@gmail.com" method="POST">
+<footer class="footer">
+    <div class="content center" *ngFor="let contacto of contactoList">
+        <form ngNoForm id="form-contacto" [action]="'https://formsubmit.co/' + contacto.mail" method="POST" role="form" name="form">
             <div>
-                <h5>Formulario de Contacto</h5>
+                    <h5>Formulario de Contacto</h5>
+                    <br>
+                    <div class="mb-3">
+                    <label for="FormControlInput1" class="form-label"><h6>Nombre y Apellido</h6></label>
+                    <input type="text" class="form-control" id="FormControlInput1" placeholder="Juan Perez" name="nombre" required>
+                </div>
+                <div>
+                    <label for="FormControlInput2" class="form-label"><h6>Dirección Email</h6></label>
+                    <input type="email" class="form-control" id="FormControlInput2" placeholder="name@example.com" name="email" required>
+                </div>
                 <br>
                 <div class="mb-3">
-                <label for="FormControlInput1" class="form-label"><h6>Nombre y Apellido</h6></label>
-                <input type="text" class="form-control" id="FormControlInput1" placeholder="Juan Perez" name="nombre" required>
+                    <label for="FormControlTextarea1" class="form-label"><h6>Escriba el asunto de contacto</h6></label>
+                    <textarea class="form-control" id="FormControlTextarea1" rows="3" name="mensaje" required></textarea>
+                </div> 
+
+                <input type="hidden" name="_next" value="http://localhost:4200/portfolio">
+                <input type="hidden" name="_subject" [value]="contacto.asunto">
+                <input type="hidden" name="_autoresponse" [value]="contacto.mensaje">
+                <input type="hidden" name="_template" value="box">
             </div>
-            <div>
-                <label for="FormControlInput2" class="form-label"><h6>Dirección Email</h6></label>
-                <input type="email" class="form-control" id="FormControlInput2" placeholder="name@example.com" name="email" required>
-            </div>
-            <br>
-            <div class="mb-3">
-                <label for="FormControlTextarea1" class="form-label"><h6>Escriba el asunto de contacto</h6></label>
-                <textarea class="form-control" id="FormControlTextarea1" rows="2" name="asunto" required></textarea>
-            </div> 
-            <div>
-                <input class="btn btn-primary" type="submit" value="Enviar">
-            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+            <app-edit class="center" *ngIf="displayEdit" (click)="onEdit(contacto.id)"></app-edit>
+        </form> 
+        <div class="wraper_form center">
+            <app-crud class="center"
+            (statusBtnEdit)="onDisplayEdit($event)" 
+            ></app-crud>
+            <app-form-contacto class="center" *ngIf="displayEdit" 
+            [object]="datos" ></app-form-contacto>
         </div>
-        <input type="hidden" name="_next" value="http://localhost:4200/portfolio">
-        <input type="hidden" name="_autoresponse" value="Muchas gracias por escribir, su consulta será analizada y me estaré comunicando a la brevedad">
-        <input type="hidden" name="_template" value="box">
-        <input type="hidden" name="_subject" value="Nuevo mensaje de: Portfolio LH">
-    </form> 
-</div>
-<app-container-btn-rs></app-container-btn-rs>
-<app-top-btn></app-top-btn>
+ </div>
+    <br>
+    <br>    
+    <app-container-btn-rs></app-container-btn-rs>
+    <app-top-btn class="center"></app-top-btn>
 </footer>
+
