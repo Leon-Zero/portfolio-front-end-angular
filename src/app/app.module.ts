@@ -82,7 +82,7 @@ import { FormContactoComponent } from './reactiveForm/form-contacto/form-contact
     PortfolioComponent,
     LoginComponent,
     PageNotFoundComponent,
-    FormContactoComponent,
+    FormContactoComponent
   ],
   imports: [
     BrowserModule,

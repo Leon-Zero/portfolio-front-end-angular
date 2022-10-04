@@ -1,4 +1,94 @@
 <section>
-    <app-title-projects></app-title-projects>
-    <div class="blank page"></div>
+        <app-title-projects></app-title-projects>
+        <div class="blank page"></div>
+<div class="flex-center">
+    <div class="cards">
+        
+        <div id="card_item-1" class="card"
+        [ngClass]="{'active': addClass === 'card_item-1'}" 
+        Style="background-image: url('./assets/imagenes/perfil.JPG')"
+        (click)="setClasses('card_item-1')" >
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon flex-center" style="color: red;">
+                    <!--icono de fontaweson-->
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="info">
+                    <div class="title">Proyecto</div>
+                    <div>Contenido que lo describe</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="card_item-2" class="card" 
+        [ngClass]="{'active': addClass === 'card_item-2'}" 
+        Style="background-image: url('./assets/imagenes/perfil.JPG');" 
+        (click)="setClasses('card_item-2')" >
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon flex-center" style="color: blue;">
+                    <!--icono de fontaweson-->
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="info">
+                    <div class="title">Content</div>
+                    <div>Otro contenido</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="card_item-3" class="card" 
+        [ngClass]="{'active': addClass === 'card_item-3'}" 
+        Style="background-image: url('./assets/imagenes/perfil.JPG');" 
+        (click)="setClasses('card_item-3')" >
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon flex-center" style="color: yellow;">
+                    <!--icono de fontaweson-->
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="info">
+                    <div class="title">Content</div>
+                    <div>Otro contenido lore</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="card_item-4" class="card" 
+        [ngClass]="{'active': addClass === 'card_item-4'}" 
+        Style="background-image: url('./assets/imagenes/perfil.JPG');" 
+        (click)="setClasses('card_item-4')" >
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon flex-center" style="color: yellow;">
+                    <!--icono de fontaweson-->
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="info">
+                    <div class="title">Content</div>
+                    <div>Otro contenido lore</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="card_item-5" class="card" 
+        [ngClass]="{'active': addClass === 'card_item-5'}" 
+        Style="background-image: url('./assets/imagenes/perfil.JPG');" 
+        (click)="setClasses('card_item-5')" >
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon flex-center" style="color: yellow;">
+                    <!--icono de fontaweson-->
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="info">
+                    <div class="title">Content</div>
+                    <div>Otro contenido lore</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 </section>

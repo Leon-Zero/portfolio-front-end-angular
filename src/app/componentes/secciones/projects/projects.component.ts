@@ -9,7 +9,12 @@ export class ProjectsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  addClass: string ="card_item-1"
 
+  ngOnInit(): void {  }
+
+  setClasses(id: string){
+    this.addClass = id;
+    console.log(this.addClass)
+  }
 }

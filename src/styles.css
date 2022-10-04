@@ -23,6 +23,11 @@ html {
   height: 150px;
   opacity: 0;
 }
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 h2{
   font-size: 2em;
   font-weight: bolder;
