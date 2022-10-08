@@ -1,6 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core'; 
 import { FormGroup, FormControl } from "@angular/forms";
-import { SoftService } from 'src/app/servicios/portfolio-service/soft.service';
+import { SoftService } from 'src/app/servicios/portfolio-service/soft.service'; 
 
 @Component({
   selector: 'app-form-soft',
@@ -21,8 +21,11 @@ export class FormSoftComponent implements OnInit {
     modal: new FormControl(''),
     beneficio: new FormControl('')
   });
+
   editMode: boolean = false;
-  ngOnInit(): void {  }
+
+  ngOnInit(): void {  
+  }
   Set(){
     this.addSoft.setValue({
       id: this.object.id,

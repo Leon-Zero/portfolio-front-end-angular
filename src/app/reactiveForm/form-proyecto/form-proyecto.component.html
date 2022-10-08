@@ -1,0 +1,201 @@
+<div class="box-new"> 
+    <button *ngIf="onSet" class="btn btn-warning btn-edit" (click)="Set()">Setear Valores</button> 
+    <hr>
+<form [formGroup]="addProyecto" (ngSubmit)="SaveProyecto()">
+    <!--****** texto ****** -->
+    <div class="input-group mb-3">
+        <span class="input-group-text">Titulo del Proyecto</span>
+        <input type="text" class="form-control" placeholder="Nombre del Proyecto"
+        formControlName="project_title">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Descripción del Proyecto </label>
+        <textarea class="form-control" rows="3"
+        formControlName="project_text"></textarea>
+    </div>
+   
+    <div class="accordion" id="card_accordion">    
+                    <!--******** card 1 ******** -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="card-1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Card #1
+            </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="card-1" data-bs-parent="#card_accordion">
+                <div class="accordion-body">
+                        <!--******** card 1 ******** -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Card Titulo</span>
+                        <input type="text" class="form-control" placeholder="titulo de la tarjeta"
+                        formControlName="card_title_1">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Card Descripción</span>
+                        <input type="text" class="form-control" placeholder="Descripción breve"
+                        formControlName="card_description_1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Cargar Imagen</span>
+                        <input type="text" class="form-control" placeholder="URL de la imagen"
+                        formControlName="card_img_1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Icono FontAwesome</span>
+                        <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
+                        formControlName="card_icon_1">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Elije un Color</span>
+                        <input type="color" class="form-control form-control-color" title="Choose your color" 
+                        formControlName="color_1">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+                    <!--******** card 2 ******** -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="card-2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Card #2
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="card-2" data-bs-parent="#card_accordion">
+                <div class="accordion-body">
+                    <!--******** card 2 ******** -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Card Titulo</span>
+                        <input type="text" class="form-control" placeholder="titulo de la tarjeta"
+                        formControlName="card_title_2">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Card Descripción</span>
+                        <input type="text" class="form-control" placeholder="Descripción breve"
+                        formControlName="card_description_2">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Cargar Imagen</span>
+                        <input type="text" class="form-control" placeholder="URL de la imagen"
+                        formControlName="card_img_2">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Icono FontAwesome</span>
+                        <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
+                        formControlName="card_icon_2">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Elije un Color</span>
+                        <input type="color" class="form-control form-control-color" title="Choose your color" 
+                        formControlName="color_2">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+                                <!--******** card 3 ******** -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="card-3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Card #3
+            </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="card-3" data-bs-parent="#card_accordion">
+                <div class="accordion-body">
+                                <!--******** card 3 ******** -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Card Titulo</span>
+                        <input type="text" class="form-control" placeholder="titulo de la tarjeta"
+                        formControlName="card_title_3">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Card Descripción</span>
+                        <input type="text" class="form-control" placeholder="Descripción breve"
+                        formControlName="card_description_3">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Cargar Imagen</span>
+                        <input type="text" class="form-control" placeholder="URL de la imagen"
+                        formControlName="card_img_3">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Icono FontAwesome</span>
+                        <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
+                        formControlName="card_icon_3">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Elije un Color</span>
+                        <input type="color" class="form-control form-control-color" title="Choose your color" 
+                        formControlName="color_3">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+                    <!--******** card 4 ******** -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="card-4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Card #4
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="card-4" data-bs-parent="#card_accordion">
+                <div class="accordion-body">
+                    <!--******** card 4 ******** -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Card Titulo</span>
+                        <input type="text" class="form-control" placeholder="titulo de la tarjeta"
+                        formControlName="card_title_4">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Card Descripción</span>
+                        <input type="text" class="form-control" placeholder="Descripción breve"
+                        formControlName="card_description_4">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Cargar Imagen</span>
+                        <input type="text" class="form-control" placeholder="URL de la imagen"
+                        formControlName="card_img_4">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Icono FontAwesome</span>
+                        <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
+                        formControlName="card_icon_4">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Elije un Color</span>
+                        <input type="color" class="form-control form-control-color" title="Choose your color" 
+                        formControlName="color_4">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" name="id"
+    formControlName="id">
+    
+    <div class="col-12">
+        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'">{{editMode? 'Editar Proyecto':'Añadir Proyecto (+)'}}</button>
+    </div>
+
+ </form>
+</div>

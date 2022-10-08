@@ -79,5 +79,19 @@
         <br>
         <h5> {{proyecto.project_text}}</h5>
         </div> 
+
+        <app-edit *ngIf="displayEdit" (click)="onEdit(proyecto.id)"></app-edit>
+        <app-delete *ngIf="displayDelete" (click)="onDelete(proyecto.id)"></app-delete>
+
     </div>
+
+    <app-crud 
+    (statusBtnDelete)="onDisplayDelete( $event )"
+    (statusBtnNew)="onDisplayNew( $event )"
+    (statusBtnEdit)="onDisplayEdit( $event )" 
+    ></app-crud>
+
+    <app-form-proyecto *ngIf="displayNew || displayEdit" 
+    [object]="datos"
+    [onSet]="displayEdit" ></app-form-proyecto>
 </section>

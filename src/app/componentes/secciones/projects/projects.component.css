@@ -1,3 +1,13 @@
+app-form-proyecto{
+    display: var(--display-5);
+} 
+app-delete, app-edit{
+    display: flex;
+    justify-self: center ;
+    align-self: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
 section{
     font-weight: 1em;
     font-size: 1.1em;
