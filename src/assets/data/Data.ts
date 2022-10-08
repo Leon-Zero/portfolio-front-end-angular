@@ -8,6 +8,7 @@ export interface Portfolio {
     programas:       Skill[];
     soft:            SkillSoft[];
     contacto:        Contacto[];
+    proyecto:        Proyecto[];
 }
 
 export interface Academica {
@@ -72,4 +73,29 @@ export interface Contacto {
     mail:        string;
     asunto:      string;
     mensaje:     string;
+}
+export interface Proyecto{
+    id:                     number;
+    project_title:          string;
+    project_text:           string;
+    card_img_1:             string;
+    card_icon_1:            string;
+    card_title_1:           string;
+    card_description_1:     string;
+    color_1:                string;
+    card_img_2:             string;
+    card_icon_2:            string;
+    card_title_2:           string;
+    card_description_2:     string;
+    color_2:                string;
+    card_img_3:             string;
+    card_icon_3:            string;
+    card_title_3:           string;
+    card_description_3:     string;
+    color_3:                string;
+    card_img_4:             string;
+    card_icon_4:            string;
+    card_title_4:           string;
+    card_description_4:     string;
+    color_4:                string;
 }

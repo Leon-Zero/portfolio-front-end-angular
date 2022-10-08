@@ -1,94 +1,83 @@
 <section>
         <app-title-projects></app-title-projects>
         <div class="blank page"></div>
-<div class="flex-center">
-    <div class="cards">
-        
-        <div id="card_item-1" class="card"
-        [ngClass]="{'active': addClass === 'card_item-1'}" 
-        Style="background-image: url('./assets/imagenes/perfil.JPG')"
-        (click)="setClasses('card_item-1')" >
-            <div class="shadow"></div>
-            <div class="label">
-                <div class="icon flex-center" style="color: red;">
-                    <!--icono de fontaweson-->
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <div class="info">
-                    <div class="title">Proyecto</div>
-                    <div>Contenido que lo describe</div>
-                </div>
-            </div>
-        </div>
 
-        <div id="card_item-2" class="card" 
-        [ngClass]="{'active': addClass === 'card_item-2'}" 
-        Style="background-image: url('./assets/imagenes/perfil.JPG');" 
-        (click)="setClasses('card_item-2')" >
-            <div class="shadow"></div>
-            <div class="label">
-                <div class="icon flex-center" style="color: blue;">
-                    <!--icono de fontaweson-->
-                    <i class="fa-solid fa-code"></i>
+    <div *ngFor="let proyecto of projectsList">
+        <h3>{{proyecto.project_title}}</h3>
+        <hr><br>
+        <div class="project_wraper">
+            <div class="cards"> 
+                <div [id]="'card-1_project-' + proyecto.id" class="card"
+                [ngClass]="{'active': addClass === 'card-1_project-' + proyecto.id}"
+                [ngStyle]="{'background-image': 'url(' + proyecto.card_img_1 + ')'}" 
+                (click)="setClasses('card-1_project-' + proyecto.id)" >
+                    <div class="shadow"></div>
+                    <div class="label">
+                        <div class="icon flex-center" [style]="'color:' + proyecto.color_1">
+                            <!--icono de fontaweson-->
+                            <i [class]="proyecto.card_icon_1"></i>
+                        </div>
+                        <div class="info">
+                            <div class="title">{{proyecto.card_title_1}}</div>
+                            <div>{{proyecto.card_description_1}}</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info">
-                    <div class="title">Content</div>
-                    <div>Otro contenido</div>
-                </div>
-            </div>
-        </div>
 
-        <div id="card_item-3" class="card" 
-        [ngClass]="{'active': addClass === 'card_item-3'}" 
-        Style="background-image: url('./assets/imagenes/perfil.JPG');" 
-        (click)="setClasses('card_item-3')" >
-            <div class="shadow"></div>
-            <div class="label">
-                <div class="icon flex-center" style="color: yellow;">
-                    <!--icono de fontaweson-->
-                    <i class="fa-solid fa-code"></i>
+                <div [id]="'card-2_project-' + proyecto.id" class="card"
+                [ngClass]="{'active': addClass === 'card-2_project-' + proyecto.id}" 
+                [ngStyle]="{'background-image': 'url(' + proyecto.card_img_2 + ')'}" 
+                (click)="setClasses('card-2_project-' + proyecto.id)" >
+                    <div class="shadow"></div>
+                    <div class="label">
+                        <div class="icon flex-center" [style]="'color:' + proyecto.color_2">
+                            <!--icono de fontaweson-->
+                            <i [class]="proyecto.card_icon_2"></i>
+                        </div>
+                        <div class="info">
+                            <div class="title">{{proyecto.card_title_2}}</div>
+                            <div>{{proyecto.card_description_2}}</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info">
-                    <div class="title">Content</div>
-                    <div>Otro contenido lore</div>
-                </div>
-            </div>
-        </div>
 
-        <div id="card_item-4" class="card" 
-        [ngClass]="{'active': addClass === 'card_item-4'}" 
-        Style="background-image: url('./assets/imagenes/perfil.JPG');" 
-        (click)="setClasses('card_item-4')" >
-            <div class="shadow"></div>
-            <div class="label">
-                <div class="icon flex-center" style="color: yellow;">
-                    <!--icono de fontaweson-->
-                    <i class="fa-solid fa-code"></i>
+                <div [id]="'card-3_project-' + proyecto.id" class="card"
+                [ngClass]="{'active': addClass === 'card-3_project-' + proyecto.id}" 
+                [ngStyle]="{'background-image': 'url(' + proyecto.card_img_3 + ')'}" 
+                (click)="setClasses('card-3_project-' + proyecto.id)" >
+                    <div class="shadow"></div>
+                    <div class="label">
+                        <div class="icon flex-center" [style]="'color:' + proyecto.color_3">
+                            <!--icono de fontaweson-->
+                            <i [class]="proyecto.card_icon_3"></i>
+                        </div>
+                        <div class="info">
+                            <div class="title">{{proyecto.card_title_3}}</div>
+                            <div>{{proyecto.card_description_3}}</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info">
-                    <div class="title">Content</div>
-                    <div>Otro contenido lore</div>
-                </div>
-            </div>
-        </div>
 
-        <div id="card_item-5" class="card" 
-        [ngClass]="{'active': addClass === 'card_item-5'}" 
-        Style="background-image: url('./assets/imagenes/perfil.JPG');" 
-        (click)="setClasses('card_item-5')" >
-            <div class="shadow"></div>
-            <div class="label">
-                <div class="icon flex-center" style="color: yellow;">
-                    <!--icono de fontaweson-->
-                    <i class="fa-solid fa-code"></i>
+                <div [id]="'card-4_project-' + proyecto.id" class="card"
+                [ngClass]="{'active': addClass === 'card-4_project-' + proyecto.id}" 
+                [ngStyle]="{'background-image': 'url(' + proyecto.card_img_4 + ')'}" 
+                (click)="setClasses('card-4_project-' + proyecto.id)" >
+                    <div class="shadow"></div>
+                    <div class="label">
+                        <div class="icon flex-center" [style]="'color:' + proyecto.color_4">
+                            <!--icono de fontaweson-->
+                            <i [class]="proyecto.card_icon_4"></i>
+                        </div>
+                        <div class="info">
+                            <div class="title">{{proyecto.card_title_4}}</div>
+                            <div>{{proyecto.card_description_4}}</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info">
-                    <div class="title">Content</div>
-                    <div>Otro contenido lore</div>
-                </div>
-            </div>
-        </div>
 
+            </div>
+        <br>
+        <h5> {{proyecto.project_text}}</h5>
+        </div> 
     </div>
-</div>
 </section>
