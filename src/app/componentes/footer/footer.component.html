@@ -1,5 +1,6 @@
 <footer class="footer">
-    <div class="content center" *ngFor="let contacto of contactoList">
+    <div class="content center" *ngFor="let contacto of contactoList"
+    data-aos="zoom-in" data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-once="true" >
         <form ngNoForm id="form-contacto" [action]="'https://formsubmit.co/' + contacto.mail" method="POST" role="form" name="form">
             <div>
                     <h5>Formulario de Contacto</h5>

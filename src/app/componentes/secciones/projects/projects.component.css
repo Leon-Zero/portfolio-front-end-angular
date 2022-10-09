@@ -16,6 +16,9 @@ section{
     text-align: left;
     width: 85%;
 }
+.wraper{
+    margin: 2em auto;
+}
 .project_wraper{
   display: flex;
   justify-content: center;

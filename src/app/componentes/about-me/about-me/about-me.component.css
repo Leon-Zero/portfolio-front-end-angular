@@ -1,6 +1,8 @@
 app-form-about-me{
-    display:var(--display-5)}
-app-edit{display:block
+    display:var(--display-5)
+}
+app-edit{
+    display:block
 }
 section{
     font-weight:1em;
@@ -9,7 +11,7 @@ section{
     margin:2em auto;
     flex:auto;
     text-align:left;
-    width:85%
+    width:85%;
 }
 .container{
     display:flex;
@@ -17,15 +19,17 @@ section{
     align-items:center;
     justify-content:center;
     gap:3em;
-    margin-top:3em}
+    margin-top:3em;
+}
 .foto-perfil{
     width:380px;
     height:270px;
     background-size:cover;
-    border-radius:25%10%;
+    border-radius:25% 10%;
     border:8px solid #7DFFFF;
     box-shadow:5px 5px 8px #118181,-5px-5px 8px #118181;
-    flex:0 2 auto}
+    flex:0 2 auto
+}
 .info{
     font-family:'Catamaran',sans-serif;
     font-weight:599;
@@ -34,14 +38,17 @@ section{
     flex:2 0 auto;
     text-align:justify;
     color:var(--color-2);
-    transition:color .8s ease-in}
+    transition:color .8s ease-in
+}
 .info span b{
     color:#30E3E3;
     font-size:1.1em;
-    text-shadow:1px 1px 1px #031313}
+    text-shadow:1px 1px 1px #031313
+}
 @media only screen and(max-width:1050px){
     section{font-weight:1em;font-size:15px;padding:.5em;width:100%}
     .container{margin-top:1em;flex-flow:column wrap;width:100%}
     .foto-perfil{width:280px;height:170px}
     .info{font-size:1em;width:100%;padding:1em}
-    .info span b{font-size:1em}}
+    .info span b{font-size:1em}
+}

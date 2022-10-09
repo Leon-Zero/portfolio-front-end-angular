@@ -2,7 +2,7 @@
         <app-title-projects></app-title-projects>
         <div class="blank page"></div>
 
-    <div *ngFor="let proyecto of projectsList">
+    <div class="wraper" *ngFor="let proyecto of projectsList">
         <h3>{{proyecto.project_title}}</h3>
         <hr><br>
         <div class="project_wraper">
@@ -10,7 +10,9 @@
                 <div [id]="'card-1_project-' + proyecto.id" class="card"
                 [ngClass]="{'active': addClass === 'card-1_project-' + proyecto.id}"
                 [ngStyle]="{'background-image': 'url(' + proyecto.card_img_1 + ')'}" 
-                (click)="setClasses('card-1_project-' + proyecto.id)" >
+                (click)="setClasses('card-1_project-' + proyecto.id)"
+                data-aos="fade-up-right" data-aos-duration="2000"
+                data-aos-anchor-placement="center-center" data-aos-once="true" >
                     <div class="shadow"></div>
                     <div class="label">
                         <div class="icon flex-center" [style]="'color:' + proyecto.color_1">
@@ -27,7 +29,9 @@
                 <div [id]="'card-2_project-' + proyecto.id" class="card"
                 [ngClass]="{'active': addClass === 'card-2_project-' + proyecto.id}" 
                 [ngStyle]="{'background-image': 'url(' + proyecto.card_img_2 + ')'}" 
-                (click)="setClasses('card-2_project-' + proyecto.id)" >
+                (click)="setClasses('card-2_project-' + proyecto.id)" 
+                data-aos="fade-up-right" data-aos-duration="2000"
+                data-aos-anchor-placement="center-center" data-aos-once="true" >
                     <div class="shadow"></div>
                     <div class="label">
                         <div class="icon flex-center" [style]="'color:' + proyecto.color_2">
@@ -44,7 +48,9 @@
                 <div [id]="'card-3_project-' + proyecto.id" class="card"
                 [ngClass]="{'active': addClass === 'card-3_project-' + proyecto.id}" 
                 [ngStyle]="{'background-image': 'url(' + proyecto.card_img_3 + ')'}" 
-                (click)="setClasses('card-3_project-' + proyecto.id)" >
+                (click)="setClasses('card-3_project-' + proyecto.id)" 
+                data-aos="fade-up-left" data-aos-duration="2000"
+                data-aos-anchor-placement="center-center" data-aos-once="true" >
                     <div class="shadow"></div>
                     <div class="label">
                         <div class="icon flex-center" [style]="'color:' + proyecto.color_3">
@@ -61,7 +67,9 @@
                 <div [id]="'card-4_project-' + proyecto.id" class="card"
                 [ngClass]="{'active': addClass === 'card-4_project-' + proyecto.id}" 
                 [ngStyle]="{'background-image': 'url(' + proyecto.card_img_4 + ')'}" 
-                (click)="setClasses('card-4_project-' + proyecto.id)" >
+                (click)="setClasses('card-4_project-' + proyecto.id)"
+                data-aos="fade-up-left" data-aos-duration="2000"
+                data-aos-anchor-placement="center-center" data-aos-once="true" >
                     <div class="shadow"></div>
                     <div class="label">
                         <div class="icon flex-center" [style]="'color:' + proyecto.color_4">
