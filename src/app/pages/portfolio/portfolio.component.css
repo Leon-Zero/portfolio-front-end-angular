@@ -1,7 +1,7 @@
 app-top-btn{
     position: sticky;
     top: 80vh;
-    left: 92vw;
+    left: 90vw;
     z-index: 1000;
 }
 
@@ -10,6 +10,5 @@ app-top-btn{
     app-top-btn{
         position: sticky;
         top: 90vh;
-        left: 100vw;
     }            
 }

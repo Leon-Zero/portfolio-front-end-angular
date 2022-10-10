@@ -8,7 +8,7 @@ section{
     margin: auto;
     flex: auto;    
     text-align: left;
-    width: 85%; 
+    width: 80%; 
 }
 app-delete, app-edit{
     display: flex;

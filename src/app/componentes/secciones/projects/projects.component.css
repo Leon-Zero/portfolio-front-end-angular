@@ -17,13 +17,13 @@ section{
     width: 85%;
 }
 .wraper{
-    margin: 2em auto;
+    margin: 0 auto 2em auto;
 }
 .project_wraper{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   overflow: hidden;
   font-family: sans-serif;
   transition: 0.25s;
@@ -40,7 +40,7 @@ section{
 .cards .card .info .title{
     font-size: 1.2rem;
     color: #0a0a0a;
-    font-weight: 700;
+    font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -64,8 +64,8 @@ section{
     white-space: pre;
     transition: 1s cubic-bezier(.05, .61, .41, .95);
     color: #e7f5f5;
-    text-shadow: 1px 1px 2px #042b2b;
-    font-weight: 700;
+    text-shadow: 2px 2px 2px #042b2b;
+    font-weight: 900;
 }
 .cards .card{
     position: relative;
@@ -76,6 +76,8 @@ section{
     cursor: pointer;
     transition: .5s cubic-bezier(.05, .61, .41, .95);
     border-radius: 30px;
+    border: 1px solid #044444;
+    box-shadow: 2px 2px 3px #044444;
 }
 
 .cards .card .label{
@@ -124,4 +126,46 @@ h5{
     color: var(--color-2);
     text-align: justify;
     font-weight: 400;
+}
+@media only screen and (max-width: 1200px){
+    section{
+        width: 100%;
+    }
+    .cards{
+        max-width: 700px;
+        width: calc(100% - 100px);
+        height: 300px;
+        gap: 20px;
+    }
+    .cards .card .label .info{
+        font-size: .6em;
+    }
+    .cards .card .info .title{
+        font-size: .8rem
+    }
+}
+@media only screen and (max-width: 1000px){
+    .project_wraper .cards{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        max-width: 600px;
+        max-height: 1200px;
+        height: calc(100% - 100px);
+        gap: 30px;        
+    }
+    .project_wraper .cards .card{
+        height: 600px;
+    }
+    .cards .card .label .info{
+        font-size: .8em;
+    }
+    .cards .card .info .title{
+        font-size: .9rem
+    }
+}
+@media only screen and (max-width: 500px){
+    .cards .card .info .description, .title{
+        display: none;
+    }    
 }

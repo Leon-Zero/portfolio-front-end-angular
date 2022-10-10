@@ -1,5 +1,5 @@
 .grafico-barra{
-    width: 60vw;
+    width: 85%;
     height: 30px;
     display: flex;
     margin:1em auto;
@@ -9,7 +9,6 @@
     flex: 1 0 auto;
     box-shadow: -8px 4px 10px rgba(48,227,227,.5);
     box-shadow: 8px -4px 10px rgba(48,227,227,.5);
-
     border: rgba(48,227,227) solid 1px
 }
 .grafico-barra__tag{
@@ -90,6 +89,10 @@
 }
 
 @media only screen and (max-width: 800px){
+    .wraper{
+        position: relative;
+        left: -40px;
+    }
     .grafico-barra{
         width: 75vw;
         height: 20px;
@@ -97,11 +100,7 @@
         box-shadow: -6px 4px 12px rgba(48,227,227,.5);
         box-shadow: 6px -4px 12px rgba(48,227,227,.5);
         border: rgba(48,227,227) solid 1px
-        }
-        .wraper{
-            position: relative;
-            left: -40px;
-        }
+    }
     .grafico-barra__tag{
         width: 145px;
         font-size: 8px;

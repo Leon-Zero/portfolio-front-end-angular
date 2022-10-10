@@ -6,7 +6,7 @@ app-edit{
 }
 section{
     font-weight:1em;
-    font-size:15px;
+    font-size:1.2em;
     padding:.5em;
     margin:2em auto;
     flex:auto;
@@ -30,10 +30,10 @@ section{
     box-shadow:5px 5px 8px #118181,-5px-5px 8px #118181;
     flex:0 2 auto
 }
-.info{
+p{
     font-family:'Catamaran',sans-serif;
     font-weight:599;
-    font-size:1.3em;
+    font-size:1em;
     width:50%;
     flex:2 0 auto;
     text-align:justify;
@@ -45,10 +45,23 @@ section{
     font-size:1.1em;
     text-shadow:1px 1px 1px #031313
 }
-@media only screen and(max-width:1050px){
-    section{font-weight:1em;font-size:15px;padding:.5em;width:100%}
-    .container{margin-top:1em;flex-flow:column wrap;width:100%}
-    .foto-perfil{width:280px;height:170px}
-    .info{font-size:1em;width:100%;padding:1em}
-    .info span b{font-size:1em}
+@media only screen and(max-width:800px){
+    section{
+        font-weight:.3em;
+        font-size:.4em;
+        padding:1em;
+        width:100%
+    }
+    .container{
+        margin-top:1em;
+        flex-flow:column wrap;
+        width:100%
+    }
+    .foto-perfil{
+        width:280px;
+        height:170px
+    }
+    .info span b{
+    font-size:.4em
+    }
 }

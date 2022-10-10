@@ -7,7 +7,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
 }
 .contenedor-btn-social a{
     color: #ffffff;
@@ -18,16 +18,15 @@ section{
     
 .contenedor-btn-social ul{
     position: relative;
-    margin: 3.5em 1em .5em 1em;
     padding: 0;
     display: flex;
+    gap: 60px;
 }
 .contenedor-btn-social ul li{
     position: relative;
     list-style: none;
     height: 45px;
     width: 45px;
-    margin: 0 25px;
     transform: rotate(-30deg) skew(25deg);
     background: #ccc;
 }
@@ -68,10 +67,32 @@ section{
 app-edit{
     position: absolute;
     top: 50px;
-    left: -40px;
+    left: -20px;
 }
 app-delete{
     position: absolute;
     top: 50px;
-    left: -5px;
+    left: 12px;
+}
+@media only screen and (max-width: 600px){      
+    .contenedor-btn-social ul{
+        gap: 35px;
+    }
+    .contenedor-btn-social ul li{
+        height: 32px;
+        width: 32px;
+    }
+    .contenedor-btn-social ul li span{
+        font-size: 21px;
+    }            
+    app-edit{
+        transform: scale(.7, .7);
+        top: 35px;
+    }
+    app-delete{
+        transform: scale(.7, .7);
+        top: 35px;
+        left: 4px;
+
+    }
 }
