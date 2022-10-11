@@ -4,7 +4,6 @@
     data-aos-anchor-placement="center-bottom" data-aos-once="true" >
         <ul>
             <li *ngFor="let social of socialList">
-
                     <a [href]="social.url" target="_blank" [title]="social.red_social">
                         <span [style]="'background: ' + social.color"></span>
                         <span [style]="'background: ' + social.color"></span>
@@ -12,8 +11,10 @@
                         <span [style]="'background: ' + social.color"></span>
                         <span [style]="'background: ' + social.color" [class]="social.btn"></span>
                     </a>
-                    <app-edit *ngIf="displayEdit" (click)="onEdit(social.id)"></app-edit>
-                    <app-delete *ngIf="displayDelete" (click)="onDelete(social.id)"></app-delete>
+                    <div class="box-edition">
+                        <app-edit *ngIf="displayEdit" (click)="onEdit(social.id)"></app-edit>
+                        <app-delete *ngIf="displayDelete" (click)="onDelete(social.id)"></app-delete>
+                    </div>
             </li>
         </ul>
     </div>

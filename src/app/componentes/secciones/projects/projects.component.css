@@ -2,11 +2,15 @@ app-form-proyecto{
     display: var(--display-5);
 } 
 app-delete, app-edit{
-    display: flex;
-    justify-self: center ;
-    align-self: center;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    transform: scale(1.8);
+    margin-bottom: 1em;
+}
+.box-edition{
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+    flex-flow: row wrap;
+    gap: 30px;
 }
 section{
     font-weight: 1em;
@@ -124,7 +128,7 @@ h5::first-letter{
 }
 h5{
     color: var(--color-2);
-    text-align: justify;
+    text-align: center;
     font-weight: 400;
 }
 @media only screen and (max-width: 1200px){
@@ -167,5 +171,8 @@ h5{
 @media only screen and (max-width: 500px){
     .cards .card .info .description, .title{
         display: none;
+    }
+    app-delete, app-edit{
+        transform: scale(1.4);
     }    
 }

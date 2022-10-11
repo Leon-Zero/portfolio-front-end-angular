@@ -9,7 +9,10 @@
     flex: 1 0 auto;
     box-shadow: -8px 4px 10px rgba(48,227,227,.5);
     box-shadow: 8px -4px 10px rgba(48,227,227,.5);
-    border: rgba(48,227,227) solid 1px
+    border: rgba(48,227,227) solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .grafico-barra__tag{
     width: 280px;

@@ -3,6 +3,22 @@ section{
     margin: auto;
     width: 70%; 
 }
+.box-edition{
+    display: flex;
+    transform: rotate(40deg) skew(0deg);
+}
+app-edit, app-delete{
+    position: absolute;
+    top: 60px;
+}
+app-delete{
+    left: 25px;
+}
+app-edit{
+    left: -10px;
+
+}
+
 .contenedor-btn-social{
     display: flex;
     justify-content: center;
@@ -20,7 +36,7 @@ section{
     position: relative;
     padding: 0;
     display: flex;
-    gap: 60px;
+    gap: 50px;
 }
 .contenedor-btn-social ul li{
     position: relative;
@@ -63,17 +79,6 @@ section{
         transform: translate(0, 0);
         opacity: .2;
     }
-        
-app-edit{
-    position: absolute;
-    top: 50px;
-    left: -20px;
-}
-app-delete{
-    position: absolute;
-    top: 50px;
-    left: 12px;
-}
 @media only screen and (max-width: 600px){      
     .contenedor-btn-social ul{
         gap: 35px;
@@ -86,13 +91,11 @@ app-delete{
         font-size: 21px;
     }            
     app-edit{
-        transform: scale(.7, .7);
-        top: 35px;
+        transform: scale(.8);
+        left: -12px;
     }
     app-delete{
-        transform: scale(.7, .7);
-        top: 35px;
-        left: 4px;
-
+        transform: scale(.8);
+        left: 15px;
     }
 }

@@ -4,6 +4,11 @@ app-container-btn-rs{
 app-form-contacto{
     display:var(--display-5)
 }
+app-edit{
+    display:flex;
+    transform: scale(2);
+    margin-bottom: 1em;
+}
 .footer{
     position: relative;
     background-image: url('src/assets/imagenes/bannerPortfolio.png');

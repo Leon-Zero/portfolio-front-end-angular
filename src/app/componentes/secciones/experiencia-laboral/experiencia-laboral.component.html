@@ -7,9 +7,11 @@
         <div class="accordion-item" *ngFor="let jobs of jobsList">
             <h2 class="accordion-header" [id]="'item-' + jobs.id">
                 <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + jobs.id" [attr.aria-controls]="jobs.id">
-
-                <app-edit *ngIf="displayEdit" (click)="onEdit(jobs.id)"></app-edit>
-                <app-delete *ngIf="displayDelete" (click)="onDelete(jobs.id)"></app-delete>
+                
+                <div class="box-edition">
+                    <app-edit *ngIf="displayEdit" (click)="onEdit(jobs.id)"></app-edit>
+                    <app-delete *ngIf="displayDelete" (click)="onDelete(jobs.id)"></app-delete>
+                </div>
 
                 <h4>{{jobs.job}}</h4> 
                 </button>

@@ -1,15 +1,16 @@
 app-form-programing{
    display: var(--display-5);
 } 
-app-edit{
+app-delete, app-edit{
+    transform: scale(1.2);
     position: absolute;
-    top: -10px;
+    top: -20px;
+}
+app-edit{
     left: 50%;
 }
 app-delete{
-    position: absolute;
-    top: -10px;
-    left: 65%; 
+    left: 70%; 
 }
 .fondo{
     background-color: #EBFCFC;
@@ -35,7 +36,7 @@ app-delete{
     display: grid;
     place-items: center;
     flex: 0 1 auto;
-    margin: 1em;
+    margin: 1em 1em 2em 1em;
     color: #9C0000;
 }
     .skill__grafico::before{
@@ -75,5 +76,15 @@ app-delete{
     }
     .skill__grafico-div{
         font-size: 12px;
+    }
+    app-delete, app-edit{
+        transform: scale(1);
+        top: -10px;
+    }
+    app-edit{
+        left: 60%;
+    }
+    app-delete{
+        left: 90%; 
     }
 }

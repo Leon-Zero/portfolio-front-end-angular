@@ -2,7 +2,10 @@ app-form-about-me{
     display:var(--display-5)
 }
 app-edit{
-    display:block
+    display:flex;
+    align-self: end;
+    transform: scale(2.2);
+    margin-bottom: 1em;
 }
 section{
     font-weight:1em;
@@ -36,7 +39,7 @@ p{
     font-size:1em;
     width:50%;
     flex:2 0 auto;
-    text-align:justify;
+    text-align: center;
     color:var(--color-2);
     transition:color .8s ease-in
 }

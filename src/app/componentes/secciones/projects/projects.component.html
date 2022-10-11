@@ -84,13 +84,13 @@
                 </div>
 
             </div>
+            <div class="box-edition">
+                <app-edit *ngIf="displayEdit" (click)="onEdit(proyecto.id)"></app-edit>
+                <app-delete *ngIf="displayDelete" (click)="onDelete(proyecto.id)"></app-delete>
+            </div>
         <br>
         <h5> {{proyecto.project_text}}</h5>
         </div> 
-
-        <app-edit *ngIf="displayEdit" (click)="onEdit(proyecto.id)"></app-edit>
-        <app-delete *ngIf="displayDelete" (click)="onDelete(proyecto.id)"></app-delete>
-
     </div>
 
     <app-crud 

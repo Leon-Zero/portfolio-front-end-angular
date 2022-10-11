@@ -7,8 +7,10 @@
         <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed accordion-fondo" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#item-academica-' + school.id" >
                 
-                <app-edit *ngIf="displayEdit" (click)="onEdit(school.id)"></app-edit>
-                <app-delete *ngIf="displayDelete" (click)="onDelete(school.id)"></app-delete>
+                <div class="box-edition">
+                    <app-edit *ngIf="displayEdit" (click)="onEdit(school.id)"></app-edit>
+                    <app-delete *ngIf="displayDelete" (click)="onDelete(school.id)"></app-delete>
+                </div>
 
                 <h3>{{school.titulo_tag}}</h3>
             </button>

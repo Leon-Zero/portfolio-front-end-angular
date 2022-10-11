@@ -4,11 +4,10 @@ app-top-btn{
     left: 90vw;
     z-index: 1000;
 }
-
-
 @media only screen and (max-width: 600px){
     app-top-btn{
         position: sticky;
         top: 90vh;
+        left: 87vw;
     }            
 }
