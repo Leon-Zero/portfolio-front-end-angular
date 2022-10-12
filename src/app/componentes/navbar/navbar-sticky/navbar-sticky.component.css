@@ -5,8 +5,16 @@
     width: 100vw;
 }
 #navbarNavDarkDropdown{
-    padding: 0 1em;
+    padding: 0 2em;
+}
+#container_item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .nav-item{
     cursor: pointer;
+}
+#logout{
+    margin-left: auto;
 }

@@ -1,0 +1,18 @@
+<header id="top-start">
+           <div data-aos="flip-left"     
+           data-aos-duration="1500" 
+           data-aos-delay="1800" 
+           data-aos-once="true">
+           <img class="logo__img" src="./assets/imagenes/logos.png"></div>
+           
+           <app-btn-ap 
+           data-aos="flip-left" 
+           data-aos-duration="1500" 
+           data-aos-delay="1800"
+           data-aos-once="true"></app-btn-ap>
+        
+        <div class="parent zoomInDown animated" *ngFor="let datos of miPortfolio">
+            <div class="div1"><h1>PORTFOLIO</h1></div>
+            <div class="div2"><h1>{{datos.title_name}}</h1></div>
+        </div>
+</header>

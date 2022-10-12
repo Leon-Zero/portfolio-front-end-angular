@@ -36,5 +36,6 @@
             </button>
         </div>
     </form>
+        <div *ngIf="login.submitted && isLoginFail" class="alert alert-danger mt-3">*Error en el Login: {{errMsj}}</div>
     </div>
 </section>

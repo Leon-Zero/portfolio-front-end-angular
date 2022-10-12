@@ -2,10 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderBannerComponent } from './componentes/header/header-banner/header-banner.component';
-import { BtnAPComponent } from './componentes/header/btn-ap/btn-ap.component';
-import { LogoAPComponent } from './componentes/header/logo-ap/logo-ap.component';
-import { TitleComponent } from './componentes/header/title/title.component';
+import { HeaderBannerComponent } from './componentes/header-banner/header-banner.component';
+import { BtnAPComponent } from './reusables/btn-ap/btn-ap.component';
 import { NavbarStickyComponent } from './componentes/navbar/navbar-sticky/navbar-sticky.component';
 import { ContainerBtnRSComponent } from './reusables/container-btn-rs/container-btn-rs.component';
 import { NightModeComponent } from './componentes/navbar/night-mode/night-mode.component';
@@ -25,7 +23,6 @@ import { TitleProjectsComponent } from './componentes/secciones//projects/title-
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CrudComponent } from './reusables/crud/crud.component';
-import { OffCanvasComponent } from './componentes/navbar/off-canvas/off-canvas.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DeleteComponent } from './reusables/crud/delete/delete.component';
 import { FormProgramingComponent } from './reactiveForm/form-programing/form-programing.component';
@@ -49,8 +46,6 @@ import { FormProyectoComponent } from './reactiveForm/form-proyecto/form-proyect
     AppComponent,
     HeaderBannerComponent,
     BtnAPComponent,
-    LogoAPComponent,
-    TitleComponent,
     NavbarStickyComponent,
     ContainerBtnRSComponent,
     NightModeComponent,
@@ -69,7 +64,6 @@ import { FormProyectoComponent } from './reactiveForm/form-proyecto/form-proyect
     TitleProjectsComponent,
     FooterComponent,
     CrudComponent,
-    OffCanvasComponent,
     DeleteComponent,
     FormProgramingComponent,
     FormProgramComponent,
