@@ -9,14 +9,22 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class NavbarStickyComponent implements OnInit {
 
+  stylesheet = document.documentElement.style;
+  displayEdition: boolean = false;  
+  roles: string[] = [];
+  isAdmin: boolean = false;
+
   constructor(private tokenService: TokenService,
               private router: Router) { }
 
-  stylesheet = document.documentElement.style;
-  displayEdition: boolean = false;  
-
-ngOnInit(): void { 
+ngOnInit(): void {
+  this.roles = this.tokenService.getAuthorities();
+  this.roles.forEach(rol =>{
+    if ( rol === 'ROLE_ADMIN'){
+      this.isAdmin = true;
+    }});
 }
+
   activar_edition(){
     const display1 = getComputedStyle(document.documentElement).getPropertyValue("--display-1");  
     const display2 = getComputedStyle(document.documentElement).getPropertyValue("--display-2");
@@ -24,6 +32,8 @@ ngOnInit(): void {
       this.stylesheet.setProperty("--display-1", display2);
       this.stylesheet.setProperty("--display-2", display1);
       this.displayEdition = true;
+     // console.log(this.isAdmin);
+    // console.log(this.roles);
     } else {
       this.displayEdition = false;
       location.reload(); 
