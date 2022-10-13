@@ -1,6 +1,3 @@
-app-form-jobs{
-    display: var(--display-5);
-} 
 section{
     font-weight: 1em;
     font-size: 14px;
@@ -9,6 +6,18 @@ section{
     flex: auto;    
     text-align: left;
     width: 80%; 
+}
+#title_job{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+#title_job img{
+    filter: drop-shadow(5px 8px 20px var(--shadow-1));
+    filter: drop-shadow(-5px -8px 20px var(--shadow-1));
+    transition: .8s ease-in;
 }
 app-delete, app-edit{
     transform: scale(1.1);
@@ -82,4 +91,8 @@ grid-column-gap: 20px;
       .accordion{
         width: 95%;
       }
+      #title_job img{
+        width: 80px;
+        height: auto;
+     }
 }

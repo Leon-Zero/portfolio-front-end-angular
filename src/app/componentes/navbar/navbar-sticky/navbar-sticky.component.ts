@@ -47,6 +47,13 @@ ngOnInit(): void {
   goAbout(){
       document.getElementById('index-about')?.scrollIntoView({behavior: "smooth"});
     }
+  goJob(){
+    document.getElementById('index-laboral')?.scrollIntoView({behavior: "smooth"});
+  }
+  goSchool(){
+    document.getElementById('index-academica')?.scrollIntoView({behavior: "smooth"});
+  }
+
   goProgramacion(){
     document.getElementById('index-programing')?.scrollIntoView({behavior: "smooth"});
   }

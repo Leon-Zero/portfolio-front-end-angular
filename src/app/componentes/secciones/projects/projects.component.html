@@ -1,5 +1,8 @@
 <section>
-        <app-title-projects></app-title-projects>
+    <div id="title_project">
+        <img src="./assets/imagenes/plano.png" alt="proyecto">
+        <h2> MIS PROYECTOS</h2>
+    </div> 
         <div class="blank page"></div>
 
     <div class="wraper" *ngFor="let proyecto of projectsList">
@@ -89,7 +92,7 @@
                 <app-delete *ngIf="displayDelete" (click)="onDelete(proyecto.id)"></app-delete>
             </div>
         <br>
-        <h5> {{proyecto.project_text}}</h5>
+        <h5>{{proyecto.project_text}}</h5>
         </div> 
     </div>
 

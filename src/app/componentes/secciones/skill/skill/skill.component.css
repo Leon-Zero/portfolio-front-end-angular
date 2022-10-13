@@ -7,3 +7,21 @@ section{
     text-align: left;
     width: 85%;
 }
+#title_skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+#title_skill img{
+    filter: drop-shadow(5px 8px 20px var(--shadow-1));
+    filter: drop-shadow(-5px -8px 20px var(--shadow-1));
+    transition: .8s ease-in;
+ }
+ @media only screen and (max-width: 600px){
+    #title_skill img{
+        width: 80px;
+        height: auto;
+     }
+}

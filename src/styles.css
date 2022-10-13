@@ -1,4 +1,3 @@
-
 body{
   font-family: 'Catamaran', sans-serif;
   color: #010505;
@@ -15,6 +14,8 @@ html {
   --color-4: #30e3e3;
   --display-1: none;
   --display-2: flex;
+  --shadow-1: #148b8b;
+  --shadow-2: #f14040;
 }
 .page{
   background: var(--color-1);  
@@ -28,25 +29,19 @@ html {
 h2{
   font-size: 2em;
   font-weight: bolder;
-  text-shadow: 5px 5px 5px #30E3E3;
+  text-shadow: 5px 5px 5px var(--shadow-1);
   color: var(--color-2);
-  transition: color .8s ease-in
+  transition: .8s ease-in;
 }
-h3{
+h3, h4{
   color: var(--color-2);
-  text-shadow: 5px 5px 10px #F4ACAC;
-  transition: color .8s ease-in
-}
-
-h4{
-  text-shadow: 5px 5px 5px #F4ACAC;
-  color: var(--color-2);
+  text-shadow: 5px 5px 5px var(--shadow-1);
+  transition: .8s ease-in;
 }
 
-h5 + h6{
+h5, h6{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
-
 }
 
 @media only screen and (max-width: 600px){

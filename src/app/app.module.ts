@@ -11,15 +11,11 @@ import { AboutMeComponent } from './componentes/about-me/about-me/about-me.compo
 import { TopBtnComponent } from './reusables/top-btn/top-btn.component';
 import { ExperienciaLaboralComponent } from './componentes/secciones/experiencia-laboral/experiencia-laboral.component';
 import { InfoAcademicaComponent } from './componentes/secciones/info-academica/info-academica.component';
-import { TitleLaboralComponent } from './componentes/secciones/experiencia-laboral/title-laboral/title-laboral.component';
-import { TitleAcademicaComponent } from './componentes/secciones/info-academica/title-academica/title-academica.component';
 import { SkillComponent } from './componentes/secciones/skill/skill/skill.component';
 import { ProgramingComponent } from './componentes/secciones/skill/programing/programing.component';
 import { ProgramsComponent } from './componentes/secciones//skill/programs/programs.component';
 import { SoftComponent } from './componentes/secciones//skill/soft/soft.component';
-import { TitleSkillComponent } from './componentes/secciones//skill/skill/title-skill/title-skill.component';
 import { ProjectsComponent } from './componentes/secciones//projects/projects.component';
-import { TitleProjectsComponent } from './componentes/secciones//projects/title-projects/title-projects.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CrudComponent } from './reusables/crud/crud.component';
@@ -54,15 +50,11 @@ import { RegistroComponent } from './pages/registro/registro.component';
     TopBtnComponent,
     ExperienciaLaboralComponent,
     InfoAcademicaComponent,
-    TitleLaboralComponent,
-    TitleAcademicaComponent,
     SkillComponent,
     ProgramingComponent,
     ProgramsComponent,
     SoftComponent,
-    TitleSkillComponent,
     ProjectsComponent,
-    TitleProjectsComponent,
     FooterComponent,
     CrudComponent,
     DeleteComponent,

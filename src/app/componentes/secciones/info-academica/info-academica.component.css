@@ -1,9 +1,3 @@
-app-form-extra{
-    display: var(--display-5);
-} 
-app-form-academica{
-    display: var(--display-5); 
-}
 section{
     font-weight: 1em;
     font-size: 14px;
@@ -13,6 +7,18 @@ section{
     text-align: left;
     width: 80%;
 }
+#title_school{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+#title_school img{
+    filter: drop-shadow(5px 8px 20px var(--shadow-1));
+    filter: drop-shadow(-5px -8px 20px var(--shadow-1));
+    transition: .8s ease-in;
+ }
 app-delete, app-edit{
     transform: scale(1.1);
 }
@@ -94,8 +100,11 @@ span{
     }
     h3{
         font-size: 15px;
-      }
+    }
     .accordion{
       width: 95%;
-    }
+    } #title_school img{
+        width: 80px;
+        height: auto;
+     }
   }    
