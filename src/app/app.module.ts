@@ -40,6 +40,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { interceptorProvider } from './servicios/interceptor.service';
 import { FormContactoComponent } from './reactiveForm/form-contacto/form-contacto.component';
 import { FormProyectoComponent } from './reactiveForm/form-proyecto/form-proyecto.component';
+import { RegistroComponent } from './pages/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { FormProyectoComponent } from './reactiveForm/form-proyecto/form-proyect
     LoginComponent,
     PageNotFoundComponent,
     FormContactoComponent,
-    FormProyectoComponent
+    FormProyectoComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

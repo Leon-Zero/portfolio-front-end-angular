@@ -1,4 +1,4 @@
-.login-body{
+.register-body{
     position: relative;
     height: 100vh;
     margin: 0;
@@ -7,9 +7,9 @@
     align-items: center;
     justify-content: center;
 }
-.login__content-form{
-    width: 500px;
-    height: 320px;
+.register__content-form{
+    width: 450px;
+    height: 450px;
     z-index: 1000;
 }
 form{
@@ -24,13 +24,6 @@ form{
     backdrop-filter: blur( 1.5px );
     border-radius: 10px;
 }
-i{
-    width: 35px;
-    height: 35px;
-    font-size: 30px;
-    color: #010505;
-    margin-right: 10px;
-}
 label{
     color: #010505;
     font-size: 13px;
@@ -40,7 +33,7 @@ label{
     letter-spacing: 4px;
     text-shadow: 1px 1px 5px #30E3E3;
 }
-.login__content-video{
+.register__content-video{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -49,7 +42,7 @@ label{
     z-index: -1;
     overflow: hidden;
 }
-.login__content-video video{
+.register__content-video video{
     position: relative;
     top: 50%;
     left: 50%;

@@ -12,7 +12,7 @@
     display: inline-block;
     width: 90px;
     height: 35px;
-    background: linear-gradient(90deg, rgba(255,94,0,1) 40%, rgba(10,6,43,1) 60%);
+    background: var(--color-3);
     border-radius: 30px;
     border-color: #130404;
     border: 2px solid #151515;
@@ -23,7 +23,7 @@
     content: url("src/assets/imagenes/sunLine.svg");
     width: 40px;
     height: 40px;
-    background-color: hwb(22 0% 0%);
+    background-color: rgb(255, 94, 0);
     border: 3px solid #fff;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0, 0, 0, .25);
@@ -38,6 +38,6 @@
 }
 #toggle:checked+.button::after {
     content: url("src/assets/imagenes/moonLine.svg");
-    background-color: #0a062b;
+    background-color: rgb(10, 6, 43);
     transform: translateX(50px) rotate(225deg);
 }

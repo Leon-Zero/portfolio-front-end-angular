@@ -56,6 +56,9 @@ ngOnInit(): void {
   goSoft(){
     document.getElementById('index-soft')?.scrollIntoView({behavior: "smooth"});
   }
+  goProyectos(){
+    document.getElementById('index-proyecto')?.scrollIntoView({behavior: "smooth"});
+  }
   goContacto(){
     document.getElementById('index-contacto')?.scrollIntoView({behavior: "smooth"});
   }

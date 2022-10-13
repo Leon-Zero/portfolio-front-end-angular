@@ -11,6 +11,8 @@ html {
 :root {  
   --color-1: #EBFCFC;  
   --color-2: #010505e7;
+  --color-3: #eb6111c0;
+  --color-4: #30e3e3;
   --display-1: none;
   --display-2: flex;
 }
