@@ -5,25 +5,25 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Nivel de estudio</span>
             <input type="text" class="form-control"
-            formControlName="titulo_tag">
+            formControlName="titulo_tag" required>
         </div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Instituto</span>
             <input type="text" class="form-control"
-            formControlName="instituto">
+            formControlName="instituto" required>
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Cargar Imagen</span>
             <input type="text" class="form-control" placeholder="URL de la imagen"
-            formControlName="logo">
+            formControlName="logo" required>
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Carrera o Curso</span>
             <input type="text" class="form-control" 
-            formControlName="carrera">
+            formControlName="carrera" required>
         </div>
 
         <div class="input-group mb-3">
@@ -42,7 +42,8 @@
         formControlName="id">
         
     <div class="col-12">
-        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'">{{editMode? 'Editar Estudios':'Añadir Estudios(+)'}}</button>
+        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'"
+        [disabled]="addAcademica.invalid">{{editMode? 'Editar Estudios':'Añadir Estudios(+)'}}</button>
     </div>
     </form>
 </div>

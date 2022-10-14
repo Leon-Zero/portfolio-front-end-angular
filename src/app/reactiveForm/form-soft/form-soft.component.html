@@ -5,32 +5,36 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Tag</span>
             <input type="text" class="form-control" placeholder="Nombre de la etiqueta"
-            formControlName="tag">
+            formControlName="tag" required>
         </div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Porcentaje</span>
             <input type="number" class="form-control" placeholder="0-100"
-            formControlName="porcentaje">
+            formControlName="porcentaje" min="1" max="100" required>
         </div>
+
+        <div *ngIf="addSoft.invalid" class="text-danger mb-3">valores entre 1 al 100</div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Modal</span>
-            <input type="text" class="form-control" placeholder="descripción de la habilidad blanda"
-            formControlName="modal">
+            <textarea class="form-control" id="modal-textarea" rows="3"
+            placeholder="descripción de la habilidad blanda"
+            formControlName="modal"></textarea>
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Beneficio</span>
-            <input type="text" class="form-control" placeholder="/opcional/ beneficio organizacional de la habilidad blanda"
-            formControlName="beneficio">
+            <textarea class="form-control" id="beneficio-textarea" rows="3" placeholder="/opcional/ beneficio organizacional de la habilidad blanda"
+            formControlName="beneficio"></textarea>
         </div>
         
         <input type="hidden" name="id"
         formControlName="id">
 
         <div class="col-12">
-            <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'">{{editMode? 'Editar Grafico':'Crear Grafico de Barras (+)'}}</button>
+            <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'" 
+            [disabled]="addSoft.invalid">{{editMode? 'Editar Grafico':'Crear Grafico de Barras (+)'}}</button>
             <br>
         </div>
     </form>

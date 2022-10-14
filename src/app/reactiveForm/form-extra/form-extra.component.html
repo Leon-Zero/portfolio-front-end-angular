@@ -5,20 +5,21 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Tipo de Actividad</span>
             <input type="text" class="form-control" placeholder="participante / ayudante / disertante / organizador / cursante / etc."
-            formControlName="tipo">
+            formControlName="tipo" required>
         </div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Descripción de la Actividad</span>
             <input type="text" class="form-control"
-            formControlName="actividad">
+            formControlName="actividad" required>
         </div>
 
         <input type="hidden" name="id"
         formControlName="id">
         
     <div class="col-12">
-        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'">{{editMode? 'Editar Act. Extracurricular':'Añadir Act. Extracurricular(+)'}}</button>
+        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'"
+        [disabled]="addExtra.invalid">{{editMode? 'Editar Act. Extracurricular':'Añadir Act. Extracurricular(+)'}}</button>
     </div>
     </form>
 </div>

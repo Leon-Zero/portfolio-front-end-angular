@@ -19,7 +19,7 @@
             <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" placeholder="ejemplo123"
             [(ngModel)]="loginModel.nombreUsuario" required minlength="5">
         </div>
-
+        
         <div *ngIf="login.touched && login.invalid" class="text-danger mb-3">Usuario debe contener min. 5 caracteres</div>
 
         <div class="mb-3 centrar">
@@ -31,7 +31,7 @@
         <div *ngIf="login.touched && login.invalid" class="text-danger mb-3">Contraseña debe poseer min. 8 caracteres</div>
       
          <div class="form-footer">
-            <button class="btn__submit" type="submit" [disabled]="login.invalid">
+            <button class="btn__submit mb-3" type="submit" [disabled]="login.invalid">
                 <span> </span>
                 <span> </span>
                 <span> </span>

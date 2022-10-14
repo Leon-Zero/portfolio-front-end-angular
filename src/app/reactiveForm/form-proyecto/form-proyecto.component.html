@@ -6,13 +6,13 @@
     <div class="input-group mb-3">
         <span class="input-group-text">Titulo del Proyecto</span>
         <input type="text" class="form-control" placeholder="Nombre del Proyecto"
-        formControlName="project_title">
+        formControlName="project_title" required>
     </div>
 
     <div class="mb-3">
         <label class="form-label"><h5>Descripción del Proyecto</h5></label>
         <textarea class="form-control" rows="3"
-        formControlName="project_text"></textarea>
+        formControlName="project_text" required></textarea>
     </div>
    
     <div class="accordion" id="card_accordion">    
@@ -29,20 +29,22 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text">Card Titulo</span>
                         <input type="text" class="form-control" placeholder="titulo de la tarjeta"
-                        formControlName="card_title_1">
+                        formControlName="card_title_1" >
                     </div>
                     
                     <div class="input-group mb-3">
                         <span class="input-group-text">Card Descripción</span>
                         <input type="text" class="form-control" placeholder="Descripción breve"
-                        formControlName="card_description_1">
+                        formControlName="card_description_1" >
                     </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Cargar Imagen</span>
                         <input type="text" class="form-control" placeholder="URL de la imagen"
-                        formControlName="card_img_1">
+                        formControlName="card_img_1" required>
                     </div>
+
+                    <div *ngIf="addProyecto.invalid && addProyecto.touched" class="text-danger mb-3">La Imagen es requerida</div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Icono FontAwesome</span>
@@ -53,7 +55,7 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text">Elije un Color</span>
                         <input type="color" class="form-control form-control-color" title="Choose your color" 
-                        formControlName="color_1">
+                        formControlName="color_1" >
                     </div>
 
                 </div>
@@ -84,8 +86,10 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text">Cargar Imagen</span>
                         <input type="text" class="form-control" placeholder="URL de la imagen"
-                        formControlName="card_img_2">
+                        formControlName="card_img_2" required>
                     </div>
+
+                    <div *ngIf="addProyecto.invalid && addProyecto.touched" class="text-danger mb-3">La Imagen es requerida</div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Icono FontAwesome</span>
@@ -127,8 +131,10 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text">Cargar Imagen</span>
                         <input type="text" class="form-control" placeholder="URL de la imagen"
-                        formControlName="card_img_3">
+                        formControlName="card_img_3" required>
                     </div>
+
+                    <div *ngIf="addProyecto.invalid && addProyecto.touched" class="text-danger mb-3">La Imagen es requerida</div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Icono FontAwesome</span>
@@ -170,8 +176,10 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text">Cargar Imagen</span>
                         <input type="text" class="form-control" placeholder="URL de la imagen"
-                        formControlName="card_img_4">
+                        formControlName="card_img_4" required>
                     </div>
+
+                    <div *ngIf="addProyecto.invalid && addProyecto.touched" class="text-danger mb-3">La Imagen es requerida</div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Icono FontAwesome</span>
@@ -194,7 +202,8 @@
     formControlName="id">
     
     <div class="col-12">
-        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'">{{editMode? 'Editar Proyecto':'Añadir Proyecto (+)'}}</button>
+        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'"
+        [disabled]="addProyecto.invalid">{{editMode? 'Editar Proyecto':'Añadir Proyecto (+)'}}</button>
     </div>
 
  </form>

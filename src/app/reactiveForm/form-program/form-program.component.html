@@ -5,26 +5,31 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Tag</span>
             <input type="text" class="form-control" placeholder="Nombre de la etiqueta"
-            formControlName="tag">
+            formControlName="tag" required>
         </div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Porcentaje</span>
             <input type="number" class="form-control" placeholder="0-100"
-            formControlName="porcentaje">
+            formControlName="porcentaje" min="1" max="100" required>
         </div>
+
+        <div *ngIf="addProgram.invalid" class="text-danger mb-3">valores entre 1 al 100</div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Elije un Color</span>
             <input type="color" class="form-control form-control-color" title="Choose your color" 
-            formControlName="color">
+            formControlName="color" required>
         </div>
+
+        <div *ngIf="addProgram.invalid" class="text-danger mb-3">Color es requerido</div>
 
         <input type="hidden" name="id"
         formControlName="id">
         
     <div class="col-12">
-        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'">{{editMode? 'Editar Grafico':'Crear Grafico(+)'}}</button>
+        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'" 
+        [disabled]="addProgram.invalid">{{editMode? 'Editar Grafico':'Crear Grafico(+)'}}</button>
     </div>
     </form>
 </div>

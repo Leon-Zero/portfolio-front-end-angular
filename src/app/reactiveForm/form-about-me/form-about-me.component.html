@@ -5,38 +5,39 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Titulo del Portfolio</span>
             <input type="text" class="form-control"
-            formControlName="title_name">
+            formControlName="title_name" required>
         </div>
-        
+
         <div class="input-group mb-3">
             <span class="input-group-text">Nombre Completo</span>
             <input type="text" class="form-control"
-            formControlName="name">
+            formControlName="name" required>
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Ubicación / Nacionalidad</span>
             <input type="text" class="form-control" 
-            formControlName="ubicacion">
+            formControlName="ubicacion" required>
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Titulo de Carrera</span>
             <input type="text" class="form-control" 
-            formControlName="school">
+            formControlName="school" required>
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Foto de Perfil</span>
             <input type="text" class="form-control" placeholder="URL de la imagen"
-            formControlName="perfil">
+            formControlName="perfil" required>
         </div>
 
         <input type="hidden" name="id"
         formControlName="id">
         
     <div class="col-12">
-        <button type="submit" class="btn btn-warning">Editar Datos</button>
+        <button type="submit" class="btn btn-warning"
+        [disabled]="addData.invalid">Editar Datos</button>
     </div>
     </form>
 </div>

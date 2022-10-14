@@ -5,19 +5,19 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Trabajo</span>
             <input type="text" class="form-control" placeholder="Nombre de la empresa o emprendimiento"
-            formControlName="job">
+            formControlName="job" required>
         </div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Cargo</span>
             <input type="text" class="form-control" placeholder="puesto que desempeño"
-            formControlName="cargo">
+            formControlName="cargo" required>
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Funciones</span>
             <textarea class="form-control" id="FormControlTextarea1" rows="2"
-            formControlName="funciones"></textarea>
+            formControlName="funciones" required></textarea>
         </div>
 
         <div class="input-group mb-3">
@@ -36,7 +36,8 @@
         formControlName="id">
         
     <div class="col-12">
-        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'">{{editMode? 'Editar Trabajo':'Crear Trabajo(+)'}}</button>
+        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'"
+        [disabled]="addJob.invalid">{{editMode? 'Editar Trabajo':'Crear Trabajo(+)'}}</button>
     </div>
     </form>
 </div>

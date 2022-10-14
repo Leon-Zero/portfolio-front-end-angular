@@ -11,26 +11,29 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Icono FontAwesome</span>
             <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
-            formControlName="btn">
+            formControlName="btn" required>
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">URL</span>
             <input type="text" class="form-control"
-            formControlName="url">
+            formControlName="url" required>
         </div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Elije un Color</span>
             <input type="color" class="form-control form-control-color" title="Choose your color" 
-            formControlName="color">
+            formControlName="color" required>
         </div>
+
+        <div *ngIf="addBtn.invalid" class="text-danger mb-3">Color es requerido</div>
 
         <input type="hidden" name="id"
         formControlName="id">
         
     <div class="col-12">
-        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'">{{editMode? 'Editar Botón':'Crear Botón(+)'}}</button>
+        <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'"
+        [disabled]="addBtn.invalid">{{editMode? 'Editar Botón':'Crear Botón(+)'}}</button>
     </div>
     </form>
 </div>
