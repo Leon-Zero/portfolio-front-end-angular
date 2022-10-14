@@ -25,3 +25,8 @@ section{
         height: auto;
      }
 }
+@media only screen and (max-width: 300px){
+    #title_skill img{
+        display: none;
+     }
+}

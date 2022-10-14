@@ -64,3 +64,8 @@ h6{
         font-size: 1em ;
     }
 }
+@media only screen and (max-width: 350px){
+    app-container-btn-rs{
+        display: none;
+    }
+}

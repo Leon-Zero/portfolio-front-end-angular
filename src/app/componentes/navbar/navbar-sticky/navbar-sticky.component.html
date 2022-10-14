@@ -4,7 +4,7 @@
           <div class="navbar-collapse collapse" id="navbarNavDarkDropdown">
               <ul id="container_item" class="navbar-nav navbar-collapse me-auto mb-2 mb-lg-0">
                   <li *ngIf="isAdmin" class="nav-item"> 
-                     <button (click)="activar_edition()" type="button" 
+                     <button id="btn-edition" (click)="activar_edition()" type="button" 
                      [class]="displayEdition? 'btn btn-danger' : 'btn btn-primary'"> 
                         <span class="fa-solid fa-pen-to-square"></span>
                      {{displayEdition? 'Salir de Edición' : 'Modo Edición'}}
@@ -37,7 +37,7 @@
                   <li id="logout" class="nav-item"> 
                     <button (click)="onLogOut()" type="button" 
                     class="btn btn-primary"> 
-                       <span class="fa-solid fa-person-from-portal"></span>
+                       <span class="fa-solid fa-door-open"></span>
                     Cerrar Sesión
                     </button>
                   </li>

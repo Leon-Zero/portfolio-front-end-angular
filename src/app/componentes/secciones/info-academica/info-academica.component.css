@@ -51,7 +51,6 @@ display: grid;
 grid-template-columns: .3fr 1fr;
 grid-auto-rows: minmax(50px, auto);
 grid-column-gap: 20px;
-
 }
 span{
     height: 35px;
@@ -64,7 +63,6 @@ span{
     font-weight: bolder;
     text-align: center;
 }
-
 .accordion-shadow{
     border: #118181 solid 3px;
     box-shadow: 0 9px 25px 0px  rgba(48,227,227,.5);
@@ -74,19 +72,16 @@ span{
     transition: background .8s ease-in;
 }
 
-  @media only screen and (max-width: 600px){
-
+@media only screen and (max-width: 600px){
     section{
         font-weight: .8em;
         font-size: 12px;
         padding: .5em;
         width: 80%; 
     }
-    
     .experiencia__contenido-div{
     grid-auto-rows: minmax(30px, auto);
     grid-column-gap: 10px;
-    
     }
     span{
         display: inline-block;
@@ -102,9 +97,15 @@ span{
         font-size: 15px;
     }
     .accordion{
-      width: 95%;
-    } #title_school img{
-        width: 80px;
-        height: auto;
-     }
-  }    
+        width: 95%;
+    } 
+    #title_school img{
+    width: 80px;
+    height: auto;
+    }
+}
+@media only screen and (max-width: 300px){
+    #title_school img{
+    display: none;
+    }
+}

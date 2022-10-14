@@ -66,3 +66,8 @@ p{
     font-size:.4em
     }
 }
+@media only screen and (max-width: 300px){
+    .foto-perfil{
+        display: none;
+    }
+}

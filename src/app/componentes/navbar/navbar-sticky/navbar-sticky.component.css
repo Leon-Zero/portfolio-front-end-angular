@@ -18,3 +18,8 @@
 #logout{
     margin-left: auto;
 }
+@media only screen and (max-width: 300px){
+    #btn-edition{
+        display: none;
+    }
+}

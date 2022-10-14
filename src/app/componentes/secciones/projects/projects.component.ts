@@ -35,7 +35,7 @@ export class ProjectsComponent implements OnInit {
   }
   setClasses(id: string){
     this.addClass = id;
-    console.log(this.addClass)
+    //console.log(this.addClass)
   }
   onDisplayDelete( active:boolean){
     if (active) {
