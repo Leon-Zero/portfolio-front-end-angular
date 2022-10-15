@@ -21,7 +21,7 @@ header {
   grid-column-gap: 0;
   grid-row-gap: 5px;
   font-family: 'Anton', sans-serif;
-  text-shadow: 2px 2px 1px #30E3E3;
+  text-shadow: 2px 2px 2px #30E3E3;
   text-align: center;
   letter-spacing: .1em;
   color: hwb(0 0% 100% / 0.527);

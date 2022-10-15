@@ -32,8 +32,7 @@ section{
     transition: .8s ease-in;
 }
 p{
-    font-family:'Catamaran',sans-serif;
-    font-weight:599;
+    font-weight:400;
     font-size:1em;
     width:50%;
     flex:2 0 auto;
@@ -42,7 +41,7 @@ p{
     transition:color .8s ease-in
 }
 .info span b{
-    color:#30E3E3;
+    color:#27bbbb;
     font-size:1.1em;
     text-shadow:1px 1px 1px #031313
 }
