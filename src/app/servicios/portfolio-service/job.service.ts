@@ -10,7 +10,7 @@ import { Job } from 'src/assets/data/Data';
 export class JobService {
 
   private _refresh$ = new Subject<void>();
-  private jobUrl= 'http://localhost:8080/jobs';
+  private jobUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/jobs';
 
   constructor(private http:HttpClient) { }
 

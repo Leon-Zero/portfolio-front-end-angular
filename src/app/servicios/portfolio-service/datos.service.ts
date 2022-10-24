@@ -10,7 +10,7 @@ import { Datum } from 'src/assets/data/Data';
 export class DatosService {
 
   private _refresh$ = new Subject<void>();
-  private dataUrl = 'http://localhost:8080/datos';
+  private dataUrl = 'https://portfolio-leonardo-hidalgo.herokuapp.com/datos';
 
   constructor(private http:HttpClient) { }
 

@@ -10,7 +10,7 @@ import { BtnR } from 'src/assets/data/Data';
 export class BtnRsService {
 
   private _refresh$ = new Subject<void>();
-  private btnUrl= 'http://localhost:8080/btnrs';
+  private btnUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/btnrs';
 
   constructor(private http:HttpClient) { }
 

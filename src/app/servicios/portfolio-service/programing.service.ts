@@ -10,7 +10,7 @@ import { Skill } from 'src/assets/data/Data';
 export class ProgramingService {
 
   private _refresh$ = new Subject<void>();
-  private programingUrl= 'http://localhost:8080/programacion';
+  private programingUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/programacion';
 
   constructor(private http:HttpClient) { }
 
