@@ -49,5 +49,8 @@ export class FormAboutMeComponent implements OnInit {
           });       
       }
     */
+  uploadImage($event: any){
+    
+  }
 }
 

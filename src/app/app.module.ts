@@ -37,6 +37,9 @@ import { interceptorProvider } from './servicios/interceptor.service';
 import { FormContactoComponent } from './reactiveForm/form-contacto/form-contacto.component';
 import { FormProyectoComponent } from './reactiveForm/form-proyecto/form-proyecto.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -79,7 +82,9 @@ import { RegistroComponent } from './pages/registro/registro.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider
