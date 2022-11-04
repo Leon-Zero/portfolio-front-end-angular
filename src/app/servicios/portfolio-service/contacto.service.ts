@@ -10,7 +10,8 @@ import { Contacto } from 'src/assets/data/Data';
 export class ContactoService {
 
   private _refresh$ = new Subject<void>();
-  private contactoUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/contacto';
+  //private contactoUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/contacto';
+  private contactoUrl= 'http://localhost:8080/contacto';
 
   constructor(private http:HttpClient) { }
 

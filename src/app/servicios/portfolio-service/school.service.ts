@@ -10,8 +10,12 @@ import { Academica, ExtraCurricular } from 'src/assets/data/Data';
 export class SchoolService {
 
   private _refresh$ = new Subject<void>();
-  private academicaUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/academica';
-  private extraUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/extracurricular';
+  //private academicaUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/academica';
+  //private extraUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/extracurricular';
+  private academicaUrl= 'http://localhost:8080/academica';
+  private extraUrl= 'http://localhost:8080/extracurricular';
+
+
 
   constructor(private http:HttpClient) { }
 

@@ -11,7 +11,7 @@ export class DatosService {
 
   private _refresh$ = new Subject<void>();
   //private dataUrl = 'https://portfolio-leonardo-hidalgo.herokuapp.com/datos';
-  private dataUrl = 'https://localhost:8080/datos';
+  private dataUrl = 'http://localhost:8080/datos';
 
   constructor(private http:HttpClient) { }
 

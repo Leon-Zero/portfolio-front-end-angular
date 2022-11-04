@@ -10,8 +10,8 @@ import { NuevoUsuario } from 'src/assets/data/nuevo-usuario';
 })
 export class AuthService {
 
-  authURL = 'https://portfolio-leonardo-hidalgo.herokuapp.com/auth/';
-
+  //authURL = 'https://portfolio-leonardo-hidalgo.herokuapp.com/auth/';
+  authURL = 'http://localhost:8080/auth/';
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {

@@ -10,7 +10,8 @@ import { Proyecto } from 'src/assets/data/Data';
 export class ProyectoService {
 
   private _refresh$ = new Subject<void>();
-  private proyectoUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/proyecto';
+  //private proyectoUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/proyecto';
+  private proyectoUrl= 'http://localhost:8080/proyecto';
 
   constructor(private http:HttpClient) { }
 

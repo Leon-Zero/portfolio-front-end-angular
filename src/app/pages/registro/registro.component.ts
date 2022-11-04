@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/servicios/auth.service';
 import { TokenService } from 'src/app/servicios/token.service';
 import { NuevoUsuario } from 'src/assets/data/nuevo-usuario';
 import {timer} from 'rxjs'
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-registro',
@@ -12,7 +13,14 @@ import {timer} from 'rxjs'
 })
 export class RegistroComponent implements OnInit {
 
-  registerModel = new NuevoUsuario("","","","");
+  register= new FormGroup ({
+    nombre: new FormControl(''),
+    nombreUsuario: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl('')
+  });
+
+
   nuevoUsuario!: NuevoUsuario;
   nombre!: string;
   nombreUsuario!: string;
@@ -22,6 +30,7 @@ export class RegistroComponent implements OnInit {
   isLogged = false;
   registerFail = false;
   registerOk = false;
+  submitted= false;
   
   constructor(private tokenService: TokenService,
               private authService: AuthService,
@@ -34,13 +43,13 @@ export class RegistroComponent implements OnInit {
   }
 
   onRegister(): void {
-    let toastOk = document.getElementById('okToast') as HTMLElement;
-    let toastFail = document.getElementById('errorToast') as HTMLElement;
+    const nombre = this.register.value.nombre as string;
+    const nombreUsuario = this.register.value.nombreUsuario as string;
+    const email = this.register.value.email as string;
+    const password = this.register.value.password as string;
+    this.submitted = true;
 
-    this.nuevoUsuario = new NuevoUsuario(this.registerModel.nombre, 
-    this.registerModel.nombreUsuario,
-    this.registerModel.email,
-    this.registerModel.password);
+    this.nuevoUsuario = new NuevoUsuario(nombre, nombreUsuario, email, password);
     this.authService.nuevo(this.nuevoUsuario).subscribe(
       data => {
         this.registerFail = false;

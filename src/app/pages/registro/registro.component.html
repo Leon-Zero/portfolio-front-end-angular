@@ -9,38 +9,35 @@
     </div>
   
 <div class="register__content-form">
-    <form #register="ngForm" (ngSubmit)="onRegister()" novalidate>
+    <form [formGroup]="register" (ngSubmit)="onRegister()" novalidate>
 
         <div class="mb-3 centrar">
             <label for="nombre" class="form-label user">Nombre</label>
             <input type="text" name="nombre" class="form-control" id="nombre" placeholder="juan perez"
-            [(ngModel)]="registerModel.nombre" required maxlength="35">
+            formControlName="nombre" required maxlength="35">
         </div>
+        <div *ngIf="register.touched && register.controls.nombre.errors" class="text-danger mb-3">Nombre es Requerido</div>
 
         <div class="mb-3 centrar">
             <label for="nombreUsuario_" class="form-label user">Usuario</label>
             <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario_" placeholder="ejemplo123"
-            [(ngModel)]="registerModel.nombreUsuario" required minlength="5" >
+            formControlName="nombreUsuario" required minlength="5" >
         </div>
-
-        <div *ngIf="register.touched && register.invalid" class="text-danger mb-3">Usuario debe contener min. 5 caracteres</div>
+        <div *ngIf="register.touched && register.controls.nombreUsuario.errors" class="text-danger mb-3">Usuario debe contener min. 5 caracteres</div>
 
         <div class="mb-3 centrar">
             <label for="email" class="form-label user">Email</label>
             <input type="email" name="email" class="form-control" id="email" placeholder="usuario@email.com"
-            [(ngModel)]="registerModel.email" required email="true" >
+            formControlName="email" required email="true" >
         </div>
-
-        <div *ngIf="register.touched && register.invalid" class="text-danger mb-3">Email Incorrecto</div>
-
+        <div *ngIf="register.touched && register.controls.email.errors" class="text-danger mb-3">Email Incorrecto</div>
 
         <div class="mb-3 centrar">
             <label for="password" class="form-label">Contraseña</label>
             <input type="password" name="password" class="form-control" id="password" placeholder="abc123"
-            [(ngModel)]="registerModel.password" required minlength="8" >
+            formControlName="password" required minlength="8" >
         </div>
-
-        <div *ngIf="register.touched && register.invalid" class="text-danger mb-3">Contraseña debe poseer min. 8 caracteres</div>
+        <div *ngIf="register.touched && register.controls.password.errors" class="text-danger mb-3">Contraseña debe poseer min. 8 caracteres</div>
 
         <div class="form-footer">
 
@@ -53,7 +50,7 @@
             </button>
         </div>
     </form>
-    <div *ngIf="register.submitted && registerFail" class="alert alert-danger mt-3">Fallo en el Registro: {{errMsj}}</div>
-    <div *ngIf="register.submitted && registerOk" class="alert alert-success mt-3">Usuario Creado Exitosamente! redireccionando al login...</div>
+    <div *ngIf="submitted && registerFail" class="alert alert-danger mt-3">Fallo en el Registro: {{errMsj}}</div>
+    <div *ngIf="submitted && registerOk" class="alert alert-success mt-3">Usuario Creado Exitosamente! redireccionando al login...</div>
 </div>
 </section>

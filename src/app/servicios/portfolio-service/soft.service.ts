@@ -10,7 +10,8 @@ import { SkillSoft } from 'src/assets/data/Data';
 export class SoftService {
 
   private _refresh$ = new Subject<void>();
-  private softUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/soft';
+  //private softUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/soft';
+  private softUrl= 'http://localhost:8080/soft';
 
   constructor(private http:HttpClient) { }
 

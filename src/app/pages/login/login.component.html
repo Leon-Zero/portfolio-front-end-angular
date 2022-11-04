@@ -15,22 +15,22 @@
 </div>
       
 <div class="login__content-form">
-    <form #login="ngForm" (ngSubmit)="onLogin()" novalidate>
+    <form [formGroup]="login" (ngSubmit)="onLogin()" novalidate>
         <div class="mb-3 centrar">
             <label for="nombreUsuario" class="form-label user"><i class="fa-solid fa-user-secret"></i>Usuario</label>
             <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" placeholder="ejemplo123"
-            [(ngModel)]="loginModel.nombreUsuario" required minlength="5">
+            formControlName="nombreUsuario" required minlength="5">
         </div>
         
-        <div *ngIf="login.touched && login.invalid" class="text-danger mb-3">Usuario debe contener min. 5 caracteres</div>
+        <div *ngIf="login.touched && login.controls.nombreUsuario.errors" class="text-danger mb-3">Usuario debe contener min. 5 caracteres</div>
 
         <div class="mb-3 centrar">
             <label for="password" class="form-label"><i class="fa-solid fa-key"></i>Contraseña</label>
             <input type="password" name="password" class="form-control" id="password" placeholder="abc123"
-            [(ngModel)]="loginModel.password" required minlength="8">
+            formControlName="password" required minlength="8">
         </div>
 
-        <div *ngIf="login.touched && login.invalid" class="text-danger mb-3">Contraseña debe poseer min. 8 caracteres</div>
+        <div *ngIf="login.touched && login.controls.password.errors" class="text-danger mb-3">Contraseña debe poseer min. 8 caracteres</div>
       
          <div class="form-footer">
             <button class="btn__submit mb-3" type="submit" [disabled]="login.invalid">
@@ -42,6 +42,6 @@
             </button>
         </div>
     </form>
-        <div *ngIf="login.submitted && isLoginFail" class="alert alert-danger mt-3">*Error en el Login: {{errMsj}}</div>
+        <div *ngIf="submitted && isLoginFail" class="alert alert-danger mt-3">*Error en el Login: {{errMsj}}</div>
     </div>
 </section>

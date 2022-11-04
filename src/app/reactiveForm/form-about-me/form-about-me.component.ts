@@ -1,5 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
+import { ImageService } from 'src/app/servicios/image.service';
 import { DatosService } from 'src/app/servicios/portfolio-service/datos.service';
 
 @Component({
@@ -9,9 +10,11 @@ import { DatosService } from 'src/app/servicios/portfolio-service/datos.service'
 })
 export class FormAboutMeComponent implements OnInit {
 
-  constructor(private datosPortfolio: DatosService) { }
+  constructor(private datosPortfolio: DatosService,
+              public imageService: ImageService) { }
 
   @Input() object:any=[];
+  reset: string = "./assets/imagenes/perfil.jpg";
 
   addData = new FormGroup ({
     id: new FormControl(''),
@@ -22,7 +25,7 @@ export class FormAboutMeComponent implements OnInit {
     perfil: new FormControl('')
   });
 
-  ngOnInit(): void { }
+  ngOnInit(): void {  }
 
   Set(){
     this.addData.setValue({
@@ -35,8 +38,13 @@ export class FormAboutMeComponent implements OnInit {
     });
   }
   EditData(){
+    if (this.addData.value.perfil !== this.object.perfil) {
+      this.addData.value.perfil = this.imageService.url;
+    }
     this.datosPortfolio.UpdateData(this.object.id, this.addData.value).subscribe(
-    (result)=>{this.addData.reset({});
+    (result)=>{
+      
+      this.addData.reset({});
     })
     }
     //Codigo para agregar componente about-me, comentado por que solo se necesita una unica vez
@@ -50,7 +58,12 @@ export class FormAboutMeComponent implements OnInit {
       }
     */
   uploadImage($event: any){
-    
+    const idFile: string = this.object.id
+    const name = `about_me_` + idFile;
+    this.imageService.uploadImage($event, name);
+  }
+  resetFile(){
+    this.imageService.url = this.reset;
+    console.log(this.imageService.url);
   }
 }
-

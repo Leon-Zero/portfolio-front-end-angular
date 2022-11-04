@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { TokenService } from 'src/app/servicios/token.service';
@@ -11,10 +12,14 @@ import { LoginUsuario } from 'src/assets/data/login-usuario';
 })
 export class LoginComponent implements OnInit {
 
-  loginModel = new LoginUsuario("","");
+  login= new FormGroup ({
+    nombreUsuario: new FormControl(''),
+    password: new FormControl('')
+  });
 
   isLogged = false;
   isLoginFail = false;
+  submitted= false;
   loginUsuario!: LoginUsuario;
   roles: string[] = [];
   errMsj!: string;
@@ -33,7 +38,11 @@ export class LoginComponent implements OnInit {
   }
 
  onLogin(): void {
-    this.loginUsuario = new LoginUsuario(this.loginModel.nombreUsuario, this.loginModel.password);
+    const nombreUsuario = this.login.value.nombreUsuario as string;
+    const password = this.login.value.password as string;
+    this.submitted = true;
+
+    this.loginUsuario = new LoginUsuario(nombreUsuario, password);
    // console.log(this.loginUsuario);
     this.authService.login(this.loginUsuario).subscribe(data => {
         this.isLogged = true;
