@@ -27,6 +27,7 @@ export class FormSoftComponent implements OnInit {
   ngOnInit(): void {  
   }
   Set(){
+    this.editMode=true;
     this.addSoft.setValue({
       id: this.object.id,
       tag: this.object.tag,
@@ -34,12 +35,12 @@ export class FormSoftComponent implements OnInit {
       modal: this.object.modal,
       beneficio: this.object.beneficio
     });
-    this.editMode=true;
   }
   SaveSoft(){
     if (!this.editMode) {
       this.datosPortfolio.SaveSoft(this.addSoft.value).subscribe(
         (result)=> {
+        this.editMode = false;
         this.addSoft.reset({});
         });       
     }

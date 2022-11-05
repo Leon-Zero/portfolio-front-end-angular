@@ -7,18 +7,22 @@
             <input type="text" class="form-control"
             formControlName="titulo_tag" required>
         </div>
+        <div *ngIf="addAcademica.touched && addAcademica.controls.titulo_tag.errors" class="text-danger mb-3">Nivel es Requerido</div>
+
         
         <div class="input-group mb-3">
             <span class="input-group-text">Instituto</span>
             <input type="text" class="form-control"
             formControlName="instituto" required>
         </div>
+        <div *ngIf="addAcademica.touched && addAcademica.controls.instituto.errors" class="text-danger mb-3">Instituto es Requerido</div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Carrera o Curso</span>
             <input type="text" class="form-control" 
             formControlName="carrera" required>
         </div>
+        <div *ngIf="addAcademica.touched && addAcademica.controls.carrera.errors" class="text-danger mb-3">Carrera o Curso es Requerido</div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Estado</span>
@@ -29,8 +33,9 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Ingreso / Salida</span>
             <input type="text" class="form-control" placeholder="Ej: dd/mm/aaaa hasta dd/mm/aaaa"
-            formControlName="ingreso">
+            formControlName="ingreso" required>
         </div>
+        <div *ngIf="addAcademica.touched && addAcademica.controls.ingreso.errors" class="text-danger mb-3">Fecha es Requerido</div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Logo Instituto</span>

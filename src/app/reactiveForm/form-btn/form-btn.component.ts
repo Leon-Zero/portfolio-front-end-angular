@@ -27,6 +27,7 @@ export class FormBtnComponent implements OnInit {
   ngOnInit(): void { }
 
   Set(){
+    this.editMode= true;
     this.addBtn.setValue({
       id: this.object.id,
       red_social: this.object.red_social,
@@ -34,12 +35,13 @@ export class FormBtnComponent implements OnInit {
       url: this.object.url,
       color: this.object.color
      });
-    this.editMode=true;
   }
   SaveBtn(){
     if (!this.editMode) {
      this.datosPortfolio.SaveBtn(this.addBtn.value).subscribe(
-       (result)=> {this.addBtn.reset({});}); 
+       (result)=> {
+        this.editMode = false;
+        this.addBtn.reset({});});
     }
     else {
       this.datosPortfolio.UpdateBtn(this.object.id, this.addBtn.value).subscribe((result)=>{this.addBtn.reset({}); this.editMode = false;

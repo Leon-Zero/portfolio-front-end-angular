@@ -5,29 +5,31 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Tag</span>
             <input type="text" class="form-control" placeholder="Nombre de la etiqueta"
-            formControlName="tag" required>
+            formControlName="tag" required maxlength="30">
         </div>
+        <div *ngIf="addSoft.touched && addSoft.controls.tag.errors" class="text-danger mb-3">Etiqueta Requerido (Máx. 30 caracteres)</div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Porcentaje</span>
             <input type="number" class="form-control" placeholder="0-100"
             formControlName="porcentaje" min="1" max="100" required>
         </div>
-
-        <div *ngIf="addSoft.invalid" class="text-danger mb-3">valores entre 1 al 100</div>
+        <div *ngIf="addSoft.touched && addSoft.controls.porcentaje.errors" class="text-danger mb-3">Porcentaje es Requerido (valores entre 1 al 100)</div>
 
         <div class="input-group mb-3">
-            <span class="input-group-text">Modal</span>
+            <span class="input-group-text">Descripción</span>
             <textarea class="form-control" id="modal-textarea" rows="3"
             placeholder="descripción de la habilidad blanda"
-            formControlName="modal"></textarea>
+            formControlName="modal" required maxlength="400"></textarea>
         </div>
+        <div *ngIf="addSoft.touched && addSoft.controls.modal.errors" class="text-danger mb-3">Descripción es Requerido (Máx. 400 caracteres)</div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Beneficio</span>
             <textarea class="form-control" id="beneficio-textarea" rows="3" placeholder="/opcional/ beneficio organizacional de la habilidad blanda"
-            formControlName="beneficio"></textarea>
+            formControlName="beneficio" maxlength="400"></textarea>
         </div>
+        <div *ngIf="addSoft.controls.beneficio.touched && addSoft.controls.beneficio.errors" class="text-danger mb-3">Máx. 400 caracteres</div>
         
         <input type="hidden" name="id"
         formControlName="id">

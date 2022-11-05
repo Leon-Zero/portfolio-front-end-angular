@@ -6,24 +6,25 @@
             <span class="input-group-text">Email del Destinatario</span>
             <input type="email" class="form-control"
             formControlName="mail" required email="true">
-            <p>*Una vez actualizado el mail, debe de enviarse a travez del formulario de contacto 
+            <p>*Una vez actualizado el mail, debe de enviarse a traves del formulario de contacto 
                 un intento de prueba para que el servicio establezca el vinculo, revise su casilla 
                 de correo electronico y vincule al servicio</p>
         </div>
-
-        <div *ngIf="addContacto.touched && addContacto.invalid" class="text-danger mb-3">Email Incorrecto</div>
+        <div *ngIf="addContacto.touched && addContacto.controls.mail.errors" class="text-danger mb-3">Email es Incorrecto</div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Asunto del mail de AUTORESPUESTA</span>
             <input type="text" class="form-control"
             formControlName="asunto" required>
         </div>
+        <div *ngIf="addContacto.touched && addContacto.controls.asunto.errors" class="text-danger mb-3">Asunto es Requerido</div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Mensaje de AUTORESPUESTA</span>
             <input type="text" class="form-control" 
             formControlName="mensaje" required>
         </div>
+        <div *ngIf="addContacto.touched && addContacto.controls.mensaje.errors" class="text-danger mb-3">Mensaje es Requerido</div>
 
         <input type="hidden" name="id"
         formControlName="id">

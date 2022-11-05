@@ -28,6 +28,7 @@ export class FormJobsComponent implements OnInit {
   ngOnInit(): void { }
 
   Set(){
+    this.editMode=true;
     this.addJob.setValue({
       id: this.object.id,
       job: this.object.job,
@@ -36,13 +37,14 @@ export class FormJobsComponent implements OnInit {
       ingreso_salida: this.object.ingreso_salida,
       contacto: this.object.contacto
     });
-    this.editMode=true;
   }
 
   SaveJob(){
     if (!this.editMode) {
      this.datosPortfolio.SaveJob(this.addJob.value).subscribe(
-       (result)=> {this.addJob.reset({});}); 
+       (result)=> {
+        this.editMode = false;
+        this.addJob.reset({});}); 
     }
     else {
       this.datosPortfolio.UpdateJob(this.object.id, this.addJob.value).subscribe((result)=>{this.addJob.reset({}); this.editMode = false;

@@ -26,17 +26,19 @@ export class FormExtraComponent implements OnInit {
   ngOnInit(): void { }
 
   SetExtra(){
+    this.editMode= true;
     this.addExtra.setValue({
     id: this.object.id,
     tipo: this.object.tipo,
     actividad: this.object.actividad,
      });
-    this.editMode=true;
   }
   SaveExtra(){
     if (!this.editMode) {
        this.datosPortfolio.SaveExtra(this.addExtra.value).subscribe(
-       (result)=> { this.addExtra.reset({});}); 
+       (result)=> { 
+        this.editMode= false;
+        this.addExtra.reset({});}); 
      }
      else {
       this.datosPortfolio.UpdateExtra(this.object.id, this.addExtra.value).subscribe((result)=>{this.addExtra.reset({}); this.editMode = false;

@@ -5,28 +5,30 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Red Social</span>
             <input type="text" class="form-control" placeholder="Nombre de Red Social"
-            formControlName="red_social">
+            formControlName="red_social" required>
         </div>
+        <div *ngIf="addBtn.touched && addBtn.controls.red_social.errors" class="text-danger mb-3">Nombre es Requerido</div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Icono FontAwesome</span>
             <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
             formControlName="btn" required>
         </div>
+        <div *ngIf="addBtn.touched && addBtn.controls.btn.errors" class="text-danger mb-3">Icono es Requerido. Ej: fa-brands fa-instagram.</div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">URL</span>
             <input type="text" class="form-control"
             formControlName="url" required>
         </div>
+        <div *ngIf="addBtn.touched && addBtn.controls.url.errors" class="text-danger mb-3">Dirección URL es Requerido</div>
         
-        <div class="input-group mb-3">
+        <div class="mb-3">
             <span class="input-group-text">Elije un Color</span>
             <input type="color" class="form-control form-control-color" title="Choose your color" 
             formControlName="color" required>
         </div>
-
-        <div *ngIf="addBtn.invalid" class="text-danger mb-3">Color es requerido</div>
+        <div *ngIf="addBtn.touched && addBtn.controls.color.errors" class="text-danger mb-3">Color es Requerido</div>
 
         <input type="hidden" name="id"
         formControlName="id">

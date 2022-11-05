@@ -26,18 +26,20 @@ export class FormProgramingComponent implements OnInit {
   ngOnInit(): void {  }
 
   Set(){
+    this.editMode= true;
     this.addPrograming.setValue({
       id: this.object.id,
       tag: this.object.tag,
       porcentaje: this.object.porcentaje,
       color: this.object.color
     });
-    this.editMode=true;
   }
   SavePrograming(){
     if (!this.editMode) {
     this.datosPortfolio.SavePrograming(this.addPrograming.value).subscribe(
-      (result)=> {this.addPrograming.reset({});
+      (result)=> {
+        this.editMode= false;
+        this.addPrograming.reset({});
       }); 
   }
     else {

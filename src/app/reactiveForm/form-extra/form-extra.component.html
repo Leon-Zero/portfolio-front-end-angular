@@ -7,12 +7,14 @@
             <input type="text" class="form-control" placeholder="participante / ayudante / disertante / organizador / cursante / etc."
             formControlName="tipo" required>
         </div>
+        <div *ngIf="addExtra.touched && addExtra.controls.tipo.errors" class="text-danger mb-3">Tipo es Requerido</div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Descripción de la Actividad</span>
             <input type="text" class="form-control"
             formControlName="actividad" required>
         </div>
+        <div *ngIf="addExtra.touched && addExtra.controls.actividad.errors" class="text-danger mb-3">Descripción es Requerido</div>
 
         <input type="hidden" name="id"
         formControlName="id">

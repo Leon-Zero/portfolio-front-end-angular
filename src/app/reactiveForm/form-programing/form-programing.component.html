@@ -5,25 +5,23 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Tag</span>
             <input type="text" class="form-control" placeholder="Nombre de la etiqueta"
-            formControlName="tag" required>
+            formControlName="tag" required maxlength="25">
         </div>
+        <div *ngIf="addPrograming.touched && addPrograming.controls.tag.errors" class="text-danger mb-3">Etiqueta es Requerido (Max. 25 caracteres)</div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Porcentaje</span>
             <input type="number" class="form-control" placeholder="0-100"
             formControlName="porcentaje" min="1" max="100" required>
         </div>
-
-        <div *ngIf="addPrograming.invalid" class="text-danger mb-3">valores entre 1 al 100</div>
-
+        <div *ngIf="addPrograming.touched && addPrograming.controls.porcentaje.errors" class="text-danger mb-3">Porcentaje es Requerido (valores entre 1 al 100)</div>
         
         <div class="input-group mb-3">
             <span class="input-group-text">Elije un Color</span>
             <input type="color" class="form-control form-control-color" title="Choose your color" 
             formControlName="color" required>
         </div>
-
-        <div *ngIf="addPrograming.invalid" class="text-danger mb-3">Color es requerido</div>
+        <div *ngIf="addPrograming.touched && addPrograming.controls.color.errors" class="text-danger mb-3">Color es Requerido</div>
 
         <input type="hidden" name="id"
         formControlName="id">
