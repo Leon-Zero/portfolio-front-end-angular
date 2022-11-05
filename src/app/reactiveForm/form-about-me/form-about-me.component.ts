@@ -15,6 +15,7 @@ export class FormAboutMeComponent implements OnInit {
 
   @Input() object:any=[];
   reset: string = "./assets/imagenes/perfil.jpg";
+  editImg: boolean = false;
 
   addData = new FormGroup ({
     id: new FormControl(''),
@@ -43,7 +44,8 @@ export class FormAboutMeComponent implements OnInit {
     }
     this.datosPortfolio.UpdateData(this.object.id, this.addData.value).subscribe(
     (result)=>{
-      
+      this.imageService.url = "";
+      this.editImg = false;
       this.addData.reset({});
     })
     }
@@ -61,9 +63,9 @@ export class FormAboutMeComponent implements OnInit {
     const idFile: string = this.object.id
     const name = `about_me_` + idFile;
     this.imageService.uploadImage($event, name);
+    this.editImg = true;
   }
   resetFile(){
     this.imageService.url = this.reset;
-    console.log(this.imageService.url);
   }
 }

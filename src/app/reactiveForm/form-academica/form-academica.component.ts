@@ -1,5 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
+import { ImageService } from 'src/app/servicios/image.service';
 import { SchoolService } from 'src/app/servicios/portfolio-service/school.service';
 
 
@@ -10,20 +11,22 @@ import { SchoolService } from 'src/app/servicios/portfolio-service/school.servic
 })
 export class FormAcademicaComponent implements OnInit {
 
-  constructor(private datosPortfolio: SchoolService) { }
+  constructor(private datosPortfolio: SchoolService,
+              public imageService: ImageService) { }
 
   @Input() object:any=[];
   @Input() onSet:boolean = false
-
+  reset: string = "./assets/imagenes/ucc.png";
+  editImg: boolean = false;
 
   addAcademica = new FormGroup ({
     id: new FormControl(''),
     titulo_tag: new FormControl(''),
     instituto: new FormControl(''),
-    logo: new FormControl(''),
     carrera: new FormControl(''),
     estado: new FormControl(''),
-    ingreso: new FormControl('')
+    ingreso: new FormControl(''),
+    logo: new FormControl(''),
   });
 
   editMode: boolean = false;
@@ -31,16 +34,16 @@ export class FormAcademicaComponent implements OnInit {
   ngOnInit(): void { }
 
   Set(){
+    this.editMode=true;
     this.addAcademica.setValue({
     id: this.object.id,
     titulo_tag: this.object.titulo_tag,
     instituto: this.object.instituto,
-    logo: this.object.logo,
     carrera: this.object.carrera,
     estado: this.object.estado,
-    ingreso: this.object.ingreso
+    ingreso: this.object.ingreso,
+    logo: this.object.logo,
      });
-    this.editMode=true;
   }
   SaveAcademica(){
     if (!this.editMode) {
@@ -48,8 +51,24 @@ export class FormAcademicaComponent implements OnInit {
        (result)=> {this.addAcademica.reset({});}); 
     }
     else {
-      this.datosPortfolio.UpdateAcademica(this.object.id, this.addAcademica.value).subscribe((result)=>{this.addAcademica.reset({}); this.editMode = false;
+      if (this.addAcademica.value.logo !== this.object.perfil) {
+        this.addAcademica.value.logo = this.imageService.url;
+      }
+      this.datosPortfolio.UpdateAcademica(this.object.id, this.addAcademica.value).subscribe((result)=>{
+        this.imageService.url="";
+        this.editImg = false;
+        this.addAcademica.reset({}); 
+        this.editMode = false;
     })
     }
+  }
+  uploadImage($event: any){
+    const nameFile: string = this.addAcademica.value.instituto as string;
+    const name = `academica` + nameFile;
+    this.imageService.uploadImage($event, name);
+    this.editImg = true;
+  }
+  resetFile(){
+    this.imageService.url = this.reset;
   }
 }

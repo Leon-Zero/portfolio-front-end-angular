@@ -36,10 +36,11 @@
                 (change)="uploadImage($event)"
                 formControlName="perfil" 
                 accept=".jpg, .jpeg, .png">
-            <button class="btn btn-outline-primary" type="button" (click)="resetFile()">Resetear Foto</button>
+            <button *ngIf="editImg" class="btn btn-outline-primary" type="button" (click)="resetFile()">Resetear Foto</button>
         </div>
         <div class="d-flex justify-content-center">
-            <img [src]="imageService.url" alt="upload" width="120px">
+            <span class="input-group-text">Vista Previa</span>
+            <span class="input-group-text"><img [src]="imageService.url" width="120px"></span>
         </div>
 
         <input type="hidden" name="id"

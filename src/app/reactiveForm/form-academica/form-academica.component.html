@@ -15,12 +15,6 @@
         </div>
 
         <div class="input-group mb-3">
-            <span class="input-group-text">Cargar Imagen</span>
-            <input type="text" class="form-control" placeholder="URL de la imagen"
-            formControlName="logo" required>
-        </div>
-
-        <div class="input-group mb-3">
             <span class="input-group-text">Carrera o Curso</span>
             <input type="text" class="form-control" 
             formControlName="carrera" required>
@@ -36,6 +30,19 @@
             <span class="input-group-text">Ingreso / Salida</span>
             <input type="text" class="form-control" placeholder="Ej: dd/mm/aaaa hasta dd/mm/aaaa"
             formControlName="ingreso">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Logo Instituto</span>
+                <input type="file" class="form-control"
+                (change)="uploadImage($event)"
+                formControlName="logo" 
+                accept=".jpg, .jpeg, .png">
+            <button *ngIf="editImg" class="btn btn-outline-primary" type="button" (click)="resetFile()">Resetear Foto</button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <span class="input-group-text">Vista Previa</span>
+            <span class="input-group-text"><img [src]="imageService.url" width="120px"></span>
         </div>
 
         <input type="hidden" name="id"

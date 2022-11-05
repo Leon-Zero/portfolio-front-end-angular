@@ -18,7 +18,6 @@ export class ImageService {
       .catch(error => console.log(error)
      )
   }
-
   getImages(){
     const uploadRef = ref(this.storage, 'imagen');
     list(uploadRef).then(async response => {
