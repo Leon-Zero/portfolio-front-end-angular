@@ -18,20 +18,20 @@
                 <h3>{{school.titulo_tag}}</h3>
             </button>
         </h2>
-            <div [id]="'item-academica-' + school.id" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion-school">
+            <div [id]="'item-academica-' + school.id" class="accordion-collapse collapse accordion-fondo" aria-labelledby="headingOne" data-bs-parent="#accordion-school">
                 <div class="accordion-body flex-grid">
-                    <div class="img"> 
+                    <div class="img mb-3"> 
                         <img [src]="school.logo" alt="logo instituto">
                     </div>
                     <div class="experiencia__contenido-div">
-                        <span>institución</span>
-                            <p>{{school.instituto}}</p>
-                        <span>carrera</span>
-                            <p>{{school.carrera}}</p>
-                        <span>estado</span>
-                            <p>{{school.estado}}</p>
-                        <span>ingreso/salida</span>
-                            <p>{{school.ingreso}}</p>
+                        <span class="mb-3">institución</span>
+                            <h5>{{school.instituto}}</h5>
+                        <span class="mb-3">carrera</span>
+                            <h5 class="mb-3">{{school.carrera}}</h5>
+                        <span class="mb-3">estado</span>
+                            <h5>{{school.estado}}</h5>
+                        <span class="mb-3">ingreso/salida</span>
+                            <h5>{{school.ingreso}}</h5>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
             <h3>ACTIVIDADES EXTRACURRICULARES</h3>
             </button>
         </h2>
-        <div id="item-extra" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-school">
+        <div id="item-extra" class="accordion-collapse collapse accordion-fondo" aria-labelledby="headingTwo" data-bs-parent="#accordion-school">
             <div class="accordion-body">
 
                 <app-crud 
@@ -61,8 +61,8 @@
                     <app-delete *ngIf="displayDelete" (click)="onDeleteExtra(ex.id)"></app-delete>
 
                     <div  class="experiencia__contenido-div">
-                        <span>{{ex.tipo}}</span>
-                        <p>{{ex.actividad}}</p>
+                        <span class="mb-3">{{ex.tipo}}</span>
+                        <h5>{{ex.actividad}}</h5>
                     </div>
                 </div>
             </div>

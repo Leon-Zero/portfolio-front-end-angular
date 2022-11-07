@@ -27,8 +27,9 @@
         <div class="input-group mb-3">
             <span class="input-group-text">Estado</span>
             <input type="text" class="form-control" 
-            formControlName="estado">
+            formControlName="estado" required>
         </div>
+        <div *ngIf="addAcademica.touched && addAcademica.controls.estado.errors" class="text-danger mb-3">Estado es Requerido</div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Ingreso / Salida</span>
@@ -41,13 +42,14 @@
             <span class="input-group-text">Logo Instituto</span>
                 <input type="file" class="form-control"
                 (change)="uploadImage($event)"
-                formControlName="logo" 
                 accept=".jpg, .jpeg, .png">
-            <button *ngIf="editImg" class="btn btn-outline-primary" type="button" (click)="resetFile()">Resetear Foto</button>
+            <input type="hidden" formControlName="logo">
         </div>
-        <div class="d-flex justify-content-center">
+        <div *ngIf="addAcademica.touched && !okAcademica" class="text-danger mb-3">Imagen es Requerido</div>
+        <div class="d-flex justify-content-center mb-3">
             <span class="input-group-text">Vista Previa</span>
-            <span class="input-group-text"><img [src]="imageService.url" width="120px"></span>
+            <span class="input-group-text"><img [src]="this.imageService.academica" width="120px"></span>
+            <span [class]="okAcademica? 'input-group-text okCard' : 'input-group-text' "><i *ngIf="okAcademica" class="fa-solid fa-circle-check"></i></span>
         </div>
 
         <input type="hidden" name="id"

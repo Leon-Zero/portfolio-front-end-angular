@@ -19,17 +19,17 @@
                 <h4>{{jobs.job}}</h4> 
                 </button>
               </h2>
-              <div [id]="'collapse-' + jobs.id" class="accordion-collapse collapse" [attr.aria-labelledby]="'item-' + jobs.id" data-bs-parent="#accordionExample">
+              <div [id]="'collapse-' + jobs.id" class="accordion-collapse collapse accordion-fondo" [attr.aria-labelledby]="'item-' + jobs.id" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="experiencia__contenido-div"> 
-                            <span class="span-item">cargo</span> 
-                                <p>{{jobs.cargo}}</p>
-                            <span class="span-item">funciones</span>
-                                <p>{{jobs.funciones}}</p>
-                            <span class="span-item">ingreso/salida</span>
-                                <p>{{jobs.ingreso_salida}}</p>
-                            <span class="span-item">contacto</span>
-                                <p>{{jobs.contacto}}</p>
+                            <span class="span-item mb-3">cargo</span> 
+                                <h5>{{jobs.cargo}}</h5>
+                            <span class="span-item mb-3">funciones</span>
+                                <h5>{{jobs.funciones}}</h5>
+                            <span class="span-item mb-3">ingreso/salida</span>
+                                <h5>{{jobs.ingreso_salida}}</h5>
+                            <span class="span-item mb-3">contacto</span>
+                                <h5>{{jobs.contacto}}</h5>
                         </div>
                     </div>
               </div>

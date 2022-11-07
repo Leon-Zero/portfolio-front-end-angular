@@ -8,12 +8,14 @@
         <input type="text" class="form-control" placeholder="Nombre del Proyecto"
         formControlName="project_title" required>
     </div>
+    <div *ngIf="addProyecto.touched && addProyecto.controls.project_title.errors" class="text-danger mb-3">Nombre es Requerido</div>
 
     <div class="mb-3">
         <label class="form-label"><h5>Descripción del Proyecto</h5></label>
         <textarea class="form-control" rows="3"
         formControlName="project_text" required></textarea>
     </div>
+    <div *ngIf="addProyecto.touched && addProyecto.controls.project_text.errors" class="text-danger mb-3">Descripción es Requerido</div>
    
     <div class="accordion" id="card_accordion">    
                     <!--******** card 1 ******** -->
@@ -38,25 +40,34 @@
                         formControlName="card_description_1" >
                     </div>
 
+                    <!-- input file 1 -->
                     <div class="input-group mb-3">
-                        <span class="input-group-text">Cargar Imagen</span>
-                        <input type="text" class="form-control" placeholder="URL de la imagen"
-                        formControlName="card_img_1" required>
+                        <span class="input-group-text">Cargar Imagen | 1</span>
+                            <input type="file" class="form-control"
+                            (change)="uploadImage($event, 'card-1')"
+                            accept=".jpg, .jpeg, .png">
+                        <input type="hidden" formControlName="card_img_1">
                     </div>
-
-                    <div *ngIf="addProyecto.invalid && addProyecto.touched" class="text-danger mb-3">La Imagen es requerida</div>
+                    <div *ngIf="addProyecto.touched && !okCard1" class="text-danger mb-3">Imagen es Requerido</div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <span class="input-group-text">Vista Previa</span>
+                        <span class="input-group-text"><img [src]="this.imageService.card1" width="120px"></span>
+                        <span [class]="okCard1? 'input-group-text okCard' : 'input-group-text' "><i *ngIf="okCard1" class="fa-solid fa-circle-check"></i></span>
+                    </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Icono FontAwesome</span>
                         <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
-                        formControlName="card_icon_1">
+                        formControlName="card_icon_1" required>
                     </div>
+                    <div *ngIf="addProyecto.touched && addProyecto.controls.card_icon_1.errors" class="text-danger mb-3">Icono es Requerido (ej: fa-brands fa-instagram)</div>
                     
                     <div class="input-group mb-3">
                         <span class="input-group-text">Elije un Color</span>
                         <input type="color" class="form-control form-control-color" title="Choose your color" 
-                        formControlName="color_1" >
+                        formControlName="color_1" required>
                     </div>
+                    <div *ngIf="addProyecto.touched && addProyecto.controls.color_1.errors" class="text-danger mb-3">Color es Requerido</div>
 
                 </div>
             </div>
@@ -83,25 +94,34 @@
                         formControlName="card_description_2">
                     </div>
 
+                    <!-- input file 2 -->
                     <div class="input-group mb-3">
-                        <span class="input-group-text">Cargar Imagen</span>
-                        <input type="text" class="form-control" placeholder="URL de la imagen"
-                        formControlName="card_img_2" required>
+                        <span class="input-group-text">Cargar Imagen | 2</span>
+                            <input type="file" class="form-control"
+                            (change)="uploadImage($event, 'card-2')"
+                            accept=".jpg, .jpeg, .png">
+                        <input type="hidden" formControlName="card_img_2">
                     </div>
-
-                    <div *ngIf="addProyecto.invalid && addProyecto.touched" class="text-danger mb-3">La Imagen es requerida</div>
+                    <div *ngIf="addProyecto.touched && !okCard2" class="text-danger mb-3">Imagen es Requerido</div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <span class="input-group-text">Vista Previa</span>
+                        <span class="input-group-text"><img [src]="this.imageService.card2" width="120px"></span>
+                        <span [class]="okCard2? 'input-group-text okCard' : 'input-group-text' "><i *ngIf="okCard2" class="fa-solid fa-circle-check"></i></span>
+                    </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Icono FontAwesome</span>
                         <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
-                        formControlName="card_icon_2">
+                        formControlName="card_icon_2" required>
                     </div>
+                    <div *ngIf="addProyecto.touched && addProyecto.controls.card_icon_2.errors" class="text-danger mb-3">Icono es Requerido (ej: fa-brands fa-instagram)</div>
                     
                     <div class="input-group mb-3">
                         <span class="input-group-text">Elije un Color</span>
                         <input type="color" class="form-control form-control-color" title="Choose your color" 
-                        formControlName="color_2">
+                        formControlName="color_2" required>
                     </div>
+                    <div *ngIf="addProyecto.touched && addProyecto.controls.color_2.errors" class="text-danger mb-3">Color es Requerido</div>
 
                 </div>
             </div>
@@ -128,25 +148,34 @@
                         formControlName="card_description_3">
                     </div>
 
+                    <!-- input file 3 -->
                     <div class="input-group mb-3">
-                        <span class="input-group-text">Cargar Imagen</span>
-                        <input type="text" class="form-control" placeholder="URL de la imagen"
-                        formControlName="card_img_3" required>
+                        <span class="input-group-text">Cargar Imagen | 3</span>
+                            <input type="file" class="form-control"
+                            (change)="uploadImage($event, 'card-3')"
+                            accept=".jpg, .jpeg, .png">
+                        <input type="hidden" formControlName="card_img_3">
                     </div>
-
-                    <div *ngIf="addProyecto.invalid && addProyecto.touched" class="text-danger mb-3">La Imagen es requerida</div>
+                    <div *ngIf="addProyecto.touched && !okCard3" class="text-danger mb-3">Imagen es Requerido</div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <span class="input-group-text">Vista Previa</span>
+                        <span class="input-group-text"><img [src]="this.imageService.card3" width="120px"></span>
+                        <span [class]="okCard3? 'input-group-text okCard' : 'input-group-text' "><i *ngIf="okCard3" class="fa-solid fa-circle-check"></i></span>
+                    </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Icono FontAwesome</span>
                         <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
-                        formControlName="card_icon_3">
+                        formControlName="card_icon_3" required>
                     </div>
+                    <div *ngIf="addProyecto.touched && addProyecto.controls.card_icon_3.errors" class="text-danger mb-3">Icono es Requerido (ej: fa-brands fa-instagram)</div>
                     
                     <div class="input-group mb-3">
                         <span class="input-group-text">Elije un Color</span>
                         <input type="color" class="form-control form-control-color" title="Choose your color" 
-                        formControlName="color_3">
+                        formControlName="color_3" required>
                     </div>
+                    <div *ngIf="addProyecto.touched && addProyecto.controls.color_3.errors" class="text-danger mb-3">Color es Requerido</div>
 
                 </div>
             </div>
@@ -173,25 +202,34 @@
                         formControlName="card_description_4">
                     </div>
 
+                    <!-- input file 4 -->
                     <div class="input-group mb-3">
-                        <span class="input-group-text">Cargar Imagen</span>
-                        <input type="text" class="form-control" placeholder="URL de la imagen"
-                        formControlName="card_img_4" required>
+                        <span class="input-group-text">Cargar Imagen | 4</span>
+                            <input type="file" class="form-control"
+                            (change)="uploadImage($event, 'card-4')"
+                            accept=".jpg, .jpeg, .png">
+                        <input type="hidden" formControlName="card_img_4">
                     </div>
-
-                    <div *ngIf="addProyecto.invalid && addProyecto.touched" class="text-danger mb-3">La Imagen es requerida</div>
+                    <div *ngIf="addProyecto.touched && !okCard4" class="text-danger mb-3">Imagen es Requerido</div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <span class="input-group-text">Vista Previa</span>
+                        <span class="input-group-text"><img [src]="this.imageService.card4" width="120px"></span>
+                        <span [class]="okCard4? 'input-group-text okCard' : 'input-group-text' "><i *ngIf="okCard4" class="fa-solid fa-circle-check"></i></span>
+                    </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Icono FontAwesome</span>
                         <input type="text" class="form-control" placeholder="ej: fa-brands fa-instagram"
-                        formControlName="card_icon_4">
+                        formControlName="card_icon_4" required>
                     </div>
+                    <div *ngIf="addProyecto.touched && addProyecto.controls.card_icon_4.errors" class="text-danger mb-3">Icono es Requerido (ej: fa-brands fa-instagram)</div>
                     
                     <div class="input-group mb-3">
                         <span class="input-group-text">Elije un Color</span>
                         <input type="color" class="form-control form-control-color" title="Choose your color" 
-                        formControlName="color_4">
+                        formControlName="color_4" required>
                     </div>
+                    <div *ngIf="addProyecto.touched && addProyecto.controls.color_4.errors" class="text-danger mb-3">Color es Requerido</div>
 
                 </div>
             </div>
@@ -205,6 +243,5 @@
         <button type="submit" [class]="editMode? 'btn btn-warning':'btn btn-primary'"
         [disabled]="addProyecto.invalid">{{editMode? 'Editar Proyecto':'Añadir Proyecto (+)'}}</button>
     </div>
-
  </form>
 </div>

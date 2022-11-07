@@ -3,3 +3,10 @@
     height: auto;
     margin: 0 auto;
 }
+.okCard{
+    background-color: rgb(10, 233, 10);
+}
+i{
+    font-size: 20px;
+    width: 20px;
+}

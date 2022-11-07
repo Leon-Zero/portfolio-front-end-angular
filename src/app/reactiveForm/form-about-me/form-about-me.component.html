@@ -31,16 +31,18 @@
         <div *ngIf="addData.touched && addData.controls.school.errors" class="text-danger mb-3">Carrera es Requerido</div>
 
         <div class="input-group mb-3">
-            <span class="input-group-text">Foto de Perfil</span>
+            <span class="input-group-text">Foto de perfil</span>
                 <input type="file" class="form-control"
                 (change)="uploadImage($event)"
-                formControlName="perfil" 
                 accept=".jpg, .jpeg, .png">
-            <button *ngIf="editImg" class="btn btn-outline-primary" type="button" (click)="resetFile()">Resetear Foto</button>
+                <button *ngIf="editImg" class="btn btn-outline-primary" type="button" (click)="resetFile()">Resetear Foto</button>
+            <input type="hidden" formControlName="perfil">
         </div>
-        <div class="d-flex justify-content-center">
+        <div *ngIf="addData.touched && !okAbout" class="text-danger mb-3">Imagen es Requerido</div>
+        <div class="d-flex justify-content-center mb-3">
             <span class="input-group-text">Vista Previa</span>
-            <span class="input-group-text"><img [src]="imageService.url" width="120px"></span>
+            <span class="input-group-text"><img [src]="this.imageService.aboutMe" width="120px"></span>
+            <span [class]="okAbout? 'input-group-text okCard' : 'input-group-text' "><i *ngIf="okAbout" class="fa-solid fa-circle-check"></i></span>
         </div>
 
         <input type="hidden" name="id"

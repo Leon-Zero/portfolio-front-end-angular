@@ -16,6 +16,8 @@ export class FormAboutMeComponent implements OnInit {
   @Input() object:any=[];
   reset: string = "./assets/imagenes/perfil.jpg";
   editImg: boolean = false;
+  okAbout: boolean = false;
+  valueAbout: string = "";
 
   addData = new FormGroup ({
     id: new FormControl(''),
@@ -29,6 +31,7 @@ export class FormAboutMeComponent implements OnInit {
   ngOnInit(): void {  }
 
   Set(){
+    this.okAbout = true;
     this.addData.setValue({
     id: this.object.id,
     title_name: this.object.title_name,
@@ -37,16 +40,15 @@ export class FormAboutMeComponent implements OnInit {
     school: this.object.school,
     perfil: this.object.perfil
     });
+    this.valueAbout = this.addData.value.perfil as string;
+    this.imageService.aboutMe = this.addData.value.perfil as string;
+
   }
   EditData(){
-    if (this.addData.value.perfil !== this.object.perfil) {
-      this.addData.value.perfil = this.imageService.url;
-    }
+    this.setImages();
     this.datosPortfolio.UpdateData(this.object.id, this.addData.value).subscribe(
     (result)=>{
-      this.imageService.url = "";
-      this.editImg = false;
-      this.addData.reset({});
+      this.clean();
     })
     }
     //Codigo para agregar componente about-me, comentado por que solo se necesita una unica vez
@@ -64,8 +66,27 @@ export class FormAboutMeComponent implements OnInit {
     const name = `about_me_` + idFile;
     this.imageService.uploadImage($event, name);
     this.editImg = true;
+    this.okAbout = false;
+    setTimeout(() => {
+    this.valueAbout = this.imageService.aboutMe as string;
+    if (this.valueAbout !== "") {
+      this.okAbout = true
+    }
+    }, 6000);
   }
   resetFile(){
-    this.imageService.url = this.reset;
+    this.imageService.aboutMe = this.reset;
+    this.valueAbout = this.reset;
+    this.okAbout = true;
+  }
+  setImages(){
+    this.addData.value.perfil = this.valueAbout;
+  }
+  clean(){
+    this.imageService.aboutMe = "";
+    this.editImg = false;
+    this.valueAbout = "";
+    this.okAbout = false;
+    this.addData.reset({});
   }
 }

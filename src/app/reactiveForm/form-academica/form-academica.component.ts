@@ -16,8 +16,9 @@ export class FormAcademicaComponent implements OnInit {
 
   @Input() object:any=[];
   @Input() onSet:boolean = false
-  reset: string = "./assets/imagenes/ucc.png";
-  editImg: boolean = false;
+  okAcademica: boolean = false;
+  valueAcademica: string = "";
+  editMode: boolean = false;
 
   addAcademica = new FormGroup ({
     id: new FormControl(''),
@@ -29,46 +30,59 @@ export class FormAcademicaComponent implements OnInit {
     logo: new FormControl(''),
   });
 
-  editMode: boolean = false;
 
   ngOnInit(): void { }
 
   Set(){
-    this.editMode=true;
+    this.editMode = true;
+    this.okAcademica = true;
     this.addAcademica.setValue({
-    id: this.object.id,
-    titulo_tag: this.object.titulo_tag,
-    instituto: this.object.instituto,
-    carrera: this.object.carrera,
-    estado: this.object.estado,
-    ingreso: this.object.ingreso,
-    logo: this.object.logo,
-     });
+      id: this.object.id,
+      titulo_tag: this.object.titulo_tag,
+      instituto: this.object.instituto,
+      carrera: this.object.carrera,
+      estado: this.object.estado,
+      ingreso: this.object.ingreso,
+      logo: this.object.logo,
+    });
+    this.valueAcademica = this.addAcademica.value.logo as string;
+    this.imageService.academica = this.addAcademica.value.logo as string;
   }
   SaveAcademica(){
-    if (!this.editMode) {
-      this.datosPortfolio.SaveAcademica(this.addAcademica.value).subscribe(
-       (result)=> {this.addAcademica.reset({});}); 
-    }
-    else {
-      if (this.addAcademica.value.logo !== this.object.perfil) {
-        this.addAcademica.value.logo = this.imageService.url;
+    this.setImages();
+      if (!this.editMode) {
+        this.datosPortfolio.SaveAcademica(this.addAcademica.value).subscribe(
+        (result)=> {
+          this.clean();
+        });
       }
+    else {
       this.datosPortfolio.UpdateAcademica(this.object.id, this.addAcademica.value).subscribe((result)=>{
-        this.imageService.url="";
-        this.editImg = false;
-        this.addAcademica.reset({}); 
         this.editMode = false;
-    })
+        this.clean();
+    });
     }
   }
+
   uploadImage($event: any){
     const nameFile: string = this.addAcademica.value.instituto as string;
-    const name = `academica` + nameFile;
+    const name = `academica_` + nameFile;
     this.imageService.uploadImage($event, name);
-    this.editImg = true;
+    this.okAcademica = false;
+    setTimeout(() => {
+    this.valueAcademica = this.imageService.academica as string;
+    if (this.valueAcademica !== "") {
+      this.okAcademica = true
+    }
+    }, 6000);
   }
-  resetFile(){
-    this.imageService.url = this.reset;
+  setImages(){
+    this.addAcademica.value.logo = this.valueAcademica;
+  }
+  clean(){
+    this.imageService.academica = "";
+    this.valueAcademica = "";
+    this.okAcademica = false;
+    this.addAcademica.reset({});
   }
 }
