@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { Skill } from 'src/assets/data/Data';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,7 @@ import { Skill } from 'src/assets/data/Data';
 export class ProgramsService {
 
   private _refresh$ = new Subject<void>();
-  //private programUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/programas';
-  private programUrl= 'http://localhost:8080/programas';
-
+  private url = environment.url + '/programas';
 
   constructor(private http:HttpClient) { }
 
@@ -20,23 +19,23 @@ get refresh$(){
   return this._refresh$;
 }  
 obtenerProgram():Observable<Skill[]>{
-  return this.http.get<Skill[]>(this.programUrl)
+  return this.http.get<Skill[]>(this.url)
 }
 SaveProgram(data:Object):Observable<Skill>{
   console.log(data);
-  return this.http.post<Skill>(this.programUrl, data).pipe(
+  return this.http.post<Skill>(this.url, data).pipe(
     tap(()=> { this._refresh$.next();        
     }))
 }
 IdProgram(id: number): Observable<Skill>{
-  return this.http.get<Skill>(`${this.programUrl}/${id}`);
+  return this.http.get<Skill>(`${this.url}/${id}`);
 }
 UpdateProgram(id: number, data:Object): Observable<Skill>{
- return this.http.put<Skill>(`${this.programUrl}/${id}`, data).pipe(
+ return this.http.put<Skill>(`${this.url}/${id}`, data).pipe(
   tap(()=> { this._refresh$.next();        
   }))
 }
 DeleteProgram(id: number){
-  return this.http.delete(`${this.programUrl}/${id}`)
+  return this.http.delete(`${this.url}/${id}`)
 }
 }

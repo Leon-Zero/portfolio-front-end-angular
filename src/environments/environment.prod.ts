@@ -8,5 +8,6 @@ export const environment = {
     authDomain: 'portfolio-lh.firebaseapp.com',
     messagingSenderId: '277737172582',
   },
+  url: 'https://portfolio-leonardo-hidalgo.herokuapp.com',
   production: true
 };

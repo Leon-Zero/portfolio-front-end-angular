@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { Proyecto } from 'src/assets/data/Data';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,7 @@ import { Proyecto } from 'src/assets/data/Data';
 export class ProyectoService {
 
   private _refresh$ = new Subject<void>();
-  //private proyectoUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/proyecto';
-  private proyectoUrl= 'http://localhost:8080/proyecto';
+  private url = environment.url + '/proyecto';
 
   constructor(private http:HttpClient) { }
 
@@ -19,23 +19,23 @@ export class ProyectoService {
     return this._refresh$;
   }
   obtenerProyecto():Observable<Proyecto[]>{
-    return this.http.get<Proyecto[]>(this.proyectoUrl)
+    return this.http.get<Proyecto[]>(this.url)
   }
   SaveProyecto(data: Object):Observable<Proyecto>{
     console.log(data);
-    return this.http.post<Proyecto>(this.proyectoUrl, data).pipe(
+    return this.http.post<Proyecto>(this.url, data).pipe(
       tap(()=> { this._refresh$.next();        
       }))
   }
   IdProyecto(id: number): Observable<Proyecto>{
-    return this.http.get<Proyecto>(`${this.proyectoUrl}/${id}`);
+    return this.http.get<Proyecto>(`${this.url}/${id}`);
   }
   UpdateProyecto(id: number, data: Object): Observable<Proyecto>{
-   return this.http.put<Proyecto>(`${this.proyectoUrl}/${id}`, data).pipe(
+   return this.http.put<Proyecto>(`${this.url}/${id}`, data).pipe(
     tap(()=> { this._refresh$.next();        
     }))
   }
   DeleteProyecto(id: number){
-    return this.http.delete(`${this.proyectoUrl}/${id}`)
+    return this.http.delete(`${this.url}/${id}`)
   }  
 }

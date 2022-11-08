@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { Contacto } from 'src/assets/data/Data';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,7 @@ import { Contacto } from 'src/assets/data/Data';
 export class ContactoService {
 
   private _refresh$ = new Subject<void>();
-  //private contactoUrl= 'https://portfolio-leonardo-hidalgo.herokuapp.com/contacto';
-  private contactoUrl= 'http://localhost:8080/contacto';
+  private url = environment.url + '/contacto';
 
   constructor(private http:HttpClient) { }
 
@@ -19,24 +19,24 @@ export class ContactoService {
     return this._refresh$;
   }
   obtenerContacto():Observable<Contacto[]>{
-    return this.http.get<Contacto[]>(this.contactoUrl)
+    return this.http.get<Contacto[]>(this.url)
   }
   SaveContacto(data:Object):Observable<Contacto>{
     console.log(data);
-    return this.http.post<Contacto>(this.contactoUrl, data).pipe(
+    return this.http.post<Contacto>(this.url, data).pipe(
       tap(()=> { this._refresh$.next();        
       }))
   }
   IdContacto(id: number): Observable<Contacto>{
-    return this.http.get<Contacto>(`${this.contactoUrl}/${id}`);
+    return this.http.get<Contacto>(`${this.url}/${id}`);
   }
   UpdateContacto(id: number, data:Object): Observable<Contacto>{
-   return this.http.put<Contacto>(`${this.contactoUrl}/${id}`, data).pipe(
+   return this.http.put<Contacto>(`${this.url}/${id}`, data).pipe(
     tap(()=> { this._refresh$.next();        
     }))
   }
   DeleteContacto(id: number){
-    return this.http.delete(`${this.contactoUrl}/${id}`)
+    return this.http.delete(`${this.url}/${id}`)
   }
 
 }
