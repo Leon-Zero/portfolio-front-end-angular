@@ -15,7 +15,7 @@ section{
     padding: 2em;
     margin: auto; 
     text-align: left;
-    width: 85%;
+    width: 90%;
 }
 #title_project{
     display: flex;
@@ -144,10 +144,9 @@ h5{
 @media only screen and (max-width: 1200px){
     section{
         width: 100%;
+        padding: .5em;
     }
     .cards{
-        max-width: 700px;
-        width: calc(100% - 100px);
         height: 300px;
         gap: 20px;
     }
@@ -163,10 +162,11 @@ h5{
         flex-direction: column;
         display: flex;
         justify-content: center;
-        max-width: 600px;
         max-height: 1200px;
+        margin: 0;
+        width: calc(100% - 20px);
         height: calc(100% - 100px);
-        gap: 30px;        
+        gap: 20px;        
     }
     .project_wraper .cards .card{
         height: 600px;
@@ -177,10 +177,16 @@ h5{
     .cards .card .info .title{
         font-size: .9rem
     }
+    .wraper{
+        margin: .5em;
+    }
 }
-@media only screen and (max-width: 500px){
-    .cards .card .info .description, .title{
-        display: none;
+@media only screen and (max-width: 600px){
+    .cards .card .info .description{
+        font-size: .6rem;
+    }
+    .cards .card .info .title{
+        font-size: .6rem;
     }
     app-delete, app-edit{
         transform: scale(1.4);
@@ -189,6 +195,14 @@ h5{
         width: 80px;
         height: auto;
      }
+}
+@media only screen and (max-width: 450px){
+    .cards .card .info .description{
+        font-size: .5rem;
+    }
+    .cards .card .info .title{
+        font-size: .5rem;
+    }
 }
 @media only screen and (max-width: 300px){
     #title_project img{

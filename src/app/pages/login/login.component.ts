@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   loginUsuario!: LoginUsuario;
   roles: string[] = [];
   errMsj!: string;
+  spinner: boolean = false;
 
 
   constructor(private tokenService: TokenService,
@@ -41,7 +42,7 @@ export class LoginComponent implements OnInit {
     const nombreUsuario = this.login.value.nombreUsuario as string;
     const password = this.login.value.password as string;
     this.submitted = true;
-
+    this.spinner = true;
     this.loginUsuario = new LoginUsuario(nombreUsuario, password);
    // console.log(this.loginUsuario);
     this.authService.login(this.loginUsuario).subscribe(data => {
@@ -52,13 +53,16 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
+        this.submitted = false;
+        this.spinner = false;
         this.router.navigate(['portfolio']);
     }, 
       err => {
+      this.spinner = false;
       this.isLogged = false;
       this.isLoginFail = true;
       this.errMsj = err.error.message;
-      //console.log(this.errMsj)
+      console.log(this.errMsj)
       });
   }
 }

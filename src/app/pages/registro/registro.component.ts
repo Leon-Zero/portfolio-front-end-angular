@@ -31,6 +31,7 @@ export class RegistroComponent implements OnInit {
   registerFail = false;
   registerOk = false;
   submitted= false;
+  spinner: boolean = false;
   
   constructor(private tokenService: TokenService,
               private authService: AuthService,
@@ -48,17 +49,19 @@ export class RegistroComponent implements OnInit {
     const email = this.register.value.email as string;
     const password = this.register.value.password as string;
     this.submitted = true;
-
+    this.spinner = true;
     this.nuevoUsuario = new NuevoUsuario(nombre, nombreUsuario, email, password);
     this.authService.nuevo(this.nuevoUsuario).subscribe(
       data => {
         this.registerFail = false;
         this.registerOk = true;
+        this.spinner = false;
         setTimeout(() => {
           this.router.navigate(['/login']);
         }, 3000);    
       },
       err => {
+        this.spinner = false;
         this.registerFail = true;
         this.errMsj = err.error.mensaje;
         console.log(this.errMsj);

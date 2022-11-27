@@ -7,6 +7,10 @@
             <source src="./assets/imagenes/bannerPortfolio.png" type="image/png">
         </video>
     </div>
+
+    <div class="back mb-3">
+        <a class="nav-link active" routerLink="/login"><h3>Volver a Inicio</h3></a>
+    </div>
   
 <div class="register__content-form">
     <form [formGroup]="register" (ngSubmit)="onRegister()" novalidate>
@@ -46,7 +50,9 @@
                 <span> </span>
                 <span> </span>
                 <span> </span>
-                Crear Usuario
+                <div *ngIf="spinner" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></div>
+                {{spinner? 'Creando Usuario' : 'Registrarse'}}
+                <div *ngIf="spinner" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></div>
             </button>
         </div>
     </form>
