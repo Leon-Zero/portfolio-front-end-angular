@@ -12,9 +12,13 @@ app-delete, app-edit{
 section{
     font-weight: 1em;
     font-size: 1.1em;
-    padding: 2em;
-    margin: auto; 
     text-align: left;
+    max-width: 100%;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+}
+.wrap{
     width: 90%;
 }
 #title_project{

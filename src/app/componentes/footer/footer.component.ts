@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ContactoService } from 'src/app/servicios/portfolio-service/contacto.service';
+import { TokenService } from 'src/app/servicios/token.service';
 import { Contacto } from 'src/assets/data/Data';
 
 @Component({
@@ -12,15 +13,22 @@ export class FooterComponent implements OnInit {
 
   suscription: Subscription = new Subscription;
   contactoList: Contacto[]= [];
-  datos:Object=[]
-  displayEdit: boolean=false
+  datos:Object=[];
+  displayEdit: boolean=false;
+  userName: string = "";
+  userInvitado: boolean = false;
 
-  constructor(private datosPortfolio: ContactoService) { }
+  constructor(private datosPortfolio: ContactoService,
+              private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.getData();
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
-    this.getData();})
+    this.getData();});
+    this.userName = this.tokenService.getUserName();
+    if (this.userName === "test1234") {
+      this.userInvitado = true;      
+    }
   }
 
   getData(){

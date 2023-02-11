@@ -13,10 +13,10 @@ export class ContainerBtnRSComponent implements OnInit {
 
   suscription: Subscription = new Subscription;
   socialList: BtnR[]= [];
-  datos:Object=[]
-  displayDelete: boolean=false 
-  displayNew: boolean=false
-  displayEdit: boolean=false
+  datos:Object=[];
+  displayDelete: boolean=false; 
+  displayNew: boolean=false;
+  displayEdit: boolean=false;
 
   constructor(private datosPortfolio: BtnRsService) { }
 
@@ -24,8 +24,9 @@ export class ContainerBtnRSComponent implements OnInit {
     this.getData();
     this.suscription = this.datosPortfolio.refresh$.subscribe(()=>{
     this.getData();
-    }) 
+    });
   }
+
   getData(){
     this.datosPortfolio.obtenerBtn().subscribe(data =>{
       //console.log(data);

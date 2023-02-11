@@ -7,10 +7,13 @@
             </video>
         </div>
 <div class="Logged_menssage mb-3" *ngIf="isLogged">
-    <a class="nav-link active" routerLink="/portfolio"><h3>Ya has iniciado sesión</h3></a>
+    <a class="nav-link active" routerLink="/portfolio"><h3>Sesión Activa, ir al Home</h3></a>
 </div>
 <div class="Logged_menssage mb-3" *ngIf="!isLogged">
-    <a class="nav-link active" routerLink="/registro"><h3>Quieres Registrarte??</h3></a>
+    <a class="nav-link active" routerLink="/registro"><h3>¿Quieres Registrarte?</h3></a>
+</div>
+<div class="Logged_menssage mb-3" *ngIf="!isLogged">
+    <a class="nav-link active" (click)="userInvitado()" ><h3>Entrar como Invitado</h3></a>
 </div>
       
 <div class="login__content-form">

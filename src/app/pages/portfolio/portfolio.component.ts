@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tokenService: TokenService) { }
+  userName: string = "";
+  userInvitado: boolean = false;
 
   ngOnInit(): void {
+    this.userName = this.tokenService.getUserName();
+    if (this.userName === "test1234") {
+      this.userInvitado = true;      
+    };
   }
 
 }

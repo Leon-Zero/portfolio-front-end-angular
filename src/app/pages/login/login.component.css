@@ -67,6 +67,11 @@ label{
     height: 100%;
     transform: translate(-50%, -50%);
 }
+a{
+  cursor:pointer;
+}
+
+
 /* boton de submit */
 
 .btn__submit{
@@ -83,6 +88,7 @@ label{
  margin-top: 20px;
  letter-spacing: 4px;
  background-color: rgba(255, 255, 255, 0);
+ cursor:pointer;
 }
 
 .btn__submit:hover {

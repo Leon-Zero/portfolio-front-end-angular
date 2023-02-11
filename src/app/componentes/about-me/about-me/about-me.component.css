@@ -5,25 +5,30 @@ app-edit{
     margin-bottom: 1em;
 }
 section{
-    font-weight:1em;
     font-size:1.2em;
-    padding:.5em;
-    margin:.5em auto;
-    flex:auto;
-    text-align:left;
-    width:85%;
+    margin:.5em 0;
+    max-width: 100%;
+    display: flex;
+    place-items: center;
+    flex-flow: column nowrap;
+}
+section small{
+    display: inline-block;
+    width: 80%;
+    padding: 1em 2em;
+    border: 1px dashed #a6b8b8;
 }
 .container{
     display:flex;
     flex-flow:row-reverse wrap;
     align-items:center;
     justify-content:center;
-    gap:3em;
+    gap:1.5em;
     margin-top: 1.5em;
 }
 .foto-perfil{
-    width:380px;
-    height:270px;
+    width:340px;
+    height:260px;
     background-size:cover;
     border-radius:25% 10%;
     border:8px solid #7DFFFF;
@@ -32,10 +37,12 @@ section{
     transition: .8s ease-in;
 }
 p{
+    display: inline-block;
     font-weight:400;
     font-size:1em;
     width:50%;
-    flex:2 0 auto;
+    margin:auto;
+    flex: 2 0 auto;
     text-align: center;
     color:var(--color-2);
     transition:color .8s ease-in
@@ -49,12 +56,10 @@ p{
     section{
         font-weight:.3em;
         font-size:.4em;
-        width:100%
     }
     .container{
         margin-top:1em;
         flex-flow:column wrap;
-        width:100%
     }
     .foto-perfil{
         width:280px;

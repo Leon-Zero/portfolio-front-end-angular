@@ -9,12 +9,12 @@ app-edit{
     transform: scale(2);
     margin-bottom: 1em;
 }
-.footer{
+footer{
     position: relative;
     background-image: url('src/assets/imagenes/bannerPortfolio.png');
     background-size: cover;
     background-repeat: repeat;
-    width: 100vw;
+    max-width: 100%;
     height: auto;
     box-sizing: content-box;
     z-index: 2000; 

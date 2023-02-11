@@ -1,26 +1,18 @@
 <section class="experiencia__encabezado">
-    <div class="container" *ngFor="let datos of miPortfolio" 
-    data-aos="zoom-out" data-aos-duration="1000" data-aos-easing="ease-in-back"
-    data-aos-anchor-placement="center-bottom" data-aos-once="true" >
-        <div class="foto-perfil" [ngStyle]="{'background-image': 'url(' + datos.perfil + ')'}" ></div>
+    <small  *ngIf="userInvitado">(*) Se ingreso con usuario invitado, si desea habilitar más medios de contacto ingrese con una cuenta registrada</small>
+    <div class="container" *ngFor="let datos of miPortfolio" data-aos="zoom-out" data-aos-duration="1000"
+        data-aos-easing="ease-in-back" data-aos-anchor-placement="center-bottom" data-aos-once="true">
+        <div class="foto-perfil" [ngStyle]="{'background-image': 'url(' + datos.perfil + ')'}"></div>
+        <br>
         <p class="info">
-            Mi nombre es <b>{{datos.name}}</b> Vivo en la ciudad de <b>{{datos.ubicacion}}</b>
-            Trabajo part-time como pintor de obra para un equipo de trabajo tercerizado.
-            Ex-alumno de <b>{{datos.school}}</b> Actualmente me encuentro cursando 
-            <strong>programación full stack jr.</strong> en el programa de formacion <b>Argentina Programa</b>
-            <span><b> los invito a ver mi portfolio web, 
-            espero lo disfruten y conozcan más de mí.</b></span>
+            Mi nombre es <b>{{datos.name}}</b> Vivo en la ciudad de <b>{{datos.ubicacion}}.</b> Exalumno de
+            <b>{{datos.school}}</b> y estudiante de <strong>programación web full stack trainee.</strong><span><b>
+                    Sin mas preámbulos los invito a que conozcan más sobre mí</b></span>
         </p>
         <app-edit *ngIf="displayEdit" (click)="onEdit(datos.id)"></app-edit>
     </div>
 
-<app-crud 
-(statusBtnEdit)="onDisplayEdit( $event )" 
-></app-crud>
+    <app-crud (statusBtnEdit)="onDisplayEdit( $event )"></app-crud>
 
-<app-form-about-me *ngIf="displayEdit" 
-[object]="datos" ></app-form-about-me>
-</section>  
-
-
-            
+    <app-form-about-me *ngIf="displayEdit" [object]="datos"></app-form-about-me>
+</section>

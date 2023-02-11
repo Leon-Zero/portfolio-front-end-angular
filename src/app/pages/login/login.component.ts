@@ -65,4 +65,31 @@ export class LoginComponent implements OnInit {
       console.log(this.errMsj)
       });
   }
+
+  userInvitado(): void {
+    const nombreUsuario = "test1234";
+    const password = "test1234";
+    this.submitted = true;
+    this.spinner = true;
+    this.loginUsuario = new LoginUsuario(nombreUsuario, password);
+    this.authService.login(this.loginUsuario).subscribe(data => {
+        this.isLogged = true;
+        this.isLoginFail = false;
+
+        this.tokenService.setToken(data.token);
+        this.tokenService.setUserName(data.nombreUsuario);
+        this.tokenService.setAuthorities(data.authorities);
+        this.roles = data.authorities;
+        this.submitted = false;
+        this.spinner = false;
+        this.router.navigate(['portfolio']);
+    }, 
+      err => {
+      this.spinner = false;
+      this.isLogged = false;
+      this.isLoginFail = true;
+      this.errMsj = err.error.message;
+      console.log(this.errMsj)
+      });
+  }
 }

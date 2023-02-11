@@ -1,12 +1,18 @@
-body{
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
   font-family: 'Roboto Condensed', sans-serif;
   color: #010505;
-  box-sizing: border-box;
-  max-height: 100%;
 }
-html {
-	overflow-x:hidden; 
+body{
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
+
 :root {  
   --color-1: #EBFCFC;  
   --color-2: #010505e7;

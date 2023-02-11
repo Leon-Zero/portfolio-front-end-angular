@@ -2,10 +2,10 @@
     position: sticky;
     top: 0;
     z-index: 3000;
-    width: 100vw;
+    max-width: 100%;
 }
 #navbarNavDarkDropdown{
-    padding: 0 2em;
+    padding: 0 1em;
 }
 #container_item{
     display: flex;

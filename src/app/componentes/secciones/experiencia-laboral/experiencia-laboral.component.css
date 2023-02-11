@@ -1,11 +1,16 @@
 section{
     font-weight: 1em;
     font-size: 14px;
-    padding: 1em;
     margin: auto;
     flex: auto;    
     text-align: left;
-    width: 80%; 
+    max-width: 100%; 
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+}
+.wrap{
+    width: 80%;
 }
 #title_job{
     display: flex;

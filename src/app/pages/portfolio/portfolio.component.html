@@ -4,7 +4,7 @@
         <div class="blank page"></div>
         <app-about-me id="index-about"></app-about-me>
         <div class="blank page"></div>
-        <app-container-btn-rs></app-container-btn-rs>
+        <app-container-btn-rs *ngIf="!userInvitado"></app-container-btn-rs>
 
         <app-top-btn></app-top-btn>
         
