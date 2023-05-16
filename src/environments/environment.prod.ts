@@ -4,7 +4,7 @@ export const environment = {
     appId: '1:277737172582:web:8b57ec631484f4614d07a7',
     storageBucket: 'portfolio-lh.appspot.com',
     locationId: 'southamerica-east1',
-    apiKey: 'AIzaSyDHFynOwrNNPcyd6B6iw_BNfu9BvMXpZZs',
+    apiKey: '',
     authDomain: 'portfolio-lh.firebaseapp.com',
     messagingSenderId: '277737172582',
   },
